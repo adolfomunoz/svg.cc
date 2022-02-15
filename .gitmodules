@@ -1,0 +1,6 @@
+[submodule "ext/patterns"]
+	path = ext/patterns
+	url = https://github.com/adolfomunoz/patterns.git
+[submodule "ext/rapidxml"]
+	path = ext/rapidxml
+	url = https://github.com/discord/rapidxml.git
