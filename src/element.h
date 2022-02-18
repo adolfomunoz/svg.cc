@@ -1,3 +1,4 @@
+#pragma once
 #include <patterns/patterns.h>
 
 namespace svg {
