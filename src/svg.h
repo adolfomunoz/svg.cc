@@ -18,6 +18,9 @@ public:
                 pattern::xml_reflect_attributes_from_stream | 
                 pattern::xml_tag_as_derived);
     }
+    void load_from_code(const std::string& content) {
+        pattern::load_xml(*this, content);
+    }
 
 };
 }

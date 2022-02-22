@@ -59,7 +59,9 @@ public:
 	Length(float quantity, const LengthUnit& unit) : q(quantity), u(unit) { }
 	float quantity() const noexcept { return q; }
     const LengthUnit& unit() const noexcept { return u; }
-
+    
+    static const char* type_name() { return "length"; }
+    
     Length operator+(const Length& that) const noexcept {
         return Length(quantity()+that.quantity()*that.unit().ratio()/unit().ratio(),unit());
     }
