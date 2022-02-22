@@ -21,6 +21,19 @@ public:
     void load_from_code(const std::string& content) {
         pattern::load_xml(*this, content);
     }
+    bool load(const std::string& filename) {
+        std::ifstream in(filename);
+        if (in.is_open()) {
+            std::ostringstream sstr;
+            sstr << in.rdbuf();
+            load_from_code(sstr.str());
+            return true;
+        } else return false;
+    }
+    void save(const std::string& filename) {
+        std::ofstream out(filename);
+        out << code();
+    }
 
 };
 }

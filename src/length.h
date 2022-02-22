@@ -4,7 +4,7 @@
 
 namespace svg {
 
-class LengthUnitBase : public pattern::SelfRegisteringReflectableBase {
+class LengthUnitBase : public virtual pattern::SelfRegisteringReflectableBase {
 public:
     virtual float ratio() const = 0;
     virtual const char* name() const = 0;
