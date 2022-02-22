@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
                                 <circle cx=\"1\" stroke-width=\"2mm\"/>\
                              </svg>");
         std::cout<<test.code()<<std::endl;
+        
     }
-
 }
 

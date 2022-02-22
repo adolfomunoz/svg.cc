@@ -12,3 +12,4 @@ include(Compiler)
 # TARGETS
 ###########################################################################################
 add_executable(circle examples/circle/main.cc)
+add_executable(status examples/status/main.cc)

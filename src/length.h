@@ -19,9 +19,11 @@ public:
     const char* name() const override { return this->impl()->name(); }
 };
 
+//It needs empty constructor for propper registration
 #define LENGTH_UNIT(CLASS,NAME,RATIO) \
     class LengthUnit##CLASS : public pattern::SelfRegisteringReflectable<LengthUnit##CLASS, LengthUnitBase> {\
         public: \
+            LengthUnit##CLASS () {}\
             static const char* type_name() { return NAME; } \
             const char* name() const override { return NAME; } \
             float ratio() const override { return RATIO; } \
@@ -38,14 +40,13 @@ LENGTH_UNIT(Pt,"pt",1.33333333)
 LENGTH_UNIT(Pc,"pc",16)
 LENGTH_UNIT(Percentage,"%",-1)
 
-
-
 std::ostream& operator<<(std::ostream& os, const LengthUnit& unit) {
     os<<unit.name(); return os;
 };
 
 std::istream& operator>>(std::istream& is, LengthUnit& unit) {
     std::string token; is>>token;
+    std::cerr<<"TOKEN = "<<token<<std::endl;
     unit.set_type(token);
 
     return is;
