@@ -11,12 +11,12 @@ public:
     template<typename T>
     T& add(const T& t) { 
         children.push_back(t); 
-        return children.back().cast<T>(); 
+        return children.back().cast_static<T>(); 
     }
     template<typename T>
     T& add(T&& t) { 
         children.push_back(std::forward<T>(t)); 
-        return children.back().cast<T>(); 
+        return children.back().cast_static<T>(); 
     }
 };
 
