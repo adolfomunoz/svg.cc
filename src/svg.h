@@ -1,5 +1,6 @@
 #pragma once
 #include "node.h"
+#include <iostream>
 
 namespace svg {
 
@@ -21,18 +22,23 @@ public:
     void load_from_code(const std::string& content) {
         pattern::load_xml(*this, content);
     }
+    bool load(std::istream& in) {
+        std::ostringstream sstr;
+        sstr << in.rdbuf();
+        load_from_code(sstr.str());
+        return true;
+    }
     bool load(const std::string& filename) {
         std::ifstream in(filename);
-        if (in.is_open()) {
-            std::ostringstream sstr;
-            sstr << in.rdbuf();
-            load_from_code(sstr.str());
-            return true;
-        } else return false;
+        if (in.is_open()) return load(in);
+        else return false;
     }
-    void save(const std::string& filename) {
-        std::ofstream out(filename);
+    void save(std::ostream& out) const {
         out << code();
+    }
+    void save(const std::string& filename) const {
+        std::ofstream out(filename);
+        save(out);
     }
 
 };

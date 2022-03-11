@@ -13,3 +13,4 @@ include(Compiler)
 ###########################################################################################
 add_executable(circle examples/circle/main.cc)
 add_executable(status examples/status/main.cc)
+add_executable(represent examples/represent/main.cc)
