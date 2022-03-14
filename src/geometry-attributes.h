@@ -5,7 +5,7 @@
 namespace svg {
     
 template<typename T>
-class PresentationAttributes : public pattern::Reflectable<PresentationAttributes<T>> {
+class GeometryAttributes : public pattern::Reflectable<GeometryAttributes<T>> {
     //This needs to be dynamic because the reflectable thing. Not my proudest moment but this is a
     //requirement of the pattern library with reflection and inheritance
 	constexpr T& t() noexcept { return *static_cast<T*>(this); } 
@@ -13,7 +13,7 @@ class PresentationAttributes : public pattern::Reflectable<PresentationAttribute
     
     std::optional<Length> _x,_y,_width,_height;
 public:
-    PresentationAttributes() {}
+    GeometryAttributes() {}
     
 	T& x(const Length& l) noexcept {
         _x = l; return t(); 
@@ -26,11 +26,11 @@ public:
 	T& width(const Length& l) noexcept {
         _width = l; return t(); 
 	}
-    Length width() const noexcept { return _width.value_or(100,LengthUnitPercentage()); }
+    Length width() const noexcept { return _width.value_or(Length(100,LengthUnitPercentage())); }
 	T& height(const Length& l) noexcept {
         _height = l; return t(); 
 	}
-    Length height() const noexcept { return _width.value_or(100,LengthUnitPercentage()); }
+    Length height() const noexcept { return _width.value_or(Length(100,LengthUnitPercentage())); }
     
     auto reflect() { return std::tie(_x,_y,_width,_height); }
     auto reflect_names() const { return std::tuple("x","y","height","width"); }
