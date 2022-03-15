@@ -4,7 +4,7 @@
 
 namespace svg {
 
-class LengthUnitBase : public virtual pattern::SelfRegisteringReflectableBase {
+class LengthUnitBase : public pattern::SelfRegisteringReflectableBase {
 public:
     virtual float ratio() const = 0;
     virtual const char* name() const = 0;
@@ -46,7 +46,6 @@ std::ostream& operator<<(std::ostream& os, const LengthUnit& unit) {
 
 std::istream& operator>>(std::istream& is, LengthUnit& unit) {
     std::string token; is>>token;
-    std::cerr<<"TOKEN = "<<token<<std::endl;
     unit.set_type(token);
 
     return is;

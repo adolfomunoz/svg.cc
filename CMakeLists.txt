@@ -11,6 +11,5 @@ include(Compiler)
 ###########################################################################################
 # TARGETS
 ###########################################################################################
-add_executable(circle examples/circle/main.cc)
-add_executable(status examples/status/main.cc)
-add_executable(represent examples/represent/main.cc)
+add_executable(status main/status/main.cc)
+add_executable(represent main/represent/main.cc)

@@ -1,6 +1,7 @@
 #pragma once
 #include <patterns/patterns.h>
 #include "length.h"
+#include "color.h"
 
 namespace svg {
     
@@ -10,6 +11,8 @@ class PresentationAttributes : public pattern::Reflectable<PresentationAttribute
 	constexpr const T& t() const noexcept { return *static_cast<const T*>(this); } 
     
     std::optional<Length> _stroke_width;
+    std::optional<Color> _stroke, _fill;
+    std::optional<float> _opacity, _fill_opacity;
 public:
     PresentationAttributes() {}
     
@@ -18,8 +21,8 @@ public:
 	}
     Length stroke_width() const noexcept { return _stroke_width.value_or(1); }
     
-    auto reflect() { return std::tie(_stroke_width); }
-    auto reflect_names() const { return std::tuple("stroke-width"); }
+    auto reflect() { return std::tie(_stroke_width,_stroke,_fill,_opacity,_fill_opacity); }
+    auto reflect_names() const { return std::tuple("stroke-width","stroke","fill","opacity","fill-opacity"); }
 };
 
 }
