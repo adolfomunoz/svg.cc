@@ -1,6 +1,5 @@
 #include "element.h"
 #include "presentation-attributes.h"
-#include "geometry-attributes.h"
 
 namespace svg {
 
