@@ -96,7 +96,8 @@ NAMED_COLOR(gray,128,128,128)
 
 
 std::ostream& operator<<(std::ostream& os, const Color& c) {
-    os<<c.to_string(); return os;
+    os<<c.to_string(); 
+    return os;
 };
 
 std::istream& operator>>(std::istream& is, Color& c) {
@@ -112,8 +113,7 @@ std::istream& operator>>(std::istream& is, Color& c) {
         }
         else c.set_type(token);
     }
-
     return is;
-};
+}
 
 }

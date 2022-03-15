@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns_xlink="http://www.w3.org/1999/xlink">
+    <circle
+       fill="#ffff00"
+       fill-opacity="0.5"
+       stroke="gray"
+       stroke-width="1px"
+       id="path846"
+       cx="200"
+       cy="200"
+       r="100" 
+     />
+</svg>
