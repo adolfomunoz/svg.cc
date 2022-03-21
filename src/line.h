@@ -3,8 +3,7 @@
 
 namespace svg {
 
-class Line : public pattern::SelfRegisteringReflectable<Line,ElementBase,
-        PresentationAttributes<Line>> {
+class Line : public pattern::SelfRegisteringReflectable<Line,ElementBase,PresentationAttributes<Line>,CoreAttributes<Line>> {
     Length _x1, _y1, _x2, _y2;
 public:
     Line(float x1 = 0.0f, float y1 = 0.0f, float x2 = 1.0f, float y2 = 1.0f) :

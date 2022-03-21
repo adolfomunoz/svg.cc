@@ -58,7 +58,7 @@ public:
 	}
 };
 
-class Polygon : public pattern::SelfRegisteringReflectable<Polygon,Poly<Polygon>,PresentationAttributes<Polygon>> {
+class Polygon : public pattern::SelfRegisteringReflectable<Polygon,Poly<Polygon>,PresentationAttributes<Polygon>,CoreAttributes<Polygon>> {
 public:
     //Needed for SelfRegisteringReflectable
     Polygon() {}
@@ -66,7 +66,7 @@ public:
     static const char* type_name() { return "polygon"; } 
 };
 
-class Polyline : public pattern::SelfRegisteringReflectable<Polyline,Poly<Polyline>,PresentationAttributes<Polyline>> {
+class Polyline : public pattern::SelfRegisteringReflectable<Polyline,Poly<Polyline>,PresentationAttributes<Polyline>,CoreAttributes<Polyline>> {
 public:
     //Needed for SelfRegisteringReflectable
     Polyline() {}//    using Poly<Polyline>::Poly;
