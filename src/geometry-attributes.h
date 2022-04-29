@@ -1,17 +1,18 @@
 #pragma once
 #include <patterns/patterns.h>
+#include <optional>
 #include "length.h"
 
 namespace svg {
     
 template<typename T>
 class GeometryAttributes : public pattern::Reflectable<GeometryAttributes<T>> {
-    //This needs to be dynamic because the reflectable thing. Not my proudest moment but this is a
-    //requirement of the pattern library with reflection and inheritance
+    
 	constexpr T& t() noexcept { return *static_cast<T*>(this); } 
 	constexpr const T& t() const noexcept { return *static_cast<const T*>(this); } 
     
     std::optional<Length> _x,_y,_width,_height;
+    
 public:
     GeometryAttributes() {}
     

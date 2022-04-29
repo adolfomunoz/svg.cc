@@ -23,7 +23,7 @@ public:
 };
 
 //We are ignoring percentage-based RGB, for now
-class ColorRGB : public pattern::SelfRegisteringReflectable<ColorRGB, ColorBase> {
+class ColorRGB : public pattern::Reflectable<ColorRGB, ColorBase> {
     std::tuple<float,float,float> rgb_;
 public:
     ColorRGB(float r = 0.0f, float g = 0.0f, float b = 0.0f) : rgb_(r,g,b) {}
@@ -36,7 +36,7 @@ public:
     std::tuple<float,float,float> rgb() const override { return rgb_; }
 };
 
-class ColorHex : public pattern::SelfRegisteringReflectable<ColorHex, ColorBase> {
+class ColorHex : public pattern::Reflectable<ColorHex, ColorBase> {
     char hex[6];
     static constexpr float hex_value(char c) {
         if ((c>='0') && (c<='9')) return float(c-'0');
@@ -69,7 +69,7 @@ public:
 
 //It needs empty constructor for propper registration
 #define NAMED_COLOR(NAME,R,G,B) \
-    class ColorNamed##NAME : public pattern::SelfRegisteringReflectable<ColorNamed##NAME, ColorBase> {\
+    class ColorNamed##NAME : public pattern::Reflectable<ColorNamed##NAME, ColorBase> {\
         public: \
             ColorNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \

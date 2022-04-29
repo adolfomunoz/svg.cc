@@ -3,7 +3,7 @@
 
 namespace svg {
 
-class ElementBase : public pattern::SelfRegisteringReflectableBase {
+class ElementBase : public pattern::SelfRegisteringReflectableBase, public pattern::VisitableBase {
 public:
     static const char* type_name() { return "element"; } 
 };

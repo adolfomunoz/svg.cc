@@ -3,7 +3,7 @@
 
 namespace svg {
 
-class Ellipse : public pattern::SelfRegisteringReflectable<Ellipse,ElementBase,PresentationAttributes<Ellipse>,CoreAttributes<Ellipse>> {
+class Ellipse : public pattern::Reflectable<Ellipse,ElementBase,PresentationAttributes<Ellipse>,CoreAttributes<Ellipse>> {
     float _cx, _cy, _rx, _ry;
 public:
     Ellipse(float cx = 0.0f, float cy = 0.0f, float rx = 1.0f, float ry = 1.0f) : _cx(cx), _cy(cy), _rx(rx), _ry(ry) {}

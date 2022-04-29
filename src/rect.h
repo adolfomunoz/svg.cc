@@ -4,7 +4,7 @@
 
 namespace svg {
 
-class Rect : public pattern::SelfRegisteringReflectable<Rect,ElementBase,
+class Rect : public pattern::Reflectable<Rect,ElementBase,
         PresentationAttributes<Rect>,GeometryAttributes<Rect>,CoreAttributes<Rect>> {
     std::optional<Length> _rx, _ry;
 public:

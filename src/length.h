@@ -21,7 +21,7 @@ public:
 
 //It needs empty constructor for propper registration
 #define LENGTH_UNIT(CLASS,NAME,RATIO) \
-    class LengthUnit##CLASS : public pattern::SelfRegisteringReflectable<LengthUnit##CLASS, LengthUnitBase> {\
+    class LengthUnit##CLASS : public pattern::Reflectable<LengthUnit##CLASS, LengthUnitBase> {\
         public: \
             LengthUnit##CLASS () {}\
             static const char* type_name() { return NAME; } \

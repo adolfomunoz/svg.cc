@@ -4,7 +4,7 @@
 
 namespace svg {
 
-class SVG : public pattern::SelfRegisteringReflectable<SVG,Node> {
+class SVG : public pattern::Reflectable<SVG,Node> {
     std::string xmlns, xmlns_xlink; //Do not modify these, it is for the slylesheet
 public:
     SVG() :
