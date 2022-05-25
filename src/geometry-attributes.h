@@ -4,6 +4,7 @@
 #include "length.h"
 
 namespace svg {
+
     
 template<typename T>
 class GeometryAttributes : public pattern::Reflectable<GeometryAttributes<T>> {

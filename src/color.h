@@ -77,7 +77,7 @@ public:
             std::tuple<float,float,float> rgb() const override { \
                 return std::tuple<float,float,float>(R,G,B); \
             }\
-    };
+    } NAME;
     
 //Gathering named colors from https://upload.wikimedia.org/wikipedia/commons/e/e7/SVG1.1_Color_Swatch.svg
 
