@@ -29,16 +29,16 @@ public:
             float ratio() const override { return RATIO; } \
     };
 
-LENGTH_UNIT(None,"",1)
-LENGTH_UNIT(Px,"px",1)
-LENGTH_UNIT(Em,"em",-1)
-LENGTH_UNIT(Ex,"ex",-1)
-LENGTH_UNIT(In,"in",96)
-LENGTH_UNIT(Cm,"cm",37.795)
-LENGTH_UNIT(Mm,"mm",377.95)
-LENGTH_UNIT(Pt,"pt",1.33333333)
-LENGTH_UNIT(Pc,"pc",16)
-LENGTH_UNIT(Percentage,"%",-1)
+LENGTH_UNIT(None,"",1.0f)
+LENGTH_UNIT(Px,"px",1.0f)
+LENGTH_UNIT(Em,"em",-1.0f)
+LENGTH_UNIT(Ex,"ex",-1.0f)
+LENGTH_UNIT(In,"in",96.0f)
+LENGTH_UNIT(Cm,"cm",37.795f)
+LENGTH_UNIT(Mm,"mm",377.95f)
+LENGTH_UNIT(Pt,"pt",1.33333333f)
+LENGTH_UNIT(Pc,"pc",16.0f)
+LENGTH_UNIT(Percentage,"%",-1.0f)
 
 std::ostream& operator<<(std::ostream& os, const LengthUnit& unit) {
     os<<unit.name(); return os;
