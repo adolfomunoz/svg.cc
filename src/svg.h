@@ -1,5 +1,6 @@
 #pragma once
 #include "node.h"
+#include "geometry-attributes.h"
 #include <iostream>
 
 namespace svg {
@@ -25,7 +26,7 @@ std::istream& operator>>(std::istream& is, Box& box) {
     return is;
 }
 
-class SVG : public pattern::Reflectable<SVG,Node> {
+class SVG : public pattern::Reflectable<SVG,Node,GeometryAttributes<SVG>> {
     std::string xmlns, xmlns_xlink; //Do not modify these, it is for the slylesheet
     std::optional<Box> _viewBox;
 public:
