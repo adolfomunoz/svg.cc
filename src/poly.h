@@ -10,20 +10,12 @@ public:
     using std::list<std::tuple<float,float>>::list;
     using std::list<std::tuple<float,float>>::operator=;
 };
-//using PointList = std::list<std::tuple<float,float>>;
-//std::ostream& operator<<(std::ostream& os, const std::tuple<float,float>& t) {
-//    os<<std::get<0>(t)<<","<<std::get<1>(t); 
-//    return os;   
-//}
+
 std::ostream& operator<<(std::ostream& os, const PointList& pl) {
     for (auto [x,y] : pl) os<<x<<","<<y<<" "; 
     return os;   
 }
-//std::istream& operator>>(std::istream& is, std::tuple<float,float>& t) {
-//    char dummy;
-//    is>>std::get<0>(t)>>dummy>>std::get<1>(t); 
-//    return is;   
-//}
+
 std::istream& operator>>(std::istream& is, PointList& pl) {
     pl.clear(); float x, y; char dummy;;
     while ( is>>x>>dummy>>y ) pl.push_back(std::tuple<float,float>(x,y));
