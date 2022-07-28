@@ -15,8 +15,6 @@ public:
     virtual void set(std::size_t i, float v) = 0;
 };
 
-
-
 class Command : public pattern::Pimpl<CommandBase> {
     bool is_absolute_ = true;
 
@@ -88,30 +86,11 @@ namespace path_command {
     COMMAND(a,7)
 }
 
-class CommandList : public std::list<Command> {
-public:
-    using std::list<Command>::list;
-    using std::list<Command>::operator=;
-};
-
-std::ostream& operator<<(std::ostream& os, const CommandList& cl) {
-    for (const Command& c : cl) os<<c<<" "; 
-    return os;   
-}
-
-std::istream& operator>>(std::istream& is, CommandList& cl) {
-    cl.clear(); Command c;
-    while ( is>>c ) cl.push_back(c);
-    return is;
-}
-
-
-
 class Path : public pattern::Reflectable<Path,ElementBase,PresentationAttributes<Path>,CoreAttributes<Path>> {
-    CommandList _d;
+    std::list<Command> _d;
 public:
-    Path(const CommandList& d = CommandList()) : _d(d) {}
-    Path(CommandList&& d) : _d(std::forward<CommandList>(d)) {}
+    Path(const std::list<Command>& d = std::list<Command>()) : _d(d) {}
+    Path(std::list<Command>&& d) : _d(std::forward<std::list<Command>>(d)) {}
     
     auto reflect() { return std::tie(_d); }
     auto reflect_names() const { return std::tuple("d"); }
@@ -122,7 +101,7 @@ public:
     Path& d(std::list<Command>&& l) noexcept {
         _d=std::forward<std::list<Command>>(l); return (*this);;
     }
-    const CommandList& d() const noexcept { return _d; }
+    const std::list<Command>& d() const noexcept { return _d; }
    
 	Path& add_command(const Command& c) {
         _d.push_back(c);
