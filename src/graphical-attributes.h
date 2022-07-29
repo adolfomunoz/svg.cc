@@ -159,7 +159,7 @@ public:
     T& transform(std::list<Transform>&& l) noexcept {
         _transform=std::forward<std::list<Transform>>(l); return t();
     }
-    const std::list<Transform>& transform() const noexcept { return std::list<Transform>(); }
+    const std::list<Transform>& transform() const noexcept { return _transform; }
    
 	T& add_transform(const Transform& tr) {
         (_transform).push_front(tr);
