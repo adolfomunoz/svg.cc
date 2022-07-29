@@ -1,7 +1,7 @@
 #include "element.h"
 #include "presentation-attributes.h"
+#include "graphical-attributes.h"
 #include <list>
-#include <tuple>
 #include <cctype>
 
 namespace svg {
@@ -62,7 +62,7 @@ inline std::istream& operator>>(std::istream& is, Command& c) {
 }
 
 //It needs empty constructor for propper registration
-#define COMMAND(LETTER,N) \
+#define DECLARE_COMMAND(LETTER,N) \
     class LETTER : public pattern::Reflectable<LETTER, CommandBase> {\
             std::array<float,N> data;\
         public: \
@@ -74,19 +74,20 @@ inline std::istream& operator>>(std::istream& is, Command& c) {
     };
 
 namespace path_command {
-    COMMAND(m,2)
-    COMMAND(l,2)
-    COMMAND(h,1)
-    COMMAND(v,1)
-    COMMAND(z,0)
-    COMMAND(c,6)
-    COMMAND(s,4)
-    COMMAND(q,4)
-    COMMAND(t,2)
-    COMMAND(a,7)
+    DECLARE_COMMAND(m,2)
+    DECLARE_COMMAND(l,2)
+    DECLARE_COMMAND(h,1)
+    DECLARE_COMMAND(v,1)
+    DECLARE_COMMAND(z,0)
+    DECLARE_COMMAND(c,6)
+    DECLARE_COMMAND(s,4)
+    DECLARE_COMMAND(q,4)
+    DECLARE_COMMAND(t,2)
+    DECLARE_COMMAND(a,7)
 }
 
-class Path : public pattern::Reflectable<Path,ElementBase,PresentationAttributes<Path>,CoreAttributes<Path>> {
+class Path : public pattern::Reflectable<Path,ElementBase,
+        PresentationAttributes<Path>,CoreAttributes<Path>,GraphicalAttributes<Path>> {
     std::list<Command> _d;
 public:
     Path(const std::list<Command>& d = std::list<Command>()) : _d(d) {}

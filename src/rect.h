@@ -1,11 +1,13 @@
 #include "element.h"
 #include "presentation-attributes.h"
 #include "geometry-attributes.h"
+#include "graphical-attributes.h"
 
 namespace svg {
 
 class Rect : public pattern::Reflectable<Rect,ElementBase,
-        PresentationAttributes<Rect>,GeometryAttributes<Rect>,CoreAttributes<Rect>> {
+        PresentationAttributes<Rect>,GeometryAttributes<Rect>,CoreAttributes<Rect>,
+        GraphicalAttributes<Rect>> {
     std::optional<Length> _rx, _ry;
 public:
     Rect(float x0 = 0.0f, float y0 = 0.0f, float x1 = 1.0f, float y1 = 1.0f) {

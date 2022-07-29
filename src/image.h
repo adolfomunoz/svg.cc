@@ -1,11 +1,13 @@
 #include "element.h"
 #include "presentation-attributes.h"
 #include "geometry-attributes.h"
+#include "graphical-attributes.h"
 
 namespace svg {
 
 class Image : public pattern::Reflectable<Image,ElementBase,
-        PresentationAttributes<Image>,GeometryAttributes<Image>,CoreAttributes<Image>> {
+        PresentationAttributes<Image>,GeometryAttributes<Image>,CoreAttributes<Image>,
+        GraphicalAttributes<Image>> {
     std::string _href;
 public:
     Image(const std::string& href = "") : _href(href) {}

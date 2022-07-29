@@ -1,10 +1,12 @@
 #include "element.h"
 #include "presentation-attributes.h"
 #include "core-attributes.h"
+#include "graphical-attributes.h"
 
 namespace svg {
 
-class Circle : public pattern::Reflectable<Circle,ElementBase,PresentationAttributes<Circle>,CoreAttributes<Circle>> {
+class Circle : public pattern::Reflectable<Circle,ElementBase,
+        PresentationAttributes<Circle>,CoreAttributes<Circle>,GraphicalAttributes<Circle>> {
     float _cx, _cy, _r;
 public:
     Circle(float cx = 0.0f, float cy = 0.0f, float r = 1.0f) : _cx(cx), _cy(cy), _r(r) {}

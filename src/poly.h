@@ -1,5 +1,6 @@
 #include "element.h"
 #include "presentation-attributes.h"
+#include "graphical-attributes.h"
 #include <list>
 #include <tuple>
 
@@ -50,7 +51,8 @@ public:
 	}
 };
 
-class Polygon : public pattern::Reflectable<Polygon,Poly<Polygon>,PresentationAttributes<Polygon>,CoreAttributes<Polygon>> {
+class Polygon : public pattern::Reflectable<Polygon,Poly<Polygon>,
+        PresentationAttributes<Polygon>,CoreAttributes<Polygon>,GraphicalAttributes<Polygon>> {
 public:
     //Needed for SelfRegisteringReflectable
     Polygon() {}
@@ -58,7 +60,8 @@ public:
     static const char* type_name() { return "polygon"; } 
 };
 
-class Polyline : public pattern::Reflectable<Polyline,Poly<Polyline>,PresentationAttributes<Polyline>,CoreAttributes<Polyline>> {
+class Polyline : public pattern::Reflectable<Polyline,Poly<Polyline>,
+        PresentationAttributes<Polyline>,CoreAttributes<Polyline>, GraphicalAttributes<Polyline>> {
 public:
     //Needed for SelfRegisteringReflectable
     Polyline() {}//    using Poly<Polyline>::Poly;

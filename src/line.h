@@ -1,9 +1,12 @@
 #include "element.h"
 #include "presentation-attributes.h"
+#include "graphical-attributes.h"
+
 
 namespace svg {
 
-class Line : public pattern::Reflectable<Line,ElementBase,PresentationAttributes<Line>,CoreAttributes<Line>> {
+class Line : public pattern::Reflectable<Line,ElementBase,
+        PresentationAttributes<Line>,CoreAttributes<Line>,GraphicalAttributes<Line>> {
     Length _x1, _y1, _x2, _y2;
 public:
     Line(float x1 = 0.0f, float y1 = 0.0f, float x2 = 1.0f, float y2 = 1.0f) :
