@@ -43,47 +43,64 @@ inline std::istream& operator>>(std::istream& is, Transform& t) {
 
 //Empty constructor for propper registration
 class Scale : public pattern::Reflectable<Scale, TransformBase> {
-    std::array<float,2> data; 
+    float x, y;
 public:
-    Scale(float v = 1.0f) : data{v,v} { }
-    Scale(float x, float y) : data{x,y} { }
+    Scale(float v = 1.0f) : x(v), y(v) { }
+    Scale(float x, float y) : x(x), y(y) { }
     static const char* type_name() { return "scale"; }
     void read_params(std::istream& is) override {
-        is>>data[0];
-        if (is.peek() == ')') data[1]=data[0];
+        is>>x;
+        if (is.peek() == ')') y=x;
         else {
             if (is.peek() == ',') { char dummy; is>>dummy;}
-            is>>data[1];
+            is>>y;
         }
     }
     void write_params(std::ostream& os) const override {
-        os<<data[0]<<" "<<data[1];
+        os<<x<<" "<<y;
     }        
 };
 
-/*
-template<std::size_t N>
-class NonScaleTransform : public pattern::Reflectable<NonScaleTransform<N>,TransformBase> {
-protected:
-    std::array<float,N> data;
+//Empty constructor for propper registration
+class Translate : public pattern::Reflectable<Translate, TransformBase> {
+    float x, y;
 public:
-    NonScaleTransform() { data.fill(0.0f); }
-
+    Translate(float x = 0.0f, float y = 0.0f) : x(x), y(y) { }
+    static const char* type_name() { return "translate"; }
     void read_params(std::istream& is) override {
-        for (std::size_t i = 0; (i<N) && (is.peek()!=')'); ++i) {
-            is>>data[i];
-            if (is.peek() == ',') { char dummy; is>>dummy; }
+        is>>x;
+        if (is.peek() == ')') y=0.0f;
+        else {
+            if (is.peek() == ',') { char dummy; is>>dummy;}
+            is>>y;
         }
     }
     void write_params(std::ostream& os) const override {
-        for (std::size_t i = 0; i<N; ++i) os<<" "<<data[i];
-    }
-
-    ~NonScaleTransform() {}
+        os<<x<<" "<<y;
+    }        
 };
-*/
 
-/*
+//Empty constructor for propper registration
+class Rotate : public pattern::Reflectable<Rotate, TransformBase> {
+    float angle,x, y;
+public:
+    Rotate(float angle = 0.0f, float x = 0.0f, float y = 0.0f) : angle(angle), x(x), y(y) { }
+    static const char* type_name() { return "rotate"; }
+    void read_params(std::istream& is) override {
+        is>>angle;
+        if (is.peek() == ')') x=y=0.0f;
+        else {
+            if (is.peek() == ',') { char dummy; is>>dummy;}
+            is>>x;
+            if (is.peek() == ',') { char dummy; is>>dummy;}
+            is>>y;
+        }
+    }
+    void write_params(std::ostream& os) const override {
+        os<<angle<<" "<<x<<" "<<y;
+    }        
+};
+
 class Matrix : public pattern::Reflectable<Matrix, TransformBase> {
     std::array<float,6> data;
 public:
@@ -100,7 +117,6 @@ public:
         for (std::size_t i = 0; i<6; ++i) os<<" "<<data[i];
     }
 };
-*/
 
 class SkewX : public pattern::Reflectable<SkewX, TransformBase> {
     float s;
