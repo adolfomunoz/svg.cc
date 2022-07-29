@@ -144,20 +144,12 @@ public:
     }
 };
 
-
-/*
-DECLARE_TRANSFORM(translate,2)
-DECLARE_TRANSFORM(rotate,3)
-DECLARE_TRANSFORM(skewX,1)  
-DECLARE_TRANSFORM(skewY,1)  
-*/
-
 template<typename T>
 class GraphicalAttributes : public pattern::Reflectable<GraphicalAttributes<T>> {
 	constexpr T& t() noexcept { return *static_cast<T*>(this); } 
 	constexpr const T& t() const noexcept { return *static_cast<const T*>(this); } 
     
-    std::optional<std::list<Transform>> _transform;
+    std::list<Transform> _transform;
 public:
     GraphicalAttributes() {}
     
@@ -167,11 +159,10 @@ public:
     T& transform(std::list<Transform>&& l) noexcept {
         _transform=std::forward<std::list<Transform>>(l); return t();
     }
-    std::list<Transform> transform() const noexcept { return _transform.value_or(std::list<Transform>()); }
+    const std::list<Transform>& transform() const noexcept { return std::list<Transform>(); }
    
 	T& add_transform(const Transform& tr) {
-        if (!_transform) _transform = std::list<Transform>();
-        (*_transform).push_front(tr);
+        (_transform).push_front(tr);
         return t();
 	}
     
