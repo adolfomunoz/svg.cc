@@ -22,11 +22,12 @@ If you want to use this as a submodule from your own libary or code, you will ha
 ```
 mkdir ext
 cd ext
-git submodule add https://github.com/adolfomunoz/patterns.git
-git submodule add https://github.com/discord/rapidxml.git 
 git submodule add https://github.com/adolfomunoz/svg.cc.git
 ```
 
-The folder will need to be introduced into the include path for the C++ compilation.
+The following subfolders folders must be introduced into the include path for C++ compilation:
+- `ext`
+- `ext/svg.cc/ext`
+- `ext/svg.cc/ext/patterns/ext`
 
 

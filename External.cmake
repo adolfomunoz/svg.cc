@@ -12,7 +12,7 @@ endif(PNG_FOUND)
 # EXTERNAL LIBRARIES (GitHub etc...) added as submodules
 ######################################################################
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ext)
-
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ext/patterns/ext)
 
 
 
