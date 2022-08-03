@@ -50,8 +50,15 @@ inline std::ostream& operator<<(std::ostream& os, const Command& c) {
 }
 
 inline std::istream& operator>>(std::istream& is, Command& c) {
+    is>>std::ws;
     char token;
-    is>>token;
+    if (!std::isdigit(is.peek()) && (is.peek()!='-'))  {
+        is>>token;
+    } else {
+        token = c.token();
+        if (token=='M') token = 'L';
+        if (token=='m') token = 'l';
+    }
     c.set_type(std::string(1,std::tolower(token)));
     c.set_absolute(std::isupper(token));
     for (std::size_t i = 0; i<c.size(); ++i) {

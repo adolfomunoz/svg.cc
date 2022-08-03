@@ -48,8 +48,10 @@ public:
     ColorHex(const std::string& h = "") : hex{'0','0','0','0','0','0'} {
         std::size_t i = 0;
         if (!h.empty() && (h[0] == '#')) ++i;
-        for (std::size_t  j = 0; (j<6) && (i<h.length()); ++i, ++j)
+        for (std::size_t  j = 0; (j<6) && (i<h.length()); ++i, ++j) {
             hex[j] = h[i];
+            if (h.length()==4) hex[++j] = h[i];
+        }
     }
     
     static const char* type_name() { return "hex"; }

@@ -7,3 +7,5 @@
 #include "src/image.h"
 #include "src/svg.h"
 #include "src/group.h"
+#include "src/defs.h"
+#include "src/clipPath.h"
