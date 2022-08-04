@@ -1,5 +1,7 @@
 #pragma once
 #include <patterns/patterns.h>
+#include "length.h"
+#include "geometry-attributes.h"
 
 namespace svg {
 class ClipBase : public pattern::SelfRegisteringReflectableBase {
@@ -53,6 +55,26 @@ public:
         os<<"#"<<id;
     } 
     static const char* type_name() { return "url"; }   
+};
+
+class Inset : public pattern::Reflectable<Inset, ClipBase,GeometryAttributes<Inset>> {
+public:
+    Inset() {}
+    Inset(Length _x, Length _y, Length _width, Length _height) {
+        x(_x).y(_y).width(_width).height(_height);
+    }
+
+    void read_clip_params(std::istream& is) override {
+        Length l;
+        is>>l; x(l);
+        is>>l; y(l);
+        is>>l; width(l);
+        is>>l; height(l);
+    }
+    void write_clip_params(std::ostream& os) const override {
+        os<<x()<<" "<<y()<<" "<<width()<<" "<<height();
+    }
+    static const char* type_name() { return "inset"; }   
 };
 
 }
