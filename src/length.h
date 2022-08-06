@@ -61,6 +61,7 @@ public:
     const LengthUnit& unit() const noexcept { return u; }
     
     static const char* type_name() { return "length"; }
+    operator float() const { return quantity()*unit().ratio(); }
     
     Length operator+(const Length& that) const noexcept {
         return Length(quantity()+that.quantity()*that.unit().ratio()/unit().ratio(),unit());

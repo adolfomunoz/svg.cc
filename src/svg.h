@@ -35,7 +35,7 @@ public:
         xmlns_xlink("http://www.w3.org/1999/xlink") {}
 
     auto reflect() { return std::tie(xmlns,xmlns_xlink,_viewBox); }
-    auto reflect_names() const { return std::tuple("xmlns","xmlns_xlink","viewBox"); }
+    auto reflect_names() const { return std::tuple("xmlns","xmlns:xlink","viewBox"); }
     static const char* type_name() { return "svg"; } 
     SVG& viewBox(const Box& b) { _viewBox = b; return *this; }
     SVG& viewBox(float x, float y, float width, float height) { return viewBox(Box(x,y,width,height)); }

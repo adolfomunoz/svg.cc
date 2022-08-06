@@ -1,5 +1,6 @@
 #pragma once
 #include <patterns/patterns.h>
+#include "style.h"
 #include <iomanip>
 
 namespace svg {
@@ -15,6 +16,7 @@ class CoreAttributes : public pattern::Reflectable<CoreAttributes<T>> {
     std::string _id;
     std::optional<std::string> _lang;
     std::optional<int> _tabindex;
+    std::optional<Style> _style;
 public:
     CoreAttributes() {
         std::stringstream sstr;
@@ -28,9 +30,12 @@ public:
     std::string lang() const noexcept { return _lang.value_or(std::string()); }
     T& tabindex(int i) noexcept { _tabindex = i; return t(); }
     int tabindex() const noexcept { return _tabindex.value_or(-1); }
+    T& style(const Style& s) { _style = s; return t(); }
+    T& style(Style&& s) { _style = std::forward<Style>(s); return t(); }
+    Style style() const { return _style.value_or(Style()); }
      
-    auto reflect() { return std::tie(_id,_lang,_tabindex); }
-    auto reflect_names() const { return std::tuple("id","lang","tabindex"); }
+    auto reflect() { return std::tie(_id,_lang,_tabindex,_style); }
+    auto reflect_names() const { return std::tuple("id","lang","tabindex","style"); }
 };
 
 }

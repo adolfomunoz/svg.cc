@@ -14,6 +14,8 @@ public:
     static const char* type_name() { return "image"; } 
     auto reflect() { return std::tie(_href,_href); }
     auto reflect_names() const { return std::tuple("href","xlink:href"); }
+//    auto reflect() { return std::tie(_href); }
+//    auto reflect_names() const { return std::tuple("href"); }
 	Image& href(const std::string& s) noexcept {
         _href = s; return *this; 
 	}

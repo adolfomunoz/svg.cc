@@ -18,6 +18,14 @@ public:
         children.push_back(std::forward<T>(t)); 
         return children.back().cast_static<T>(); 
     }
+
+    template<typename T>
+    std::list<T> find_all() const {
+        std::list<T> all;
+        for (const Element& e : children)
+            e.apply([&all] (const T& t) { all.push_back(t); });
+        return all;
+    }
 };
 
 }
