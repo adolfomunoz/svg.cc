@@ -20,6 +20,8 @@ public:
         _stroke_width = l; return t(); 
 	}
     Length stroke_width() const noexcept { return _stroke_width.value_or(1); }
+    bool has_stroke_width() const noexcept { return bool(_stroke_width); }
+    
     T& fill(const Color& c) noexcept {
         _fill = c; return t();
     }

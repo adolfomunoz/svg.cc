@@ -32,10 +32,10 @@ public:
 	T& height(const Length& l) noexcept {
         _height = l; return t(); 
 	}
-    Length height() const noexcept { return _width.value_or(Length(100,LengthUnitPercentage())); }
+    Length height() const noexcept { return _height.value_or(Length(100,LengthUnitPercentage())); }
     
     auto reflect() { return std::tie(_x,_y,_width,_height); }
-    auto reflect_names() const { return std::tuple("x","y","height","width"); }
+    auto reflect_names() const { return std::tuple("x","y","width","height"); }
 };
 
 }

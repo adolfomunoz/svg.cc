@@ -4,28 +4,22 @@
 namespace svg {
 
 class Node : public pattern::Reflectable<Node,ElementBase> {
-    std::list<Element> children;
+    std::list<Element> children_;
 public:
-    auto reflect() { return std::tie(children); }
+    auto reflect() { return std::tie(children_); }
+    const std::list<Element>& children() const { return children_; }
 
     template<typename T>
     T& add(const T& t) { 
-        children.push_back(t); 
-        return children.back().cast_static<T>(); 
+        children_.push_back(t); 
+        return children_.back().cast_static<T>(); 
     }
     template<typename T>
     T& add(T&& t) { 
-        children.push_back(std::forward<T>(t)); 
-        return children.back().cast_static<T>(); 
+        children_.push_back(std::forward<T>(t)); 
+        return children_.back().cast_static<T>(); 
     }
 
-    template<typename T>
-    std::list<T> find_all() const {
-        std::list<T> all;
-        for (const Element& e : children)
-            e.apply([&all] (const T& t) { all.push_back(t); });
-        return all;
-    }
 };
 
 }

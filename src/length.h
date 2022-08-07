@@ -67,8 +67,16 @@ public:
         return Length(quantity()+that.quantity()*that.unit().ratio()/unit().ratio(),unit());
     }
 
+    Length operator+(float that) const noexcept {
+        return (*this)+Length(that);
+    }
+
     Length operator-(const Length& that) const noexcept {
         return Length(quantity()-that.quantity()*that.unit().ratio()/unit().ratio(),unit());
+    }
+
+    Length operator-(float that) const noexcept {
+        return (*this)-Length(that);
     }
 
     Length operator*(float that) const noexcept {
