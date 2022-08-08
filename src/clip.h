@@ -6,7 +6,7 @@
 namespace svg {
 class ClipBase : public pattern::SelfRegisteringReflectableBase {
 public:
-    const char* name() const { return object_type_name(); }
+    virtual const char* name() const { return object_type_name(); }
     virtual void read_clip_params(std::istream& is) = 0;
     virtual void write_clip_params(std::ostream& os) const = 0;
 };
@@ -15,6 +15,8 @@ class Clip : public pattern::Pimpl<ClipBase> {
 public:
     using pattern::Pimpl<ClipBase>::Pimpl;
     using pattern::Pimpl<ClipBase>::operator=;
+
+    const char* name() const override { return this->impl()->name(); }
 
     void read_clip_params(std::istream& is) override {
         this->impl()->read_clip_params(is);
