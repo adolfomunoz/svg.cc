@@ -2,6 +2,12 @@
 #include <iostream>
 #include <list>
 
+float inset_stroke_width(const svg::Rect& inset) {
+    float stroke_width = inset.stroke_width();
+    if (inset.style().has_stroke_width()) stroke_width = inset.style().stroke_width();
+    return stroke_width;
+}
+
 struct Config : public pattern::Reflectable<Config> {
     std::string input = "", output = "";
     float separation = 0.02f;
@@ -9,11 +15,6 @@ struct Config : public pattern::Reflectable<Config> {
     auto reflect_names() const { return std::tuple("input","output","separation"); }
 };
 
-float inset_stroke_width(const svg::Rect& inset) {
-    float stroke_width = inset.stroke_width();
-    if (inset.style().has_stroke_width()) stroke_width = inset.style().stroke_width();
-    return stroke_width;
-}
 
 int main(int argc, char** argv) {
     Config config;
@@ -47,20 +48,26 @@ int main(int argc, char** argv) {
     for (const svg::Rect& inset : insets) ar += inset.width()/inset.height();
     float inset_width = (image.width()-separation*float(insets.size()-1)-inset_stroke_width(insets.front()));
     float final_height = inset_width/ar;
-    float x = image.x();
+    float pos = image.x();
+    int inset_id = 0;
     for (const svg::Rect& inset : insets) {
         svg::Rect outside_inset = inset;
         float size_factor = final_height/inset.height();
         float stroke_width = inset_stroke_width(inset);
-        outside_inset
-            .x(x+0.5f*stroke_width)
-            .y(image.y()-0.5f*stroke_width+image.height()+separation)
-            .width(inset.width()*size_factor)
-            .height(inset.height()*size_factor);
-        //Not very clear on the 0.5f*stroke_width on width and height but it seems to be
-        // aligning everything propperly
+        float x = pos + 0.5f*stroke_width;
+        float y = image.y()-0.5f*stroke_width+image.height()+separation;
+        float width = inset.width()*size_factor;
+        float height = inset.height()*size_factor;
+        outside_inset.x(x).y(y).width(width).height(height);
+        std::stringstream id; id<<"inset-"<<std::setw(5) << std::setfill('0')<<(++inset_id);
+        defs.add(svg::ClipPath()).id(id.str()).add(inset);
+        out.add(image)
+            .add_transform(svg::Translate(-image.x()-inset.x(),-image.y()-inset.y()))
+            .add_transform(svg::Scale(size_factor))
+            .add_transform(svg::Translate(x,y))
+            .clip_path(svg::Url(id.str()));
         out.add(outside_inset);
-        x+=outside_inset.width()+separation;
+        pos+=outside_inset.width()+separation;
     }
 
     out.viewBox(svg::Box(image.x(),image.y(),image.width(),image.height()+final_height+separation));
