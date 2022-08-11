@@ -8,11 +8,13 @@ namespace svg {
 class PreserveAspectRatioAlignmentBase : public pattern::SelfRegisteringReflectableBase {
 public:
     virtual const char* name() const { return object_type_name(); }
+    virtual ~PreserveAspectRatioAlignmentBase() {}
 };
 
 class PreserveAspectRatioStrategyBase : public pattern::SelfRegisteringReflectableBase {
 public:
     virtual const char* name() const { return object_type_name(); }
+    virtual ~PreserveAspectRatioStrategyBase() {}
 };
 
 class PreserveAspectRatioAlignment : public pattern::Pimpl<PreserveAspectRatioAlignmentBase> {
