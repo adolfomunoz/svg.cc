@@ -2,14 +2,15 @@
 
 #include "layout.h"
 
-class LayoutSingleImageBottomInsets : public pattern::Reflectable<LayoutSingleImageBottomInsets,LayoutBase> {
+class LayoutSingleImageRightInsets : public pattern::Reflectable<LayoutSingleImageRightInsets,LayoutBase> {
     float separation = 0.02f;
 public:
-    LayoutSingleImageBottomInsets() {} //Needed for self registration
+    LayoutSingleImageRightInsets() {} //Needed for self registration
     auto reflect() { return std::tie(separation);}
     auto reflect_names() const { return std::tuple("separation"); }
 
-    static const char* type_name() { return "layout-single-image-bottom-insets"; } \
+    static const char* type_name() { return "layout-single-image-right-insets"; }
+
     void draw_insets(svg::SVG& out, 
         const std::list<svg::Image>& images, 
         const std::list<svg::Rect>& insets) const override {
@@ -21,21 +22,21 @@ public:
             for (const auto& inset : insets) out.add(inset);
 
             float ar = 0.0f;
-            for (const svg::Rect& inset : insets) ar += inset.width()/inset.height();
-            float inset_size = (image.width()-separation*float(insets.size()-1)-inset_stroke_width(insets.front()));
-            float final_height = inset_size/ar;
-            float inset_y = image.y() + image.height() + separation;
+            for (const svg::Rect& inset : insets) ar += inset.height()/inset.width();
+            float inset_size = (image.height()-separation*float(insets.size()-1)-inset_stroke_width(insets.front()));
+            float final_width = inset_size/ar;
+            float inset_x = image.x() + image.width() + separation;
             for (const svg::Image& image : images) {
-                float inset_x = image.x();
+                float inset_y = image.y();
                 int inset_id = 0;
                 for (const svg::Rect& inset : insets) {
                     svg::Rect outside_inset = inset;
-                    float size_factor = final_height/inset.height();
+                    float size_factor = final_width/inset.width();
                     float stroke_width = inset_stroke_width(inset);
 
                     outside_inset
-                        .x(inset_x + 0.5f*stroke_width)
-                        .y(inset_y - 0.5f*stroke_width)
+                        .x(inset_x - 0.5f*stroke_width)
+                        .y(inset_y + 0.5f*stroke_width)
                         .width(inset.width()*size_factor)
                         .height(inset.height()*size_factor);
 
@@ -48,12 +49,12 @@ public:
                         .add_transform(svg::Translate(outside_inset.x(),outside_inset.y()))
                         .clip_path(svg::Url(id.str()));
                     out.add(outside_inset);
-                    inset_x+=outside_inset.width()+separation;
+                    inset_y+=outside_inset.height()+separation;
                 }
-                inset_y+= (final_height + separation);
+                inset_x+= (final_width + separation);
             }
 
-            out.viewBox(svg::Box(image.x(),image.y(),image.width(),image.height()+float(images.size())*(final_height+separation)));
+            out.viewBox(svg::Box(image.x(),image.y(),image.width()+float(images.size())*(final_width+separation),image.height()));
                 
     }
 };

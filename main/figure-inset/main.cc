@@ -1,6 +1,7 @@
-#include "layout.h"
-#include "layout-single-image-bottom-insets.h"
 
+#include "layout-single-image-right-insets.h"
+#include "layout-single-image-bottom-insets.h"
+#include "layout-horizontal-images-bottom-insets.h"
 
 struct Config : public pattern::Reflectable<Config> {
     std::string input = "", output = "";
