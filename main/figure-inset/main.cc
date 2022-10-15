@@ -29,8 +29,8 @@ int main(int argc, char** argv) {
     Config config;
     pattern::load_commandline(config,argc,argv);
     svg::SVG file;
-    if (config.input.empty()) file.load(std::cin);
-    else file.load(config.input);
+    if (config.input.empty()) file.load_from_stream(std::cin);
+    else file.load_from_file(config.input);
 
     std::list<svg::Rect> insets = svg::find_all<svg::Rect>(file);
     std::list<svg::Image> images = svg::find_all<svg::Image>(file);
@@ -54,8 +54,8 @@ int main(int argc, char** argv) {
 
     config.layout.draw_insets(out,images,insets);  
 
-    if (config.output.empty()) { out.save(std::cout); std::cout<<std::endl; } 
-    else  { out.save(config.output); }
+    if (config.output.empty()) { out.save_to_stream(std::cout); std::cout<<std::endl; } 
+    else  { out.save_to_file(config.output); }
     return 0;
 }
 

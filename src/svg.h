@@ -48,23 +48,23 @@ public:
     void load_from_code(const std::string& content) {
         pattern::load_xml(*this, content);
     }
-    bool load(std::istream& in) {
+    bool load_from_stream(std::istream& in) {
         std::ostringstream sstr;
         sstr << in.rdbuf();
         load_from_code(sstr.str());
         return true;
     }
-    bool load(const std::string& filename) {
+    bool load_from_file(const std::string& filename) {
         std::ifstream in(filename);
-        if (in.is_open()) return load(in);
+        if (in.is_open()) return load_from_stream(in);
         else return false;
     }
-    void save(std::ostream& out) const {
+    void save_to_stream(std::ostream& out) const {
         out << code();
     }
-    void save(const std::string& filename) const {
+    void save_to_file(const std::string& filename) const {
         std::ofstream out(filename);
-        save(out);
+        save_to_stream(out);
     }
 
 };
