@@ -59,16 +59,12 @@ inline std::istream& operator>>(std::istream& is, Command& c) {
         if (token=='M') token = 'L';
         if (token=='m') token = 'l';
     }
-    std::cerr<<"TOKEN = "<<token<<std::endl;
     c.set_type(std::string(1,std::tolower(token)));
     c.set_absolute(std::isupper(token));
     for (std::size_t i = 0; i<c.size(); ++i) {
-        std::cerr<<char(is.peek())<<std::endl;
         float v; is>>v;  c.set(i,v); 
-        std::cerr<<v<<std::endl;
         if (is.peek() == ',') { char dummy; is>>dummy; }
     }
-    std::cerr<<"At the end -> "<<char(is.peek())<<std::endl;
     return is;
 }
 
