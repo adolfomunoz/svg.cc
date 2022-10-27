@@ -1,8 +1,9 @@
 #include "presentation-attributes.h"
+#include "text-presentation-attributes.h"
 
 namespace svg {
 
-class Style : public pattern::Reflectable<Style,PresentationAttributes<Style>> {
+class Style : public pattern::Reflectable<Style,PresentationAttributes<Style>,TextPresentationAttributes<Style>> {
 public:
     Style() {}   
     static const char* type_name() { return "style"; } 

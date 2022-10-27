@@ -10,3 +10,4 @@
 #include "src/defs.h"
 #include "src/clipPath.h"
 #include "src/search.h"
+#include "src/text.h"
