@@ -30,6 +30,9 @@ public:
         _content = s; return (*this);
     }
     const std::string& content() const noexcept { return _content; }
+
+//    void init() { std::cerr<<"Init text: "<<content()<<std::endl; }
+
 };
 
 }
