@@ -47,9 +47,7 @@ public:
             }\
     } NAME;
     
-//Gathering named colors from https://upload.wikimedia.org/wikipedia/commons/e/e7/SVG1.1_Color_Swatch.svg
-
-NAMED_FONT_WEIGHT(normal,400)
+// NAMED_FONT_WEIGHT(normal,400)   Conflict
 NAMED_FONT_WEIGHT(bold,700)
 
 std::ostream& operator<<(std::ostream& os, const FontWeight& c) {
@@ -69,5 +67,44 @@ std::istream& operator>>(std::istream& is, FontWeight& c) {
     }
     return is;
 }
+
+class FontStyleBase : public pattern::SelfRegisteringReflectableBase {  };
+class FontStyle : public pattern::Pimpl<FontStyleBase> {
+public:
+    using pattern::Pimpl<FontStyleBase>::Pimpl;
+    using pattern::Pimpl<FontStyleBase>::operator=;
+};
+//It needs empty constructor for propper registration
+#define NAMED_FONT_STYLE(NAME) \
+    class FontStyleNamed##NAME : public pattern::Reflectable<FontStyleNamed##NAME, FontStyleBase> {\
+        public: \
+            FontStyleNamed##NAME () {}\
+            static const char* type_name() { return #NAME; } \
+    } NAME;
+    
+// NAMED_FONT_STYLE(normal)   Conflict
+NAMED_FONT_STYLE(italic)
+NAMED_FONT_STYLE(oblique)
+
+std::ostream& operator<<(std::ostream& os, const FontStyle& c) {
+    os<<c.type(); 
+    return os;
+};
+std::istream& operator>>(std::istream& is, FontStyle& c) {
+    std::string token; 
+    is>>token;
+    c.set_type(token);
+    return is;
+}
+
+class FontNormal : public pattern::Reflectable<FontNormal, FontWeightBase, FontStyleBase> {
+    public:
+        FontNormal() {}
+        static const char* type_name() { return "normal"; } 
+        std::string to_string() const override { return "normal"; } 
+        int value() const override { 
+            return 400;
+        }
+} normal;
 
 }
