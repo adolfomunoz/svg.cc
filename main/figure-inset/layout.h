@@ -7,7 +7,8 @@ class LayoutBase : public pattern::SelfRegisteringReflectableBase {
 public:
     virtual void draw_insets(svg::SVG& out, 
             const std::list<svg::Image>& images, 
-            const std::list<svg::Rect>& insets) const = 0;
+            const std::list<svg::Rect>& insets,
+            const std::list<std::string>& labels = {}) const = 0;
     virtual ~LayoutBase() {}
 };
 
@@ -18,7 +19,8 @@ public:
 
     void draw_insets(svg::SVG& out, 
             const std::list<svg::Image>& images, 
-            const std::list<svg::Rect>& insets) const override {
+            const std::list<svg::Rect>& insets,
+            const std::list<std::string>& lables = {}) const override {
                 this->impl()->draw_insets(out,images,insets);
             }
 }; 
