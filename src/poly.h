@@ -23,6 +23,13 @@ std::istream& operator>>(std::istream& is, PointList& pl) {
     return is;
 }
 
+namespace detail {
+    template <typename T, class = void>
+    struct has_random_access : std::false_type{};
+    template<typename T>
+    struct has_random_access<T,std::void_t<decltype(std::declval<T>()[0])>> : std::true_type{};
+}
+
 template<typename P>
 class Poly : public pattern::Reflectable<Poly<P>,ElementBase> {
     PointList _points;
@@ -49,6 +56,12 @@ public:
 	P& add_point(float x, float y) {
         return add_point(std::tuple<float,float>(x,y));
 	}
+
+    template<typename T, typename = std::enable_if_t<detail::has_random_access<T>::value>>
+	P& add_point(const T& t) {
+        return add_point(std::tuple<float,float>(t[0],t[1]));
+	}
+
 };
 
 class Polygon : public pattern::Reflectable<Polygon,Poly<Polygon>,
