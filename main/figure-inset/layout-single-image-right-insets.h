@@ -4,16 +4,18 @@
 
 class LayoutSingleImageRightInsets : public pattern::Reflectable<LayoutSingleImageRightInsets,LayoutBase> {
     float separation = 0.02f;
+    float label_relative_size = 0.95f;
 public:
     LayoutSingleImageRightInsets() {} //Needed for self registration
-    auto reflect() { return std::tie(separation);}
-    auto reflect_names() const { return std::tuple("separation"); }
+    auto reflect() { return std::tie(separation,label_relative_size);}
+    auto reflect_names() const { return std::tuple("separation","label-relative-size"); }
 
     static const char* type_name() { return "layout-single-image-right-insets"; }
 
     void draw_insets(svg::SVG& out, 
         const std::list<svg::Image>& images, 
-        const std::list<svg::Rect>& insets) const override {
+        const std::list<svg::Rect>& insets,
+        const std::list<std::string>& labels) const override {
             svg::Defs& defs = out.add(svg::Defs());
             
             svg::Image image = images.front(); 
@@ -26,9 +28,21 @@ public:
             float inset_size = (image.height()-separation*float(insets.size()-1)-inset_stroke_width(insets.front()));
             float final_width = inset_size/ar;
             float inset_x = image.x() + image.width() + separation;
+            float label_font_size = label_relative_size*final_width*4.0f/3.0f;
+            auto label_it = labels.begin();
             for (const svg::Image& image : images) {
                 float inset_y = image.y();
                 int inset_id = 0;
+                if (label_it != labels.end()) {
+                    svg::Text label(*label_it);
+                    label
+                        .x(inset_x + 0.5f*inset_size)
+                        .y(inset_y - separation)
+                        .font_size(label_font_size)
+                        .font_family("sans-serif")
+                        .text_anchor(svg::middle);
+                    out.add(label);
+                }
                 for (const svg::Rect& inset : insets) {
                     svg::Rect outside_inset = inset;
                     float size_factor = final_width/inset.width();
@@ -54,7 +68,7 @@ public:
                 inset_x+= (final_width + separation);
             }
 
-            out.viewBox(svg::Box(image.x(),image.y(),image.width()+float(images.size())*(final_width+separation),image.height()));
+            out.viewBox(svg::Box(image.x(),image.y()-labels.empty()?0.0f:(separation + label_font_size),image.width()+float(images.size())*(final_width+separation),image.height()));
                 
     }
 };

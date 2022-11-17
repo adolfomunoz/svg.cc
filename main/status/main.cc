@@ -9,5 +9,8 @@ int main(int argc, char** argv) {
     std::cout<<"Registered path commands= "<<svg::Command::registered()<<std::endl;
     std::cout<<"Registered transforms   = "<<svg::Transform::registered()<<std::endl;
     std::cout<<"Registered clips        = "<<svg::Clip::registered()<<std::endl;
+    std::cout<<"Registered font weights = "<<svg::FontWeight::registered()<<std::endl;
+    std::cout<<"Registered text anchors = "<<svg::TextAnchor::registered()<<std::endl;
+    std::cout<<"Registered baselines    = "<<svg::DominantBaseline::registered()<<std::endl;
 }
 

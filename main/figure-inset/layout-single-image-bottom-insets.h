@@ -12,7 +12,8 @@ public:
     static const char* type_name() { return "layout-single-image-bottom-insets"; } \
     void draw_insets(svg::SVG& out, 
         const std::list<svg::Image>& images, 
-        const std::list<svg::Rect>& insets) const override {
+        const std::list<svg::Rect>& insets,
+        const std::list<std::string>& labels) const override {
             svg::Defs& defs = out.add(svg::Defs());
             
             svg::Image image = images.front(); 
