@@ -68,7 +68,7 @@ public:
                 inset_x+= (final_width + separation);
             }
 
-            out.viewBox(svg::Box(image.x(),image.y()-labels.empty()?0.0f:(separation + label_font_size),image.width()+float(images.size())*(final_width+separation),image.height()));
+            out.viewBox(svg::Box(image.x(),image.y()-(labels.empty()?0.0f:(separation + label_font_size)),image.width()+float(images.size())*(final_width+separation),image.height()));
                 
     }
 };

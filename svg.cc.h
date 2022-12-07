@@ -1,3 +1,4 @@
+#pragma once
 #include "src/circle.h"
 #include "src/ellipse.h"
 #include "src/rect.h"

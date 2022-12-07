@@ -48,7 +48,7 @@ public:
     bool has_font_family() const noexcept { return bool(_font_family); }
 
     T& text_anchor(const TextAnchor& ta) noexcept {
-        _text_anchor = ta;
+        _text_anchor = ta; return t();
     }
     TextAnchor text_anchor() const noexcept { return _text_anchor.value_or(start); }
     bool has_text_anchor() const noexcept { return bool(_text_anchor); }
