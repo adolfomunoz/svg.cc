@@ -4,8 +4,8 @@
 #include <sstream>
 #include <vector>
 
-namespace svg_cpp_plot {
-namespace axis_scale {
+namespace svg {
+namespace plot {
   
 class Base {
 public:
