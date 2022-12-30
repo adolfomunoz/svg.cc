@@ -1,6 +1,7 @@
 #pragma once
 #include "node.h"
 #include "geometry-attributes.h"
+#include "aspect-ratio-attributes.h"
 #include <iostream>
 
 namespace svg {
