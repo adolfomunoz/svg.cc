@@ -1,27 +1,32 @@
-#include <array>
+#include "../axis-scale.h"
 #include <cmath>
-#include "exceptions.h"
-#include <sstream>
-#include <vector>
 
-namespace svg_cpp_plot {
-namespace axis_scale {
+namespace svg {
+namespace plot {
+
+//Adjust a floating point number so it only has two 
+float adjust(float x) noexcept {
+    float div_by = std::pow(x,int(std::log10(std::abs(x))))/100.0f;
+    
+}
+
+virtual std::vector<float> AxisBase::ticks(int target_ticks, float xmin, float xmax) const noexcept {
+    float tick_ref = 0;
+
+    float tick_step = std::floor((xmax - xmin)/float(target_ticks-1));
+	int factor = 2;
+	while (tick_step<=0.0f) {
+		tick_step=std::floor(factor*(xmax - xmin)/float(target_ticks-1))/float(factor);
+		if ((factor % 4) == 0) factor = (factor*10)/4;
+		else factor*=2;
+	}
+	float first_tick = std::ceil(xmin/tick_step)*tick_step;
+	std::vector<float> sol;
+	for (float x = first_tick; x <= (xmax + 0.01*tick_step); x+=tick_step) if (is_valid(x)) sol.push_back(x);
+	return filter(sol,0.5*(sol.back() - sol.front())/(target_ticks-1));
+}
   
-class Base {
-public:
-    virtual float transform(float x)     const noexcept = 0;
-    virtual float antitransform(float y) const noexcept = 0;
-    virtual bool is_valid(float x) const noexcept { return true; }
-    std::vector<float> filter(const std::vector<float>& sol, float threshold) const noexcept {
-        std::vector<float> filtered_sol;
-        for (float x : sol) {
-            if ( (std::abs(transform(sol.back()) - transform(x))>threshold) &&
-                    (filtered_sol.empty() || (std::abs(transform(filtered_sol.back()) - transform(x))>threshold) ) ) 
-                filtered_sol.push_back(x);
-        }
-        filtered_sol.push_back(sol.back()); 
-        return filtered_sol;
-    }
+
     virtual std::vector<float> ticks(int target_ticks, float xmin, float xmax) const noexcept {
         float tick_step = std::floor((xmax - xmin)/float(target_ticks-1));
 		int factor = 2;
