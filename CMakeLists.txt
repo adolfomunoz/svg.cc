@@ -13,3 +13,5 @@ include(Compiler)
 add_executable(status main/status/main.cc)
 add_executable(represent main/represent/main.cc)
 add_executable(figure-inset main/figure-inset/main.cc)
+
+add_library(svgplot plot/src/plot.cc plot/src/axis-scale.cc)

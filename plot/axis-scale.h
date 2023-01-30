@@ -1,63 +1,50 @@
-#include <array>
-#include <cmath>
-#include "exceptions.h"
-#include <sstream>
+#pragma once
 #include <vector>
+#include <string>
+#include <patterns/patterns.h>
 
 namespace svg {
 namespace plot {
   
-class Base {
+class ScaleBase : public pattern::SelfRegisteringReflectableBase {
 public:
-    virtual float transform(float x)     const noexcept = 0;
-    virtual float antitransform(float y) const noexcept = 0;
-    virtual bool is_valid(float x) const noexcept { return true; }
-    std::vector<float> filter(const std::vector<float>& sol, float threshold) const noexcept {
-        std::vector<float> filtered_sol;
-        for (float x : sol) {
-            if ( (std::abs(transform(sol.back()) - transform(x))>threshold) &&
-                    (filtered_sol.empty() || (std::abs(transform(filtered_sol.back()) - transform(x))>threshold) ) ) 
-                filtered_sol.push_back(x);
-        }
-        filtered_sol.push_back(sol.back()); 
-        return filtered_sol;
+    virtual float transform(float x, float xmin, float xmax, float canvas_min, float canvas_max) const noexcept = 0;
+    virtual std::vector<float> ticks(int target_ticks, float xmin, float xmax) const noexcept; 
+    virtual std::string ticklabel(float value) const noexcept;
+};
+
+class Scale : public pattern::Pimpl<ScaleBase> {
+public:
+    using pattern::Pimpl<ScaleBase>::Pimpl;
+    using pattern::Pimpl<ScaleBase>::operator=;
+
+    float transform(float x, float xmin, float xmax, float canvas_min, float canvas_max) const noexcept {
+        return impl()->transform(x,xmin,xmax,canvas_min,canvas_max);
     }
     virtual std::vector<float> ticks(int target_ticks, float xmin, float xmax) const noexcept {
-        float tick_step = std::floor((xmax - xmin)/float(target_ticks-1));
-		int factor = 2;
-		while (tick_step<=0.0f) {
-			tick_step=std::floor(factor*(xmax - xmin)/float(target_ticks-1))/float(factor);
-			if ((factor % 4) == 0) factor = (factor*10)/4;
-			else factor*=2;
-		}
-		float first_tick = std::ceil(xmin/tick_step)*tick_step;
-		std::vector<float> sol;
-		for (float x = first_tick; x <= (xmax + 0.01*tick_step); x+=tick_step) if (is_valid(x)) sol.push_back(x);
-		return filter(sol,0.5*(sol.back() - sol.front())/(target_ticks-1));
+        return impl()->ticks(target_ticks,xmin,xmax);
     }
-    virtual std::tuple<float,float> axis_adjust(float xmin, float xmax) const noexcept {
-        return std::tuple<float,float>(xmin,xmax);
-    }
-    
     virtual std::string ticklabel(float value) const noexcept {
-        std::stringstream s; 
-		s<<((value==0)?0:value);
-		return s.str(); 
+        return impl()->ticklabel(value);
     }
 };
 
-class linear : public Base {
+namespace scale {
+
+class linear : public pattern::Reflectable<linear,ScaleBase> {
 public:
-    float transform(float x)     const noexcept override { return x; }
-    float antitransform(float y) const noexcept override { return y; }
+    static const char* type_name() { return "linear"; }
+    float transform(float x, float xmin, float xmax, float canvas_min, float canvas_max)     const noexcept override;
 };
 
-class log : public Base {
+/*
+class log : public ScaleBase {
     float base_;
 public:
     log(float base = 10.0f) : base_(base) {}
     log& base(float b) { base_ = b; return (*this); }
     float base() const { return base_; }
+
     bool is_valid(float x)       const noexcept override { return x>0; }
     float transform(float x)     const noexcept override { return std::log((x>0)?x:1.e-3f)/std::log(base()); }
     float antitransform(float y) const noexcept override { return std::pow(base(),y); }
@@ -151,10 +138,16 @@ public:
     }
     
 };
-}    
+} 
+*/ 
+}
+
    
-axis_scale::log log;
-axis_scale::symlog symlog;
-axis_scale::linear linear;
-   
-};
+scale::linear linear;
+/*
+scale::symlog symlog;
+scale::log log;
+*/
+
+}  
+}
