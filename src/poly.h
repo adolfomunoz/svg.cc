@@ -1,5 +1,6 @@
 #pragma once
 #include "element.h"
+#include "core-attributes.h"
 #include "presentation-attributes.h"
 #include "graphical-attributes.h"
 #include <list>

@@ -11,7 +11,10 @@ public:
     virtual float transform(float x, float xmin, float xmax, float canvas_min, float canvas_max) const noexcept = 0;
     virtual std::vector<float> ticks(int target_ticks, float xmin, float xmax) const noexcept; 
     virtual std::string ticklabel(float value) const noexcept;
+    virtual ~ScaleBase() {}
 };
+
+class Transform;
 
 class Scale : public pattern::Pimpl<ScaleBase> {
 public:
@@ -27,6 +30,15 @@ public:
     virtual std::string ticklabel(float value) const noexcept {
         return impl()->ticklabel(value);
     }
+
+    Transform transform(float xmin, float xmax, float canvas_min, float canvas_max) const noexcept;
+};
+
+class Transform {
+    Scale scale; float xmin, xmax, canvas_min, canvas_max;
+public:
+    Transform(const Scale& scale, float xmin, float xmax, float canvas_min, float canvas_max) noexcept;
+    float operator()(float x) const noexcept;
 };
 
 namespace scale {

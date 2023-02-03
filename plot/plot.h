@@ -1,25 +1,20 @@
-#include "axis-scale.h"
+#pragma once
 #include "plottable.h"
+#include <list>
 
 namespace svg {
 namespace plot {
 
-class SVGPlot {
-    std::list<Plottable> plottables;
-    Scale xscale_ = scale::linear();
-    Scale yscale_ = scale::linear();
+class Plot : public PlottableBase {
+    std::list<float> x, y;
 public:
-    Scale& set_xscale(const std::string& s);
-    Scale& set_yscale(const std::string& s);
-    Scale& set_xscale(const Scale& s);
-    Scale& set_yscale(const Scale& s);
-    SVGPlot& xscale(const std::string& s);
-    SVGPlot& yscale(const std::string& s);
-    SVGPlot& xscale(const Scale& s);
-    SVGPlot& yscale(const Scale& s);
-    const Scale& xscale() const noexcept;
-    const Scale& yscale() const noexcept;
-};
+    Plot(const std::list<float>& x, const std::list<float>& y);
+    Plot(std::list<float>&& x, const std::list<float>& y);
+    Plot(const std::list<float>& x, std::list<float>&& y);
+    Plot(std::list<float>&& x, std::list<float>&& y);
 
+    svg::Element plot(const Transform& xscale, const Transform& yscale) const noexcept override;
+    std::array<float,4> axis() const noexcept override;
+};
 }
 }

@@ -29,6 +29,16 @@ std::string ScaleBase::ticklabel(float value) const noexcept {
 	return s.str(); 
 }
 
+Transform Scale::transform(float xmin, float xmax, float canvas_min, float canvas_max) const noexcept {
+    return Transform(*this, xmin, xmax, canvas_min, canvas_max);
+}
+
+Transform::Transform(const Scale& scale, float xmin, float xmax, float canvas_min, float canvas_max) noexcept :
+    scale(scale), xmin(xmin), xmax(xmax), canvas_min(canvas_min), canvas_max(canvas_max) {}
+
+float Transform::operator()(float x) const noexcept {
+    return scale.transform(x,xmin,xmax,canvas_min,canvas_max);
+}
 
 float scale::linear::transform(float x, float xmin, float xmax, float canvas_min, float canvas_max) const noexcept {
     float t = (x - xmin)/(xmax - xmin);
