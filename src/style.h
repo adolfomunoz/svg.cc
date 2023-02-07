@@ -59,7 +59,7 @@ namespace detail {
 
 }
 
-std::istream& operator>>(std::istream& is, Style& style) {
+inline std::istream& operator>>(std::istream& is, Style& style) {
     std::string name; std::string value;
     while (!is.eof()) {
         std::getline(is,name,':'); //Remove trailing and ending spaces
@@ -77,7 +77,7 @@ std::istream& operator>>(std::istream& is, Style& style) {
     return is;
 }
 
-std::ostream& operator<<(std::ostream& os, const Style& style) {
+inline std::ostream& operator<<(std::ostream& os, const Style& style) {
     style.for_each_attribute([&os] (const std::string& name, const auto& value) {
         if (detail::has_value(value)) {
             os<<name<<": "<<detail::to_string(value)<<"; ";

@@ -12,7 +12,7 @@ public:
 };
 //It needs empty constructor for propper registration
 #define NAMED_TEXT_ANCHOR(NAME) \
-    class TextAnchorNamed##NAME : public pattern::Reflectable<TextAnchorNamed##NAME, TextAnchorBase> {\
+    inline class TextAnchorNamed##NAME : public pattern::Reflectable<TextAnchorNamed##NAME, TextAnchorBase> {\
         public: \
             TextAnchorNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -22,11 +22,11 @@ NAMED_TEXT_ANCHOR(start)
 //NAMED_TEXT_ANCHOR(middle)  Conflict
 NAMED_TEXT_ANCHOR(end)
 
-std::ostream& operator<<(std::ostream& os, const TextAnchor& c) {
+inline std::ostream& operator<<(std::ostream& os, const TextAnchor& c) {
     os<<c.type(); 
     return os;
 };
-std::istream& operator>>(std::istream& is, TextAnchor& c) {
+inline std::istream& operator>>(std::istream& is, TextAnchor& c) {
     std::string token; 
     is>>token;
     c.set_type(token);
@@ -41,7 +41,7 @@ public:
 };
 //It needs empty constructor for propper registration
 #define NAMED_DOMINANT_BASELINE(NAME) \
-    class DominantBaselineNamed##NAME : public pattern::Reflectable<DominantBaselineNamed##NAME, DominantBaselineBase> {\
+    inline class DominantBaselineNamed##NAME : public pattern::Reflectable<DominantBaselineNamed##NAME, DominantBaselineBase> {\
         public: \
             DominantBaselineNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -54,7 +54,7 @@ NAMED_DOMINANT_BASELINE(alphabetic)
 NAMED_DOMINANT_BASELINE(mathematical)
 NAMED_DOMINANT_BASELINE(ideographic)
 
-class DominantBaselineAuto : public pattern::Reflectable<DominantBaselineAuto, DominantBaselineBase> {\
+inline class DominantBaselineAuto : public pattern::Reflectable<DominantBaselineAuto, DominantBaselineBase> {\
     public: \
         DominantBaselineAuto () {}\
         static const char* type_name() { return "auto"; } \
@@ -62,18 +62,18 @@ class DominantBaselineAuto : public pattern::Reflectable<DominantBaselineAuto, D
     
 
 
-std::ostream& operator<<(std::ostream& os, const DominantBaseline& c) {
+inline std::ostream& operator<<(std::ostream& os, const DominantBaseline& c) {
     os<<c.type(); 
     return os;
 };
-std::istream& operator>>(std::istream& is, DominantBaseline& c) {
+inline std::istream& operator>>(std::istream& is, DominantBaseline& c) {
     std::string token; 
     is>>token;
     c.set_type(token);
     return is;
 }
 
-class MiddleMulticlass : public pattern::Reflectable<MiddleMulticlass, TextAnchorBase, DominantBaselineBase> {
+inline class MiddleMulticlass : public pattern::Reflectable<MiddleMulticlass, TextAnchorBase, DominantBaselineBase> {
     public:
         MiddleMulticlass () {}
         static const char* type_name() { return "middle"; } 

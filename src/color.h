@@ -71,7 +71,7 @@ public:
 
 //It needs empty constructor for propper registration
 #define NAMED_COLOR(NAME,R,G,B) \
-    class ColorNamed##NAME : public pattern::Reflectable<ColorNamed##NAME, ColorBase> {\
+    inline class ColorNamed##NAME : public pattern::Reflectable<ColorNamed##NAME, ColorBase> {\
         public: \
             ColorNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -99,12 +99,12 @@ NAMED_COLOR(gray,128,128,128)
 NAMED_COLOR(none,-1,-1,-1)
 
 
-std::ostream& operator<<(std::ostream& os, const Color& c) {
+inline std::ostream& operator<<(std::ostream& os, const Color& c) {
     os<<c.to_string(); 
     return os;
 };
 
-std::istream& operator>>(std::istream& is, Color& c) {
+inline std::istream& operator>>(std::istream& is, Color& c) {
     std::string token; 
     is>>token;
     if (!token.empty()) {

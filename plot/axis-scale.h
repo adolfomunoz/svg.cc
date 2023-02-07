@@ -155,7 +155,7 @@ public:
 }
 
    
-scale::linear linear;
+extern scale::linear linear;
 /*
 scale::symlog symlog;
 scale::log log;

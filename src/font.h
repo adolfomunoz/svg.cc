@@ -37,7 +37,7 @@ public:
 
 //It needs empty constructor for propper registration
 #define NAMED_FONT_WEIGHT(NAME,V) \
-    class FontWeightNamed##NAME : public pattern::Reflectable<FontWeightNamed##NAME, FontWeightBase> {\
+    inline class FontWeightNamed##NAME : public pattern::Reflectable<FontWeightNamed##NAME, FontWeightBase> {\
         public: \
             FontWeightNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -50,12 +50,12 @@ public:
 // NAMED_FONT_WEIGHT(normal,400)   Conflict
 NAMED_FONT_WEIGHT(bold,700)
 
-std::ostream& operator<<(std::ostream& os, const FontWeight& c) {
+inline std::ostream& operator<<(std::ostream& os, const FontWeight& c) {
     os<<c.to_string(); 
     return os;
 };
 
-std::istream& operator>>(std::istream& is, FontWeight& c) {
+inline std::istream& operator>>(std::istream& is, FontWeight& c) {
     if ((is.peek()>='0') && (is.peek()<='9')) {
         int value;
         is>>value;
@@ -76,7 +76,7 @@ public:
 };
 //It needs empty constructor for propper registration
 #define NAMED_FONT_STYLE(NAME) \
-    class FontStyleNamed##NAME : public pattern::Reflectable<FontStyleNamed##NAME, FontStyleBase> {\
+    inline class FontStyleNamed##NAME : public pattern::Reflectable<FontStyleNamed##NAME, FontStyleBase> {\
         public: \
             FontStyleNamed##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -86,18 +86,18 @@ public:
 NAMED_FONT_STYLE(italic)
 NAMED_FONT_STYLE(oblique)
 
-std::ostream& operator<<(std::ostream& os, const FontStyle& c) {
+inline std::ostream& operator<<(std::ostream& os, const FontStyle& c) {
     os<<c.type(); 
     return os;
 };
-std::istream& operator>>(std::istream& is, FontStyle& c) {
+inline std::istream& operator>>(std::istream& is, FontStyle& c) {
     std::string token; 
     is>>token;
     c.set_type(token);
     return is;
 }
 
-class FontNormal : public pattern::Reflectable<FontNormal, FontWeightBase, FontStyleBase> {
+inline class FontNormal : public pattern::Reflectable<FontNormal, FontWeightBase, FontStyleBase> {
     public:
         FontNormal() {}
         static const char* type_name() { return "normal"; } 

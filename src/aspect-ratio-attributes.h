@@ -35,7 +35,7 @@ public:
 
 //It needs empty constructor for propper registration
 #define PAR_ALIGNMENT(NAME) \
-    class Aligmnent##NAME : public pattern::Reflectable<Aligmnent##NAME, PreserveAspectRatioAlignmentBase> {\
+    inline class Aligmnent##NAME : public pattern::Reflectable<Aligmnent##NAME, PreserveAspectRatioAlignmentBase> {\
         public: \
             Aligmnent##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -43,7 +43,7 @@ public:
 
     //It needs empty constructor for propper registration
 #define PAR_STRATEGY(NAME) \
-    class Strategy##NAME : public pattern::Reflectable<Strategy##NAME, PreserveAspectRatioStrategyBase> {\
+    inline class Strategy##NAME : public pattern::Reflectable<Strategy##NAME, PreserveAspectRatioStrategyBase> {\
         public: \
             Strategy##NAME () {}\
             static const char* type_name() { return #NAME; } \
@@ -69,13 +69,13 @@ struct PreserveAspectRatio {
     std::optional<PreserveAspectRatioStrategy> strategy;
 };
 
-std::ostream& operator<<(std::ostream& os, const PreserveAspectRatio& par) {
+inline std::ostream& operator<<(std::ostream& os, const PreserveAspectRatio& par) {
     os<<par.alignment.name();
     if (par.strategy) os<<" "<<(*par.strategy).name();
     return os;
 }
 
-std::istream& operator>>(std::istream& is, PreserveAspectRatio& par) {
+inline std::istream& operator>>(std::istream& is, PreserveAspectRatio& par) {
     std::string alignment, strategy;
     std::getline(is,alignment,' ');
     std::getline(is,strategy,' ');

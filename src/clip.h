@@ -62,19 +62,17 @@ public:
 class Inset : public pattern::Reflectable<Inset, ClipBase,GeometryAttributes<Inset>> {
 public:
     Inset() {}
-    Inset(Length _x, Length _y, Length _width, Length _height) {
-        x(_x).y(_y).width(_width).height(_height);
+    Inset(Length top, Length right, Length bottom, Length left) {
+        x(left).y(top).width(right-left).height(bottom-top);
     }
 
     void read_clip_params(std::istream& is) override {
-        Length l;
-        is>>l; x(l);
-        is>>l; y(l);
-        is>>l; width(l);
-        is>>l; height(l);
+        Length top, right, bottom, left;
+        is>>top>>right>>bottom>>left;
+        x(left).y(top).width(right-left).height(bottom-top);
     }
     void write_clip_params(std::ostream& os) const override {
-        os<<x()<<" "<<y()<<" "<<width()<<" "<<height();
+        os<<y()<<" "<<(x()+width())<<" "<<(y()+height())<<" "<<x();
     }
     static const char* type_name() { return "inset"; }   
 };

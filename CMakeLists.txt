@@ -15,3 +15,7 @@ add_executable(represent main/represent/main.cc)
 add_executable(figure-inset main/figure-inset/main.cc)
 
 add_library(svgplot plot/src/svgplot.cc plot/src/plot.cc plot/src/axis-scale.cc)
+
+add_executable(plot main/plot/plot.cc)
+target_link_libraries(plot svgplot)
+add_executable(plot-headeronly main/plot/plot-headeronly.cc)

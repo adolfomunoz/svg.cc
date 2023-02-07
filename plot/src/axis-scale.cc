@@ -46,4 +46,5 @@ float scale::linear::transform(float x, float xmin, float xmax, float canvas_min
 }
 
 }
+plot::scale::linear linear;
 }

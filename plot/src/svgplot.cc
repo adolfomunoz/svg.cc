@@ -1,5 +1,6 @@
 #include "../svgplot.h"
 #include "../../src/group.h"
+#include "../../src/rect.h"
 #include "../../src/clipPath.h"
 #include <codecvt>
 #include <fstream>
@@ -92,8 +93,11 @@ svg::SVG SVGPlot::svg() const noexcept {
     auto fs = figsize();
     auto ax = axis();
     svg::SVG output;
+    output.viewBox(svg::Box(0.0f,0.0f,fs[0],fs[1]));
+    svg::ClipPath& clip = output.add(ClipPath());
+    clip.add(svg::Rect(0.0f,0.0f,fs[0],fs[1]));
     svg::Group& plots = output.add(svg::Group());
-    plots.clip_path(svg::Inset(0.0f,0.0f,fs[0],fs[1]));
+    plots.clip_path(svg::Url(clip.id()));
     for (const Plottable& plottable : plottables)
         plots.add(plottable.plot(xscale().transform(ax[0],ax[1],0.0f,fs[0]),
                                  yscale().transform(ax[2],ax[3],0.0f,fs[1])));

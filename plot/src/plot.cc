@@ -13,6 +13,7 @@ svg::Element Plot::plot(const Transform& xscale, const Transform& yscale) const 
     std::list<float>::const_iterator ix, iy;
     for (ix = x.begin(), iy = y.begin(); (ix != x.end()) && (iy != y.end()); ++ix, ++iy)
         output.add_point(xscale(*ix),yscale(*iy));
+    output.fill(none).stroke_width(linewidth()).stroke(color()).opacity(alpha());
     return output;
 }
 std::array<float,4> Plot::axis() const noexcept {
@@ -28,5 +29,11 @@ std::array<float,4> Plot::axis() const noexcept {
     return a;
 }
 
+Plot& Plot::linewidth(float f) noexcept { linewidth_=f; return *this; }
+float Plot::linewidth() const noexcept { return linewidth_; }
+Plot& Plot::alpha(float f) noexcept { alpha_=f; return *this; }
+float Plot::alpha() const noexcept { return alpha_; }
+Plot& Plot::color(const svg::Color& c) { color_=c; return *this; }
+const svg::Color& Plot::color() const { return color_; }
 } 
 }

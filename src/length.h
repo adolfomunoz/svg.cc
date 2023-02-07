@@ -40,11 +40,11 @@ LENGTH_UNIT(Pt,"pt",1.33333333f)
 LENGTH_UNIT(Pc,"pc",16.0f)
 LENGTH_UNIT(Percentage,"%",-1.0f)
 
-std::ostream& operator<<(std::ostream& os, const LengthUnit& unit) {
+inline std::ostream& operator<<(std::ostream& os, const LengthUnit& unit) {
     os<<unit.name(); return os;
 };
 
-std::istream& operator>>(std::istream& is, LengthUnit& unit) {
+inline std::istream& operator>>(std::istream& is, LengthUnit& unit) {
     std::string token; is>>token;
     unit.set_type(token);
 
@@ -95,12 +95,12 @@ public:
     friend std::istream& operator>>(std::istream& is, Length& length);
 };
 
-std::ostream& operator<<(std::ostream& os, const Length& length) {
+inline std::ostream& operator<<(std::ostream& os, const Length& length) {
     os<<length.quantity()<<length.unit();
     return os;
 }
 
-std::istream& operator>>(std::istream& is, Length& length) {
+inline std::istream& operator>>(std::istream& is, Length& length) {
     is>>length.q>>length.u;
     return is;
 }

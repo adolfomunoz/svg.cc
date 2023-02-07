@@ -17,12 +17,12 @@ public:
     friend std::istream& operator>>(std::istream& is, Box& box);
 };
 
-std::ostream& operator<<(std::ostream& os, const Box& box) {
+inline std::ostream& operator<<(std::ostream& os, const Box& box) {
     os<<box.x()<<" "<<box.y()<<" "<<box.width()<<" "<<box.height();
     return os;
 }
 
-std::istream& operator>>(std::istream& is, Box& box) {
+inline std::istream& operator>>(std::istream& is, Box& box) {
     is>>box._x>>box._y>>box._width>>box._height;
     return is;
 }
