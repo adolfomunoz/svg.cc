@@ -44,11 +44,24 @@ public:
 private:
     std::optional<std::array<float,2>> figsize_;
     std::optional<std::array<float,4>> axis_;
+    float linewidth_ = 1;
+    std::vector<svg::Color> color_cycle{
+        svg::ColorHex("#1f77b4"),svg::ColorHex("#ff7f0e"),svg::ColorHex("#2ca02c"),
+        svg::ColorHex("#d62728"),svg::ColorHex("#9467bd"),svg::ColorHex("#8c564b"),
+        svg::ColorHex("#e377c2"),svg::ColorHex("#7f7f7f"),svg::ColorHex("#bcbd22"),
+        svg::ColorHex("#17becf")}; 
+    std::size_t color_cycle_pos{0};
+    svg::Color next_color() noexcept;
+
     std::array<float,2> figsize() const noexcept;
     std::array<float,4> axis() const noexcept;
+    float linewidth() const noexcept;
+
+    std::array<float,4> margin() const noexcept;
 public:
     SVGPlot& figsize(const std::array<float,2>& fs) noexcept;
     SVGPlot& axis(const std::array<float,4>& a) noexcept;
+    SVGPlot& linewidth(float lw) noexcept;
     /****************
      * OUTPUT
      ****************/

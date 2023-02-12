@@ -45,7 +45,11 @@ SVGPlot& SVGPlot::yscale(const std::string& s) {
      ****************/
 
 Plot& SVGPlot::plot(std::list<float>&& x, std::list<float>&& y) noexcept {
-    plottables.push_back(Plot(std::forward<std::list<float>>(x),std::forward<std::list<float>>(y)));
+    plottables.push_back(
+        Plot(std::forward<std::list<float>>(x),std::forward<std::list<float>>(y))
+            .color(next_color())
+    );
+
     return plottables.back().cast_static<Plot>();
 }
 
@@ -77,6 +81,25 @@ std::array<float,4> SVGPlot::axis() const noexcept {
 	}
 }
 
+float SVGPlot::linewidth() const noexcept {
+    return linewidth_;
+}
+
+svg::Color SVGPlot::next_color() noexcept {
+    auto c = color_cycle[color_cycle_pos];
+    color_cycle_pos = (color_cycle_pos + 1)%color_cycle.size();
+    return c;
+}
+
+std::array<float,4> SVGPlot::margin() const noexcept {
+    return std::array<float,4>{
+        0.5f*linewidth(), //Left
+        0.5f*linewidth(), //Right
+        0.5f*linewidth(), //Top
+        0.5f*linewidth()  //Bottom
+    };
+}
+
 SVGPlot& SVGPlot::figsize(const std::array<float,2>& fs) noexcept {
     figsize_ = fs; return (*this);
 }
@@ -85,6 +108,11 @@ SVGPlot& SVGPlot::axis(const std::array<float,4>& a) noexcept {
     axis_ = a; return (*this);
 }
 
+SVGPlot& SVGPlot::linewidth(float lw) noexcept {
+    linewidth_ = lw; return (*this);
+}
+
+
     /****************
      * OUTPUT
      ****************/
@@ -92,15 +120,18 @@ SVGPlot& SVGPlot::axis(const std::array<float,4>& a) noexcept {
 svg::SVG SVGPlot::svg() const noexcept {
     auto fs = figsize();
     auto ax = axis();
+    auto mg = margin();
     svg::SVG output;
+    svg::Rect border(mg[0],mg[2],fs[0]-mg[1],fs[1]-mg[3]);
     output.viewBox(svg::Box(0.0f,0.0f,fs[0],fs[1]));
     svg::ClipPath& clip = output.add(ClipPath());
-    clip.add(svg::Rect(0.0f,0.0f,fs[0],fs[1]));
+    clip.add(border);
     svg::Group& plots = output.add(svg::Group());
     plots.clip_path(svg::Url(clip.id()));
     for (const Plottable& plottable : plottables)
-        plots.add(plottable.plot(xscale().transform(ax[0],ax[1],0.0f,fs[0]),
-                                 yscale().transform(ax[2],ax[3],0.0f,fs[1])));
+        plots.add(plottable.plot(xscale().transform(ax[0],ax[1],mg[0],fs[0]-mg[1]),
+                                 yscale().transform(ax[2],ax[3],mg[2],fs[1]-mg[3])));
+    output.add(border).fill(svg::none).stroke(svg::black).stroke_width(linewidth());
     return output;
 }
 
