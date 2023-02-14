@@ -7,7 +7,7 @@ namespace plot {
 
 //Adjust a floating point number so it only has two meaningful digits
 float adjust(float x) noexcept {
-    float div_by = std::pow(int(std::log10(std::abs(x))),10.0f)/100.0f;
+    float div_by = std::pow(10.0f,int(std::log10(std::abs(x))))/100.0f;
     return int(x/div_by)*div_by;
 }
 
@@ -15,7 +15,6 @@ std::vector<float> ScaleBase::ticks(int target_ticks, float xmin, float xmax) co
     float tick_ref = 0;
     if ((xmax*xmin) > 0.0f) tick_ref = adjust(0.5*(xmax+xmin));
     float tick_step = adjust((xmax-xmin)/float(target_ticks-1));
-
     std::vector<float> sol;
     for (int i = (target_ticks/2); i>0; --i) sol.push_back(tick_ref - tick_step*i);
     sol.push_back(tick_ref);

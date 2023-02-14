@@ -54,14 +54,14 @@ public:
     bool has_text_anchor() const noexcept { return bool(_text_anchor); }
 
     T& dominant_baseline(const DominantBaseline& db) noexcept {
-        _dominant_baseline = db;
+        _dominant_baseline = db; return t();
     }
     DominantBaseline dominant_baseline() const noexcept { return _dominant_baseline.value_or(_auto); }
     bool has_dominant_baseline() const noexcept { return bool(_dominant_baseline); }
 
 
-    auto reflect() { return std::tie(_font_size,_font_weight,_font_family); }
-    auto reflect_names() const { return std::tuple("font-size","font-weight","font-family"); }
+    auto reflect() { return std::tie(_font_size,_font_weight,_font_family,_font_style,_text_anchor,_dominant_baseline); }
+    auto reflect_names() const { return std::tuple("font-size","font-weight","font-family","font-style","text-anchor","dominant-baseline"); }
 };
 
 }

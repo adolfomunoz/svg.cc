@@ -44,6 +44,8 @@ public:
 private:
     std::optional<std::array<float,2>> figsize_;
     std::optional<std::array<float,4>> axis_;
+    std::optional<std::vector<float>> xticks_, yticks_;
+    std::optional<std::vector<std::string>> xticklabels_, yticklabels_;
     float linewidth_ = 1;
     std::vector<svg::Color> color_cycle{
         svg::ColorHex("#1f77b4"),svg::ColorHex("#ff7f0e"),svg::ColorHex("#2ca02c"),
@@ -55,6 +57,10 @@ private:
 
     std::array<float,2> figsize() const noexcept;
     std::array<float,4> axis() const noexcept;
+    std::vector<float> xticks() const noexcept;
+    std::vector<float> yticks() const noexcept;
+    std::vector<std::string> xticklabels() const noexcept;
+    std::vector<std::string> yticklabels() const noexcept;
     float linewidth() const noexcept;
 
     std::array<float,4> margin() const noexcept;
@@ -62,6 +68,12 @@ public:
     SVGPlot& figsize(const std::array<float,2>& fs) noexcept;
     SVGPlot& axis(const std::array<float,4>& a) noexcept;
     SVGPlot& linewidth(float lw) noexcept;
+    SVGPlot& xticks(const std::vector<float>& xt) noexcept;
+    SVGPlot& yticks(const std::vector<float>& yt) noexcept;
+    SVGPlot& xticks(const std::vector<float>& xt, const std::vector<std::string>& xtl) noexcept;
+    SVGPlot& yticks(const std::vector<float>& yt, const std::vector<std::string>& ytl) noexcept;
+    SVGPlot& xticklabels(const std::vector<std::string>& xtl) noexcept;
+    SVGPlot& yticklabels(const std::vector<std::string>& ytl) noexcept;
     /****************
      * OUTPUT
      ****************/
