@@ -46,6 +46,8 @@ private:
     std::optional<std::array<float,4>> axis_;
     std::optional<std::vector<float>> xticks_, yticks_;
     std::optional<std::vector<std::string>> xticklabels_, yticklabels_;
+    std::string ylabel_, xlabel_, title_;
+
     float linewidth_ = 1;
     std::vector<svg::Color> color_cycle{
         svg::ColorHex("#1f77b4"),svg::ColorHex("#ff7f0e"),svg::ColorHex("#2ca02c"),
@@ -74,6 +76,13 @@ public:
     SVGPlot& yticks(const std::vector<float>& yt, const std::vector<std::string>& ytl) noexcept;
     SVGPlot& xticklabels(const std::vector<std::string>& xtl) noexcept;
     SVGPlot& yticklabels(const std::vector<std::string>& ytl) noexcept;
+    std::string_view title() const noexcept;
+	SVGPlot& title(std::string_view l) noexcept;
+	std::string_view ylabel() const noexcept;
+	SVGPlot& ylabel(std::string_view l) noexcept;
+	std::string_view xlabel() const noexcept;
+	SVGPlot& xlabel(std::string_view l) noexcept;
+
     /****************
      * OUTPUT
      ****************/

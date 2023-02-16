@@ -16,9 +16,16 @@ std::vector<float> ScaleBase::ticks(int target_ticks, float xmin, float xmax) co
     if ((xmax*xmin) > 0.0f) tick_ref = adjust(0.5*(xmax+xmin));
     float tick_step = adjust((xmax-xmin)/float(target_ticks-1));
     std::vector<float> sol;
-    for (int i = (target_ticks/2); i>0; --i) sol.push_back(tick_ref - tick_step*i);
-    sol.push_back(tick_ref);
-    for (int i = 1; i<=(target_ticks/2); ++i) sol.push_back(tick_ref + tick_step*i);
+    for (int i = (target_ticks); i>0; --i) {
+        float tick = adjust(tick_ref - tick_step*i);
+        if (tick >= xmin) sol.push_back(tick);
+    }
+    sol.push_back(tick_ref); 
+
+    for (int i = 1; i<=(target_ticks); ++i) {
+        float tick = adjust(tick_ref + tick_step*i);
+        if (tick <= xmax) sol.push_back(tick);
+    }
     return sol;
 }
     
