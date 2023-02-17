@@ -141,27 +141,27 @@ svg::Color SVGPlot::next_color() noexcept {
     return c;
 }
 
-std::array<float,4> SVGPlot::margin() const noexcept {
+float SVGPlot::yticklabels_size() const noexcept {
     auto ylabs = yticklabels();
-    bool xt = !xticks().empty(); bool xtl = !xticklabels().empty();
-    bool yt = !yticks().empty(); bool ytl = !ylabs.empty();
-    //Assuming font size of 10 but if we add fonts this needs to change
-
-    const float fontsize = 10.0f;
     float yticksspace = 0.0f;
     for (auto y : ylabs) {
-        float yspace = float(y.size())*fontsize*3.0f/4.0f;
+        float yspace = float(y.size())*fontsize()*3.0f/4.0f;
         if (yspace > yticksspace) yticksspace = yspace;
     }
+    return yticksspace;
+}
 
-    const float title_fontsize = fontsize*2.0f;
+std::array<float,4> SVGPlot::margin() const noexcept {
+    bool xt = !xticks().empty(); bool xtl = !xticklabels().empty();
+    bool yt = !yticks().empty(); bool ytl = !yticklabels().empty();
+    //Assuming font size of 10 but if we add fonts this needs to change
 
     //Right and top are affected by xticklabels and yticklabels because the text might get out of there
     return std::array<float,4>{
-        0.5f*linewidth() + (xt?3.0f:0.0f) + yticksspace, //Left
+        0.5f*linewidth() + (xt?3.0f:0.0f) + yticklabels_size() + (ylabel().empty()?0.0f:(2.0f*label_fontsize()+1.0f)), //Left
         0.5f*linewidth() + (ytl?10.0f:0.0f), //Right
-        0.5f*linewidth() + (title().empty()?0.0f:title_fontsize+2.0f) + (xtl?7.5f:0.0f), //Top
-        0.5f*linewidth() + (yt?3.0f:0.0f) + (ytl?(fontsize+2.0f):0.0f) //Bottom
+        0.5f*linewidth() + (title().empty()?0.0f:title_fontsize()+2.0f) + (xtl?7.5f:0.0f), //Top
+        0.5f*linewidth() + (yt?3.0f:0.0f) + (ytl?(fontsize()+2.0f):0.0f) + (xlabel().empty()?0.0f:(label_fontsize()+1.0f)) //Bottom
     };
 }
 
@@ -231,7 +231,6 @@ svg::SVG SVGPlot::svg() const noexcept {
 
     auto xt = xticks();
     auto xtl = xticklabels();
-    const float fontsize = 10.0f;
     //We don't give the option of configuring tick appearance yet. Width = linewidth and length = 3
     const float ticklength = 3.0f;
     for (std::size_t i = 0; i<xt.size(); ++i) {
@@ -239,7 +238,7 @@ svg::SVG SVGPlot::svg() const noexcept {
         output.add(svg::Line(x,border.y()+border.height(),x,border.y()+border.height()+ticklength)).stroke_width(linewidth()).stroke(svg::black);
         if (i<xtl.size())
             output.add(svg::Text(xtl[i],x,border.y()+border.height()+ticklength+3.0f))
-                .font_size(fontsize).font_family("sans-serif").dominant_baseline(svg::hanging).text_anchor(svg::middle);
+                .font_size(fontsize()).font_family("sans-serif").dominant_baseline(svg::hanging).text_anchor(svg::middle);
     }
 
     auto yt = yticks();
@@ -249,12 +248,25 @@ svg::SVG SVGPlot::svg() const noexcept {
         output.add(svg::Line(border.x(),y,border.x()-ticklength,y)).stroke_width(linewidth()).stroke(svg::black);
         if (i<ytl.size())
             output.add(svg::Text(ytl[i],border.x()-ticklength-1.0f,y))
-                .font_size(fontsize).font_family("sans-serif").dominant_baseline(svg::middle).text_anchor(svg::end);
+                .font_size(fontsize()).font_family("sans-serif").dominant_baseline(svg::middle).text_anchor(svg::end);
     }
 
     if (!title().empty()) {
-        output.add(svg::Text(title(),figsize()[0],border.y()-2.0f))
-            .font_size(fontsize*2).font_family("sans-serif").text_anchor(svg::middle);
+        output.add(svg::Text(title(),0.5f*figsize()[0],border.y()-0.5f*title_fontsize()))
+            .font_size(title_fontsize()).font_family("sans-serif").text_anchor(svg::middle);
+    }
+
+    if (!xlabel().empty()) {
+        output.add(svg::Text(xlabel(),border.x()+0.5f*border.width(),border.y()+border.height()+ticklength+fontsize()+5.0f))
+            .font_size(label_fontsize()).font_family("sans-serif").dominant_baseline(svg::hanging).text_anchor(svg::middle);
+    }
+
+    if (!ylabel().empty()) {
+        float x = border.x() - ticklength - yticklabels_size() - 2.0f;
+        float y = border.y() + 0.5f*border.height();
+        output.add(svg::Text(ylabel(),x,y))
+            .font_size(label_fontsize()).font_family("sans-serif").text_anchor(svg::middle)
+            .add_transform(svg::Rotate(-90,x,y));
     }
 
     return output;

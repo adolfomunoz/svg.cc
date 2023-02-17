@@ -65,6 +65,10 @@ private:
     std::vector<std::string> yticklabels() const noexcept;
     float linewidth() const noexcept;
 
+    constexpr float fontsize() const noexcept { return 10.0; }
+    constexpr float title_fontsize() const noexcept { return 2.4*fontsize(); }
+    constexpr float label_fontsize() const noexcept { return 1.6*fontsize(); }
+    float yticklabels_size() const noexcept;
     std::array<float,4> margin() const noexcept;
 public:
     SVGPlot& figsize(const std::array<float,2>& fs) noexcept;
