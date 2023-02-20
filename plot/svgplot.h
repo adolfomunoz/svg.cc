@@ -2,6 +2,7 @@
 #include "axis-scale.h"
 #include "plottable.h"
 #include "plot.h"
+#include "linspace.h"
 #include "../src/svg.h"
 
 #include <list>
