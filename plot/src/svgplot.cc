@@ -4,6 +4,7 @@
 #include "../../src/clipPath.h"
 #include "../../src/line.h"
 #include "../../src/text.h"
+#include "../arange.h"
 #include <codecvt>
 #include <fstream>
 
@@ -47,12 +48,27 @@ SVGPlot& SVGPlot::yscale(const std::string& s) {
      ****************/
 
 Plot& SVGPlot::plot(std::list<float>&& x, std::list<float>&& y) noexcept {
-    plottables.push_back(
-        Plot(std::forward<std::list<float>>(x),std::forward<std::list<float>>(y))
-            .color(next_color())
-    );
-
+    plottables.push_back(Plot(std::move(x),std::move(y)).color(next_color()));
     return plottables.back().cast_static<Plot>();
+}
+
+Plot& SVGPlot::plot(const std::list<float>& x, std::list<float>&& y) noexcept {
+    plottables.push_back(Plot(x,std::move(y)).color(next_color()));
+    return plottables.back().cast_static<Plot>();
+}
+
+Plot& SVGPlot::plot(std::list<float>&& x, const std::list<float>& y) noexcept {
+    plottables.push_back(Plot(std::move(x),y).color(next_color()));
+    return plottables.back().cast_static<Plot>();
+}
+
+Plot& SVGPlot::plot(const std::list<float>& x, const std::list<float>& y) noexcept {
+    plottables.push_back(Plot(x,y).color(next_color()));
+    return plottables.back().cast_static<Plot>();
+}
+
+Plot& SVGPlot::plot(std::list<float>&& y) noexcept {
+    return plot(arange(y.size()),std::move(y));
 }
 
    /***************

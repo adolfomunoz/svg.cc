@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 		plt.savefig("../doc/svgplot/plot/example2.svg");
 	}
 	
-	{ // Example 3
+		{ // Example 3
 		svg::plot::SVGPlot plt;
 		float f=-1.0;
 		std::list<float> l; 
@@ -25,7 +25,8 @@ int main(int argc, char** argv) {
 		plt.plot(svg::plot::arange(0,5,0.05),l);
 		plt.savefig("../doc/svgplot/plot/example3.svg");
 	}
-	
+
+/*
 	{ // Example 4
 		svg::plot::SVGPlot plt;
         auto x = svg::plot::linspace(0,5);
@@ -68,4 +69,5 @@ int main(int argc, char** argv) {
 			.marker("s").color(svg::rgb(0.2,0.8,0.2)).markersize(2);
  		plt.savefig("../doc/svgplot/plot/example6.svg");
 	}
+*/
 }

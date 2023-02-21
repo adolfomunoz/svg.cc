@@ -38,6 +38,15 @@ public:
      * PLOT variants
      ****************/
     Plot& plot(std::list<float>&& x, std::list<float>&& y) noexcept;
+    Plot& plot(const std::list<float>& x, std::list<float>&& y) noexcept;
+    Plot& plot(std::list<float>&& x, const std::list<float>& y) noexcept;
+    Plot& plot(const std::list<float>& x, const std::list<float>& y) noexcept;
+
+    Plot& plot(std::list<float>&& y) noexcept;
+    template<typename Collection>
+    Plot& plot(Collection&& y, std::enable_if_t<std::is_arithmetic_v<std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->plot(arange(y.size()),std::forward<Collection>(y));    
+    }
 
     /***************
      * GRAPH setup

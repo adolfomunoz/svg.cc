@@ -27,6 +27,7 @@ public:
     arange operator/(float v) const {
         return arange(start/v,stop/v,step/v);
     }
+
 	
 	class const_iterator : public std::iterator<std::input_iterator_tag, float>{
 		friend class arange;
@@ -54,6 +55,18 @@ public:
 	
 	const_iterator begin() const { return const_iterator(start,step); }
 	const_iterator end() const { return const_iterator(stop,step); }
+
+	operator std::vector<float>() const {
+		std::vector<float> s;
+		for (float x : (*this)) s.push_back(x);
+		return s;
+	}
+
+	operator std::list<float>() const {
+		std::list<float> s;
+		for (float x : (*this)) s.push_back(x);
+		return s;
+	}
     
     float front() const { return start; }
     float back() const { unsigned long n = (stop-start)/step; return start+n*step; }
