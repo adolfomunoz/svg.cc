@@ -11,8 +11,9 @@ Scatter::Scatter(std::vector<float>&& x, std::vector<float>&& y) : x(std::move(x
 
 svg::Element Scatter::plot(const Transform& xscale, const Transform& yscale) const noexcept {
     svg::Group output;
+    output.add(svg::Defs());
     for (std::size_t i = 0; (i<x.size()) && (i<y.size()); ++i) {
-
+        output.add(marker_.)
     }
     std::list<float>::const_iterator ix, iy;
     for (ix = x.begin(), iy = y.begin(); (ix != x.end()) && (iy != y.end()); ++ix, ++iy)

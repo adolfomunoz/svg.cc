@@ -12,3 +12,4 @@
 #include "src/clipPath.h"
 #include "src/search.h"
 #include "src/text.h"
+#include "src/use.h"
