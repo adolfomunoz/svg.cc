@@ -71,6 +71,31 @@ Plot& SVGPlot::plot(std::list<float>&& y) noexcept {
     return plot(arange(y.size()),std::move(y));
 }
 
+    /***************
+     * SCATTER variants
+     * 
+     ****************/
+Scatter& SVGPlot::scatter(std::vector<float>&& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(Scatter(std::move(x),std::move(y)).c(next_color()));
+    return plottables.back().cast_static<Scatter>();
+}
+
+Scatter& SVGPlot::scatter(const std::vector<float>& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(Scatter(x,std::move(y)).c(next_color()));
+    return plottables.back().cast_static<Scatter>();
+}
+
+Scatter& SVGPlot::scatter(std::vector<float>&& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(Scatter(std::move(x),y).c(next_color()));
+    return plottables.back().cast_static<Scatter>();
+}
+
+Scatter& SVGPlot::scatter(const std::vector<float>& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(Scatter(x,y).c(next_color()));
+    return plottables.back().cast_static<Scatter>();
+}
+
+
    /***************
      * GRAPH setup
      ****************/

@@ -1,5 +1,4 @@
 #pragma once
-#include <iterator>
 
 namespace svg {
 namespace plot {
@@ -29,7 +28,7 @@ public:
     }
 
 	
-	class const_iterator : public std::iterator<std::input_iterator_tag, float>{
+	class const_iterator {
 		friend class arange;
 		float x, step;
 		const_iterator(float x , float step) :

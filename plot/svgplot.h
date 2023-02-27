@@ -2,6 +2,7 @@
 #include "axis-scale.h"
 #include "plottable.h"
 #include "plot.h"
+#include "scatter.h"
 #include "linspace.h"
 #include "../src/svg.h"
 
@@ -47,6 +48,14 @@ public:
     Plot& plot(Collection&& y, std::enable_if_t<std::is_arithmetic_v<std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
         return this->plot(arange(y.size()),std::forward<Collection>(y));    
     }
+
+    /***************
+     * SCATTER variants
+     ****************/
+    Scatter& scatter(std::vector<float>&& x, std::vector<float>&& y) noexcept;
+    Scatter& scatter(const std::vector<float>& x, std::vector<float>&& y) noexcept;
+    Scatter& scatter(std::vector<float>&& x, const std::vector<float>& y) noexcept;
+    Scatter& scatter(const std::vector<float>& x, const std::vector<float>& y) noexcept;
 
     /***************
      * GRAPH setup

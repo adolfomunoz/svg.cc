@@ -18,6 +18,8 @@ add_library(svgplot plot/src/svgplot.cc plot/src/plot.cc plot/src/scatter.cc plo
 
 add_executable(plot main/plot/plot.cc)
 target_link_libraries(plot svgplot)
+add_executable(scatter main/plot/scatter.cc)
+target_link_libraries(scatter svgplot)
 add_executable(headeronly main/plot/headeronly.cc)
 add_executable(savefig main/plot/savefig.cc)
 target_link_libraries(savefig svgplot)

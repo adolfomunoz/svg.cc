@@ -19,7 +19,7 @@ svg::Element Scatter::plot(const Transform& xscale, const Transform& yscale) con
     auto& points = output.add(svg::Group());
     for (std::size_t i = 0; (i<x.size()) && (i<y.size()); ++i) {
         points.add(svg::Use(marker_)).
-            x(x[i]).y(y[i]).width(markersize(i)).height(markersize(i)).
+            x(xscale(x[i])).y(yscale(y[i])).width(markersize(i)).height(markersize(i)).
             fill(color(i)).stroke_width(linewidth(i)).stroke(edgecolor(i)).
             opacity(alpha(i)).fill_opacity(alpha(i));
     }
