@@ -5,6 +5,7 @@
 #include "../../src/defs.h"
 #include "../../src/circle.h"
 #include "../../src/rect.h"
+#include "color.h"
 #include <cmath>
 
 namespace svg {
@@ -46,7 +47,7 @@ std::array<float,4> Scatter::axis() const noexcept {
     return a;
 }
 
-Scatter& Scatter::linewidth(float f) noexcept {
+Scatter& Scatter::linewidths(float f) noexcept {
     this->linewidth_ = std::vector<float>(1,f);
     return (*this);
 }
@@ -54,9 +55,15 @@ Scatter& Scatter::alpha(float f) noexcept {
     this->alpha_ = std::vector<float>(1,f);
     return (*this);
 }
-Scatter& Scatter::c(const svg::Color& c) noexcept {
-    this->color_ = c;
+Scatter& Scatter::c(const svg::Color& sc) noexcept {
+    this->color_ = sc;
     return (*this);
+}
+Scatter& Scatter::c(const std::string& sc) noexcept {
+    return c(color_from_string(sc));
+}
+Scatter& Scatter::c(const char* sc) noexcept {
+    return c(std::string(sc));
 }
 Scatter& Scatter::s(float f) noexcept {
     this->markersize_ = std::vector<float>(1,f);
@@ -66,7 +73,12 @@ Scatter& Scatter::edgecolors(const svg::Color& c) noexcept {
     this->edgecolor_ = c;
     return (*this);
 }
-
+Scatter& Scatter::edgecolors(const std::string& c) noexcept {
+    return edgecolors(color_from_string(c));
+}
+Scatter& Scatter::edgecolors(const char* c) noexcept {
+    return edgecolors(std::string(c));
+}
 Scatter& Scatter::marker(const svg::Element& m) noexcept {
     this->marker_ = m;
     return (*this);

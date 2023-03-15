@@ -27,11 +27,11 @@ int main(int argc, char** argv) {
         plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example2.svg");
 	}
 
-/*
+
     { // Example 3
         std::mt19937 gen{1}; //Fixed seed
         std::fisher_f_distribution<float> d(5.0,5.0);
-        std::list<float> x,y;
+        std::vector<float> x,y;
         for (int n=0;n<50;++n) { 
             x.push_back(d(gen)); y.push_back(d(gen)); 
         }
@@ -39,7 +39,8 @@ int main(int argc, char** argv) {
         plt.scatter(x,y).c("r").alpha(0.5).s(2).edgecolors("black").linewidths(0.5);
         plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example3.svg");
 	}
-    
+
+/*   
     { // Example 4
         svg::plot::SVGPlot plt; int p=0;
         for (std::string marker : {"o",".",",","v",">","^","<","s","+","P","x","X"}) {

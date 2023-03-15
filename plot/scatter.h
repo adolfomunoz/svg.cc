@@ -26,11 +26,15 @@ public:
     std::array<float,4> axis() const noexcept override;
 
     /*NAMED ATTRIBUTES*/
-    Scatter& linewidth(float f) noexcept;
+    Scatter& linewidths(float f) noexcept;
     Scatter& alpha(float f) noexcept;
-	Scatter& c(const svg::Color& c) noexcept;
+	Scatter& c(const svg::Color& sc) noexcept;
+	Scatter& c(const std::string& sc) noexcept;
+	Scatter& c(const char* sc) noexcept;
     Scatter& s(float f) noexcept;
     Scatter& edgecolors(const svg::Color& c) noexcept;
+    Scatter& edgecolors(const std::string& c) noexcept;
+	Scatter& edgecolors(const char* c) noexcept;
     Scatter& marker(const svg::Element& m) noexcept;
     Scatter& marker(std::string_view f) noexcept;
 private:
