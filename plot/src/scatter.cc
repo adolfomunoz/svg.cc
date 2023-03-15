@@ -3,6 +3,9 @@
 #include "../../src/use.h"
 #include "../../src/group.h"
 #include "../../src/defs.h"
+#include "../../src/circle.h"
+#include "../../src/rect.h"
+#include <cmath>
 
 namespace svg {
 namespace plot {
@@ -63,6 +66,40 @@ Scatter& Scatter::edgecolors(const svg::Color& c) noexcept {
     this->edgecolor_ = c;
     return (*this);
 }
+
+Scatter& Scatter::marker(const svg::Element& m) noexcept {
+    this->marker_ = m;
+    return (*this);
+}
+
+namespace {
+inline svg::Polygon plus(float s, float w) {
+    const float hs = 0.5f*s;
+    const float hw = 0.5f*w;
+    return svg::Polygon({{hw,hw},{hs,hw},{hs,-hw},{hw,-hw},{hw,-hs},{-hw,-hs},{-hw,-hw},{-hs,-hw},{-hs,hw},{-hw,hw},{-hw,hs},{hw,hs}});
+}
+inline svg::Polygon times(float s, float w) {
+    return plus(s*std::sqrt(2.0f),w).add_transform(svg::Rotate(45));
+}
+}
+
+Scatter& Scatter::marker(std::string_view f) noexcept {
+		if (f == "o") return marker(svg::Circle(0,0,1));
+        else if (f == ".") return marker(svg::Circle(0,0,0.5));
+		else if (f == ",") return marker(svg::Circle(0,0,0.23));
+		else if (f == "v") return marker(svg::Polygon({{0,1},{1,-1},{-1,-1}}));
+		else if (f == ">") return marker(svg::Polygon({{1,0},{-1,1},{-1,-1}}));
+		else if (f == "^") return marker(svg::Polygon({{0,-1},{1,1},{-1,1}}));
+		else if (f == "<") return marker(svg::Polygon({{-1,0},{1,1},{1,-1}}));
+		else if (f == "s") return marker(svg::Rect(-1,-1,1,1));
+        //From now on size, color and alpha affect stroke but not fill. We setup the stroke width here
+        else if (f == "+") return marker(plus(2,0.3));
+ 		else if (f == "P") return marker(plus(2,0.7)); 
+		else if (f == "x") return marker(times(2,0.3));
+		else if (f == "X") return marker(times(1.5,0.7));
+		else return marker(svg::Circle(0,0,1)); //By default, a circle
+}
+
 
 svg::Color Scatter::color(std::size_t i) const noexcept {
     return color_;

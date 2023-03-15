@@ -69,17 +69,23 @@ public:
 class Polygon : public pattern::Reflectable<Polygon,Poly<Polygon>,
         PresentationAttributes<Polygon>,CoreAttributes<Polygon>,GraphicalAttributes<Polygon>> {
 public:
-    //Needed for SelfRegisteringReflectable
-    Polygon() {}
-//    using Poly<Polygon>::Poly;
+    
+    Polygon(std::initializer_list<std::tuple<float,float>> ps = {}) {
+        points(ps);
+    }
+    // Cannot do this below because it is reflectable and not a direct base of Poly
+    // using Poly<Polygon>::Poly;
     static const char* type_name() { return "polygon"; } 
 };
 
 class Polyline : public pattern::Reflectable<Polyline,Poly<Polyline>,
         PresentationAttributes<Polyline>,CoreAttributes<Polyline>, GraphicalAttributes<Polyline>> {
 public:
-    //Needed for SelfRegisteringReflectable
-    Polyline() {}//    using Poly<Polyline>::Poly;
+    Polyline(std::initializer_list<std::tuple<float,float>> ps = {}) {
+        points(ps);
+    }
+    // Cannot do this below because it is reflectable and not a direct base of Poly
+    // using Poly<Polyline>::Poly;
     static const char* type_name() { return "polyline"; } 
 };
 
