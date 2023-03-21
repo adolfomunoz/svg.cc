@@ -23,7 +23,7 @@ svg::Element Scatter::plot(const Transform& xscale, const Transform& yscale) con
     auto& points = output.add(svg::Group());
     for (std::size_t i = 0; (i<x.size()) && (i<y.size()); ++i) {
         points.add(svg::Use(marker_)).
-            x(xscale(x[i])).y(yscale(y[i])).width(markersize(i)).height(markersize(i)).
+            add_transform(svg::Scale(markersize(i))).add_transform(svg::Translate(xscale(x[i]),yscale(y[i]))).
             fill(color(i)).stroke_width(linewidth(i)).stroke(edgecolor(i)).
             opacity(alpha(i)).fill_opacity(alpha(i));
     }
@@ -95,7 +95,7 @@ inline svg::Polygon times(float s, float w) {
 }
 }
 
-Scatter& Scatter::marker(std::string_view f) noexcept {
+Scatter& Scatter::marker(const std::string& f) noexcept {
 		if (f == "o") return marker(svg::Circle(0,0,1));
         else if (f == ".") return marker(svg::Circle(0,0,0.5));
 		else if (f == ",") return marker(svg::Circle(0,0,0.23));

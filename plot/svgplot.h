@@ -7,6 +7,7 @@
 #include "../src/svg.h"
 
 #include <list>
+#include <vector>
 #include <array>
 #include <optional>
 #include <filesystem>
@@ -15,11 +16,49 @@ namespace svg {
 namespace plot {
 
 class SVGPlot {
+    /**********************************
+     * For subplots
+     **********************************/
+private:
+    std::vector<std::unique_ptr<SVGPlot>> subplots_;
+    int nrows = 0, ncols = 0;
+
+    class SubplotsAdjust {
+        float left_, right_, bottom_, top_, wspace_, hspace_;
+    public:
+        SubplotsAdjust();
+        SubplotsAdjust& left(float v);
+        SubplotsAdjust& right(float v);
+        SubplotsAdjust& top(float v);
+        SubplotsAdjust& bottom(float v);
+        SubplotsAdjust& wspace(float v);
+        SubplotsAdjust& hspace(float v);
+        float left() const;
+        float right() const;   
+        float top() const;   
+        float bottom() const;     
+        float wspace() const; 
+        float hspace() const;       
+    } subplots_adjust_;
+    SVGPlot* parent = nullptr;
+
+private:
+    float subplots_xmax(int c) const;
+    float subplots_ymax(int r) const;
+    std::array<float,2> subplot_size() const;
+    bool has_subplots() const;
+public:
+    SubplotsAdjust& subplots_adjust();  
+    SVGPlot& subplot(int nrows_, int ncols_, std::size_t index);
+    /**********************************
+     * For plotting here
+     **********************************/ 
+private:
+     
     std::list<Plottable> plottables;
     /*****************************
      * AXIS SCALES
      *****************************/
-private:
     Scale xscale_ = scale::linear();
     Scale yscale_ = scale::linear();
 

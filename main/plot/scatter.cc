@@ -40,19 +40,19 @@ int main(int argc, char** argv) {
         plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example3.svg");
 	}
 
-/*   
+   
     { // Example 4
         svg::plot::SVGPlot plt; int p=0;
         for (std::string marker : {"o",".",",","v",">","^","<","s","+","P","x","X"}) {
             auto& sub = plt.subplot(2,6,p++);
-            sub.set_title("'"+((marker!="<")?marker:"&lt;")+"'").fontsize(2);
-            sub.axis({-1,1,-1,1}).xticks({}).yticks({}).figsize({5,8}).linewidth(0.01);
-            sub.scatter({0},{0}).marker(marker);
+            sub.title("'"+((marker!="<")?marker:"&lt;")+"'"); //.fontsize(2);
+            sub.axis({-1,1,-1,1}).xticks({}).yticks({}).figsize({245,265}).linewidth(1);
+            sub.scatter({0},{0}).marker(marker).s(100.0f);
          }
         plt.savefig("../doc/svgplot/scatter/example4.svg");
 	}
     
-    { // Example 5
+/*    { // Example 5
         std::mt19937 gen{1}; //Fixed seed
         std::uniform_real_distribution<float> d(0,1);
         std::list<float> x,y, value;

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" >
    <clipPath id="clipPath00003" >
-         <rect x="33.5" y="8" width="156" height="176.5" id="rect00003" />
+         <rect x="18.5" y="8" width="171" height="176.5" id="rect00003" />
 
    </clipPath>
    <g id="g00011" clip-path="url(#clipPath00003)" >
@@ -10,89 +10,92 @@
 
          </defs>
          <g id="g00013" >
-                     <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="87.8268" y="154.882" width="2" height="2" id="use00126" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="143.81" y="162.232" width="2" height="2" id="use00127" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="68.7454" y="144.812" width="2" height="2" id="use00128" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="43.0661" y="166.632" width="2" height="2" id="use00129" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="38.0882" y="156.401" width="2" height="2" id="use00130" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="45.6333" y="169.594" width="2" height="2" id="use00131" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="184.912" y="172.395" width="2" height="2" id="use00132" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="57.3165" y="144.1" width="2" height="2" id="use00133" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="47.3191" y="163.733" width="2" height="2" id="use00134" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="56.3648" y="144.07" width="2" height="2" id="use00135" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="96.9077" y="169.446" width="2" height="2" id="use00136" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="60.414" y="174.7" width="2" height="2" id="use00137" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="46.0899" y="157.809" width="2" height="2" id="use00138" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="84.6904" y="142.21" width="2" height="2" id="use00139" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="50.5921" y="157.049" width="2" height="2" id="use00140" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="62.7049" y="174.866" width="2" height="2" id="use00141" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="173.131" y="163.362" width="2" height="2" id="use00142" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="45.9797" y="173.026" width="2" height="2" id="use00143" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="76.8381" y="170.534" width="2" height="2" id="use00144" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="68.9091" y="107.436" width="2" height="2" id="use00145" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="40.4448" y="176.172" width="2" height="2" id="use00146" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="42.9609" y="175.817" width="2" height="2" id="use00147" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="50.6703" y="179.309" width="2" height="2" id="use00148" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="144.675" y="139.932" width="2" height="2" id="use00149" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="50.7114" y="110.825" width="2" height="2" id="use00150" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="81.4594" y="140.552" width="2" height="2" id="use00151" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="54.4147" y="164.406" width="2" height="2" id="use00152" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="46.0089" y="173.284" width="2" height="2" id="use00153" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="58.1934" y="172.071" width="2" height="2" id="use00154" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="53.9798" y="135.662" width="2" height="2" id="use00155" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="40.2531" y="170.221" width="2" height="2" id="use00156" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="132.3" y="154.952" width="2" height="2" id="use00157" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="114.018" y="176.371" width="2" height="2" id="use00158" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="68.8615" y="173.059" width="2" height="2" id="use00159" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="55.2178" y="152.992" width="2" height="2" id="use00160" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="52.873" y="13.1912" width="2" height="2" id="use00161" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="101.072" y="178.902" width="2" height="2" id="use00162" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="62.5391" y="164.771" width="2" height="2" id="use00163" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="81.3035" y="144.995" width="2" height="2" id="use00164" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="90.7887" y="101.993" width="2" height="2" id="use00165" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="94.8772" y="168.854" width="2" height="2" id="use00166" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="110.211" y="172.035" width="2" height="2" id="use00167" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="46.2311" y="175.315" width="2" height="2" id="use00168" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="59.9896" y="173.598" width="2" height="2" id="use00169" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="71.2858" y="116.194" width="2" height="2" id="use00170" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="46.4104" y="173.113" width="2" height="2" id="use00171" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="69.0003" y="163.935" width="2" height="2" id="use00172" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="78.9155" y="167.605" width="2" height="2" id="use00173" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="115.067" y="169.329" width="2" height="2" id="use00174" />
-            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" x="66.9329" y="163.213" width="2" height="2" id="use00175" />
+                     <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00126" transform="translate(78.0505 154.882)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00127" transform="translate(139.416 162.232)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00128" transform="translate(57.1343 144.812)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00129" transform="translate(28.986 166.632)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00130" transform="translate(23.5294 156.401)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00131" transform="translate(31.7999 169.594)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00132" transform="translate(184.471 172.395)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00133" transform="translate(44.6065 144.1)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00134" transform="translate(33.6479 163.733)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00135" transform="translate(43.5634 144.07)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00136" transform="translate(88.0046 169.446)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00137" transform="translate(48.0019 174.7)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00138" transform="translate(32.3004 157.809)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00139" transform="translate(74.6126 142.21)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00140" transform="translate(37.2356 157.049)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00141" transform="translate(50.5131 174.866)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00142" transform="translate(171.557 163.362)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00143" transform="translate(32.1797 173.026)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00144" transform="translate(66.0052 170.534)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00145" transform="translate(57.3138 107.436)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00146" transform="translate(26.1126 176.172)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00147" transform="translate(28.8706 175.817)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00148" transform="translate(37.3213 179.309)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00149" transform="translate(140.365 139.932)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00150" transform="translate(37.3663 110.825)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00151" transform="translate(71.0708 140.552)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00152" transform="translate(41.4257 164.406)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00153" transform="translate(32.2117 173.284)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00154" transform="translate(45.5677 172.071)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00155" transform="translate(40.949 135.662)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00156" transform="translate(25.9025 170.221)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00157" transform="translate(126.8 154.952)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00158" transform="translate(106.76 176.371)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00159" transform="translate(57.2616 173.059)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00160" transform="translate(42.3061 152.992)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00161" transform="translate(39.7358 13.1912)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00162" transform="translate(92.5695 178.902)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00163" transform="translate(50.3313 164.771)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00164" transform="translate(70.8999 144.995)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00165" transform="translate(81.2973 101.993)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00166" transform="translate(85.7788 168.854)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00167" transform="translate(102.587 172.035)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00168" transform="translate(32.4553 175.315)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00169" transform="translate(47.5367 173.598)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00170" transform="translate(59.9191 116.194)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00171" transform="translate(32.6517 173.113)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00172" transform="translate(57.4137 163.935)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00173" transform="translate(68.2824 167.605)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00174" transform="translate(107.91 169.329)scale(2 2) " />
+            <use href="#circle00005" xlink:href="#circle00005" stroke-width="0.5" stroke="black" fill="red" opacity="0.5" fill-opacity="0.5" id="use00175" transform="translate(55.1476 163.213)scale(2 2) " />
 
          </g>
 
       </g>
 
    </g>
-   <rect stroke-width="1" stroke="black" fill="none" x="33.5" y="8" width="156" height="176.5" id="rect00003" />
-   <line x1="34.4803" y1="184.5" x2="34.4803" y2="187.5" stroke-width="1" stroke="black" id="line00017" />
-   <text x="34.4803" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00017" >
+   <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="171" height="176.5" id="rect00003" />
+   <line x1="19.5746" y1="184.5" x2="19.5746" y2="187.5" stroke-width="1" stroke="black" id="line00021" />
+   <text x="19.5746" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00021" >
 0   </text>
-   <line x1="73.1862" y1="184.5" x2="73.1862" y2="187.5" stroke-width="1" stroke="black" id="line00018" />
-   <text x="73.1862" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00018" >
-1.17   </text>
-   <line x1="111.892" y1="184.5" x2="111.892" y2="187.5" stroke-width="1" stroke="black" id="line00019" />
-   <text x="111.892" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00019" >
-2.34   </text>
-   <line x1="150.267" y1="184.5" x2="150.267" y2="187.5" stroke-width="1" stroke="black" id="line00020" />
-   <text x="150.267" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00020" >
-3.5   </text>
-   <line x1="189.304" y1="184.5" x2="189.304" y2="187.5" stroke-width="1" stroke="black" id="line00021" />
-   <text x="189.304" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00021" >
-4.68   </text>
-   <line x1="33.5" y1="180.091" x2="30.5" y2="180.091" stroke-width="1" stroke="black" id="line00022" />
-   <text x="29.5" y="180.091" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00022" >
+   <line x1="55.8375" y1="184.5" x2="55.8375" y2="187.5" stroke-width="1" stroke="black" id="line00022" />
+   <text x="55.8375" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00022" >
+1   </text>
+   <line x1="92.1005" y1="184.5" x2="92.1005" y2="187.5" stroke-width="1" stroke="black" id="line00023" />
+   <text x="92.1005" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00023" >
+2   </text>
+   <line x1="128.363" y1="184.5" x2="128.363" y2="187.5" stroke-width="1" stroke="black" id="line00024" />
+   <text x="128.363" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00024" >
+3   </text>
+   <line x1="164.626" y1="184.5" x2="164.626" y2="187.5" stroke-width="1" stroke="black" id="line00025" />
+   <text x="164.626" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00025" >
+4   </text>
+   <line x1="18.5" y1="180.091" x2="15.5" y2="180.091" stroke-width="1" stroke="black" id="line00026" />
+   <text x="14.5" y="180.091" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00026" >
 0   </text>
-   <line x1="33.5" y1="136.031" x2="30.5" y2="136.031" stroke-width="1" stroke="black" id="line00023" />
-   <text x="29.5" y="136.031" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00023" >
-3.34   </text>
-   <line x1="33.5" y1="91.9711" x2="30.5" y2="91.9711" stroke-width="1" stroke="black" id="line00024" />
-   <text x="29.5" y="91.9711" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00024" >
-6.68   </text>
-   <line x1="33.5" y1="48.1748" x2="30.5" y2="48.1748" stroke-width="1" stroke="black" id="line00025" />
-   <text x="29.5" y="48.1748" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00025" >
-10   </text>
+   <line x1="18.5" y1="140.516" x2="15.5" y2="140.516" stroke-width="1" stroke="black" id="line00027" />
+   <text x="14.5" y="140.516" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00027" >
+3   </text>
+   <line x1="18.5" y1="100.941" x2="15.5" y2="100.941" stroke-width="1" stroke="black" id="line00028" />
+   <text x="14.5" y="100.941" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00028" >
+6   </text>
+   <line x1="18.5" y1="61.3665" x2="15.5" y2="61.3665" stroke-width="1" stroke="black" id="line00029" />
+   <text x="14.5" y="61.3665" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00029" >
+9   </text>
+   <line x1="18.5" y1="21.7915" x2="15.5" y2="21.7915" stroke-width="1" stroke="black" id="line00030" />
+   <text x="14.5" y="21.7915" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00030" >
+12   </text>
 
 </svg>
