@@ -26,7 +26,6 @@ int main(int argc, char** argv) {
 		plt.savefig("../doc/svgplot/plot/example3.svg");
 	}
 
-/*
 	{ // Example 4
 		svg::plot::SVGPlot plt;
         auto x = svg::plot::linspace(0,5);
@@ -35,7 +34,7 @@ int main(int argc, char** argv) {
 		plt.savefig("../doc/svgplot/plot/example4.svg");
 	}
 	
-	{ // Example 5
+	/* { // Example 5
 		svg::plot::SVGPlot plt;
 		plt.plot(svg::plot::arange(0,20,0.05),
 				[] (float x) { return x*std::sin(x);},"g-");

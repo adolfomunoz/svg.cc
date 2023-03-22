@@ -1,39 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" >
    <clipPath id="clipPath00003" >
-         <rect x="41" y="8" width="588.5" height="456.5" id="rect00003" />
+         <rect x="11" y="8" width="618.5" height="456.5" id="rect00003" />
 
    </clipPath>
    <g id="g00003" clip-path="url(#clipPath00003)" >
-         <polyline points="41,96.027 46.9444,376.033 52.8889,94.627 58.8333,377.44 64.7778,93.213 70.7222,378.861 76.6667,91.7847 82.6111,380.296 88.5555,90.3422 94.5,381.746 100.444,88.8852 106.389,383.21 112.333,87.4135 118.278,384.689 124.222,85.9272 130.167,386.183 136.111,84.4259 142.056,387.692 148,82.9096 153.944,389.216 159.889,81.378 165.833,390.755 171.778,79.8311 177.722,392.31 183.667,78.2687 189.611,393.88 195.556,76.6907 201.5,395.466 207.444,75.0969 213.389,397.068 219.333,73.487 225.278,398.686 231.222,71.861 237.167,400.32 243.111,70.2187 249.055,401.97 255,68.56 260.944,403.637 266.889,66.8846 272.833,405.321 278.778,65.1924 284.722,407.022 290.667,63.4832 296.611,408.739 302.555,61.757 308.5,410.474 314.444,60.0134 320.389,412.227 326.333,58.2523 332.278,413.996 338.222,56.4736 344.166,415.784 350.111,54.677 356.055,417.59 362,52.8625 367.944,419.413 373.889,51.0298 379.833,421.255 385.778,49.1786 391.722,423.115 397.666,47.3089 403.611,424.995 409.555,45.4205 415.5,426.892 421.444,43.5131 427.389,428.809 433.333,41.5867 439.277,430.745 445.222,39.6408 451.166,432.701 457.111,37.6755 463.055,434.676 469,35.6906 474.944,436.671 480.889,33.6856 486.833,438.686 492.777,31.6607 498.722,440.721 504.666,29.6154 510.611,442.777 516.555,27.5496 522.5,444.853 528.444,25.463 534.389,446.95 540.333,23.3556 546.277,449.068 552.222,21.2271 558.166,451.207 564.111,19.0771 570.055,453.367 576,16.9057 581.944,455.55 587.889,14.7125 593.833,457.754 599.778,12.4973 605.722,459.98 611.667,10.2598 617.611,462.229 623.556,8 629.5,464.5 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00003" />
+         <polyline points="11,96.027 17.2475,376.033 23.4949,94.627 29.7424,377.44 35.9899,93.213 42.2374,378.861 48.4848,91.7847 54.7323,380.296 60.9798,90.3422 67.2273,381.746 73.4747,88.8852 79.7222,383.21 85.9697,87.4135 92.2172,384.689 98.4646,85.9272 104.712,386.183 110.96,84.4259 117.207,387.692 123.455,82.9096 129.702,389.216 135.949,81.378 142.197,390.755 148.444,79.8311 154.692,392.31 160.939,78.2687 167.187,393.88 173.434,76.6907 179.682,395.466 185.929,75.0969 192.177,397.068 198.424,73.487 204.672,398.686 210.919,71.861 217.167,400.32 223.414,70.2187 229.661,401.97 235.909,68.56 242.156,403.637 248.404,66.8846 254.651,405.321 260.899,65.1924 267.146,407.022 273.394,63.4832 279.641,408.739 285.889,61.757 292.136,410.474 298.384,60.0134 304.631,412.227 310.879,58.2523 317.126,413.996 323.374,56.4736 329.621,415.784 335.868,54.677 342.116,417.59 348.363,52.8625 354.611,419.413 360.858,51.0298 367.106,421.255 373.353,49.1786 379.601,423.115 385.848,47.3089 392.096,424.995 398.343,45.4205 404.591,426.892 410.838,43.5131 417.086,428.809 423.333,41.5867 429.581,430.745 435.828,39.6408 442.075,432.701 448.323,37.6755 454.57,434.676 460.818,35.6906 467.065,436.671 473.313,33.6856 479.56,438.686 485.808,31.6607 492.055,440.721 498.303,29.6154 504.55,442.777 510.798,27.5496 517.045,444.853 523.293,25.463 529.54,446.95 535.788,23.3556 542.035,449.068 548.283,21.2271 554.53,451.207 560.778,19.0771 567.025,453.367 573.273,16.9057 579.52,455.55 585.768,14.7125 592.015,457.754 598.263,12.4973 604.51,459.98 610.758,10.2598 617.005,462.229 623.253,8 629.5,464.5 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00003" />
 
    </g>
-   <rect stroke-width="1" stroke="black" fill="none" x="41" y="8" width="588.5" height="456.5" id="rect00003" />
-   <line x1="41" y1="464.5" x2="41" y2="467.5" stroke-width="1" stroke="black" id="line00021" />
-   <text x="41" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00022" >
+   <rect stroke-width="1" stroke="black" fill="none" x="11" y="8" width="618.5" height="456.5" id="rect00003" />
+   <line x1="11" y1="464.5" x2="11" y2="467.5" stroke-width="1" stroke="black" id="line00045" />
+   <text x="11" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00046" >
 0   </text>
-   <line x1="187.233" y1="464.5" x2="187.233" y2="467.5" stroke-width="1" stroke="black" id="line00022" />
-   <text x="187.233" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00023" >
-1.23   </text>
-   <line x1="333.467" y1="464.5" x2="333.467" y2="467.5" stroke-width="1" stroke="black" id="line00023" />
-   <text x="333.467" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00024" >
-2.46   </text>
-   <line x1="479.7" y1="464.5" x2="479.7" y2="467.5" stroke-width="1" stroke="black" id="line00024" />
-   <text x="479.7" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00025" >
-3.69   </text>
-   <line x1="625.933" y1="464.5" x2="625.933" y2="467.5" stroke-width="1" stroke="black" id="line00025" />
-   <text x="625.933" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00026" >
-4.92   </text>
-   <line x1="41" y1="463.573" x2="38" y2="463.573" stroke-width="1" stroke="black" id="line00026" />
-   <text x="37" y="463.573" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00027" >
--1.64   </text>
-   <line x1="41" y1="349.627" x2="38" y2="349.627" stroke-width="1" stroke="black" id="line00027" />
-   <text x="37" y="349.627" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00028" >
--0.82   </text>
-   <line x1="41" y1="235.681" x2="38" y2="235.681" stroke-width="1" stroke="black" id="line00028" />
-   <text x="37" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00029" >
+   <line x1="135.949" y1="464.5" x2="135.949" y2="467.5" stroke-width="1" stroke="black" id="line00046" />
+   <text x="135.949" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00047" >
+1   </text>
+   <line x1="260.899" y1="464.5" x2="260.899" y2="467.5" stroke-width="1" stroke="black" id="line00047" />
+   <text x="260.899" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00048" >
+2   </text>
+   <line x1="385.848" y1="464.5" x2="385.848" y2="467.5" stroke-width="1" stroke="black" id="line00048" />
+   <text x="385.848" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00049" >
+3   </text>
+   <line x1="510.798" y1="464.5" x2="510.798" y2="467.5" stroke-width="1" stroke="black" id="line00049" />
+   <text x="510.798" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00050" >
+4   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00050" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00051" >
 0   </text>
-   <line x1="41" y1="121.734" x2="38" y2="121.734" stroke-width="1" stroke="black" id="line00029" />
-   <text x="37" y="121.734" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00030" >
-0.82   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00051" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00052" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00052" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00053" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00053" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00054" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00054" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00055" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00055" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00056" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00056" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00057" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00057" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00058" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00058" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00059" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00059" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00060" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00060" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00061" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00061" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00062" >
+0   </text>
+   <line x1="11" y1="235.681" x2="8" y2="235.681" stroke-width="1" stroke="black" id="line00062" />
+   <text x="7" y="235.681" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00063" >
+0   </text>
 
 </svg>

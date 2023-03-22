@@ -2,6 +2,7 @@
 #include "plottable.h"
 #include "../src/color.h"
 #include <list>
+#include "scatter.h"
 
 namespace svg {
 namespace plot {
@@ -10,6 +11,7 @@ class Plot : public PlottableBase {
     std::list<float> x, y;
     svg::Color color_ = svg::black;
     float linewidth_ = 1.0f, alpha_ = 1.0f;
+    Scatter markers;
 public:
     Plot(const std::list<float>& x, const std::list<float>& y);
     Plot(std::list<float>&& x, const std::list<float>& y);
@@ -26,6 +28,7 @@ public:
     float alpha() const noexcept;
 	Plot& color(const svg::Color& c);
 	const svg::Color& color() const;
+    Plot& fmt(const std::string& f) noexcept;
 };
 }
 }
