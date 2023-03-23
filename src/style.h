@@ -29,6 +29,28 @@ namespace detail {
         }
     };
     template<typename T>
+    struct CSS<std::list<T>> {
+        static void load(const std::string& value, std::list<T>& t) {
+            t.clear();
+            const auto end = value.end(); auto to = value.begin(); decltype(to) from;
+            while((from = std::find_if(to, end, [](char c){ return !std::isspace(c); })) != end) {
+                to = std::find_if(from, end, [](char c){ return std::isspace(c); });
+                T item;
+                CSS<T>::load(std::string(from,to),item);
+                t.push_back(item);
+            }
+        }
+        static bool has_value(const std::list<T>& t) {
+            return !t.empty();
+        }
+        static std::string to_string(const std::list<T>& t) {
+            std::stringstream sstr;
+            for (const T& e : t) sstr<<CSS<T>::to_string(e)<<" ";
+            return sstr.str();
+        }
+    };
+    
+    template<typename T>
     struct CSS<std::optional<T>> {
         static void load(const std::string& value, std::optional<T>& t) {
             T v;
