@@ -35,6 +35,9 @@ The following subfolders folders must be introduced into the include path for C+
 - `ext/svg.cc/ext`
 - `ext/svg.cc/ext/patterns/ext`
 
+## Applications
 
+- **figure-inset**: A command line tool for generating figure insets from a simple svg file with rectangles.
+- [SVGPlot](svgplot.html): API for plotting different types of graphs in a 'matplotlib.pyplot' way with vector (SVG) output.
 
 

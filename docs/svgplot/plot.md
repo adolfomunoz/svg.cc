@@ -1,13 +1,16 @@
-# GNUPlot::plot
+---------------------------------------------------
+layout: default
+title: SVGPlot::plot
+---------------------------------------------------
+
+# SVGPlot::plot
 
 The `plot` method provides a versatile and fast way of plotting graphs and curves from the `svg_cpp_plot::SVGPlot` class. Generating visualizations is very quick:
 
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.plot({1,2,3,4});
-plt.ylabel("some numbers");
-plt.savefig("../doc/example1.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/plot.cc start=8 count=11 %}
+{% endhighlight %}
+
 generates the following graph:
 
 <div style="text-align:center"><img 
@@ -17,11 +20,10 @@ You may be wondering why the x-axis ranges from *0-3* and the *y*-axis from *1-4
 
 `plot()` is a versatile method. For example, to plot *x* versus *y*, you can do
 
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.plot({1, 2, 3, 4}, {1, 4, 9, 16});
-plt.savefig("../doc/example2.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/plot.cc start=15 count=17 %}
+{% endhighlight %}
+
 to include also specific values on the *x* axis and therefore generate
 
 <div style="text-align:center"><img 
@@ -30,14 +32,10 @@ to include also specific values on the *x* axis and therefore generate
 
 Of course the `plot()` method is not limited to bracketed lists. It can also work with any STL linear container of floating point numbers (such as `std::list<float>`). Additionaly, a python-like `arange(<start>,<stop>,<step>)` is provided as a list generator. These are illustrated in the following code:
 
-```cpp
-svg_cpp_plot::SVGPlot plt;
-float f=-1.0;
-std::list<float> l; 
-for (int i=0; i<100;++i) l.push_back(f*=-1.005);
-plt.plot(svg_cpp_plot::arange(0,5,0.05),l);
-plt.savefig("../doc/example3.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/plot.cc start=21 count=26 %}
+{% endhighlight %}
+
 
 that generates 
 
@@ -46,21 +44,17 @@ that generates
 
 Furthermore, it is also possible to use functions as the *y* parameter. In that case, the function is evaluated for all the real numbers in *x* and plotted accordingly, as follows:
 
-```cpp
-svg_cpp_plot::SVGPlot plt;
-auto x = svg_cpp_plot::linspace(0,5);
-plt.plot(x,[] (float x) { return x*std::sin(x);});
-plt.plot(x,sqrtf);
-plt.savefig("../doc/svgplot/plot/example4.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/plot.cc start=30 count=24 %}
+{% endhighlight %}
 
-The above example also illustrates the provided python-like `linspace(<start>,<stop>,<nsamples=50>)` list generator. It generates
-generatea the following graph:
+
+The above example also illustrates the provided python-like `linspace(<start>,<stop>,<nsamples=50>)` list generator. It generates the following graph:
 
 <div style="text-align:center"><img 
  src="./plot/example4.svg" alt="example4" width="50%" /></div>
 
-##Formatting
+## Formatting
 
  There is also a great variety of formatting options that can be setup through formatting strings. Such strings are composed of:
 - A color represented by a letter (```r```  red, ```g```  green, ```b```  blue, ```c``` cyan, ```m``` magenta, ```y```  yellow, ```k```  black, ```w``` white), although default colors are chosen for each of the plots if no color is specified.

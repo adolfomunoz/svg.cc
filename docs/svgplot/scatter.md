@@ -1,16 +1,15 @@
-# GNUPlot::scatter
+---------------------------------------------------
+layout: default
+title: SVGPlot::scatter
+---------------------------------------------------
+
+# SVGPlot::scatter
 
 The `scatter` method of the `svg_cpp_plot::SVGPlot` class generates scatter plots: a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data (passed as the two parameters *x* and *y* of the method). The points can be coded coded (color/shape/size) for displaying additional variables. Generating scatter plots is very quick:
 
-```cpp
-std::mt19937 gen{1}; //Fixed seed
-std::normal_distribution<float> d{0,2};
-std::list<float> x,y;
-for (int n=0;n<50;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
-svg_cpp_plot::SVGPlot plt;
-plt.scatter(x,y);
-plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example1.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/scatter.cc start=7 count=13 %}
+{% endhighlight %}
 which generates a scatter plot with points distributed randomly according to a normal distribution:
 
 <div style="text-align:center"><img 
@@ -18,19 +17,9 @@ which generates a scatter plot with points distributed randomly according to a n
 	
 As expected, the *x* and *y* parameters can be any C++ collection or bracketed list. Also, if needed (although not very useful for scatter plots), list generators such as `arange(<start>,<stop>,<step>)` and `linspace(<start>,<stop>,<nsamples = 50>)` are provided. Many scatter plots can be included in the same graph through multiple calls of the `scatter` method:
 
-```cpp
-std::mt19937 gen{1}; //Fixed seed
-std::normal_distribution<float> d{0,1};
-svg_cpp_plot::SVGPlot plt;
-for (int r = 0; r<3; ++r) {
-    std::list<float> x,y;
-    for (int s=0;s<25;++s) {
-        x.push_back(-12.5+0.5*s+d(gen)); y.push_back(3*r+0.1*s+d(gen));
-    }            
-    plt.scatter(x,y);
-}            
-plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example2.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/scatter.cc start=17 count=27 %}
+{% endhighlight %}
 
 which automatically assigns a specific color (with a palette similar to `matplotlib`'s) to each of the scatter plots in order to differenciate them:
 
@@ -50,17 +39,9 @@ The appearance of a scatter plot can be setup in multiple ways through named par
 
 These are illustrated here:
 
-```cpp
-std::mt19937 gen{1}; //Fixed seed
-std::fisher_f_distribution<float> d(5.0,5.0);
-std::list<float> x,y;
-for (int n=0;n<50;++n) { 
-    x.push_back(d(gen)); y.push_back(d(gen)); 
-}
-svg_cpp_plot::SVGPlot plt;
-plt.scatter(x,y).c("r").alpha(0.5).s(2).edgecolors("black").linewidths(0.5);
-plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example3.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/scatter.cc start=32 count=40 %}
+{% endhighlight %}
 
 which generates
 
@@ -69,16 +50,9 @@ which generates
  
 The shape of the marker can be defined by the `marker(<string>)` named parameter. There are multiple enabled options for marker shapes, as illustrated in the following code:
 
-```cpp
-svg_cpp_plot::SVGPlot plt; int p=0;
-for (std::string marker : {"o",".",",","v",">","^","<","s","+","P","x","X"}) {
-    auto& sub = plt.subplot(2,6,p++);
-    sub.set_title("'"+((marker!="<")?marker:"&lt;")+"'").fontsize(2);
-    sub.axis({-1,1,-1,1}).xticks({}).yticks({}).figsize({5,8}).linewidth(0.01);
-    sub.scatter({0},{0}).marker(marker);
- }
-plt.savefig("../doc/svgplot/scatter/example4.svg");
-```
+{% highlight cpp %}
+{% include includelines filename="../../main/plot/scatter.cc start=45 count=52 %}
+{% endhighlight %}
 
 generates a visualization of all the available marker shapes:
 

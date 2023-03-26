@@ -11,7 +11,7 @@ class Plot : public PlottableBase {
     std::list<float> x, y;
     svg::Color color_ = svg::black;
     float linewidth_ = 1.0f, alpha_ = 1.0f;
-    Scatter markers;
+    Scatter markers; bool markers_set = false;
     std::list<float> linestyle_;
 public:
     Plot(const std::list<float>& x, const std::list<float>& y);
@@ -35,6 +35,9 @@ public:
     Plot& linestyle(const std::list<float>& l) noexcept;
     Plot& linestyle(const std::string& ls) noexcept;
     const std::list<float>& linestyle() const noexcept;
+    Plot& marker(const svg::Element& m) noexcept;
+    Plot& marker(const std::string& f) noexcept;
+    Plot& markersize(float s) noexcept;
 };
 }
 }
