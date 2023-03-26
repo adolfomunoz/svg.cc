@@ -24,9 +24,9 @@ auto green = std::tuple(0.0f,1.0f,0.0f);
 auto blue = std::tuple(0.0f,0.0f,1.0f);
 svg_cpp_plot::SVGPlot plt;
 plt.figsize({200,200});
-plt.imshow({{red,green,blue},
-            {green,blue,red},
-            {blue,red,green}});
+plt.imshow( { {red,green,blue},
+              {green,blue,red},
+              {blue,red,green} } );
 plt.savefig("../doc/svgplot/imshow/example2.svg");
 ```
 
@@ -43,9 +43,9 @@ auto green = std::tuple(0.0f,1.0f,0.0f,1.0f);
 auto black_transparent = std::tuple(0.0f,0.0f,0.0f,0.5f);
 svg_cpp_plot::SVGPlot plt;
 plt.figsize({200,200});
-plt.imshow({{black_transparent,green,black_transparent},
-            {green,black_transparent,red},
-            {black_transparent,red,black_transparent}});
+plt.imshow( { {black_transparent,green,black_transparent},
+             {green,black_transparent,red},
+             {black_transparent,red,black_transparent} } );
 plt.savefig("../doc/svgplot/imshow/example3.svg");
 ```
 
