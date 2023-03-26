@@ -1,7 +1,7 @@
 # svg.cc
 A C++17 library for constructing and manipulating SVG files
 
-##Installation
+## Installation
 
 You can install this library by cloning the repository with all the submodules:
 
@@ -29,5 +29,7 @@ The following subfolders folders must be introduced into the include path for C+
 - `ext`
 - `ext/svg.cc/ext`
 - `ext/svg.cc/ext/patterns/ext`
+
+
 
 

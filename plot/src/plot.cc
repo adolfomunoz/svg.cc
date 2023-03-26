@@ -64,6 +64,16 @@ Plot& Plot::linestyle(const std::string& ls) noexcept {
     else return (*this);
 }
 
+Plot& Plot::marker(const svg::Element& m) noexcept {
+    markers.marker(m); markers_set=true; return (*this);
+}
+Plot& Plot::marker(const std::string& f) noexcept {
+    markers.marker(f); markers_set=true; return (*this);
+}
+Plot& Plot::markersize(float s) noexcept {
+    markers.s(s); markers_set=true; return (*this);
+}
+
 
 const std::list<float>& Plot::linestyle() const noexcept { return linestyle_; }
 
