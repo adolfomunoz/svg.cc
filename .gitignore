@@ -4,6 +4,9 @@ bin
 lib
 .vscode
 
+# Docs
+docs/_site
+docs/Gemfile.lock
 
 # Prerequisites
 *.d
