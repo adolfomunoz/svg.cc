@@ -15,7 +15,7 @@ Example:
 -->{% endraw %}{% endcomment %}
 
 {% capture filecontent %}
-    {% include {{include.filename}} %}
+    {% include_relative {{include.filename}} %}
 {% endcapture %}
 
 {% assign lines = filecontent | newline_to_br | split: '<br />' %}

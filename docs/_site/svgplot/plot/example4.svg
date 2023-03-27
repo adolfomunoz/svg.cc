@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" >
+   <clipPath id="clipPath00004" >
+         <rect x="18.5" y="8" width="611" height="456.5" id="rect00004" />
+
+   </clipPath>
+   <g id="g00004" clip-path="url(#clipPath00004)" >
+         <polyline points="18.5,152.788 30.72,152.141 42.94,150.215 55.16,147.047 67.38,142.701 79.6,137.266 91.82,130.851 104.04,123.588 116.26,115.628 128.48,107.139 140.7,98.3015 152.92,89.3104 165.14,80.367 177.36,71.6788 189.58,63.4551 201.8,55.9044 214.02,49.2302 226.24,43.6284 238.46,39.2839 250.68,36.3672 262.9,35.0318 275.12,35.4109 287.34,37.6155 299.56,41.7318 311.78,47.819 324,55.9084 336.22,66.0016 348.44,78.0697 360.66,92.0532 372.88,107.862 385.1,125.374 397.32,144.441 409.54,164.883 421.76,186.494 433.98,209.046 446.2,232.285 458.42,255.94 470.64,279.725 482.86,303.337 495.08,326.468 507.3,348.802 519.52,370.023 531.74,389.816 543.96,407.875 556.18,423.903 568.4,437.62 580.62,448.763 592.84,457.094 605.06,462.4 617.28,464.5 629.5,463.244 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00004" />
+      <polyline points="18.5,152.788 30.72,132.312 42.94,123.83 55.16,117.322 67.38,111.835 79.6,107.002 91.82,102.632 104.04,98.613 116.26,94.8725 128.48,91.3594 140.7,88.0366 152.92,84.8762 165.14,81.8564 177.36,78.9601 189.58,76.1732 201.8,73.4841 214.02,70.8833 226.24,68.3626 238.46,65.915 250.68,63.5345 262.9,61.2159 275.12,58.9545 287.34,56.7463 299.56,54.5878 311.78,52.4758 324,50.4073 336.22,48.3797 348.44,46.3908 360.66,44.4384 372.88,42.5206 385.1,40.6356 397.32,38.7817 409.54,36.9575 421.76,35.1616 433.98,33.3927 446.2,31.6496 458.42,29.9312 470.64,28.2366 482.86,26.5647 495.08,24.9146 507.3,23.2856 519.52,21.6768 531.74,20.0876 543.96,18.5171 556.18,16.9648 568.4,15.43 580.62,13.9122 592.84,12.4108 605.06,10.9253 617.28,9.45517 629.5,8 " stroke-width="1" stroke="#ff7f0e" fill="none" opacity="1" id="polyline00005" />
+
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="611" height="456.5" id="rect00004" />
+   <line x1="18.5" y1="464.5" x2="18.5" y2="467.5" stroke-width="1" stroke="black" id="line00063" />
+   <text x="18.5" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00064" >
+0   </text>
+   <line x1="140.7" y1="464.5" x2="140.7" y2="467.5" stroke-width="1" stroke="black" id="line00064" />
+   <text x="140.7" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00065" >
+1   </text>
+   <line x1="262.9" y1="464.5" x2="262.9" y2="467.5" stroke-width="1" stroke="black" id="line00065" />
+   <text x="262.9" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00066" >
+2   </text>
+   <line x1="385.1" y1="464.5" x2="385.1" y2="467.5" stroke-width="1" stroke="black" id="line00066" />
+   <text x="385.1" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00067" >
+3   </text>
+   <line x1="507.3" y1="464.5" x2="507.3" y2="467.5" stroke-width="1" stroke="black" id="line00067" />
+   <text x="507.3" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00068" >
+4   </text>
+   <line x1="18.5" y1="411.792" x2="15.5" y2="411.792" stroke-width="1" stroke="black" id="line00068" />
+   <text x="14.5" y="411.792" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00069" >
+-4   </text>
+   <line x1="18.5" y1="347.041" x2="15.5" y2="347.041" stroke-width="1" stroke="black" id="line00069" />
+   <text x="14.5" y="347.041" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00070" >
+-3   </text>
+   <line x1="18.5" y1="282.29" x2="15.5" y2="282.29" stroke-width="1" stroke="black" id="line00070" />
+   <text x="14.5" y="282.29" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00071" >
+-2   </text>
+   <line x1="18.5" y1="217.539" x2="15.5" y2="217.539" stroke-width="1" stroke="black" id="line00071" />
+   <text x="14.5" y="217.539" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00072" >
+-1   </text>
+   <line x1="18.5" y1="152.788" x2="15.5" y2="152.788" stroke-width="1" stroke="black" id="line00072" />
+   <text x="14.5" y="152.788" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00073" >
+0   </text>
+   <line x1="18.5" y1="88.0366" x2="15.5" y2="88.0366" stroke-width="1" stroke="black" id="line00073" />
+   <text x="14.5" y="88.0366" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00074" >
+1   </text>
+   <line x1="18.5" y1="23.2856" x2="15.5" y2="23.2856" stroke-width="1" stroke="black" id="line00074" />
+   <text x="14.5" y="23.2856" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00075" >
+2   </text>
+
+</svg>
