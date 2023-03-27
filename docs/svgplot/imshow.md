@@ -150,9 +150,9 @@ auto green = std::tuple(0.0f,1.0f,0.0f);
 auto blue = std::tuple(0.0f,0.0f,1.0f);
 svg_cpp_plot::SVGPlot plt;
 plt.figsize({200,200}).axis({-5,5,-5,5});
-plt.imshow({{red,green,blue},
-            {green,blue,red},
-            {blue,red,green}}).extent({-1,1,1,-1});
+plt.imshow( { {red,green,blue},
+              {green,blue,red},
+              {blue,red,green} } ).extent({-1,1,1,-1});
 plt.savefig("../doc/svgplot/imshow/example8.svg");   
 ```
 
