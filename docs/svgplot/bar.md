@@ -1,4 +1,4 @@
-# GNUPlot::bar
+# SVGPlot::bar
 
 The `bar` method provides a simple way of generating bar diagrams from the `svg_cpp_plot::SVGPlot` class:
 

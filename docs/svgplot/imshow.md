@@ -1,6 +1,6 @@
-# GNUPlot::imshow
+# SVGPlot::imshow
 
-The `imshow` method provides a versatile way of plotting two dimensional data from the `svg_cpp_plot::SVGPlot` class. The simplest example is the following:
+The `imshow` method provides a versatile way of plotting two dimensional data from the `svg::plot::SVGPlot` class. The simplest example is the following:
 
 ```cpp
 svg_cpp_plot::SVGPlot plt;

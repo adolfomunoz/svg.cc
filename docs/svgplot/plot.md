@@ -1,8 +1,3 @@
----------------------------------------------------
-layout: default
-title: SVGPlot::plot
----------------------------------------------------
-
 # SVGPlot::plot
 
 The `plot` method provides a versatile and fast way of plotting graphs and curves from the `svg_cpp_plot::SVGPlot` class. Generating visualizations is very quick:

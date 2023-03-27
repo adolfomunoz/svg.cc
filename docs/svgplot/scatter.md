@@ -1,11 +1,6 @@
----------------------------------------------------
-layout: default
-title: SVGPlot::scatter
----------------------------------------------------
-
 # SVGPlot::scatter
 
-The `scatter` method of the `svg_cpp_plot::SVGPlot` class generates scatter plots: a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data (passed as the two parameters *x* and *y* of the method). The points can be coded coded (color/shape/size) for displaying additional variables. Generating scatter plots is very quick:
+The `scatter` method of the `svg::plot::SVGPlot` class generates scatter plots: a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data (passed as the two parameters *x* and *y* of the method). The points can be coded coded (color/shape/size) for displaying additional variables. Generating scatter plots is very quick:
 
 {% highlight cpp %}
 {% include includelines filename='scatter.cc' start=7 count=7 %}

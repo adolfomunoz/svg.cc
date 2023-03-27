@@ -1,4 +1,4 @@
-# GNUPlot::subplot
+# SVGPlot::subplot
 
 The method `subplot(nrows,ncols,index)` adds a subplot to the current figure and returns a reference to it (`svg_cpp_plot::SVGPlot&`). The SVGPlot from which this methods is called will be composed of subplots and have no plots of its own. The subplot will take the `index` position on a grid with `nrows` rows and `ncols` columns. `index` starts at 0 in the upper left corner and increases to the right (note that `matplotlib`'s subplot method starts at index 1, but in this library we choose 0 as starting index because it is more C++y).
 
