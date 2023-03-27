@@ -8,7 +8,7 @@ title: SVGPlot::plot
 The `plot` method provides a versatile and fast way of plotting graphs and curves from the `svg_cpp_plot::SVGPlot` class. Generating visualizations is very quick:
 
 {% highlight cpp %}
-{% include includelines filename="../../main/plot/plot.cc" start=8 count=11 %}
+{% include includelines filename='../../main/plot/plot.cc' start=8 count=4 %}
 {% endhighlight %}
 
 generates the following graph:
@@ -21,7 +21,7 @@ You may be wondering why the x-axis ranges from *0-3* and the *y*-axis from *1-4
 `plot()` is a versatile method. For example, to plot *x* versus *y*, you can do
 
 {% highlight cpp %}
-{% include includelines filename="../../main/plot/plot.cc" start=15 count=17 %}
+{% include includelines filename='../../main/plot/plot.cc' start=15 count=3 %}
 {% endhighlight %}
 
 to include also specific values on the *x* axis and therefore generate
@@ -33,7 +33,7 @@ to include also specific values on the *x* axis and therefore generate
 Of course the `plot()` method is not limited to bracketed lists. It can also work with any STL linear container of floating point numbers (such as `std::list<float>`). Additionaly, a python-like `arange(<start>,<stop>,<step>)` is provided as a list generator. These are illustrated in the following code:
 
 {% highlight cpp %}
-{% include includelines filename="../../main/plot/plot.cc" start=21 count=26 %}
+{% include includelines filename='../../main/plot/plot.cc' start=21 count=6 %}
 {% endhighlight %}
 
 
@@ -45,7 +45,7 @@ that generates
 Furthermore, it is also possible to use functions as the *y* parameter. In that case, the function is evaluated for all the real numbers in *x* and plotted accordingly, as follows:
 
 {% highlight cpp %}
-{% include includelines filename="../../main/plot/plot.cc" start=30 count=24 %}
+{% include includelines filename='../../main/plot/plot.cc' start=30 count=5 %}
 {% endhighlight %}
 
 
