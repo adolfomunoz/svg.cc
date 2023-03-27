@@ -8,7 +8,7 @@ title: SVGPlot::scatter
 The `scatter` method of the `svg_cpp_plot::SVGPlot` class generates scatter plots: a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data (passed as the two parameters *x* and *y* of the method). The points can be coded coded (color/shape/size) for displaying additional variables. Generating scatter plots is very quick:
 
 {% highlight cpp %}
-{% include includelines filename='../../main/plot/scatter.cc' start=7 count=7 %}
+{% include includelines filename='scatter.cc' start=7 count=7 %}
 {% endhighlight %}
 which generates a scatter plot with points distributed randomly according to a normal distribution:
 
@@ -18,7 +18,7 @@ which generates a scatter plot with points distributed randomly according to a n
 As expected, the *x* and *y* parameters can be any C++ collection or bracketed list. Also, if needed (although not very useful for scatter plots), list generators such as `arange(<start>,<stop>,<step>)` and `linspace(<start>,<stop>,<nsamples = 50>)` are provided. Many scatter plots can be included in the same graph through multiple calls of the `scatter` method:
 
 {% highlight cpp %}
-{% include includelines filename='../../main/plot/scatter.cc 'start=17 count=11 %}
+{% include includelines filename='scatter.cc 'start=17 count=11 %}
 {% endhighlight %}
 
 which automatically assigns a specific color (with a palette similar to `matplotlib`'s) to each of the scatter plots in order to differenciate them:
@@ -40,7 +40,7 @@ The appearance of a scatter plot can be setup in multiple ways through named par
 These are illustrated here:
 
 {% highlight cpp %}
-{% include includelines filename='../../main/plot/scatter.cc' start=32 count=9 %}
+{% include includelines filename='scatter.cc' start=32 count=9 %}
 {% endhighlight %}
 
 which generates
@@ -51,7 +51,7 @@ which generates
 The shape of the marker can be defined by the `marker(<string>)` named parameter. There are multiple enabled options for marker shapes, as illustrated in the following code:
 
 {% highlight cpp %}
-{% include includelines filename='../../main/plot/scatter.cc' start=45 count=8 %}
+{% include includelines filename='scatter.cc' start=45 count=8 %}
 {% endhighlight %}
 
 generates a visualization of all the available marker shapes:

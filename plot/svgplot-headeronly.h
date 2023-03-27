@@ -4,3 +4,4 @@
 #include "src/plot.cc"
 #include "src/scatter.cc"
 #include "src/svgplot.cc"
+#include "src/color.cc"
