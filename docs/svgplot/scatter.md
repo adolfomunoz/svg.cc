@@ -18,7 +18,7 @@ which generates a scatter plot with points distributed randomly according to a n
 As expected, the *x* and *y* parameters can be any C++ collection or bracketed list. Also, if needed (although not very useful for scatter plots), list generators such as `arange(<start>,<stop>,<step>)` and `linspace(<start>,<stop>,<nsamples = 50>)` are provided. Many scatter plots can be included in the same graph through multiple calls of the `scatter` method:
 
 {% highlight cpp %}
-{% include includelines filename='scatter.cc 'start=17 count=11 %}
+{% include includelines filename='scatter.cc' start=17 count=11 %}
 {% endhighlight %}
 
 which automatically assigns a specific color (with a palette similar to `matplotlib`'s) to each of the scatter plots in order to differenciate them:
