@@ -20,4 +20,4 @@ Example:
 
 {% assign lines = filecontent | newline_to_br | split: '<br />' %}
 
-{% for line in lines offset:{{include.start}} limit:{{include.count}} %}{{ line }}{% endfor %}
+{% for line in lines offset:{{include.start}} limit:{{include.count}} %}{{ line | remove_first:"  " }}{% endfor %}

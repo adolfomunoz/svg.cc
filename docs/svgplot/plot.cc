@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 
 	{ // Example 4
 	svg::plot::SVGPlot plt;
-    auto x = svg::plot::linspace(0,5);
+	auto x = svg::plot::linspace(0,5);
 	plt.plot(x,[] (float x) { return x*std::sin(x);});
 	plt.plot(x,sqrtf);
 	plt.savefig("../doc/svgplot/plot/example4.svg");
