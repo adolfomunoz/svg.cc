@@ -7,8 +7,7 @@ The `scatter` method of the `svg::plot::SVGPlot` class generates scatter plots: 
 {% endhighlight %}
 which generates a scatter plot with points distributed randomly according to a normal distribution:
 
-<div style="text-align:center"><img 
- src="./scatter/example1.svg" alt="example1" width="50%" /></div>
+![Example 1](./scatter/example1.svg)
 	
 As expected, the *x* and *y* parameters can be any C++ collection or bracketed list. Also, if needed (although not very useful for scatter plots), list generators such as `arange(<start>,<stop>,<step>)` and `linspace(<start>,<stop>,<nsamples = 50>)` are provided. Many scatter plots can be included in the same graph through multiple calls of the `scatter` method:
 
@@ -18,9 +17,7 @@ As expected, the *x* and *y* parameters can be any C++ collection or bracketed l
 
 which automatically assigns a specific color (with a palette similar to `matplotlib`'s) to each of the scatter plots in order to differenciate them:
 
-
-<div style="text-align:center"><img 
- src="./scatter/example2.svg" alt="example2" width="50%" /></div>
+![Example 2](./scatter/example2.svg)
  
 ## Formatting
 
@@ -40,8 +37,7 @@ These are illustrated here:
 
 which generates
 
-<div style="text-align:center"><img 
- src="./scatter/example3.svg" alt="example3" width="50%" /></div>
+![Example 3](./scatter/example3.svg)
  
 The shape of the marker can be defined by the `marker(<string>)` named parameter. There are multiple enabled options for marker shapes, as illustrated in the following code:
 
@@ -51,8 +47,7 @@ The shape of the marker can be defined by the `marker(<string>)` named parameter
 
 generates a visualization of all the available marker shapes:
 
-<div style="text-align:center"><img 
- src="./scatter/example4.svg" alt="example4" width="100%" /></div>
+![Example 4](./scatter/example4.svg)
 
 ## Additional variables
 

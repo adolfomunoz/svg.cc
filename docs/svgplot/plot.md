@@ -8,8 +8,7 @@ The `plot` method provides a versatile and fast way of plotting graphs and curve
 
 generates the following graph:
 
-<div style="text-align:center"><img 
- src="./plot/example1.svg" alt="example1" width="50%" /></div>
+![Example 1](./plot/example1.svg)
 	
 You may be wondering why the x-axis ranges from *0-3* and the *y*-axis from *1-4*. If you provide a single list or array to the `plot()` method, it is assumed that it represents a sequence of *y* values, and automatically generates the *x* values for you, starting from *0* (in this case `{0, 1, 2, 3}`).
 
@@ -21,9 +20,7 @@ You may be wondering why the x-axis ranges from *0-3* and the *y*-axis from *1-4
 
 to include also specific values on the *x* axis and therefore generate
 
-<div style="text-align:center"><img 
- src="./plot/example2.svg" alt="example2" width="50%" /></div>
-	
+![Example 2](./plot/example2.svg)
 
 Of course the `plot()` method is not limited to bracketed lists. It can also work with any STL linear container of floating point numbers (such as `std::list<float>`). Additionaly, a python-like `arange(<start>,<stop>,<step>)` is provided as a list generator. These are illustrated in the following code:
 
@@ -34,8 +31,7 @@ Of course the `plot()` method is not limited to bracketed lists. It can also wor
 
 that generates 
 
-<div style="text-align:center"><img 
- src="./plot/example3.svg" alt="example3" width="50%" /></div>
+![Example 3](./plot/example3.svg)
 
 Furthermore, it is also possible to use functions as the *y* parameter. In that case, the function is evaluated for all the real numbers in *x* and plotted accordingly, as follows:
 
@@ -46,8 +42,7 @@ Furthermore, it is also possible to use functions as the *y* parameter. In that 
 
 The above example also illustrates the provided python-like `linspace(<start>,<stop>,<nsamples=50>)` list generator. It generates the following graph:
 
-<div style="text-align:center"><img 
- src="./plot/example4.svg" alt="example4" width="50%" /></div>
+![Example 4](./plot/example4.svg)
 
 ## Formatting
 
