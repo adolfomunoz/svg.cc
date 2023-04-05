@@ -37,7 +37,15 @@ public:
     const std::list<float>& linestyle() const noexcept;
     Plot& marker(const svg::Element& m) noexcept;
     Plot& marker(const std::string& f) noexcept;
+    Plot& marker(const char* f) noexcept;
     Plot& markersize(float s) noexcept;
+    Plot& markeredgecolor(const svg::Color& c) noexcept;
+    Plot& markeredgecolor(const std::string& c) noexcept;
+    Plot& markeredgecolor(const char* c) noexcept;
+    Plot& markeredgewidth(float w) noexcept;
+    Plot& markerfacecolor(const svg::Color& c) noexcept;
+    Plot& markerfacecolor(const std::string& c) noexcept;
+    Plot& markerfacecolor(const char* c) noexcept;
 };
 }
 }

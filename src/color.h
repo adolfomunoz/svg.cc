@@ -36,6 +36,28 @@ public:
     std::tuple<float,float,float> rgb() const override { return rgb_; }
 };
 
+inline ColorRGB rgb(float r, float g, float b) noexcept {
+    return ColorRGB(r,g,b);
+}
+
+inline ColorRGB hsv(float h, float s, float v) {
+	h*=3.0f/280.0; //In 6 sectors (h is in degrees)
+	int i = h; //floor of h;
+	float f = h-i; //Decimals part;
+	float p = 255.0f*v*(1.0f-s);
+	float q = 255.0f*v*(1.0f-s*f);
+	float t = 255.0f*v*(1.0f-s*(1.0f-f));
+	switch (i){
+		case 0: return rgb(v,t,p);
+		case 1: return rgb(q,v,p);
+		case 2: return rgb(p,v,t);
+		case 3: return rgb(p,q,t);
+		case 4: return rgb(t,p,v);
+		default: //5
+			return rgb(v,p,q);
+	}
+}
+
 class ColorHex : public pattern::Reflectable<ColorHex, ColorBase> {
     char hex[6];
     static constexpr float hex_value(char c) {

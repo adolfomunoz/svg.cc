@@ -1,4 +1,5 @@
 #include "../plot.h"
+#include "../../src/group.h"
 #include "../../src/poly.h"
 #include "color.h"
 
@@ -24,11 +25,18 @@ svg::Element Plot::plot(const Transform& xscale, const Transform& yscale) const 
 
     std::list<float> ls = linestyle();
     if (!ls.empty()) {
-        std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return lw*f; });
+        std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return 0.1f*lw*f; });
         output.stroke_dasharray(ls);
     }
 
-    return output;
+    if (markers_set) {
+        svg::Group g;
+        g.add(output);
+        g.add(markers.plot(xscale,yscale));
+        return g;
+    } else {
+        return output;
+    }
 }
 std::array<float,4> Plot::axis() const noexcept {
     if (x.empty() || y.empty()) return std::array<float,4>{0.0f,0.0f,0.0f,0.0f};
@@ -47,7 +55,9 @@ Plot& Plot::linewidth(float f) noexcept { linewidth_=f; return *this; }
 float Plot::linewidth() const noexcept { return linewidth_; }
 Plot& Plot::alpha(float f) noexcept { alpha_=f; return *this; }
 float Plot::alpha() const noexcept { return alpha_; }
-Plot& Plot::color(const svg::Color& c) noexcept { color_=c; return *this; }
+Plot& Plot::color(const svg::Color& c) noexcept { 
+    color_=c; markers.c(c); return *this; 
+}
 Plot& Plot::color(const std::string& sc) noexcept {
     return color(color_from_string(sc));
 }
@@ -70,17 +80,38 @@ Plot& Plot::marker(const svg::Element& m) noexcept {
 Plot& Plot::marker(const std::string& f) noexcept {
     markers.marker(f); markers_set=true; return (*this);
 }
+Plot& Plot::marker(const char* f) noexcept {
+    return marker(std::string(f));
+}
 Plot& Plot::markersize(float s) noexcept {
     markers.s(s); markers_set=true; return (*this);
 }
-
-
+Plot& Plot::markeredgecolor(const svg::Color& c) noexcept { 
+    markers.edgecolors(c); markers_set=true; return *this; 
+}
+Plot& Plot::markeredgecolor(const std::string& sc) noexcept {
+    return markeredgecolor(color_from_string(sc));
+}
+Plot& Plot::markeredgecolor(const char* sc) noexcept {
+    return markeredgecolor(std::string(sc));
+}
+Plot& Plot::markeredgewidth(float s) noexcept {
+    markers.linewidths(s); markers_set=true; return (*this);
+}
 const std::list<float>& Plot::linestyle() const noexcept { return linestyle_; }
 
 Plot& Plot::fmt(const std::string& f) noexcept {
     return (*this);
 }
-
+Plot& Plot::markerfacecolor(const svg::Color& c) noexcept { 
+    markers.c(c); markers_set=true; return *this; 
+}
+Plot& Plot::markerfacecolor(const std::string& sc) noexcept {
+    return markerfacecolor(color_from_string(sc));
+}
+Plot& Plot::markerfacecolor(const char* sc) noexcept {
+    return markerfacecolor(std::string(sc));
+}
 
 } 
 }

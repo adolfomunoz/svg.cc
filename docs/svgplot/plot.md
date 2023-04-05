@@ -46,70 +46,25 @@ The above example also illustrates the provided python-like `linspace(<start>,<s
 
 ## Formatting
 
- There is also a great variety of formatting options that can be setup through formatting strings. Such strings are composed of:
-- A color represented by a letter (```r```  red, ```g```  green, ```b```  blue, ```c``` cyan, ```m``` magenta, ```y```  yellow, ```k```  black, ```w``` white), although default colors are chosen for each of the plots if no color is specified.
-- A style representation for lines and points (```-``` full line, ```--``` dashed line, ```-.``` chain line, ```..``` small dashed line,  ```o``` cicle marker, ```^``` triangle marker, ```s``` square marker, ```+``` sum marker, ```.``` point marker). By default plots are drawn with lines. 
- 
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.plot(svg_cpp_plot::arange(0,20,0.05),
-        [] (float x) { return x*std::sin(x);},"g-");
-plt.plot(svg_cpp_plot::arange(0,20,0.05),
-        [] (float x) { return x*std::sin(x+0.4*M_PI);},"r--");
-plt.plot(svg_cpp_plot::arange(0,20,0.05),
-        [] (float x) { return x*std::sin(x+0.8*M_PI);},"b-.");
-plt.plot(svg_cpp_plot::arange(0,20,0.05),
-        [] (float x) { return x*std::sin(x+1.2*M_PI);},"y:");
-plt.plot(svg_cpp_plot::arange(0,20,0.05),
-        [] (float x) { return x*std::sin(x+1.6*M_PI);},"k");
-plt.plot(svg_cpp_plot::arange(0,20,0.25),
-        [] (float x) { return 50+x*std::sin(x);},"go");
-plt.plot(svg_cpp_plot::arange(0,20,0.25),
-        [] (float x) { return 50+x*std::sin(x+0.4*M_PI);},"r^");
-plt.plot(svg_cpp_plot::arange(0,20,0.25),
-        [] (float x) { return 50+x*std::sin(x+0.8*M_PI);},"bs");
-plt.plot(svg_cpp_plot::arange(0,20,0.25),
-        [] (float x) { return 50+x*std::sin(x+1.2*M_PI);},"y+");
-plt.plot(svg_cpp_plot::arange(0,20,0.25),
-        [] (float x) { return 50+x*std::sin(x+1.6*M_PI);},"k.");
+There are several *named attributes* that can be used for formatting the plot. However, as C++ does not specifically support such feature, these named attributes are implemented as postfix methods, appended consecutively at the end of the `plot` method call.
 
-plt.savefig("../doc/svgplot/plot/example5.svg");
-```
-
-The above example tests many format combinations, yielding:
-
-<div style="text-align:center"><img 
- src="./plot/example5.svg" alt="example4" width="50%" /></div>
-
-Another option to better customize the appearance of each of the plots is through *named attributes*. However, as C++ does not specifically support such feature, these named attributes are implemented as postfix methods, appended consecutively at the end of the `plot` method call.
-
-For markers the following named attributes are provided:
+These are this named attributes:
 - `markersize(<float>)` sets the size of the marker.
-- `marker(<string>)` defines the style of the marker represented as a single charater.
-<div style="text-align:center"><img 
- src="./scatter/example4.svg" alt="example4" width="100%" /></div>
-
-For lines the following named attributes are provided:
+- `marker(<string>)` defines the style of the marker represented as a single charater (the same characters as for [scatter plots](scatter.html)).
+- `markeredgewidth(<float>)` sets the width of the line around the markers.
 - `linewidth(<float>)` sets the width of the line.
-- `linestyle(<string>)` defines the style of the line (see format strings above).
+- `linestyle(<string>)` defines the style of the line (```-``` full line, ```--``` dashed line, ```-.``` chain line, ```..``` small dashed line). Alternatively, it is also possible to pass a list of floats indicating the size of the lines and spaces among them, consecutively.
+- `color(<color>)` defines the [color](color.html) of the plot.
+- `markerfacecolor(<color>)` defines the [color](color.html) of the markers.
+- `markeredgecolor(<color>)` defined the [color](color.html) of the edges of the markes.
 
-For both the following named attribute is provided:
-- `color(<color>)` sets the color of the marker / line. Colors can be a named color (`svg_cpp_plot::red`), a RGB color (`svg_cpp_plot::rgb(0.2,0.8,0.2)`), a HSV color (`svg_cpp_plot::hsv(0,1,1)`) or a string that represents a color, either named colors `"magenta"`, color URLs `"#FF00EE"` or single char colors (```r```  red, ```g```  green, ```b```  blue, ```c``` cyan, ```m``` magenta, ```y```  yellow, ```k```  black, ```w``` white).
+As an usage example for these parameters, we provide this:
 
-The following is an example of the usage of these named attributes described above:
-
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.plot(svg_cpp_plot::arange(0,7,0.05),[] (float x) { return std::sin(x); })
-	.linestyle("-.").color( svg_cpp_plot::hsv(160,1,1)).linewidth(1);
-plt.plot(svg_cpp_plot::arange(0,7,0.5),[] (float x) { return std::sin(x); })
-	.marker("s").color(svg_cpp_plot::rgb(0.2,0.8,0.2)).markersize(2);
-plt.savefig("../doc/svgplot/plot/example6.svg");
-```
+{% highlight cpp %}
+{% include includelines filename='plot.cc' start=38 count=5 %}
+{% endhighlight %}
 
 which yields the following graph:
+![Example 5](./plot/example5.svg)
 
-<div style="text-align:center"><img 
- src="./plot/example6.svg" alt="example4" width="50%" /></div>
-
-
+ 

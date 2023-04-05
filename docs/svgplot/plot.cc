@@ -8,13 +8,13 @@ int main(int argc, char** argv) {
 	svg::plot::SVGPlot plt;
 	plt.plot({1,2,3,4});
 	plt.ylabel("some numbers");
-	plt.savefig("../doc/svgplot/plot/example1.svg");
+	plt.savefig("../docs/svgplot/plot/example1.svg");
 	}
 
 	{ // Example 2
 	svg::plot::SVGPlot plt;
 	plt.plot({1, 2, 3, 4}, {1, 4, 9, 16});
-	plt.savefig("../doc/svgplot/plot/example2.svg");
+	plt.savefig("../docs/svgplot/plot/example2.svg");
 	}
 	
 	{ // Example 3
@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 	std::list<float> l; 
 	for (int i=0; i<100;++i) l.push_back(f*=-1.005);
 	plt.plot(svg::plot::arange(0,5,0.05),l);
-	plt.savefig("../doc/svgplot/plot/example3.svg");
+	plt.savefig("../docs/svgplot/plot/example3.svg");
 	}
 
 	{ // Example 4
@@ -31,10 +31,17 @@ int main(int argc, char** argv) {
 	auto x = svg::plot::linspace(0,5);
 	plt.plot(x,[] (float x) { return x*std::sin(x);});
 	plt.plot(x,sqrtf);
-	plt.savefig("../doc/svgplot/plot/example4.svg");
+	plt.savefig("../docs/svgplot/plot/example4.svg");
 	}
 	
-	/* { // Example 5
+    { // Example 5
+	svg::plot::SVGPlot plt;
+	plt.plot(svg::plot::arange(0,7,0.5),[] (float x) { return std::sin(x); })
+		.linestyle("-.").color(svg::hsv(160,1,1)).linewidth(1)
+		.marker("s").markeredgecolor(svg::hsv(160,1,1)).markerfacecolor(svg::yellow).markersize(5);
+ 	plt.savefig("../docs/svgplot/plot/example5.svg");
+	}
+		/* { // Example 5
 	svg::plot::SVGPlot plt;
 	plt.plot(svg::plot::arange(0,20,0.05),
 		[] (float x) { return x*std::sin(x);},"g-");

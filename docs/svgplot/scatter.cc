@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
     for (int n=0;n<50;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
     svg::plot::SVGPlot plt;
     plt.scatter(x,y);
-    plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example1.svg");
+    plt.figsize({200,200}).savefig("../docs/svgplot/scatter/example1.svg");
 	}
     
 	{ // Example 2
@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
         }            
         plt.scatter(x,y);
     }            
-    plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example2.svg");
+    plt.figsize({200,200}).savefig("../docs/svgplot/scatter/example2.svg");
 	}
 
 
@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     }
     svg::plot::SVGPlot plt;
     plt.scatter(x,y).c("r").alpha(0.5).s(2).edgecolors("black").linewidths(0.5);
-    plt.figsize({200,200}).savefig("../doc/svgplot/scatter/example3.svg");
+    plt.figsize({200,200}).savefig("../docs/svgplot/scatter/example3.svg");
 	}
 
    
@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
         sub.axis({-1,1,-1,1}).xticks({}).yticks({}).figsize({245,265}).linewidth(1);
         sub.scatter({0},{0}).marker(marker).s(100.0f);
         }
-    plt.savefig("../doc/svgplot/scatter/example4.svg");
+    plt.savefig("../docs/svgplot/scatter/example4.svg");
 	}
     
 /*    { // Example 5

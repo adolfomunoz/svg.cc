@@ -1,4 +1,4 @@
-# GNUPlot::hist
+# SVGPlot::hist
 
 The `hist` method provides a way to generate histograms from data, from `svg_cpp_plot::SVGPlot` class. It expectes a single parameter, which are the samples from which the histogram is going to be calculated and plotted:
 
