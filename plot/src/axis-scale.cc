@@ -14,16 +14,22 @@ float adjust(float x, int digits = 2) noexcept {
 std::vector<float> ScaleBase::ticks(int target_ticks, float xmin, float xmax) const noexcept {
     float tick_ref = 0;
     if ((xmax*xmin) > 0.0f) tick_ref = adjust(0.5*(xmax+xmin),1);
-    float tick_step = adjust((xmax-xmin)/float(target_ticks-1),1);
+    int digits = 1;
+    float tick_step = adjust((xmax-xmin)/float(target_ticks-1),digits);
+    while (std::abs(tick_step)<1.e-10) {
+        ++digits;
+        tick_step = adjust((xmax-xmin)/float(target_ticks-1),digits);
+    }
+
     std::vector<float> sol;
     for (int i = (target_ticks+1); i>0; --i) {
-        float tick = adjust(tick_ref - tick_step*i);
+        float tick = adjust(tick_ref - tick_step*i,digits);
         if (tick >= xmin) sol.push_back(tick);
     }
     sol.push_back(tick_ref); 
 
     for (int i = 1; i<=(target_ticks+1); ++i) {
-        float tick = adjust(tick_ref + tick_step*i);
+        float tick = adjust(tick_ref + tick_step*i,digits);
         if (tick <= xmax) sol.push_back(tick);
     }
     return sol;

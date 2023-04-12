@@ -1,92 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" >
    <clipPath id="clipPath00001" >
-         <rect x="44" y="8" width="585.5" height="456.5" id="rect00001" />
+         <rect x="59" y="8" width="570.5" height="456.5" id="rect00001" />
 
    </clipPath>
    <g id="g00001" clip-path="url(#clipPath00001)" >
-         <polyline points="44,464.5 239.167,312.333 434.333,160.167 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00001" />
+         <polyline points="59,464.5 249.167,312.333 439.333,160.167 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00001" />
 
    </g>
-   <rect stroke-width="1" stroke="black" fill="none" x="44" y="8" width="585.5" height="456.5" id="rect00001" />
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00001" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00001" >
+   <rect stroke-width="1" stroke="black" fill="none" x="59" y="8" width="570.5" height="456.5" id="rect00001" />
+   <line x1="59" y1="464.5" x2="59" y2="467.5" stroke-width="1" stroke="black" id="line00001" />
+   <text x="59" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00001" >
 0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00002" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00002" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00003" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00003" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00004" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00004" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00005" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00005" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00006" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00006" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00007" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00007" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00008" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00008" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00009" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00009" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00010" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00010" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00011" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00011" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00012" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00012" >
-0   </text>
-   <line x1="44" y1="464.5" x2="44" y2="467.5" stroke-width="1" stroke="black" id="line00013" />
-   <text x="44" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00013" >
-0   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00014" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00014" >
+   <line x1="192.117" y1="464.5" x2="192.117" y2="467.5" stroke-width="1" stroke="black" id="line00002" />
+   <text x="192.117" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00002" >
+0.7   </text>
+   <line x1="325.233" y1="464.5" x2="325.233" y2="467.5" stroke-width="1" stroke="black" id="line00003" />
+   <text x="325.233" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00003" >
+1.4   </text>
+   <line x1="439.333" y1="464.5" x2="439.333" y2="467.5" stroke-width="1" stroke="black" id="line00004" />
+   <text x="439.333" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00004" >
 2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00015" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00015" >
+   <line x1="591.467" y1="464.5" x2="591.467" y2="467.5" stroke-width="1" stroke="black" id="line00005" />
+   <text x="591.467" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00005" >
+2.8   </text>
+   <line x1="59" y1="434.067" x2="56" y2="434.067" stroke-width="1" stroke="black" id="line00006" />
+   <text x="55" y="434.067" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00006" >
+1.2   </text>
+   <line x1="59" y1="312.333" x2="56" y2="312.333" stroke-width="1" stroke="black" id="line00007" />
+   <text x="55" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00007" >
 2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00016" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00016" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00017" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00017" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00018" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00018" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00019" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00019" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00020" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00020" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00021" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00021" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00022" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00022" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00023" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00023" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00024" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00024" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00025" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00025" >
-2   </text>
-   <line x1="44" y1="312.333" x2="41" y2="312.333" stroke-width="1" stroke="black" id="line00026" />
-   <text x="40" y="312.333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00026" >
-2   </text>
-   <text x="31.5" y="236.25" font-size="16" font-family="sans-serif" text-anchor="middle" id="text00027" transform="rotate(-90 31.5 236.25)" >
+   <line x1="59" y1="205.817" x2="56" y2="205.817" stroke-width="1" stroke="black" id="line00008" />
+   <text x="55" y="205.817" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00008" >
+2.7   </text>
+   <line x1="59" y1="99.3" x2="56" y2="99.3" stroke-width="1" stroke="black" id="line00009" />
+   <text x="55" y="99.3" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00009" >
+3.4   </text>
+   <text x="31.5" y="236.25" font-size="16" font-family="sans-serif" text-anchor="middle" id="text00010" transform="rotate(-90 31.5 236.25)" >
 some numbers   </text>
 
 </svg>
