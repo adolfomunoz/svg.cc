@@ -37,8 +37,8 @@ int main(int argc, char** argv) {
     { // Example 5
 	svg::plot::SVGPlot plt;
 	plt.plot(svg::plot::arange(0,7,0.5),[] (float x) { return std::sin(x); })
-		.linestyle("-.").color(svg::hsv(160,1,1)).linewidth(1)
-		.marker("s").markeredgecolor(svg::hsv(160,1,1)).markerfacecolor(svg::yellow).markersize(5);
+		.linestyle("-.").color(svg::hsv(240,1,1)).linewidth(1)
+		.marker("s").markeredgecolor(svg::hsv(240,1,1)).markerfacecolor(svg::yellow).markersize(2.5).markeredgewidth(1);
  	plt.savefig("../docs/svgplot/plot/example5.svg");
 	}
 		/* { // Example 5

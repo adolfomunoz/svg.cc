@@ -41,20 +41,20 @@ inline ColorRGB rgb(float r, float g, float b) noexcept {
 }
 
 inline ColorRGB hsv(float h, float s, float v) {
-	h*=3.0f/280.0; //In 6 sectors (h is in degrees)
+	h*=3.0f/180.0; //In 6 sectors (h is in degrees)
 	int i = h; //floor of h;
 	float f = h-i; //Decimals part;
-	float p = 255.0f*v*(1.0f-s);
-	float q = 255.0f*v*(1.0f-s*f);
-	float t = 255.0f*v*(1.0f-s*(1.0f-f));
+	float p = v*(1.0f-s);
+	float q = v*(1.0f-s*f);
+	float t = v*(1.0f-s*(1.0f-f));
 	switch (i){
-		case 0: return rgb(v,t,p);
-		case 1: return rgb(q,v,p);
-		case 2: return rgb(p,v,t);
-		case 3: return rgb(p,q,t);
-		case 4: return rgb(t,p,v);
+		case 0: return rgb(255.0f*v,255.0f*t,255.0f*p);
+		case 1: return rgb(255.0f*q,255.0f*v,255.0f*p);
+		case 2: return rgb(255.0f*p,255.0f*v,255.0f*t);
+		case 3: return rgb(255.0f*p,255.0f*q,255.0f*t);
+		case 4: return rgb(255.0f*t,255.0f*p,255.0f*v);
 		default: //5
-			return rgb(v,p,q);
+			return rgb(255.0f*v,255.0f*p,255.0f*q);
 	}
 }
 
