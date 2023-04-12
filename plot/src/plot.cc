@@ -2,6 +2,7 @@
 #include "../../src/group.h"
 #include "../../src/poly.h"
 #include "color.h"
+#include <cctype>
 
 namespace svg {
 namespace plot {
@@ -17,26 +18,23 @@ Plot::Plot(std::list<float>&& _x, const std::list<float>& y) : x(std::move(_x)),
 Plot::Plot(const std::list<float>& x, std::list<float>&& _y) : x(x), y(std::move(_y)),markers(list_to_vector(x),list_to_vector(y)) {}
 Plot::Plot(std::list<float>&& _x, std::list<float>&& _y) : x(std::move(_x)), y(std::move(_y)),markers(list_to_vector(x),list_to_vector(y)) {}
 svg::Element Plot::plot(const Transform& xscale, const Transform& yscale) const noexcept {
-    svg::Polyline output;
-    std::list<float>::const_iterator ix, iy;
-    for (ix = x.begin(), iy = y.begin(); (ix != x.end()) && (iy != y.end()); ++ix, ++iy)
-        output.add_point(xscale(*ix),yscale(*iy));
-    output.fill(none).stroke_width(linewidth()).stroke(color()).opacity(alpha());
-
+    svg::Group g;
     std::list<float> ls = linestyle();
-    if (!ls.empty()) {
-        std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return lw*f; });
-        output.stroke_dasharray(ls);
+    if ((ls.empty()) || (ls.front()!=0)) { //ls.front = 0 marks a null linestyle
+        svg::Polyline output;
+        std::list<float>::const_iterator ix, iy;
+        for (ix = x.begin(), iy = y.begin(); (ix != x.end()) && (iy != y.end()); ++ix, ++iy)
+            output.add_point(xscale(*ix),yscale(*iy));
+        output.fill(none).stroke_width(linewidth()).stroke(color()).opacity(alpha());
+        if (!ls.empty()) {
+            std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return lw*f; });
+            output.stroke_dasharray(ls);
+        }    
+        g.add(output);
     }
 
-    if (markers_set) {
-        svg::Group g;
-        g.add(output);
-        g.add(markers.plot(xscale,yscale));
-        return g;
-    } else {
-        return output;
-    }
+    if (markers_set) g.add(markers.plot(xscale,yscale));
+    return g;
 }
 std::array<float,4> Plot::axis() const noexcept {
     if (markers_set) return markers.axis();
@@ -74,6 +72,7 @@ Plot& Plot::linestyle(const std::string& ls) noexcept {
     else if ((ls=="dotted") || (ls==":")) return linestyle(std::list{1.0f});
     else if ((ls=="dashed") || (ls=="--")) return linestyle(std::list{3.0f,1.0f});
     else if ((ls=="dashdot") || (ls=="-.")) return linestyle(std::list{5.0f,1.0f,1.0f,1.0f});
+    else if (ls=="none") return linestyle(std::list{0.0f});
     else return (*this);
 }
 
@@ -115,6 +114,27 @@ Plot& Plot::markerfacecolor(const char* sc) noexcept {
 }
 
 Plot& Plot::fmt(const std::string& f) noexcept {
+    std::string col, mar, ls;
+    for (std::size_t i = 0; i<f.size();++i) {
+        if ((f[i]=='o') || (f[i]=='x')) mar = f.substr(i,i+1); //This is a marker, not a color
+        else if (std::islower(f[i])) col = f.substr(i,i+1);
+        else if (f[i]=='-') {
+            if ( ((i+1) < f.size()) && ((f[i+1]=='.') || (f[i+1]=='-')) ) { //Two characters linestyle
+                ++i;
+                ls = f.substr(i-1,i+1);
+            } else ls = f.substr(i,i+1);
+        } 
+        else if (f[i]==':') ls = f.substr(i,i+1); 
+        else  mar = f.substr(i-i+1); //The only thing left is marker
+
+    }
+    if (!col.empty()) color(col);
+    if (!ls.empty()) linestyle(ls);
+    if (!mar.empty()) {
+        marker(mar).markersize(2);
+        if (!col.empty()) markerfacecolor(col);
+        if (ls.empty()) linestyle("none");
+    }
     return (*this);
 }
 

@@ -3,8 +3,11 @@
          <rect x="18.5" y="8" width="611" height="456.5" id="rect00002" />
 
    </clipPath>
-   <g id="g00002" clip-path="url(#clipPath00002)" >
-         <polyline points="18.5,464.5 222.167,373.2 425.833,221.033 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00002" />
+   <g id="g00003" clip-path="url(#clipPath00002)" >
+         <g id="g00004" >
+               <polyline points="18.5,464.5 222.167,373.2 425.833,221.033 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00002" />
+
+      </g>
 
    </g>
    <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="611" height="456.5" id="rect00002" />

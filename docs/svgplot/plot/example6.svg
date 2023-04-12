@@ -1,196 +1,135 @@
-<svg viewBox="0 0 640 480" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="id0000001371" >
-<g id="id0000001372" >
-<clipPath id="id0000001372clipper" >
-<polygon points="36,1 36,458 639,458 639,1 " id="id0000001404" class="rectangle" />
-</clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" >
+   <clipPath id="clipPath00006" >
+         <rect x="18.5" y="8" width="611" height="456.5" id="rect00007" />
 
-<g clip-path="url(#id0000001372clipper)" id="id0000001374" >
-<polyline id="id0000001405" fill="none" points="36,229.484 40.3381,218.062 44.6762,206.669 49.0144,195.332 53.3525,184.081 57.6906,172.944 62.0287,161.948 66.3669,151.12 70.705,140.489 75.0431,130.08 79.3812,119.919 83.7194,110.033 88.0575,100.444 92.3956,91.1787 96.7337,82.2587 101.072,73.7068 105.41,65.5441 109.748,57.7913 114.086,50.4676 118.424,43.5914 122.762,37.1797 127.101,31.2488 131.439,25.8133 135.777,20.8869 140.115,16.4819 144.453,12.6093 148.791,9.27876 153.129,6.49861 157.467,4.27582 161.806,2.61591 166.144,1.52307 170.482,1 174.82,1.04802 179.158,1.66701 183.496,2.85542 187.834,4.61029 192.172,6.92723 196.511,9.80045 200.849,13.2227 205.187,17.1856 209.525,21.6791 213.863,26.692 218.201,32.2117 222.539,38.2245 226.877,44.7154 231.215,51.6682 235.554,59.0653 239.892,66.8884 244.23,75.1179 248.568,83.7333 252.906,92.7129 257.244,102.034 261.582,111.674 265.92,121.609 270.259,131.813 274.597,142.261 278.935,152.928 283.273,163.785 287.611,174.807 291.949,185.966 296.287,197.233 300.625,208.581 304.964,219.981 309.302,231.405 313.64,242.824 317.978,254.21 322.316,265.534 326.654,276.768 330.992,287.883 335.33,298.853 339.668,309.649 344.007,320.245 348.345,330.614 352.683,340.731 357.021,350.569 361.359,360.104 365.697,369.314 370.035,378.173 374.373,386.661 378.712,394.756 383.05,402.438 387.388,409.688 391.726,416.487 396.064,422.819 400.402,428.668 404.74,434.019 409.079,438.858 413.417,443.175 417.755,446.957 422.093,450.195 426.431,452.882 430.769,455.011 435.107,456.576 439.445,457.573 443.784,458 448.122,457.856 452.46,457.141 456.798,455.857 461.136,454.007 465.474,451.596 469.812,448.63 474.151,445.116 478.489,441.064 482.827,436.482 487.165,431.383 491.503,425.779 495.841,419.685 500.179,413.115 504.518,406.086 508.856,398.616 513.194,390.723 517.532,382.427 521.87,373.749 526.208,364.71 530.546,355.333 534.885,345.642 539.223,335.66 543.561,325.413 547.899,314.926 552.237,304.226 556.575,293.339 560.913,282.292 565.252,271.113 569.59,259.83 573.928,248.471 578.266,237.065 582.604,225.64 586.942,214.225 591.28,202.847 595.619,191.536 599.957,180.32 604.295,169.227 608.633,158.285 612.971,147.52 617.309,136.961 621.647,126.632 625.986,116.561 630.324,106.772 634.662,97.2897 639,88.1378 " stroke-dasharray="3.000000 2.000000 1.000000 2.000000" stroke-opacity="1.000000" stroke-linecap="round" stroke="rgb( 255, 0, 53 )" stroke-width="1.000000" />
-<g id="id0000001375" >
-<g id="id0000001377" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001376" >
-<polygon points="34,227.484 34,231.484 38,231.484 38,227.484 " id="id0000001406" class="rectangle" />
-</g>
+   </clipPath>
+   <g id="g00014" clip-path="url(#clipPath00006)" >
+         <g id="g00015" >
+               <polyline points="36.4706,370.231 37.9264,370.217 39.3823,370.177 40.8381,370.109 42.294,370.014 43.7498,369.894 45.2057,369.748 46.6615,369.577 48.1174,369.382 49.5732,369.165 51.029,368.925 52.4849,368.665 53.9407,368.385 55.3966,368.088 56.8524,367.775 58.3083,367.446 59.7641,367.105 61.22,366.752 62.6758,366.391 64.1317,366.022 65.5875,365.647 67.0433,365.27 68.4992,364.891 69.955,364.513 71.4109,364.139 72.8667,363.769 74.3226,363.408 75.7784,363.056 77.2342,362.716 78.6901,362.39 80.1459,362.081 81.6018,361.79 83.0576,361.519 84.5135,361.271 85.9693,361.048 87.4252,360.851 88.881,360.682 90.3368,360.544 91.7927,360.437 93.2485,360.363 94.7044,360.325 96.1602,360.322 97.6161,360.357 99.0719,360.43 100.528,360.542 101.984,360.695 103.439,360.888 104.895,361.123 106.351,361.4 107.807,361.72 109.263,362.081 110.719,362.484 112.174,362.93 113.63,363.417 115.086,363.945 116.542,364.514 117.998,365.122 119.454,365.768 120.91,366.452 122.365,367.171 123.821,367.925 125.277,368.711 126.733,369.529 128.189,370.375 129.645,371.248 131.1,372.146 132.556,373.066 134.012,374.006 135.468,374.964 136.924,375.935 138.38,376.919 139.836,377.911 141.291,378.909 142.747,379.909 144.203,380.91 145.659,381.906 147.115,382.896 148.571,383.876 150.026,384.842 151.482,385.791 152.938,386.721 154.394,387.627 155.85,388.506 157.306,389.355 158.762,390.171 160.217,390.95 161.673,391.69 163.129,392.387 164.585,393.039 166.041,393.641 167.497,394.193 168.952,394.69 170.408,395.13 171.864,395.511 173.32,395.831 174.776,396.087 176.232,396.277 177.688,396.4 179.143,396.454 180.599,396.437 182.055,396.348 183.511,396.186 184.967,395.951 186.423,395.64 187.879,395.255 189.334,394.795 190.79,394.259 192.246,393.647 193.702,392.962 195.158,392.202 196.614,391.369 198.069,390.463 199.525,389.487 200.981,388.442 202.437,387.329 203.893,386.151 205.349,384.909 206.805,383.607 208.26,382.247 209.716,380.831 211.172,379.363 212.628,377.846 214.084,376.284 215.54,374.679 216.996,373.037 218.451,371.36 219.907,369.654 221.363,367.921 222.819,366.168 224.275,364.397 225.731,362.614 227.186,360.824 228.642,359.03 230.098,357.239 231.554,355.455 233.01,353.683 234.466,351.928 235.922,350.195 237.377,348.49 238.833,346.816 240.289,345.18 241.745,343.585 243.201,342.038 244.657,340.542 246.113,339.103 247.568,337.725 249.024,336.413 250.48,335.172 251.936,334.004 253.392,332.916 254.848,331.91 256.304,330.99 257.759,330.16 259.215,329.424 260.671,328.784 262.127,328.243 263.583,327.805 265.039,327.471 266.494,327.244 267.95,327.125 269.406,327.117 270.862,327.221 272.318,327.437 273.774,327.767 275.23,328.211 276.685,328.77 278.141,329.442 279.597,330.229 281.053,331.128 282.509,332.139 283.965,333.26 285.421,334.491 286.876,335.828 288.332,337.269 289.788,338.813 291.244,340.455 292.7,342.193 294.156,344.023 295.611,345.942 297.067,347.945 298.523,350.028 299.979,352.186 301.435,354.414 302.891,356.708 304.347,359.062 305.802,361.47 307.258,363.927 308.714,366.427 310.17,368.963 311.626,371.53 313.082,374.121 314.538,376.729 315.993,379.348 317.449,381.971 318.905,384.591 320.361,387.202 321.817,389.796 323.273,392.366 324.728,394.906 326.184,397.408 327.64,399.866 329.096,402.272 330.552,404.621 332.008,406.905 333.464,409.118 334.919,411.253 336.375,413.304 337.831,415.264 339.287,417.129 340.743,418.891 342.199,420.546 343.655,422.089 345.11,423.513 346.566,424.814 348.022,425.989 349.478,427.032 350.934,427.939 352.39,428.708 353.845,429.335 355.301,429.816 356.757,430.15 358.213,430.333 359.669,430.365 361.125,430.244 362.581,429.969 364.036,429.539 365.492,428.954 366.948,428.213 368.404,427.319 369.86,426.271 371.316,425.071 372.772,423.721 374.227,422.223 375.683,420.579 377.139,418.793 378.595,416.868 380.051,414.807 381.507,412.616 382.962,410.298 384.418,407.859 385.874,405.303 387.33,402.637 388.786,399.866 390.242,396.997 391.698,394.036 393.153,390.99 394.609,387.866 396.065,384.672 397.521,381.415 398.977,378.103 400.433,374.745 401.889,371.348 403.344,367.921 404.8,364.473 406.256,361.012 407.712,357.547 409.168,354.087 410.624,350.641 412.08,347.218 413.535,343.826 414.991,340.475 416.447,337.174 417.903,333.932 419.359,330.756 420.815,327.657 422.271,324.642 423.726,321.72 425.182,318.899 426.638,316.187 428.094,313.592 429.55,311.121 431.006,308.782 432.461,306.581 433.917,304.526 435.373,302.621 436.829,300.875 438.285,299.291 439.741,297.876 441.197,296.634 442.652,295.569 444.108,294.686 445.564,293.988 447.02,293.478 448.476,293.159 449.932,293.033 451.388,293.102 452.843,293.367 454.299,293.828 455.755,294.486 457.211,295.34 458.667,296.39 460.123,297.634 461.578,299.07 463.034,300.697 464.49,302.51 465.946,304.508 467.402,306.685 468.858,309.038 470.314,311.562 471.769,314.251 473.225,317.1 474.681,320.102 476.137,323.251 477.593,326.54 479.049,329.961 480.505,333.507 481.96,337.169 483.416,340.938 484.872,344.806 486.328,348.764 487.784,352.802 489.24,356.91 490.695,361.078 492.151,365.296 493.607,369.553 495.063,373.84 496.519,378.145 497.975,382.457 499.431,386.765 500.886,391.059 502.342,395.327 503.798,399.558 505.254,403.742 506.71,407.867 508.166,411.923 509.621,415.898 511.077,419.783 512.533,423.566 513.989,427.238 515.445,430.789 516.901,434.208 518.356,437.486 519.812,440.614 521.268,443.584 522.724,446.386 524.18,449.013 525.635,451.456 527.091,453.709 528.547,455.765 530.003,457.617 531.459,459.259 532.914,460.687 534.37,461.894 535.826,462.877 537.282,463.633 538.738,464.156 540.194,464.446 541.649,464.5 543.105,464.316 544.561,463.894 546.017,463.233 547.473,462.334 548.929,461.197 550.384,459.824 551.84,458.217 553.296,456.38 554.752,454.314 556.208,452.025 557.664,449.517 559.119,446.795 560.575,443.864 562.031,440.732 563.487,437.404 564.943,433.888 566.398,430.193 567.854,426.326 569.31,422.296 570.766,418.113 572.222,413.786 573.678,409.326 575.133,404.743 576.589,400.049 578.045,395.254 579.501,390.369 580.957,385.408 582.413,380.382 583.868,375.304 585.324,370.185 586.78,365.04 588.236,359.88 589.692,354.72 591.147,349.57 592.603,344.446 594.059,339.36 595.515,334.326 596.971,329.355 598.427,324.461 599.882,319.658 601.338,314.957 602.794,310.37 604.25,305.911 605.706,301.591 607.161,297.422 608.617,293.415 610.073,289.581 611.529,285.93 612.985,282.474 614.441,279.22 615.896,276.18 617.352,273.361 " stroke-width="1" stroke="green" fill="none" opacity="1" id="polyline00007" />
 
-</g>
+      </g>
+      <g id="g00016" >
+               <g id="g00017" >
+                     <defs>
+                           <circle cx="0" cy="0" r="1" id="circle00009" />
 
-<g id="id0000001379" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001378" >
-<polygon points="77.3812,117.919 77.3812,121.919 81.3812,121.919 81.3812,117.919 " id="id0000001407" class="rectangle" />
-</g>
+            </defs>
+            <g id="g00018" >
+                           <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00015" transform="translate(36.4706 97.8712) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00016" transform="translate(43.7498 97.5343) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00017" transform="translate(51.029 96.5654) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00018" transform="translate(58.3083 95.0865) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00019" transform="translate(65.5875 93.2875) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00020" transform="translate(72.8667 91.4096) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00021" transform="translate(80.1459 89.7209) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00022" transform="translate(87.4252 88.4913) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00023" transform="translate(94.7044 87.965) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00024" transform="translate(101.984 88.335) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00025" transform="translate(109.263 89.7212) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00026" transform="translate(116.542 92.154) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00027" transform="translate(123.821 95.5651) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00028" transform="translate(131.101 99.7867) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00029" transform="translate(138.38 104.559) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00030" transform="translate(145.659 109.547) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00031" transform="translate(152.938 114.361) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00032" transform="translate(160.217 118.591) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00033" transform="translate(167.497 121.833) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00034" transform="translate(174.776 123.727) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00035" transform="translate(182.055 123.988) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00036" transform="translate(189.334 122.435) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00037" transform="translate(196.614 119.009) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00038" transform="translate(203.893 113.791) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00039" transform="translate(211.172 107.003) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00040" transform="translate(218.451 99.0008) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00041" transform="translate(225.73 90.2545) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00042" transform="translate(233.01 81.3238) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00043" transform="translate(240.289 72.8201) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00044" transform="translate(247.568 65.366) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00045" transform="translate(254.847 59.5502) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00046" transform="translate(262.127 55.8835) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00047" transform="translate(269.406 54.7574) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00048" transform="translate(276.685 56.41) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00049" transform="translate(283.964 60.9004) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00050" transform="translate(291.243 68.095) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00051" transform="translate(298.523 77.6672) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00052" transform="translate(305.802 89.1095) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00053" transform="translate(313.081 101.76) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00054" transform="translate(320.36 114.841) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00055" transform="translate(327.64 127.505) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00056" transform="translate(334.919 138.892) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00057" transform="translate(342.198 148.186) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00058" transform="translate(349.477 154.672) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00059" transform="translate(356.757 157.79) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00060" transform="translate(364.036 157.179) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00061" transform="translate(371.315 152.712) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00062" transform="translate(378.594 144.509) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00063" transform="translate(385.873 132.945) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00064" transform="translate(393.153 118.632) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00065" transform="translate(400.432 102.387) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00066" transform="translate(407.711 85.1894) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00067" transform="translate(414.99 68.1177) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00068" transform="translate(422.27 52.2845) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00069" transform="translate(429.549 38.7632) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00070" transform="translate(436.828 28.5161) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00071" transform="translate(444.107 22.3268) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00072" transform="translate(451.386 20.7423) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00073" transform="translate(458.666 24.0292) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00074" transform="translate(465.945 32.1464) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00075" transform="translate(473.224 44.7375) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00076" transform="translate(480.503 61.1443) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00077" transform="translate(487.783 80.4388) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00078" transform="translate(495.062 101.477) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00079" transform="translate(502.341 122.963) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00080" transform="translate(509.62 143.535) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00081" transform="translate(516.899 161.846) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00082" transform="translate(524.179 176.651) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00083" transform="translate(531.458 186.899) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00084" transform="translate(538.737 191.796) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00085" transform="translate(546.016 190.874) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00086" transform="translate(553.296 184.021) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00087" transform="translate(560.575 171.505) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00088" transform="translate(567.854 153.967) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00089" transform="translate(575.133 132.384) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00090" transform="translate(582.413 108.023) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00091" transform="translate(589.692 82.3594) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00092" transform="translate(596.971 56.9945) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00093" transform="translate(604.25 33.5506) scale(2 2)" />
+               <use href="#circle00009" xlink:href="#circle00009" stroke-width="0" stroke="black" fill="green" opacity="1" fill-opacity="1" id="use00094" transform="translate(611.529 13.5696) scale(2 2)" />
 
-</g>
+            </g>
 
-<g id="id0000001381" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001380" >
-<polygon points="120.762,35.1798 120.762,39.1798 124.762,39.1798 124.762,35.1798 " id="id0000001408" class="rectangle" />
-</g>
+         </g>
 
-</g>
+      </g>
 
-<g id="id0000001383" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001382" >
-<polygon points="164.144,-0.476944 164.144,3.52306 168.144,3.52306 168.144,-0.476944 " id="id0000001409" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001385" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001384" >
-<polygon points="207.525,19.6792 207.525,23.6792 211.525,23.6792 211.525,19.6792 " id="id0000001410" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001387" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001386" >
-<polygon points="250.906,90.7131 250.906,94.7131 254.906,94.7131 254.906,90.7131 " id="id0000001411" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001389" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001388" >
-<polygon points="294.287,195.233 294.287,199.233 298.287,199.233 298.287,195.233 " id="id0000001412" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001391" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001390" >
-<polygon points="337.669,307.65 337.669,311.65 341.669,311.65 341.669,307.65 " id="id0000001413" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001393" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001392" >
-<polygon points="381.05,400.439 381.05,404.439 385.05,404.439 385.05,400.439 " id="id0000001414" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001395" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001394" >
-<polygon points="424.431,450.882 424.431,454.882 428.431,454.882 428.431,450.882 " id="id0000001415" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001397" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001396" >
-<polygon points="467.812,446.63 467.812,450.63 471.812,450.63 471.812,446.63 " id="id0000001416" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001399" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001398" >
-<polygon points="511.194,388.724 511.194,392.724 515.194,392.724 515.194,388.724 " id="id0000001417" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001401" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001400" >
-<polygon points="554.575,291.34 554.575,295.34 558.575,295.34 558.575,291.34 " id="id0000001418" class="rectangle" />
-</g>
-
-</g>
-
-<g id="id0000001403" >
-<g opacity="1.000000" fill="rgb( 51, 204, 51 )" stroke="black" stroke-width="0.000000" id="id0000001402" >
-<polygon points="597.956,178.322 597.956,182.322 601.956,182.322 601.956,178.322 " id="id0000001419" class="rectangle" />
-</g>
-
-</g>
-
-</g>
-
-</g>
-
-<polygon points="36,1 36,458 639,458 639,1 " stroke="black" stroke-width="1.000000" fill="none" id="id0000001420" pointer-events="none" class="rectangle" />
-<polyline points="36,458 36,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001421" class="line" />
-<text id="id0000001422" transform="matrix(1 0 0 1 36 1)" x="0.000000" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-0
-</text>
-
-<polyline points="122.762,458 122.762,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001423" class="line" />
-<text id="id0000001424" transform="matrix(1 0 0 1 36 1)" x="86.762482" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-1
-</text>
-
-<polyline points="209.525,458 209.525,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001425" class="line" />
-<text id="id0000001426" transform="matrix(1 0 0 1 36 1)" x="173.524963" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-2
-</text>
-
-<polyline points="296.287,458 296.287,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001427" class="line" />
-<text id="id0000001428" transform="matrix(1 0 0 1 36 1)" x="260.287445" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-3
-</text>
-
-<polyline points="383.05,458 383.05,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001429" class="line" />
-<text id="id0000001430" transform="matrix(1 0 0 1 36 1)" x="347.049927" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-4
-</text>
-
-<polyline points="469.812,458 469.812,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001431" class="line" />
-<text id="id0000001432" transform="matrix(1 0 0 1 36 1)" x="433.812439" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-5
-</text>
-
-<polyline points="556.575,458 556.575,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001433" class="line" />
-<text id="id0000001434" transform="matrix(1 0 0 1 36 1)" x="520.574890" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-6
-</text>
-
-<polyline points="643.337,458 643.337,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001435" class="line" />
-<text id="id0000001436" transform="matrix(1 0 0 1 36 1)" x="607.337402" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-7
-</text>
-
-<polyline points="33,400.884 36,400.884 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001437" class="line" />
-<text id="id0000001438" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="399.884186" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
--0.75
-</text>
-
-<polyline points="33,343.751 36,343.751 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001439" class="line" />
-<text id="id0000001440" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="342.750793" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
--0.5
-</text>
-
-<polyline points="33,286.617 36,286.617 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001441" class="line" />
-<text id="id0000001442" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="285.617432" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
--0.25
-</text>
-
-<polyline points="33,229.484 36,229.484 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001443" class="line" />
-<text id="id0000001444" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="228.484070" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0
-</text>
-
-<polyline points="33,172.351 36,172.351 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001445" class="line" />
-<text id="id0000001446" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="171.350708" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.25
-</text>
-
-<polyline points="33,115.217 36,115.217 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001447" class="line" />
-<text id="id0000001448" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="114.217316" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.5
-</text>
-
-<polyline points="33,58.084 36,58.084 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001449" class="line" />
-<text id="id0000001450" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="57.083954" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.75
-</text>
-
-<polyline points="33,0.950592 36,0.950592 " fill="none" stroke-width="1.000000" stroke="black" id="id0000001451" class="line" />
-<text id="id0000001452" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="-0.049408" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-1
-</text>
-
-
-</g>
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="611" height="456.5" id="rect00007" />
+   <line x1="36.4706" y1="464.5" x2="36.4706" y2="467.5" stroke-width="1" stroke="black" id="line00053" />
+   <text x="36.4706" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00054" >
+0   </text>
+   <line x1="182.055" y1="464.5" x2="182.055" y2="467.5" stroke-width="1" stroke="black" id="line00054" />
+   <text x="182.055" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00055" >
+5   </text>
+   <line x1="327.64" y1="464.5" x2="327.64" y2="467.5" stroke-width="1" stroke="black" id="line00055" />
+   <text x="327.64" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00056" >
+10   </text>
+   <line x1="473.224" y1="464.5" x2="473.224" y2="467.5" stroke-width="1" stroke="black" id="line00056" />
+   <text x="473.224" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00057" >
+15   </text>
+   <line x1="618.809" y1="464.5" x2="618.809" y2="467.5" stroke-width="1" stroke="black" id="line00057" />
+   <text x="618.809" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00058" >
+20   </text>
+   <line x1="18.5" y1="370.231" x2="15.5" y2="370.231" stroke-width="1" stroke="black" id="line00058" />
+   <text x="14.5" y="370.231" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00059" >
+0   </text>
+   <line x1="18.5" y1="261.287" x2="15.5" y2="261.287" stroke-width="1" stroke="black" id="line00059" />
+   <text x="14.5" y="261.287" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00060" >
+20   </text>
+   <line x1="18.5" y1="152.343" x2="15.5" y2="152.343" stroke-width="1" stroke="black" id="line00060" />
+   <text x="14.5" y="152.343" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00061" >
+40   </text>
+   <line x1="18.5" y1="43.3993" x2="15.5" y2="43.3993" stroke-width="1" stroke="black" id="line00061" />
+   <text x="14.5" y="43.3993" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00062" >
+60   </text>
 
 </svg>

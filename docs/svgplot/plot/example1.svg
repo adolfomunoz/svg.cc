@@ -4,7 +4,10 @@
 
    </clipPath>
    <g id="g00001" clip-path="url(#clipPath00001)" >
-         <polyline points="59,464.5 249.167,312.333 439.333,160.167 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00001" />
+         <g id="g00002" >
+               <polyline points="59,464.5 249.167,312.333 439.333,160.167 629.5,8 " stroke-width="1" stroke="#1f77b4" fill="none" opacity="1" id="polyline00001" />
+
+      </g>
 
    </g>
    <rect stroke-width="1" stroke="black" fill="none" x="59" y="8" width="570.5" height="456.5" id="rect00001" />

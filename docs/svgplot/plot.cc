@@ -37,14 +37,16 @@ int main(int argc, char** argv) {
     { // Example 5
 	svg::plot::SVGPlot plt;
 	plt.plot(svg::plot::arange(0,7,0.5),[] (float x) { return std::sin(x); })
-		.linestyle("-.").color(svg::hsv(240,1,1)).linewidth(1)
+		.linestyle("-.").color(svg::hsv(240,1,1)).linewidth(2)
 		.marker("s").markeredgecolor(svg::hsv(240,1,1)).markerfacecolor(svg::yellow).markersize(2.5).markeredgewidth(1);
  	plt.savefig("../docs/svgplot/plot/example5.svg");
 	}
-		/* { // Example 5
+
+	{ // Example 6
 	svg::plot::SVGPlot plt;
 	plt.plot(svg::plot::arange(0,20,0.05),
-		[] (float x) { return x*std::sin(x);},"g-");
+		[] (float x) { return x*std::sin(x);}).fmt("g-");
+	/*
 	plt.plot(svg::plot::arange(0,20,0.05),
 		[] (float x) { return x*std::sin(x+0.4*M_PI);},"r--");
 	plt.plot(svg::plot::arange(0,20,0.05),
@@ -53,8 +55,10 @@ int main(int argc, char** argv) {
 		[] (float x) { return x*std::sin(x+1.2*M_PI);},"y:");
 	plt.plot(svg::plot::arange(0,20,0.05),
 		[] (float x) { return x*std::sin(x+1.6*M_PI);},"k");
+	*/
 	plt.plot(svg::plot::arange(0,20,0.25),
-		[] (float x) { return 50+x*std::sin(x);},"go");
+		[] (float x) { return 50+x*std::sin(x);}).fmt("go");
+	/*
 	plt.plot(svg::plot::arange(0,20,0.25),
 		[] (float x) { return 50+x*std::sin(x+0.4*M_PI);},"r^");
 	plt.plot(svg::plot::arange(0,20,0.25),
@@ -63,17 +67,7 @@ int main(int argc, char** argv) {
 		[] (float x) { return 50+x*std::sin(x+1.2*M_PI);},"y+");
 	plt.plot(svg::plot::arange(0,20,0.25),
 		[] (float x) { return 50+x*std::sin(x+1.6*M_PI);},"k.");
-
-	plt.savefig("../doc/svgplot/plot/example5.svg");
+	*/
+	plt.savefig("../docs/svgplot/plot/example6.svg");
 	}
-    
-    { // Example 6
-	svg::plot::SVGPlot plt;
-	plt.plot(svg::plot::arange(0,7,0.05),[] (float x) { return std::sin(x); })
-		.linestyle("-.").color( svg::hsv(160,1,1)).linewidth(1);
-	plt.plot(svg::plot::arange(0,7,0.5),[] (float x) { return std::sin(x); })
-		.marker("s").color(svg::rgb(0.2,0.8,0.2)).markersize(2);
- 	plt.savefig("../doc/svgplot/plot/example6.svg");
-	}
-*/
 }

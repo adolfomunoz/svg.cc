@@ -3,15 +3,15 @@
          <rect x="33.5" y="8" width="596" height="456.5" id="rect00006" />
 
    </clipPath>
-   <g id="g00005" clip-path="url(#clipPath00005)" >
-         <g id="g00006" >
-               <polyline points="51.0294,238.422 94.1787,134.127 137.328,55.368 180.477,21.4265 223.627,40.613 266.776,108.23 309.925,207.722 353.075,314.731 396.224,403.056 439.373,451.074 482.523,447.026 525.672,391.905 568.821,299.206 611.971,191.624 " stroke-width="1" stroke="rgb(0, 0, 255)" fill="none" opacity="1" stroke-dasharray="5 1 1 1" id="polyline00006" />
-         <g id="g00007" >
+   <g id="g00010" clip-path="url(#clipPath00005)" >
+         <g id="g00011" >
+               <polyline points="51.0294,238.422 94.1787,134.127 137.328,55.368 180.477,21.4265 223.627,40.613 266.776,108.23 309.925,207.722 353.075,314.731 396.224,403.056 439.373,451.074 482.523,447.026 525.672,391.905 568.821,299.206 611.971,191.624 " stroke-width="2" stroke="rgb(0, 0, 255)" fill="none" opacity="1" stroke-dasharray="10 2 2 2" id="polyline00006" />
+         <g id="g00012" >
                      <defs>
                            <rect x="-1" y="-1" width="2" height="2" id="rect00005" />
 
             </defs>
-            <g id="g00008" >
+            <g id="g00013" >
                            <use href="#rect00005" xlink:href="#rect00005" stroke-width="0.4" stroke="rgb(0, 0, 255)" fill="yellow" opacity="1" fill-opacity="1" id="use00001" transform="translate(51.0294 238.422) scale(2.5 2.5)" />
                <use href="#rect00005" xlink:href="#rect00005" stroke-width="0.4" stroke="rgb(0, 0, 255)" fill="yellow" opacity="1" fill-opacity="1" id="use00002" transform="translate(94.1787 134.127) scale(2.5 2.5)" />
                <use href="#rect00005" xlink:href="#rect00005" stroke-width="0.4" stroke="rgb(0, 0, 255)" fill="yellow" opacity="1" fill-opacity="1" id="use00003" transform="translate(137.328 55.368) scale(2.5 2.5)" />
