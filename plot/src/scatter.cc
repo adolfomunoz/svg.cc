@@ -24,7 +24,7 @@ svg::Element Scatter::plot(const Transform& xscale, const Transform& yscale) con
     for (std::size_t i = 0; (i<x.size()) && (i<y.size()); ++i) {
         points.add(svg::Use(marker_)).
             add_transform(svg::Scale(markersize(i))).add_transform(svg::Translate(xscale(x[i]),yscale(y[i]))).
-            fill(color(i)).stroke_width(linewidth(i)).stroke(edgecolor(i)).
+            fill(color(i)).stroke_width(linewidth(i)/markersize(i)).stroke(edgecolor(i)).  //We divide stroke_width by markersize in order to undo the effect of scaling
             opacity(alpha(i)).fill_opacity(alpha(i));
     }
     return output;
