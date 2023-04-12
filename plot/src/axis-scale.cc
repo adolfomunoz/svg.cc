@@ -5,31 +5,38 @@
 namespace svg {
 namespace plot {
 
-//Adjust a floating point number so it only has two meaningful digits
-float adjust(float x, int digits = 2) noexcept {
+//Adjust a floating point number so it only has "digits" meaningful digits
+float adjust(float x, float digits = 2) noexcept {
     float div_by = std::pow(10.0f,int(std::log10(std::abs(x))))/std::pow(10.0f,digits-1);
     return int(x/div_by)*div_by;
 }
 
+//Adjust a floating point number so it is rounded to the corresponding floating point number
+float round_to(float x, float value = 1) noexcept {
+    return int(x/value)*value;
+}
+
+
 std::vector<float> ScaleBase::ticks(int target_ticks, float xmin, float xmax) const noexcept {
     float tick_ref = 0;
     if ((xmax*xmin) > 0.0f) tick_ref = adjust(0.5*(xmax+xmin),1);
-    int digits = 1;
-    float tick_step = adjust((xmax-xmin)/float(target_ticks-1),digits);
+    int digits=1;
+    float to_adjust = (xmax-xmin)/float(target_ticks-1);
+    float tick_step = adjust(to_adjust,digits);
     while (std::abs(tick_step)<1.e-10) {
         ++digits;
-        tick_step = adjust((xmax-xmin)/float(target_ticks-1),digits);
+        tick_step = adjust(to_adjust,digits);
     }
 
     std::vector<float> sol;
     for (int i = (target_ticks+1); i>0; --i) {
-        float tick = adjust(tick_ref - tick_step*i,digits);
+        float tick = tick_ref - tick_step*i;
         if (tick >= xmin) sol.push_back(tick);
     }
     sol.push_back(tick_ref); 
 
     for (int i = 1; i<=(target_ticks+1); ++i) {
-        float tick = adjust(tick_ref + tick_step*i,digits);
+        float tick = tick_ref + tick_step*i;
         if (tick <= xmax) sol.push_back(tick);
     }
     return sol;

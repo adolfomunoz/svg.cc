@@ -25,7 +25,7 @@ svg::Element Plot::plot(const Transform& xscale, const Transform& yscale) const 
 
     std::list<float> ls = linestyle();
     if (!ls.empty()) {
-        std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return 0.1f*lw*f; });
+        std::transform(ls.begin(),ls.end(),ls.begin(),[lw = linewidth()] (float f) { return lw*f; });
         output.stroke_dasharray(ls);
     }
 
@@ -103,9 +103,7 @@ Plot& Plot::markeredgewidth(float s) noexcept {
 }
 const std::list<float>& Plot::linestyle() const noexcept { return linestyle_; }
 
-Plot& Plot::fmt(const std::string& f) noexcept {
-    return (*this);
-}
+
 Plot& Plot::markerfacecolor(const svg::Color& c) noexcept { 
     markers.c(c); markers_set=true; return *this; 
 }
@@ -114,6 +112,10 @@ Plot& Plot::markerfacecolor(const std::string& sc) noexcept {
 }
 Plot& Plot::markerfacecolor(const char* sc) noexcept {
     return markerfacecolor(std::string(sc));
+}
+
+Plot& Plot::fmt(const std::string& f) noexcept {
+    return (*this);
 }
 
 } 
