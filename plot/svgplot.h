@@ -84,16 +84,22 @@ public:
     Plot& plot(const std::list<float>& x, const std::list<float>& y) noexcept;
 
     Plot& plot(std::list<float>&& y) noexcept;
+    
+    template<typename CollectionX, typename CollectionY>
+    Plot& plot(CollectionX&& x, CollectionY&& y, const std::string& fmt = "", std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->plot(std::list<float>(x.begin(),x.end()),std::list<float>(y.begin(),y.end())).fmt(fmt);    
+    }
+
     template<typename Collection>
-    Plot& plot(Collection&& y, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
-        return this->plot(arange(y.size()),std::forward<Collection>(y));    
+    Plot& plot(Collection&& y, const std::string& fmt = "", std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->plot(arange(y.size()),std::forward<Collection>(y)).fmt(fmt);    
     }
 
     template<typename Collection, typename Function>
-    Plot& plot(Collection&& x, const Function& f, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type> && std::is_arithmetic_v<decltype(std::declval<Function>()(0.0f))>,void*> sfinae = nullptr) noexcept {
+    Plot& plot(Collection&& x, const Function& f, const std::string& fmt = "", std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type> && std::is_arithmetic_v<decltype(std::declval<Function>()(0.0f))>,void*> sfinae = nullptr) noexcept {
         std::list<float> y;
         for (auto ex : x) y.push_back(f(ex));
-        return this->plot(std::forward<Collection>(x),std::move(y));    
+        return this->plot(std::forward<Collection>(x),std::move(y)).fmt(fmt);    
     }
 
 

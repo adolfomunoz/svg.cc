@@ -116,7 +116,7 @@ Plot& Plot::markerfacecolor(const char* sc) noexcept {
 Plot& Plot::fmt(const std::string& f) noexcept {
     std::string col, mar, ls;
     for (std::size_t i = 0; i<f.size();++i) {
-        if ((f[i]=='o') || (f[i]=='x')) mar = f.substr(i,i+1); //This is a marker, not a color
+        if ((f[i]=='o') || (f[i]=='x') || (f[i]=='s')) mar = f.substr(i,i+1); //This is a marker, not a color
         else if (std::islower(f[i])) col = f.substr(i,i+1);
         else if (f[i]=='-') {
             if ( ((i+1) < f.size()) && ((f[i+1]=='.') || (f[i+1]=='-')) ) { //Two characters linestyle

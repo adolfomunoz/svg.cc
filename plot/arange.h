@@ -72,3 +72,10 @@ public:
 };
 }
 }
+
+namespace std {
+template<>
+struct iterator_traits<svg::plot::arange::const_iterator> {
+	using iterator_category = std::forward_iterator_tag;
+};
+}

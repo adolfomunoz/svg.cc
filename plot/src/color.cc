@@ -16,7 +16,7 @@ svg::Color color_from_string(const std::string& s) {
         std::stringstream rgb_stream(s.substr(1));
         rgb_stream>>r>>dummy>>g>>dummy>>b;
         return svg::ColorRGB(r,g,b);
-    } else { //Named colors go here
+    } else { //Named colors go here although there seems to be a problem when it does not exist
         svg::Color c; c.set_type(s); return c;
     }
 }

@@ -46,19 +46,17 @@ int main(int argc, char** argv) {
 	svg::plot::SVGPlot plt;
 	plt.plot(svg::plot::arange(0,20,0.05),
 		[] (float x) { return x*std::sin(x);}).fmt("g-");
-	/*
 	plt.plot(svg::plot::arange(0,20,0.05),
-		[] (float x) { return x*std::sin(x+0.4*M_PI);},"r--");
+		[] (float x) { return x*std::sin(x+0.4*M_PI);}).fmt("r--");
 	plt.plot(svg::plot::arange(0,20,0.05),
-		[] (float x) { return x*std::sin(x+0.8*M_PI);},"b-.");
+		[] (float x) { return x*std::sin(x+0.8*M_PI);}).fmt("b-.");
 	plt.plot(svg::plot::arange(0,20,0.05),
-		[] (float x) { return x*std::sin(x+1.2*M_PI);},"y:");
+		[] (float x) { return x*std::sin(x+1.2*M_PI);}).fmt("y:");
 	plt.plot(svg::plot::arange(0,20,0.05),
-		[] (float x) { return x*std::sin(x+1.6*M_PI);},"k");
-	*/
+		[] (float x) { return x*std::sin(x+1.6*M_PI);}).fmt("k");
+	
 	plt.plot(svg::plot::arange(0,20,0.25),
-		[] (float x) { return 50+x*std::sin(x);}).fmt("go");
-	/*
+		[] (float x) { return 50+x*std::sin(x);},"go");
 	plt.plot(svg::plot::arange(0,20,0.25),
 		[] (float x) { return 50+x*std::sin(x+0.4*M_PI);},"r^");
 	plt.plot(svg::plot::arange(0,20,0.25),
@@ -67,7 +65,7 @@ int main(int argc, char** argv) {
 		[] (float x) { return 50+x*std::sin(x+1.2*M_PI);},"y+");
 	plt.plot(svg::plot::arange(0,20,0.25),
 		[] (float x) { return 50+x*std::sin(x+1.6*M_PI);},"k.");
-	*/
+	
 	plt.savefig("../docs/svgplot/plot/example6.svg");
 	}
 }
