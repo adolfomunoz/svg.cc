@@ -37,6 +37,7 @@ public:
 	Scatter& edgecolors(const char* c) noexcept;
     Scatter& marker(const svg::Element& m) noexcept;
     Scatter& marker(const std::string& f) noexcept;
+    Scatter& marker(const char* f) noexcept;
 private:
 	svg::Color color(std::size_t i = 0) const noexcept;
 	svg::Color edgecolor(std::size_t i = 0) const noexcept;

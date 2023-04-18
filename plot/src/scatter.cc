@@ -5,6 +5,8 @@
 #include "../../src/defs.h"
 #include "../../src/circle.h"
 #include "../../src/rect.h"
+#include "../../src/svg.h"
+#include "../../src/image.h"
 #include "color.h"
 #include <cmath>
 
@@ -96,7 +98,20 @@ inline svg::Polygon times(float s, float w) {
 }
 
 Scatter& Scatter::marker(const std::string& f) noexcept {
-		if (f == "o") return marker(svg::Circle(0,0,1));
+		if (f.size()>4) {
+            if (f.substr(f.size()-4)==".svg") {
+                svg::SVG marker_from_file; marker_from_file.load_from_file(f);
+                std::cerr<<marker_from_file.code()<<std::endl;
+                if (!marker_from_file.children().empty()) return marker(marker_from_file);
+                else return marker(svg::Circle(0,0,1)); //By default, a circle
+            } else if ((f.substr(f.size()-4)==".jpg") && (f.substr(f.size()-4)==".png")) {
+                svg::Image image(f);
+                std::cerr<<"IMAGE = "<<f<<std::endl;
+                image.x(-0.5).y(-0.5).width(1).height(1).preserveAspectRatio(svg::par::xMidYMid,svg::par::meet);
+                return marker(image);
+            } else return marker(svg::Circle(0,0,1)); //By default, a circle
+        }
+        else if (f == "o") return marker(svg::Circle(0,0,1));
         else if (f == ".") return marker(svg::Circle(0,0,0.5));
 		else if (f == ",") return marker(svg::Circle(0,0,0.23));
 		else if (f == "v") return marker(svg::Polygon({{0,1},{1,-1},{-1,-1}}));
@@ -104,7 +119,6 @@ Scatter& Scatter::marker(const std::string& f) noexcept {
 		else if (f == "^") return marker(svg::Polygon({{0,-1},{1,1},{-1,1}}));
 		else if (f == "<") return marker(svg::Polygon({{-1,0},{1,1},{1,-1}}));
 		else if (f == "s") return marker(svg::Rect(-1,-1,1,1));
-        //From now on size, color and alpha affect stroke but not fill. We setup the stroke width here
         else if (f == "+") return marker(plus(2,0.3));
  		else if (f == "P") return marker(plus(2,0.7)); 
 		else if (f == "x") return marker(times(2,0.3));
@@ -112,6 +126,9 @@ Scatter& Scatter::marker(const std::string& f) noexcept {
 		else return marker(svg::Circle(0,0,1)); //By default, a circle
 }
 
+Scatter& Scatter::marker(const char* f) noexcept {
+    return marker(std::string(f));
+}
 
 svg::Color Scatter::color(std::size_t i) const noexcept {
     return color_;

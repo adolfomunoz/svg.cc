@@ -51,6 +51,20 @@ int main(int argc, char** argv) {
         }
     plt.savefig("../docs/svgplot/scatter/example4.svg");
 	}
+
+    { // Example 5
+    std::mt19937 gen{1}; //Fixed seed
+    std::normal_distribution<float> d{0,2};
+    std::vector<float> x,y;
+    for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
+    svg::plot::SVGPlot plt;
+    plt.scatter(x,y).marker("../svg/burger.svg");
+    x.clear(); y.clear();
+    for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
+    plt.scatter(x,y).marker("../../../svg/dice.png");
+
+    plt.figsize({200,200}).savefig("../docs/svgplot/scatter/example5.svg");
+	}
     
 /*    { // Example 5
     std::mt19937 gen{1}; //Fixed seed
