@@ -67,4 +67,21 @@ As an usage example for these parameters, we provide this:
 which yields the following graph:
 ![Example 5](./plot/example5.svg)
 
- 
+Alternatively, it is possible to use *format strings*, structured as 
+
+```
+"[marker][line][color]"
+```
+
+Each of them is optional. If not provided, a default value (alternating so it actually changes from plot to plout) is used. The exceptions are the interactions between lines and markers: If `line` is given, but no `marker`, the data will be a line without markers, and if `marker` is given but no `line`, the data will be markers without lines.
+
+Other combinations such as `[color][marker][line]` are also supported, but note that their parsing may be ambiguous.
+
+The `fmt` can be either a named attribute or also a nameless attribute added at the end of the data, as illustrated in the following example: 
+
+{% highlight cpp %}
+{% include includelines filename='plot.cc' start=46 count=24 %}
+{% endhighlight %}
+
+which gives the following output:
+![Example 6](./plot/example6.svg)
