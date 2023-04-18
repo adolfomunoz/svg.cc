@@ -27,6 +27,7 @@ class ColorRGB : public pattern::Reflectable<ColorRGB, ColorBase> {
     std::tuple<float,float,float> rgb_;
 public:
     ColorRGB(float r = 0.0f, float g = 0.0f, float b = 0.0f) : rgb_(r,g,b) {}
+    ColorRGB(const Color& color) : rgb_(color.rgb()) {}
     static const char* type_name() { return "rgb"; } 
     std::string to_string() const override {
         std::stringstream sstr;
@@ -142,5 +143,24 @@ inline std::istream& operator>>(std::istream& is, Color& c) {
     }
     return is;
 }
+
+inline ColorRGB operator+(const Color& c1, const Color& c2) noexcept {
+    auto t1 = c1.rgb(); auto t2 = c2.rgb();
+    return ColorRGB(std::get<0>(t1)+std::get<0>(t2),
+                    std::get<1>(t1)+std::get<1>(t2),
+                    std::get<2>(t1)+std::get<2>(t2));
+}
+
+inline ColorRGB operator*(const Color& c, float f) noexcept {
+    auto t = c.rgb(); 
+    return ColorRGB(std::get<0>(t)*f,
+                    std::get<1>(t)*f,
+                    std::get<2>(t)*f);
+}
+
+inline ColorRGB operator*(float f, const Color& c) noexcept {
+    return c*f;
+}
+
 
 }
