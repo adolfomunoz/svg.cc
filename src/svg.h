@@ -2,6 +2,7 @@
 #include "node.h"
 #include "geometry-attributes.h"
 #include "aspect-ratio-attributes.h"
+#include "core-attributes.h"
 #include <iostream>
 
 namespace svg {
@@ -27,7 +28,7 @@ inline std::istream& operator>>(std::istream& is, Box& box) {
     return is;
 }
 
-class SVG : public pattern::Reflectable<SVG,Node,GeometryAttributes<SVG>,AspectRatioAttributes<SVG>> {
+class SVG : public pattern::Reflectable<SVG,Node,CoreAttributes<SVG>,GeometryAttributes<SVG>,AspectRatioAttributes<SVG>> {
     std::string xmlns, xmlns_xlink; //Do not modify these, it is for the slylesheet
     std::optional<Box> _viewBox;
 public:

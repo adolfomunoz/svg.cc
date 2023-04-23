@@ -1,12 +1,6 @@
 #include "../scatter.h"
-#include "../../src/poly.h"
-#include "../../src/use.h"
-#include "../../src/group.h"
-#include "../../src/defs.h"
-#include "../../src/circle.h"
-#include "../../src/rect.h"
-#include "../../src/svg.h"
-#include "../../src/image.h"
+//We have to include everything, otherwise the svg in marker might not load propperly
+#include "../../svg.cc.h"
 #include "color.h"
 #include <cmath>
 
@@ -101,13 +95,13 @@ Scatter& Scatter::marker(const std::string& f) noexcept {
 		if (f.size()>4) {
             if (f.substr(f.size()-4)==".svg") {
                 svg::SVG marker_from_file; marker_from_file.load_from_file(f);
-                std::cerr<<marker_from_file.code()<<std::endl;
-                if (!marker_from_file.children().empty()) return marker(marker_from_file);
-                else return marker(svg::Circle(0,0,1)); //By default, a circle
-            } else if ((f.substr(f.size()-4)==".jpg") && (f.substr(f.size()-4)==".png")) {
+                if (!marker_from_file.children().empty()){
+                    marker_from_file.x(-1).y(-1).width(2).height(2).preserveAspectRatio(svg::par::xMidYMid,svg::par::meet);
+                    return marker(marker_from_file);
+                } else return marker(svg::Circle(0,0,1)); //By default, a circle
+            } else if ((f.substr(f.size()-4)==".jpg") || (f.substr(f.size()-4)==".png")) {
                 svg::Image image(f);
-                std::cerr<<"IMAGE = "<<f<<std::endl;
-                image.x(-0.5).y(-0.5).width(1).height(1).preserveAspectRatio(svg::par::xMidYMid,svg::par::meet);
+                image.x(-1).y(-1).width(2).height(2).preserveAspectRatio(svg::par::xMidYMid,svg::par::meet);
                 return marker(image);
             } else return marker(svg::Circle(0,0,1)); //By default, a circle
         }

@@ -58,12 +58,13 @@ int main(int argc, char** argv) {
     std::vector<float> x,y;
     for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
     svg::plot::SVGPlot plt;
-    plt.scatter(x,y).marker("../svg/burger.svg");
+    plt.scatter(x,y).s(6).marker("../svg/burger.svg");
     x.clear(); y.clear();
     for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
-    plt.scatter(x,y).marker("../../../svg/dice.png");
+    plt.scatter(x,y).s(4).marker("dice.png");
 
-    plt.figsize({200,200}).savefig("../docs/svgplot/scatter/example5.svg");
+    plt.figsize({200,200});
+    plt.savefig("../docs/svgplot/scatter/example5.svg");
 	}
     
 /*    { // Example 5
