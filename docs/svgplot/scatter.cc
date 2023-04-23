@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
     plt.scatter(x,y).s(6).marker("../svg/burger.svg");
     x.clear(); y.clear();
     for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
-    plt.scatter(x,y).s(4).marker("dice.png");
+    plt.scatter(x,y).s(4).marker("../svg/dice.png");
 
     plt.figsize({200,200});
     plt.savefig("../docs/svgplot/scatter/example5.svg");

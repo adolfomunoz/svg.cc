@@ -100,7 +100,8 @@ Scatter& Scatter::marker(const std::string& f) noexcept {
                     return marker(marker_from_file);
                 } else return marker(svg::Circle(0,0,1)); //By default, a circle
             } else if ((f.substr(f.size()-4)==".jpg") || (f.substr(f.size()-4)==".png")) {
-                svg::Image image(f);
+                svg::Image image;
+                image.embed(f);
                 image.x(-1).y(-1).width(2).height(2).preserveAspectRatio(svg::par::xMidYMid,svg::par::meet);
                 return marker(image);
             } else return marker(svg::Circle(0,0,1)); //By default, a circle

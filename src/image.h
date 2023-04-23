@@ -1,5 +1,6 @@
 #pragma once
 #include "element.h"
+#include "base64.h"
 #include "presentation-attributes.h"
 #include "geometry-attributes.h"
 #include "graphical-attributes.h"
@@ -22,6 +23,17 @@ public:
         _href = s; return *this; 
 	}
     const std::string& href() const noexcept { return _href; }
+    Image& embed(const std::string& filename) noexcept {
+        std::ifstream stream(filename, std::ios::in | std::ios::binary);
+        if (stream.fail()) return (*this);
+        else {  
+            std::vector<uint8_t> contents((std::istreambuf_iterator<char>(stream)), std::istreambuf_iterator<char>());
+            std::stringstream ss;
+            ss << "data:image/"<< filename.substr(filename.size()-3)
+                << ";base64,"<<base64_encode(contents.data(),contents.size());
+            return href(ss.str());
+        } 
+    } 
 };
 
     
