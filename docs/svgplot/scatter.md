@@ -49,7 +49,23 @@ generates a visualization of all the available marker shapes:
 
 ![Example 4](./scatter/example4.svg)
 
-## Additional variables
+Additionally, markers can be generated from an image file (`.png`, `.jpg` and `.svg`), by puting the file name of the image instead of a character that defines the marker. In the case of `.svg` file format, additionally, it preserves the color given by the `c` named parameter(or a default color). Images are embedded in the output file directly, so there is no need to carry them along with the output graph. This is illustrated in the following source code:
+
+{% highlight cpp %}
+{% include includelines filename='scatter.cc' start=56 count=16 %}
+{% endhighlight %}
+
+that gives the following output:
+
+![Example 5](./scatter/example5.svg)
+
+## Sequence parameters and aditional variables
+
+TODO
+
+## Color maps
+
+TODO
 
 Additional variables can be visualized by modifying each marker's color through the `c(<sequence>)` named parameter, when passing a sequence (C++ collection) of floating point values. The mapping to RGB values is done (like in Matplotlib) through a color map, where the maximum and minimum labeled values are calculated automatically from the data so there is no clamping. It is possible, however, to specifically set those clamping values through the `vmin(<float>)` and `vmax(<float>)` named parameters (represented in C++ as methods). Furthermore, the color map can be specified through the `cmap(<string>)` named parameter. The following color maps are available:
 
@@ -74,7 +90,7 @@ plt.savefig("../doc/svgplot/scatter/example5.svg");
 which generates
 
 <div style="text-align:center"><img 
- src="./scatter/example5.svg" alt="example5" width="100%" /></div>
+ src="./scatter/example6.svg" alt="example5" width="100%" /></div>
 
 It is also possible not only to set values through a sequence of floating point numbers in `c(<sequence>)` but also specific colors through a sequence of RGB tuples, as illustrated in the following code:
 

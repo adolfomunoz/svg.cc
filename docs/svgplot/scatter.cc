@@ -56,9 +56,13 @@ int main(int argc, char** argv) {
     std::mt19937 gen{1}; //Fixed seed
     std::normal_distribution<float> d{0,2};
     std::vector<float> x,y;
-    for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
     svg::plot::SVGPlot plt;
-    plt.scatter(x,y).s(6).marker("../svg/burger.svg");
+
+    for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
+    plt.scatter(x,y).s(3).marker("X");
+    x.clear(); y.clear();
+    for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
+    plt.scatter(x,y).s(6).c(svg::hsv(50,1,1)).marker("../svg/burger.svg");
     x.clear(); y.clear();
     for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
     plt.scatter(x,y).s(4).marker("../svg/dice.png");
