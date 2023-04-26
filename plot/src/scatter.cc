@@ -43,13 +43,27 @@ std::array<float,4> Scatter::axis() const noexcept {
     return a;
 }
 
+Scatter& Scatter::linewidths(std::vector<float>&& vf) noexcept {
+    this->linewidth_ = std::move(vf);
+    return (*this);
+}
+Scatter& Scatter::linewidths(const std::vector<float>& vf) noexcept {
+    this->linewidth_ = vf;
+    return (*this);
+}
 Scatter& Scatter::linewidths(float f) noexcept {
-    this->linewidth_ = std::vector<float>(1,f);
+    return linewidths(std::vector<float>(1,f));
+}
+Scatter& Scatter::alpha(std::vector<float>&& vf) noexcept {
+    this->alpha_ = std::move(vf);
+    return (*this);
+}
+Scatter& Scatter::alpha(const std::vector<float>& vf) noexcept {
+    this->alpha_ = vf;
     return (*this);
 }
 Scatter& Scatter::alpha(float f) noexcept {
-    this->alpha_ = std::vector<float>(1,f);
-    return (*this);
+    return alpha(std::vector<float>(1,f));
 }
 Scatter& Scatter::c(const svg::Color& sc) noexcept {
     this->color_ = sc;
@@ -61,9 +75,16 @@ Scatter& Scatter::c(const std::string& sc) noexcept {
 Scatter& Scatter::c(const char* sc) noexcept {
     return c(std::string(sc));
 }
-Scatter& Scatter::s(float f) noexcept {
-    this->markersize_ = std::vector<float>(1,f);
+Scatter& Scatter::s(std::vector<float>&& vf) noexcept {
+    this->markersize_ = std::move(vf);
     return (*this);
+}
+Scatter& Scatter::s(const std::vector<float>& vf) noexcept {
+    this->markersize_ = vf;
+    return (*this);
+}
+Scatter& Scatter::s(float f) noexcept {
+    return s(std::vector<float>(1,f));
 }
 Scatter& Scatter::edgecolors(const svg::Color& c) noexcept {
     this->edgecolor_ = c;

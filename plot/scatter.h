@@ -27,11 +27,17 @@ public:
 
     /*NAMED ATTRIBUTES*/
     Scatter& linewidths(float f) noexcept;
+    Scatter& linewidths(const std::vector<float>& vf) noexcept;
+    Scatter& linewidths(std::vector<float>&& vf) noexcept;
     Scatter& alpha(float f) noexcept;
+    Scatter& alpha(const std::vector<float>& vf) noexcept;
+    Scatter& alpha(std::vector<float>&& vf) noexcept;
 	Scatter& c(const svg::Color& sc) noexcept;
 	Scatter& c(const std::string& sc) noexcept;
 	Scatter& c(const char* sc) noexcept;
     Scatter& s(float f) noexcept;
+    Scatter& s(const std::vector<float>& vf) noexcept;
+    Scatter& s(std::vector<float>&& vf) noexcept;
     Scatter& edgecolors(const svg::Color& c) noexcept;
     Scatter& edgecolors(const std::string& c) noexcept;
 	Scatter& edgecolors(const char* c) noexcept;
