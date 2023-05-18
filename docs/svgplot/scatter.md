@@ -49,7 +49,7 @@ generates a visualization of all the available marker shapes:
 
 ![Example 4](./scatter/example4.svg)
 
-Additionally, markers can be generated from an image file (`.png`, `.jpg` and `.svg`), by puting the file name of the image instead of a character that defines the marker. In the case of `.svg` file format, additionally, it preserves the color given by the `c` named parameter(or a default color). Images are embedded in the output file directly, so there is no need to carry them along with the output graph. This is illustrated in the following source code:
+Additionally, markers can be generated from an image file (`.png`, `.jpg` and `.svg`), by puting the file name of the image instead of a character that defines the marker. In the case of `.svg` file format it preserves the color given by the `c` named parameter(or a default color). Images are embedded in the output file directly, so there is no need to carry them along with the output graph. This is illustrated in the following source code:
 
 {% highlight cpp %}
 {% include includelines filename='scatter.cc' start=56 count=16 %}
