@@ -1,38 +1,137 @@
-<svg viewBox="0 0 10 25" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="id0000003563" >
-<g id="id0000003564" >
-<clipPath id="id0000003564clipper" >
-<polygon points="1,1 1,24 9,24 9,1 " id="id0000003574" class="rectangle" />
-</clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" id="svg00019" >
+   <clipPath id="clipPath00017" >
+         <rect x="26" y="8" width="163.5" height="176.5" id="rect00018" />
 
-<g clip-path="url(#id0000003564clipper)" id="id0000003566" >
-<g id="id0000003567" >
-<g id="id0000003569" >
-<g opacity="1.000000" fill="rgb( 0, 255, 63 )" stroke="black" stroke-width="0.000000" id="id0000003568" >
-<path id="id0000003575" d="M 5 19.25 C 5.2992 19.25 5.59528 19.1074 5.78183 18.8735 C 5.96838 18.6396 6.04151 18.3192 5.97493 18.0275 C 5.90835 17.7358 5.70345 17.4788 5.43388 17.349 C 5.16431 17.2192 4.83569 17.2192 4.56612 17.349 C 4.29655 17.4788 4.09165 17.7358 4.02507 18.0275 C 3.95849 18.3192 4.03162 18.6396 4.21817 18.8735 C 4.40472 19.1074 4.7008 19.25 5 19.25 " />
-</g>
+   </clipPath>
+   <g id="g00072" clip-path="url(#clipPath00017)" >
+         <g id="g00073" >
+               <defs>
+                     <circle cx="0" cy="0" r="1" id="circle00024" />
 
-</g>
+         </defs>
+         <g id="g00074" >
+                     <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.294218" stroke="rgb(95.6104, 127.5, 63.75)" fill="rgb(127.442, 255, 0)" opacity="0.860162" fill-opacity="0.860162" id="use00218" transform="translate(94.6414 13.1912) scale(3.39884 3.39884)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.450423" stroke="rgb(65.5237, 127.5, 63.75)" fill="rgb(7.09465, 255, 0)" opacity="0.99952" fill-opacity="0.99952" id="use00219" transform="translate(49.1475 129.278) scale(2.22013 2.22013)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.387317" stroke="rgb(63.75, 127.5, 75.934)" fill="rgb(0, 255, 48.7359)" opacity="0.59313" fill-opacity="0.59313" id="use00220" transform="translate(43.5122 113.533) scale(2.58187 2.58187)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.356097" stroke="rgb(63.75, 115.22, 76.0296)" fill="rgb(0, 205.881, 49.1186)" opacity="0.96777" fill-opacity="0.96777" id="use00221" transform="translate(134.439 113.501) scale(2.80823 2.80823)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.358832" stroke="rgb(69.5573, 127.5, 63.75)" fill="rgb(23.2293, 255, 0)" opacity="0.84261" fill-opacity="0.84261" id="use00222" transform="translate(94.9835 127.451) scale(2.78682 2.78682)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.489936" stroke="rgb(63.75, 127.5, 100.013)" fill="rgb(0, 255, 145.051)" opacity="0.614789" fill-opacity="0.614789" id="use00223" transform="translate(98.8035 33.0835) scale(2.04108 2.04108)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.372328" stroke="rgb(63.75, 127.5, 103.108)" fill="rgb(0, 255, 157.432)" opacity="0.708652" fill-opacity="0.708652" id="use00224" transform="translate(134.552 27.095) scale(2.68581 2.68581)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.435322" stroke="rgb(63.75, 123.88, 67.3696)" fill="rgb(0, 240.521, 14.4785)" opacity="0.969564" fill-opacity="0.969564" id="use00225" transform="translate(96.7951 156.334) scale(2.29715 2.29715)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.312097" stroke="rgb(63.75, 127.5, 71.8366)" fill="rgb(0, 255, 32.3464)" opacity="0.984131" fill-opacity="0.984131" id="use00226" transform="translate(155.068 60.173) scale(3.20414 3.20414)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.301697" stroke="rgb(63.75, 112.835, 78.4151)" fill="rgb(0, 196.34, 58.6603)" opacity="0.759076" fill-opacity="0.759076" id="use00227" transform="translate(43.5849 64.1237) scale(3.31458 3.31458)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.308223" stroke="rgb(90.6455, 127.5, 63.75)" fill="rgb(107.582, 255, 0)" opacity="0.542522" fill-opacity="0.542522" id="use00228" transform="translate(169.849 41.2648) scale(3.24441 3.24441)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.301458" stroke="rgb(63.75, 127.5, 117.367)" fill="rgb(0, 255, 214.469)" opacity="0.529622" fill-opacity="0.529622" id="use00229" transform="translate(71.9695 151.415) scale(3.31721 3.31721)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.332504" stroke="rgb(63.75, 100.994, 90.2559)" fill="rgb(0, 148.976, 106.024)" opacity="0.710554" fill-opacity="0.710554" id="use00230" transform="translate(44.4583 80.7064) scale(3.00748 3.00748)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.329184" stroke="rgb(63.75, 127.5, 68.8028)" fill="rgb(0, 255, 20.2111)" opacity="0.598775" fill-opacity="0.598775" id="use00231" transform="translate(93.8171 90.7138) scale(3.03782 3.03782)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.314963" stroke="rgb(63.75, 116.71, 74.5398)" fill="rgb(0, 211.841, 43.1591)" opacity="0.84325" fill-opacity="0.84325" id="use00232" transform="translate(78.6568 156.045) scale(3.17497 3.17497)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.319978" stroke="rgb(63.75, 127.5, 111.439)" fill="rgb(0, 255, 190.755)" opacity="0.517086" fill-opacity="0.517086" id="use00233" transform="translate(93.9354 176.733) scale(3.12522 3.12522)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.40854" stroke="rgb(63.75, 127.5, 67.6316)" fill="rgb(0, 255, 15.5264)" opacity="0.874083" fill-opacity="0.874083" id="use00234" transform="translate(184.691 69.4176) scale(2.44774 2.44774)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.464072" stroke="rgb(86.2711, 127.5, 63.75)" fill="rgb(90.0843, 255, 0)" opacity="0.611062" fill-opacity="0.611062" id="use00235" transform="translate(99.2258 47.9254) scale(2.15484 2.15484)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.466362" stroke="rgb(63.75, 127.5, 69.3108)" fill="rgb(0, 255, 22.2432)" opacity="0.954298" fill-opacity="0.954298" id="use00236" transform="translate(99.5028 101.394) scale(2.14426 2.14426)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.455572" stroke="rgb(63.75, 127.5, 98.7869)" fill="rgb(0, 255, 140.148)" opacity="0.559745" fill-opacity="0.559745" id="use00237" transform="translate(171.229 131.71) scale(2.19504 2.19504)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.296271" stroke="rgb(68.6424, 127.5, 63.75)" fill="rgb(19.5697, 255, 0)" opacity="0.839418" fill-opacity="0.839418" id="use00238" transform="translate(32.021 165.818) scale(3.37529 3.37529)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.365316" stroke="rgb(63.75, 127.5, 106.385)" fill="rgb(0, 255, 170.538)" opacity="0.649465" fill-opacity="0.649465" id="use00239" transform="translate(172.343 135.424) scale(2.73736 2.73736)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.342359" stroke="rgb(76.9171, 127.5, 63.75)" fill="rgb(52.6684, 255, 0)" opacity="0.787059" fill-opacity="0.787059" id="use00240" transform="translate(37.3744 85.2429) scale(2.92091 2.92091)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.327908" stroke="rgb(66.1705, 127.5, 63.75)" fill="rgb(9.68215, 255, 0)" opacity="0.630489" fill-opacity="0.630489" id="use00241" transform="translate(179.601 81.3346) scale(3.04964 3.04964)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.291979" stroke="rgb(63.75, 127.5, 120.411)" fill="rgb(0, 255, 226.644)" opacity="0.707028" fill-opacity="0.707028" id="use00242" transform="translate(45.0862 90.6664) scale(3.42491 3.42491)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.481944" stroke="rgb(63.75, 125.526, 65.7244)" fill="rgb(0, 247.103, 7.89744)" opacity="0.7703" fill-opacity="0.7703" id="use00243" transform="translate(106.615 110.592) scale(2.07493 2.07493)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.452499" stroke="rgb(63.75, 127.5, 97.5234)" fill="rgb(0, 255, 135.093)" opacity="0.831897" fill-opacity="0.831897" id="use00244" transform="translate(113.361 172.213) scale(2.20995 2.20995)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.347242" stroke="rgb(63.75, 110.526, 80.7235)" fill="rgb(0, 187.106, 67.894)" opacity="0.514901" fill-opacity="0.514901" id="use00245" transform="translate(153.754 21.9773) scale(2.87983 2.87983)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.374256" stroke="rgb(77.8673, 127.5, 63.75)" fill="rgb(56.469, 255, 0)" opacity="0.568737" fill-opacity="0.568737" id="use00246" transform="translate(171.234 89.4402) scale(2.67197 2.67197)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.385132" stroke="rgb(63.75, 127.5, 100.524)" fill="rgb(0, 255, 147.097)" opacity="0.688792" fill-opacity="0.688792" id="use00247" transform="translate(169.459 44.8995) scale(2.59652 2.59652)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.393408" stroke="rgb(63.75, 127.5, 76.2151)" fill="rgb(0, 255, 49.8606)" opacity="0.963754" fill-opacity="0.963754" id="use00248" transform="translate(55.0102 70.8104) scale(2.54189 2.54189)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.32373" stroke="rgb(79.5199, 127.5, 63.75)" fill="rgb(63.0794, 255, 0)" opacity="0.818918" fill-opacity="0.818918" id="use00249" transform="translate(118.89 54.3521) scale(3.089 3.089)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.336516" stroke="rgb(63.75, 127.38, 63.8702)" fill="rgb(0, 254.519, 0.480659)" opacity="0.811836" fill-opacity="0.811836" id="use00250" transform="translate(168.069 64.4776) scale(2.97162 2.97162)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.415819" stroke="rgb(63.75, 127.5, 77.3328)" fill="rgb(0, 255, 54.3312)" opacity="0.881617" fill-opacity="0.881617" id="use00251" transform="translate(84.7074 121.499) scale(2.40489 2.40489)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.301022" stroke="rgb(63.75, 100.108, 91.1421)" fill="rgb(0, 145.432, 109.568)" opacity="0.714046" fill-opacity="0.714046" id="use00252" transform="translate(170.05 54.0219) scale(3.32201 3.32201)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.341001" stroke="rgb(86.2165, 127.5, 63.75)" fill="rgb(89.8661, 255, 0)" opacity="0.749055" fill-opacity="0.749055" id="use00253" transform="translate(30.8088 68.9489) scale(2.93254 2.93254)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.477076" stroke="rgb(63.75, 127.5, 89.2388)" fill="rgb(0, 255, 101.955)" opacity="0.974745" fill-opacity="0.974745" id="use00254" transform="translate(47.0407 48.3143) scale(2.0961 2.0961)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.382818" stroke="rgb(63.75, 127.5, 80.2999)" fill="rgb(0, 255, 66.1997)" opacity="0.970918" fill-opacity="0.970918" id="use00255" transform="translate(84.9234 83.1583) scale(2.61221 2.61221)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.316717" stroke="rgb(63.75, 127.5, 105.019)" fill="rgb(0, 255, 165.077)" opacity="0.95169" fill-opacity="0.95169" id="use00256" transform="translate(66.2968 52.3292) scale(3.15739 3.15739)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.341797" stroke="rgb(76.1264, 127.5, 63.75)" fill="rgb(49.5058, 255, 0)" opacity="0.88637" fill-opacity="0.88637" id="use00257" transform="translate(76.4277 179.309) scale(2.92572 2.92572)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.496645" stroke="rgb(63.75, 110.167, 81.0826)" fill="rgb(0, 185.67, 69.3305)" opacity="0.763529" fill-opacity="0.763529" id="use00258" transform="translate(80.4093 83.1174) scale(2.01351 2.01351)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.297371" stroke="rgb(63.75, 125.639, 65.6106)" fill="rgb(0, 247.558, 7.44225)" opacity="0.73532" fill-opacity="0.73532" id="use00259" transform="translate(140.627 120.1) scale(3.3628 3.3628)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.41606" stroke="rgb(63.75, 104.622, 86.6283)" fill="rgb(0, 163.487, 91.513)" opacity="0.507911" fill-opacity="0.507911" id="use00260" transform="translate(127.134 101.702) scale(2.4035 2.4035)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.286042" stroke="rgb(86.6896, 127.5, 63.75)" fill="rgb(91.7584, 255, 0)" opacity="0.775662" fill-opacity="0.775662" id="use00261" transform="translate(159.941 64.3619) scale(3.49598 3.49598)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.321115" stroke="rgb(63.75, 104.219, 87.0309)" fill="rgb(0, 161.876, 93.1238)" opacity="0.568568" fill-opacity="0.568568" id="use00262" transform="translate(56.1104 100.853) scale(3.11415 3.11415)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.476417" stroke="rgb(66.2537, 127.5, 63.75)" fill="rgb(10.015, 255, 0)" opacity="0.732156" fill-opacity="0.732156" id="use00263" transform="translate(59.1993 63.3727) scale(2.099 2.099)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.432367" stroke="rgb(63.75, 105.439, 85.8106)" fill="rgb(0, 166.757, 88.2425)" opacity="0.876938" fill-opacity="0.876938" id="use00264" transform="translate(147.937 94.8767) scale(2.31285 2.31285)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.457372" stroke="rgb(73.6595, 127.5, 63.75)" fill="rgb(39.638, 255, 0)" opacity="0.759431" fill-opacity="0.759431" id="use00265" transform="translate(36.7354 60.9157) scale(2.18641 2.18641)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.462738" stroke="rgb(92.0159, 127.5, 63.75)" fill="rgb(113.064, 255, 0)" opacity="0.513106" fill-opacity="0.513106" id="use00266" transform="translate(32.1018 113.577) scale(2.16105 2.16105)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.303948" stroke="rgb(63.75, 127.5, 68.6865)" fill="rgb(0, 255, 19.7461)" opacity="0.551068" fill-opacity="0.551068" id="use00267" transform="translate(109.253 138.654) scale(3.29004 3.29004)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.289729" stroke="rgb(63.75, 115.766, 75.4839)" fill="rgb(0, 208.064, 46.9357)" opacity="0.776411" fill-opacity="0.776411" id="use00268" transform="translate(113.823 141.069) scale(3.4515 3.4515)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.413432" stroke="rgb(83.9516, 127.5, 63.75)" fill="rgb(80.8062, 255, 0)" opacity="0.616811" fill-opacity="0.616811" id="use00269" transform="translate(72.7992 159.043) scale(2.41878 2.41878)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.380678" stroke="rgb(63.75, 127.5, 103.406)" fill="rgb(0, 255, 158.625)" opacity="0.984798" fill-opacity="0.984798" id="use00270" transform="translate(121.213 84.5488) scale(2.62689 2.62689)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.312407" stroke="rgb(63.75, 127.5, 68.8194)" fill="rgb(0, 255, 20.2776)" opacity="0.906497" fill-opacity="0.906497" id="use00271" transform="translate(86.897 176.673) scale(3.20095 3.20095)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.342534" stroke="rgb(63.75, 127.5, 81.3272)" fill="rgb(0, 255, 70.3089)" opacity="0.903553" fill-opacity="0.903553" id="use00272" transform="translate(65.6586 59.9355) scale(2.91942 2.91942)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.320443" stroke="rgb(63.75, 127.5, 86.4211)" fill="rgb(0, 255, 90.6845)" opacity="0.875937" fill-opacity="0.875937" id="use00273" transform="translate(96.1984 35.5186) scale(3.12068 3.12068)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.393258" stroke="rgb(87.9855, 127.5, 63.75)" fill="rgb(96.942, 255, 0)" opacity="0.568228" fill-opacity="0.568228" id="use00274" transform="translate(116.565 108.22) scale(2.54286 2.54286)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.483833" stroke="rgb(63.75, 106.283, 84.9673)" fill="rgb(0, 170.131, 84.869)" opacity="0.968595" fill-opacity="0.968595" id="use00275" transform="translate(53.1181 159.516) scale(2.06683 2.06683)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.34194" stroke="rgb(63.75, 127.5, 122.781)" fill="rgb(0, 255, 236.124)" opacity="0.612855" fill-opacity="0.612855" id="use00276" transform="translate(45.8988 49.1485) scale(2.92449 2.92449)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.495335" stroke="rgb(79.0794, 127.5, 63.75)" fill="rgb(61.3175, 255, 0)" opacity="0.827162" fill-opacity="0.827162" id="use00277" transform="translate(34.6402 86.2778) scale(2.01883 2.01883)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.393511" stroke="rgb(63.75, 127.5, 104.308)" fill="rgb(0, 255, 162.231)" opacity="0.983638" fill-opacity="0.983638" id="use00278" transform="translate(40.3053 130.61) scale(2.54122 2.54122)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.420435" stroke="rgb(76.2275, 127.5, 63.75)" fill="rgb(49.9101, 255, 0)" opacity="0.536985" fill-opacity="0.536985" id="use00279" transform="translate(72.2207 145.825) scale(2.37849 2.37849)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.293421" stroke="rgb(63.75, 127.5, 105.998)" fill="rgb(0, 255, 168.993)" opacity="0.597715" fill-opacity="0.597715" id="use00280" transform="translate(146.104 152.787) scale(3.40807 3.40807)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.305788" stroke="rgb(63.75, 127.5, 126.347)" fill="rgb(0, 255, 250.387)" opacity="0.525009" fill-opacity="0.525009" id="use00281" transform="translate(87.4152 17.7295) scale(3.27024 3.27024)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.43355" stroke="rgb(63.75, 127.5, 110.919)" fill="rgb(0, 255, 188.677)" opacity="0.746885" fill-opacity="0.746885" id="use00282" transform="translate(66.741 129.889) scale(2.30654 2.30654)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.44739" stroke="rgb(63.75, 126.308, 64.942)" fill="rgb(0, 250.232, 4.76786)" opacity="0.946511" fill-opacity="0.946511" id="use00283" transform="translate(183.572 41.2926) scale(2.23519 2.23519)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.485549" stroke="rgb(63.75, 127.5, 93.884)" fill="rgb(0, 255, 120.536)" opacity="0.535011" fill-opacity="0.535011" id="use00284" transform="translate(31.8965 71.0073) scale(2.05953 2.05953)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.350474" stroke="rgb(63.75, 127.5, 89.9235)" fill="rgb(0, 255, 104.694)" opacity="0.881287" fill-opacity="0.881287" id="use00285" transform="translate(157.136 78.4904) scale(2.85328 2.85328)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.462106" stroke="rgb(63.75, 127.5, 105.793)" fill="rgb(0, 255, 168.17)" opacity="0.994308" fill-opacity="0.994308" id="use00286" transform="translate(78.9476 90.9374) scale(2.164 2.164)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.353804" stroke="rgb(68.1296, 127.5, 63.75)" fill="rgb(17.5183, 255, 0)" opacity="0.754394" fill-opacity="0.754394" id="use00287" transform="translate(51.9676 116.279) scale(2.82642 2.82642)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.371302" stroke="rgb(63.75, 127.5, 65.6522)" fill="rgb(0, 255, 7.60895)" opacity="0.834616" fill-opacity="0.834616" id="use00288" transform="translate(146.342 26.6804) scale(2.69323 2.69323)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.39137" stroke="rgb(68.5015, 127.5, 63.75)" fill="rgb(19.0058, 255, 0)" opacity="0.882121" fill-opacity="0.882121" id="use00289" transform="translate(49.7999 168.706) scale(2.55513 2.55513)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.466608" stroke="rgb(63.75, 127.149, 64.1013)" fill="rgb(0, 253.595, 1.40538)" opacity="0.605087" fill-opacity="0.605087" id="use00290" transform="translate(128.135 167.382) scale(2.14313 2.14313)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.418327" stroke="rgb(83.4733, 127.5, 63.75)" fill="rgb(78.893, 255, 0)" opacity="0.678232" fill-opacity="0.678232" id="use00291" transform="translate(54.5144 168.672) scale(2.39047 2.39047)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.294419" stroke="rgb(63.75, 127.5, 113.406)" fill="rgb(0, 255, 198.625)" opacity="0.596717" fill-opacity="0.596717" id="use00292" transform="translate(155.699 155.854) scale(3.39652 3.39652)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.295228" stroke="rgb(63.75, 127.5, 111.345)" fill="rgb(0, 255, 190.379)" opacity="0.919823" fill-opacity="0.919823" id="use00293" transform="translate(119.768 92.133) scale(3.38721 3.38721)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.323413" stroke="rgb(63.75, 127.5, 125.596)" fill="rgb(0, 255, 247.384)" opacity="0.532981" fill-opacity="0.532981" id="use00294" transform="translate(70.4336 125.572) scale(3.09202 3.09202)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.297466" stroke="rgb(74.5357, 127.5, 63.75)" fill="rgb(43.1429, 255, 0)" opacity="0.868406" fill-opacity="0.868406" id="use00295" transform="translate(111.289 50.7825) scale(3.36172 3.36172)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.378757" stroke="rgb(65.7438, 127.5, 63.75)" fill="rgb(7.97535, 255, 0)" opacity="0.506976" fill-opacity="0.506976" id="use00296" transform="translate(175.733 65.0033) scale(2.64022 2.64022)" />
+            <use href="#circle00024" xlink:href="#circle00024" stroke-width="0.292097" stroke="rgb(63.75, 127.5, 82.5704)" fill="rgb(0, 255, 75.2817)" opacity="0.878168" fill-opacity="0.878168" id="use00297" transform="translate(143.7 76.7447) scale(3.42352 3.42352)" />
 
-<g id="id0000003571" >
-<g opacity="1.000000" fill="rgb( 255, 191, 0 )" stroke="black" stroke-width="0.000000" id="id0000003570" >
-<path id="id0000003576" d="M 5 13.5 C 5.2992 13.5 5.59528 13.3574 5.78183 13.1235 C 5.96838 12.8896 6.04151 12.5692 5.97493 12.2775 C 5.90835 11.9858 5.70345 11.7288 5.43388 11.599 C 5.16431 11.4692 4.83569 11.4692 4.56612 11.599 C 4.29655 11.7288 4.09165 11.9858 4.02507 12.2775 C 3.95849 12.5692 4.03162 12.8896 4.21817 13.1235 C 4.40472 13.3574 4.7008 13.5 5 13.5 " />
-</g>
+         </g>
 
-</g>
+      </g>
 
-<g id="id0000003573" >
-<g opacity="1.000000" fill="rgb( 191, 63, 63 )" stroke="black" stroke-width="0.000000" id="id0000003572" >
-<path id="id0000003577" d="M 5 7.75 C 5.2992 7.75 5.59528 7.60741 5.78183 7.37349 C 5.96838 7.13957 6.04151 6.81918 5.97493 6.52748 C 5.90835 6.23578 5.70345 5.97885 5.43388 5.84903 C 5.16431 5.71921 4.83569 5.71921 4.56612 5.84903 C 4.29655 5.97885 4.09165 6.23578 4.02507 6.52748 C 3.95849 6.81918 4.03162 7.13957 4.21817 7.37349 C 4.40472 7.60741 4.7008 7.75 5 7.75 " />
-</g>
-
-</g>
-
-</g>
-
-</g>
-
-<polygon points="1,1 1,24 9,24 9,1 " stroke="black" stroke-width="0.000000" fill="none" id="id0000003578" pointer-events="none" class="rectangle" />
-
-</g>
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="26" y="8" width="163.5" height="176.5" id="rect00018" />
+   <line x1="28.9712" y1="184.5" x2="28.9712" y2="187.5" stroke-width="1" stroke="black" id="line00044" />
+   <text x="28.9712" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00056" >
+0   </text>
+   <line x1="60.466" y1="184.5" x2="60.466" y2="187.5" stroke-width="1" stroke="black" id="line00045" />
+   <text x="60.466" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00057" >
+0.2   </text>
+   <line x1="91.9608" y1="184.5" x2="91.9608" y2="187.5" stroke-width="1" stroke="black" id="line00046" />
+   <text x="91.9608" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00058" >
+0.4   </text>
+   <line x1="123.456" y1="184.5" x2="123.456" y2="187.5" stroke-width="1" stroke="black" id="line00047" />
+   <text x="123.456" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00059" >
+0.6   </text>
+   <line x1="154.95" y1="184.5" x2="154.95" y2="187.5" stroke-width="1" stroke="black" id="line00048" />
+   <text x="154.95" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00060" >
+0.8   </text>
+   <line x1="186.445" y1="184.5" x2="186.445" y2="187.5" stroke-width="1" stroke="black" id="line00049" />
+   <text x="186.445" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00061" >
+1   </text>
+   <line x1="26" y1="179.788" x2="23" y2="179.788" stroke-width="1" stroke="black" id="line00050" />
+   <text x="22" y="179.788" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00062" >
+0   </text>
+   <line x1="26" y1="146.375" x2="23" y2="146.375" stroke-width="1" stroke="black" id="line00051" />
+   <text x="22" y="146.375" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00063" >
+0.2   </text>
+   <line x1="26" y1="112.961" x2="23" y2="112.961" stroke-width="1" stroke="black" id="line00052" />
+   <text x="22" y="112.961" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00064" >
+0.4   </text>
+   <line x1="26" y1="79.5479" x2="23" y2="79.5479" stroke-width="1" stroke="black" id="line00053" />
+   <text x="22" y="79.5479" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00065" >
+0.6   </text>
+   <line x1="26" y1="46.1344" x2="23" y2="46.1344" stroke-width="1" stroke="black" id="line00054" />
+   <text x="22" y="46.1344" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00066" >
+0.8   </text>
+   <line x1="26" y1="12.7208" x2="23" y2="12.7208" stroke-width="1" stroke="black" id="line00055" />
+   <text x="22" y="12.7208" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00067" >
+1   </text>
 
 </svg>

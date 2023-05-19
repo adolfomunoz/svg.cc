@@ -65,9 +65,25 @@ Scatter& Scatter::alpha(const std::vector<float>& vf) noexcept {
 Scatter& Scatter::alpha(float f) noexcept {
     return alpha(std::vector<float>(1,f));
 }
-Scatter& Scatter::c(const svg::Color& sc) noexcept {
-    this->color_ = sc;
+Scatter& Scatter::c(std::vector<svg::Color>&& sc) noexcept {
+    this->color_ = std::move(sc);
     return (*this);
+}
+Scatter& Scatter::c(const std::vector<svg::Color>& sc) noexcept {
+    this->color_ = sc; return (*this);
+}
+Scatter& Scatter::c(const std::vector<std::string>& sc) noexcept {
+    std::vector<svg::Color> cs(sc.size(),svg::black);
+    std::transform(sc.begin(),sc.end(),cs.begin(),color_from_string);
+    return c(std::move(cs));
+}
+Scatter& Scatter::c(const std::vector<const char*>& sc) noexcept {
+    std::vector<svg::Color> cs(sc.size(),svg::black);
+    std::transform(sc.begin(),sc.end(),cs.begin(),[] (const char* cc) { return color_from_string(std::string(cc)); });
+    return c(std::move(cs));
+}
+Scatter& Scatter::c(const svg::Color& sc) noexcept {
+    return c(std::vector<svg::Color>(1,sc));
 }
 Scatter& Scatter::c(const std::string& sc) noexcept {
     return c(color_from_string(sc));
@@ -86,8 +102,25 @@ Scatter& Scatter::s(const std::vector<float>& vf) noexcept {
 Scatter& Scatter::s(float f) noexcept {
     return s(std::vector<float>(1,f));
 }
+Scatter& Scatter::edgecolors(std::vector<svg::Color>&& c) noexcept {
+    this->edgecolor_ = std::move(c);
+    return (*this);
+}
+Scatter& Scatter::edgecolors(const std::vector<svg::Color>& c) noexcept {
+    this->edgecolor_ = c; return (*this);
+}
+Scatter& Scatter::edgecolors(const std::vector<std::string>& sc) noexcept {
+    std::vector<svg::Color> cs(sc.size(),svg::black);
+    std::transform(sc.begin(),sc.end(),cs.begin(),color_from_string);
+    return edgecolors(std::move(cs));
+}
+Scatter& Scatter::edgecolors(const std::vector<const char*>& sc) noexcept {
+    std::vector<svg::Color> cs(sc.size(),svg::black);
+    std::transform(sc.begin(),sc.end(),cs.begin(),[] (const char* cc) { return color_from_string(std::string(cc)); });
+    return edgecolors(std::move(cs));
+}
 Scatter& Scatter::edgecolors(const svg::Color& c) noexcept {
-    this->edgecolor_ = c;
+    return edgecolors(std::vector<svg::Color>(1,c));
     return (*this);
 }
 Scatter& Scatter::edgecolors(const std::string& c) noexcept {
@@ -147,10 +180,10 @@ Scatter& Scatter::marker(const char* f) noexcept {
 }
 
 svg::Color Scatter::color(std::size_t i) const noexcept {
-    return color_;
+    return color_[i%color_.size()];
 }
-svg::Color Scatter::edgecolor(std::size_t) const noexcept {
-    return edgecolor_;
+svg::Color Scatter::edgecolor(std::size_t i) const noexcept {
+    return edgecolor_[i%color_.size()];
 }
 
 float Scatter::alpha(std::size_t i) const noexcept {
@@ -160,7 +193,7 @@ float Scatter::linewidth(std::size_t i) const noexcept {
     return linewidth_[i%linewidth_.size()];
 }
 float Scatter::markersize(std::size_t i) const noexcept {
-    return markersize_[i%linewidth_.size()];
+    return markersize_[i%markersize_.size()];
 }
 
 }

@@ -12,8 +12,8 @@ class Scatter : public PlottableBase {
     std::vector<float> markersize_ = std::vector<float>(1,1.0f);
     std::vector<float> linewidth_ = std::vector<float>(1,0.0f);
     std::vector<float> alpha_ = std::vector<float>(1,1.0f);
-    svg::Color color_ = svg::black;
-    svg::Color edgecolor_ = svg::black;
+    std::vector<svg::Color> color_ = std::vector<svg::Color>(1,svg::black);
+    std::vector<svg::Color> edgecolor_ = std::vector<svg::Color>(1,svg::black);
     svg::Element marker_ = svg::Circle(0,0,1);
 
 public:
@@ -35,12 +35,20 @@ public:
 	Scatter& c(const svg::Color& sc) noexcept;
 	Scatter& c(const std::string& sc) noexcept;
 	Scatter& c(const char* sc) noexcept;
+    Scatter& c(std::vector<svg::Color>&& c) noexcept;
+    Scatter& c(const std::vector<svg::Color>& c) noexcept;
+    Scatter& c(const std::vector<std::string>& c) noexcept;
+    Scatter& c(const std::vector<const char*>& c) noexcept;
     Scatter& s(float f) noexcept;
     Scatter& s(const std::vector<float>& vf) noexcept;
     Scatter& s(std::vector<float>&& vf) noexcept;
     Scatter& edgecolors(const svg::Color& c) noexcept;
     Scatter& edgecolors(const std::string& c) noexcept;
 	Scatter& edgecolors(const char* c) noexcept;
+    Scatter& edgecolors(std::vector<svg::Color>&& c) noexcept;
+    Scatter& edgecolors(const std::vector<svg::Color>& c) noexcept;
+    Scatter& edgecolors(const std::vector<std::string>& c) noexcept;
+    Scatter& edgecolors(const std::vector<const char*>& c) noexcept;
     Scatter& marker(const svg::Element& m) noexcept;
     Scatter& marker(const std::string& f) noexcept;
     Scatter& marker(const char* f) noexcept;

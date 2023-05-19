@@ -71,6 +71,26 @@ int main(int argc, char** argv) {
     plt.savefig("../docs/svgplot/scatter/example5.svg");
 	}
     
+    //We need to implement lists as well
+    { // Example 6
+    std::mt19937 gen{1}; //Fixed seed
+    std::uniform_real_distribution<float> d(0,1);
+    std::vector<float> x,y,opacity,size;
+    std::vector<svg::Color> colors,edges;
+    for (int i=0;i<80;++i) {
+        x.push_back(d(gen)); y.push_back(d(gen)); 
+        opacity.push_back(std::max(std::min(0.5f*d(gen)+0.5f,1.0f),0.0f));
+        size.push_back(2.0f + 1.5f*d(gen));
+        float hue = 90 + 120*d(gen);
+        colors.push_back(svg::hsv(hue,1.0,1.0));
+        edges.push_back(svg::hsv(hue,0.5,0.5));
+    }
+
+    svg::plot::SVGPlot plt; 
+    plt.figsize({200,200}).scatter(x,y).alpha(opacity).s(size).c(colors).edgecolors(edges).linewidths(1);
+    plt.savefig("../docs/svgplot/scatter/example6.svg");
+    }
+
 /*    { // Example 5
     std::mt19937 gen{1}; //Fixed seed
     std::uniform_real_distribution<float> d(0,1);
