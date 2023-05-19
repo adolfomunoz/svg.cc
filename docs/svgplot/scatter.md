@@ -24,10 +24,10 @@ which automatically assigns a specific color (with a palette similar to `matplot
 The appearance of a scatter plot can be setup in multiple ways through named parameters (which are represented as methods):
 
 - `s(<float>)`: The marker size in points
-- `c(<color>)`: Marker color, which can be a named color (`svg_cpp_plot::red`), a RGB color (`svg_cpp_plot::rgb(0.2,0.8,0.2)`), a HSV color (`svg_cpp_plot::hsv(0,1,1)`) or a string that represents a color, either named colors `"magenta"`, color URLs `"#FF00EE"` or single char colors (```r```  red, ```g```  green, ```b```  blue, ```c``` cyan, ```m``` magenta, ```y```  yellow, ```k```  black, ```w``` white).
-- `edgecolors(<color>)`: The color of the edge of the marker, which can be again any color as in the `c(<color>)` named parameter.
-- `linewidths(<float>)`: The width of the edge line of the marker.
-- `alpha(<float>)`: Transparency of the markers from *0* (totally transparent, invisible) to *100* (totally opaque, default value).
+- `c(<color>)`: defines the [color](color.html) of the marker.
+- `edgecolors(<color>)`: defines the [color](color.html) of the edge of the marker. It cannot be seen if the `linewidths` is *0*.
+- `linewidths(<float>)`: The width of the edge line of the marker (default is *0*).
+- `alpha(<float>)`: Transparency of the markers from *0* (totally transparent, invisible) to *1* (totally opaque, default value).
 
 These are illustrated here:
 
@@ -61,7 +61,15 @@ that gives the following output:
 
 ## Sequence parameters and aditional variables
 
-TODO
+All the named parameters related to format discussed above (`c`, `s`, `alpha`, `edgecolors` and `linewidths`) can also have a sequence (any iterable collection) for the same data type as parameter. Each element of the sequence is assigned to each `x`, `y` data point. This sequence parameters can be used to show more data than two dimensions for the same plot. This is illustrated in the following source code:
+
+{% highlight cpp %}
+{% include includelines filename='scatter.cc' start=76 count=12 %}
+{% endhighlight %}
+
+that gives the following output:
+
+![Example 6](./scatter/example6.svg)
 
 ## Color maps
 
