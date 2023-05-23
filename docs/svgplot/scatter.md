@@ -73,64 +73,16 @@ that gives the following output:
 
 ## Color maps
 
-TODO
-
-Additional variables can be visualized by modifying each marker's color through the `c(<sequence>)` named parameter, when passing a sequence (C++ collection) of floating point values. The mapping to RGB values is done (like in Matplotlib) through a color map, where the maximum and minimum labeled values are calculated automatically from the data so there is no clamping. It is possible, however, to specifically set those clamping values through the `vmin(<float>)` and `vmax(<float>)` named parameters (represented in C++ as methods). Furthermore, the color map can be specified through the `cmap(<string>)` named parameter. The following color maps are available:
-
-<div style="text-align:center"><img 
- src="./imshow/example10.svg" alt="example10" width="100%" /></div>
+Additional variables can be visualized by modifying each marker's color through the `c(<sequence>)` named parameter, when passing a sequence (C++ collection) of floating point values, instead of a sequence of colors. The mapping to RGB values is done (like in Matplotlib) through a color map, where the maximum and minimum labeled values are calculated automatically from the data so there is no clamping. It is possible, however, to specifically set those clamping values through the `vmin(<float>)` and `vmax(<float>)` named parameters (represented in C++ as methods). Furthermore, the color map can be specified through the `cmap(<string>)` or `cmap(<ColorMap>)` named parameter. You can find more information about color [maps here](colormap.html). 
 
 The following example illustrates three different color maps for the same set of values:
 
-```cpp
-std::mt19937 gen{1}; //Fixed seed
-std::uniform_real_distribution<float> d(0,1);
-std::list<float> x,y, value;
-for (int i=0;i<10;++i) for (int j=0;j<10;++j) for (int s=0;s<3;++s) {
-    x.push_back(i+d(gen)); y.push_back(j+d(gen)); value.push_back(sqrt((x.back()-5.0f)*(x.back()-5.0f)+(y.back()-5.0f)*(y.back()-5.0f)));
-}
-svg_cpp_plot::SVGPlot plt; int p = 0;
-for (auto cmap : {"grayscale","viridis","plasma"})
-    plt.subplot(1,3,p++).figsize({200,200}).scatter(x,y).c(value).cmap(cmap);
-plt.savefig("../doc/svgplot/scatter/example5.svg");
-```
+{% highlight cpp %}
+{% include includelines filename='scatter.cc' start=95 count=22 %}
+{% endhighlight %}
 
-which generates
+The resulting application of color maps can be seen here:
 
-<div style="text-align:center"><img 
- src="./scatter/example6.svg" alt="example5" width="100%" /></div>
-
-It is also possible not only to set values through a sequence of floating point numbers in `c(<sequence>)` but also specific colors through a sequence of RGB tuples, as illustrated in the following code:
-
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.scatter({0,0,0},{0,2,4}).c({ {0,1,0.25},{1.0,0.75,0},{0.75,0.25,0.25} });
-plt.figsize({10,25}).axis({-2,2,-2,6}).xticks({}).yticks({}).linewidth(0);
-plt.savefig("../doc/svgplot/scatter/example6.svg");
-```
-
-which generates:
-
-<div style="text-align:center"><img 
- src="./scatter/example6.svg" alt="example6" width="20%" /></div>
- 
-In this case the parameters `cmap`, `vmin` and `vmax` will just be ignored.
-
-Actually, multiple variables can be defined: in scatter plots, most named parameters that define appearance can be translated into a sequence, enabling new ways of showing information through the markers size (`s`) and border width (`linewidth`). The following illustrates different sizes for the same scatter plot:
-
-```cpp
-svg_cpp_plot::SVGPlot plt;
-plt.scatter({0,0,0},{0,2,3.5}).s({4,3,2});
-plt.scatter({0},{3.4}).s(0.4).marker("v");
-plt.scatter({-0.3,0.3,-0.3,-0.1,0.1,0.3},{3.8,3.8,3.2,3.2,3.2,3.2}).s({0.4,0.4,0.3,0.2,0.2,0.3}).marker("+");
-plt.figsize({10,25}).axis({-2,2,-2,5}).xticks({}).yticks({}).linewidth(0);
-plt.savefig("../doc/svgplot/scatter/example7.svg");
-```
-
-yielding
-
-<div style="text-align:center"><img 
- src="./scatter/example7.svg" alt="example7" width="20%" /></div>
-
+![Example 7](./scatter/example7.svg)
 
 

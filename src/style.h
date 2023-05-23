@@ -7,6 +7,7 @@ namespace svg {
 class Style : public pattern::Reflectable<Style,PresentationAttributes<Style>,TextPresentationAttributes<Style>> {
 public:
     Style() {}   
+    virtual ~Style() {}
     static const char* type_name() { return "style"; } 
 //    auto reflect() {}
 //    auto reflect_names() const { }

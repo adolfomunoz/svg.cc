@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
     { // Example 5
     std::mt19937 gen{1}; //Fixed seed
     std::normal_distribution<float> d{0,2};
-    std::vector<float> x,y;
+    std::list<float> x,y;
     svg::plot::SVGPlot plt;
 
     for (int n=0;n<10;++n) { x.push_back(d(gen)); y.push_back(d(gen)); }
@@ -75,8 +75,8 @@ int main(int argc, char** argv) {
     { // Example 6
     std::mt19937 gen{1}; //Fixed seed
     std::uniform_real_distribution<float> d(0,1);
-    std::vector<float> x,y,opacity,size;
-    std::vector<svg::Color> colors,edges;
+    std::list<float> x,y,opacity,size;
+    std::list<svg::Color> colors,edges;
     for (int i=0;i<80;++i) {
         x.push_back(d(gen)); y.push_back(d(gen)); 
         opacity.push_back(std::max(std::min(0.5f*d(gen)+0.5f,1.0f),0.0f));
@@ -91,33 +91,18 @@ int main(int argc, char** argv) {
     plt.savefig("../docs/svgplot/scatter/example6.svg");
     }
 
-/*    { // Example 5
+    { // Example 7
     std::mt19937 gen{1}; //Fixed seed
     std::uniform_real_distribution<float> d(0,1);
     std::list<float> x,y, value;
     for (int i=0;i<10;++i) for (int j=0;j<10;++j) for (int s=0;s<3;++s) {
-        x.push_back(i+d(gen)); y.push_back(j+d(gen)); value.push_back(sqrt((x.back()-5.0f)*(x.back()-5.0f)+(y.back()-5.0f)*(y.back()-5.0f)));
+        x.push_back(i+d(gen)); y.push_back(j+d(gen)); 
+        value.push_back(sqrt((x.back()-5.0f)*(x.back()-5.0f)+(y.back()-5.0f)*(y.back()-5.0f)));
     }
     svg::plot::SVGPlot plt; int p = 0;
-    for (auto cmap : {"grayscale","viridis","plasma"})
-        plt.subplot(1,3,p++).figsize({200,200}).scatter(x,y).c(value).cmap(cmap);
-    plt.savefig("../doc/svgplot/scatter/example5.svg");
-    }
-        
-    { // Example 6
-    svg::plot::SVGPlot plt;
-    plt.scatter({0,0,0},{0,2,4}).c({ {0,1,0.25},{1.0,0.75,0},{0.75,0.25,0.25} });
-    plt.figsize({10,25}).axis({-2,2,-2,6}).xticks({}).yticks({}).linewidth(0);
-    plt.savefig("../doc/svgplot/scatter/example6.svg");
-    }
+    for (auto cmap : {"grayscale","viridis","plasma"}) 
+        plt.subplot(1,3,p++).title(cmap).figsize({200,220}).scatter(x,y).c(value).cmap(cmap);
     
-    { // Example 7
-    svg::plot::SVGPlot plt;
-    plt.scatter({0,0,0},{0,2,3.5}).s({4,3,2});
-    plt.scatter({0},{3.4}).s(0.4).marker("v");
-    plt.scatter({-0.3,0.3,-0.3,-0.1,0.1,0.3},{3.8,3.8,3.2,3.2,3.2,3.2}).s({0.4,0.4,0.3,0.2,0.2,0.3}).marker("+");
-    plt.figsize({10,25}).axis({-2,2,-2,5}).xticks({}).yticks({}).linewidth(0);
-    plt.savefig("../doc/svgplot/scatter/example7.svg");
+    plt.savefig("../docs/svgplot/scatter/example7.svg");
     }
-*/ 
 }

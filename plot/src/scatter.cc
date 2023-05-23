@@ -3,6 +3,7 @@
 #include "../../svg.cc.h"
 #include "color.h"
 #include <cmath>
+#include <limits>
 
 namespace svg {
 namespace plot {
@@ -66,10 +67,12 @@ Scatter& Scatter::alpha(float f) noexcept {
     return alpha(std::vector<float>(1,f));
 }
 Scatter& Scatter::c(std::vector<svg::Color>&& sc) noexcept {
+    value_.clear();
     this->color_ = std::move(sc);
     return (*this);
 }
 Scatter& Scatter::c(const std::vector<svg::Color>& sc) noexcept {
+    value_.clear();
     this->color_ = sc; return (*this);
 }
 Scatter& Scatter::c(const std::vector<std::string>& sc) noexcept {
@@ -91,6 +94,13 @@ Scatter& Scatter::c(const std::string& sc) noexcept {
 Scatter& Scatter::c(const char* sc) noexcept {
     return c(std::string(sc));
 }
+Scatter& Scatter::c(std::vector<float>&& v) noexcept {
+    this->value_=std::move(v); return (*this);
+}
+Scatter& Scatter::c(const std::vector<float>& v) noexcept {
+    this->value_=v; return (*this);
+}
+
 Scatter& Scatter::s(std::vector<float>&& vf) noexcept {
     this->markersize_ = std::move(vf);
     return (*this);
@@ -180,7 +190,8 @@ Scatter& Scatter::marker(const char* f) noexcept {
 }
 
 svg::Color Scatter::color(std::size_t i) const noexcept {
-    return color_[i%color_.size()];
+    if (!value_.empty()) return cmap_(value_[i%value_.size()],vmin(),vmax());
+    else return color_[i%color_.size()];
 }
 svg::Color Scatter::edgecolor(std::size_t i) const noexcept {
     return edgecolor_[i%color_.size()];
@@ -194,6 +205,39 @@ float Scatter::linewidth(std::size_t i) const noexcept {
 }
 float Scatter::markersize(std::size_t i) const noexcept {
     return markersize_[i%markersize_.size()];
+}
+
+Scatter& Scatter::vmin(float v) noexcept {
+    vmin_=v; return (*this);
+}
+Scatter& Scatter::vmax(float v) noexcept {
+    vmax_=v; return (*this);
+}
+Scatter& Scatter::cmap(const ColorMap& c) noexcept {
+    cmap_=c; return (*this);
+}
+Scatter& Scatter::cmap(const std::string& c) noexcept {
+    return cmap(ColorMap::from_name(c));
+}
+Scatter& Scatter::cmap(const char* c) noexcept {
+    return cmap(std::string(c));
+}
+
+float Scatter::vmin() const noexcept {
+    if (vmin_) return *vmin_;
+    else {
+        float r = std::numeric_limits<float>::max();
+        for (float v : value_) if (v<r) r=v;
+        return r;
+    }
+}
+float Scatter::vmax() const noexcept {
+    if (vmax_) return *vmax_;
+    else {
+        float r = std::numeric_limits<float>::lowest();
+        for (float v : value_) if (v>r) r=v;
+        return r;
+    }
 }
 
 }

@@ -111,6 +111,10 @@ public:
     Scatter& scatter(std::vector<float>&& x, const std::vector<float>& y) noexcept;
     Scatter& scatter(const std::vector<float>& x, const std::vector<float>& y) noexcept;
 
+    template<typename CollectionX, typename CollectionY>
+    Scatter& scatter(CollectionX&& x, CollectionY&& y, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->scatter(std::vector<float>(x.begin(),x.end()),std::vector<float>(y.begin(),y.end()));    
+    }
     /***************
      * GRAPH setup
      ****************/
