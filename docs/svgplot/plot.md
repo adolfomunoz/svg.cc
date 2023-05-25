@@ -1,6 +1,6 @@
 # SVGPlot::plot
 
-The `plot` method provides a versatile and fast way of plotting graphs and curves from the `svg_cpp_plot::SVGPlot` class. Generating visualizations is very quick:
+The `plot` method provides a versatile and fast way of plotting graphs and curves from the `svg::plot::SVGPlot` class. Generating visualizations is very quick:
 
 {% highlight cpp %}
 {% include includelines filename='plot.cc' start=8 count=4 %}

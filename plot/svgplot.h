@@ -51,6 +51,7 @@ private:
 public:
     SubplotsAdjust& subplots_adjust();  
     SVGPlot& subplot(int nrows_, int ncols_, std::size_t index);
+    SVGPlot& subplot(int pos);
     /**********************************
      * For plotting here
      **********************************/ 

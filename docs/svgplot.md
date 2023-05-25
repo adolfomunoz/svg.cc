@@ -3,10 +3,10 @@
 ## Example teaser
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.subplot(1,3,0).xlabel("How cool is this?").bar({"Meh","Fine","Awesome"},{0.1,1,6});
-plt.subplot(1,3,1).ylabel("Awesomeness").xlabel("Time").plot(svg_cpp_plot::arange(0.0,10.0,0.2),[] (float x) { return std::exp(x)/2000.0f; },"r--");
-plt.subplot(1,3,2).ylabel("C++ness").xlabel("Usefulness").imshow(svg_cpp_plot::arange(0.0,10.0,0.2),svg_cpp_plot::arange(0.0,10.0,0.2),[] (float x, float y) { return x+y; }).interpolation("bicubic").cmap("inferno");
+plt.subplot(1,3,1).ylabel("Awesomeness").xlabel("Time").plot(svg::plot::arange(0.0,10.0,0.2),[] (float x) { return std::exp(x)/2000.0f; },"r--");
+plt.subplot(1,3,2).ylabel("C++ness").xlabel("Usefulness").imshow(svg::plot::arange(0.0,10.0,0.2),svg::plot::arange(0.0,10.0,0.2),[] (float x, float y) { return x+y; }).interpolation("bicubic").cmap("inferno");
 plt.savefig("../doc/svgplot/teaser.svg");
 ```
 
@@ -21,6 +21,18 @@ Plotting with `svg.cc` is designed to be similar to (or more accurately, a subse
 The provided functionality is rather small, compared to the well stablished `matplotlib.pyplot`. While I am expanding it to fulfill my own needs, some very niche features will never ever be provided. However, the provided functionality seems to be enough (at least for my needs) given the fact that the resulting diagrams can easily be edited and tweaked afterwards, for instance with the vector drawing software [Inkscape](https://inkscape.org/).  
 
 Also, this is for now a single author project so I am updating the documentation with features which I deem stable but there are some other features that I don't consider ready and usable so they won't be documented (so you don't use them). Also, my documentation style is not very formal and tends to illustrate the functionality through examples (which is what very often works for me when I read documentation). 
+
+## Usage
+
+Assuming that you have followed the [installation instructions](index.html), you have two options for using `svg::plot::SVGPlot` with all it's functionality.
+
+* You can include `svg/plot/svgplot.h` and then link the static library `svgplot`. I don't provide binaries for the library but it is easily compiled. I do it with *CMake* using the line there `add_library(svgplot ...)`. You can also include my `CMakeLists.txt` into your project, although it probably compiles things that you don't need.
+* You can include header-only version `svg/plot/svgplot-headeronly.h` and link nothing. This is even easier but compile times will tend to be significantly larger.
+
+{% highlight %}
+{% include includelines filename='subplot.cc' start=6 count=6 %}
+{% endhighlight %}
+
 
 ## Named parameters
 
@@ -69,11 +81,11 @@ By default, the `savefig()` method expects file with `svg` extension. Other exte
 
 ## C++ plotting alternatives
 
-There are several alternatives to `svg-cpp-plot` for plotting from C++.
+There are several alternatives to `svg::plot::SVGPlot` for plotting from C++.
 - [**sciplot**](https://github.com/sciplot/sciplot) - Requires [gnuplot](http://www.gnuplot.info/)
 - [**Matplot++**](https://github.com/alandefreitas/matplotplusplus) - Requires [gnuplot](http://www.gnuplot.info/)
 - [**matplotlib-cpp**](https://github.com/lava/matplotlib-cpp) - Resembles `matplotlib`, and requires an installed version of `matplotlib` with python interoperability.
 
-In contrast `svg::plot::SVGPlot` resembles `matplotlib` and has no dependency, except for, optionally, `libpng` for interpolated `imshow` and Inkscape for saving in different formats.
+In contrast `svg::plot::SVGPlot` resembles `matplotlib` and has no dependency, except for, optionally, `libpng` for interpolated `imshow` and Inkscape for saving in formats different to `.svg`.
 
 

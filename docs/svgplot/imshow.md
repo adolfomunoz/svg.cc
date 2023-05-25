@@ -3,7 +3,7 @@
 The `imshow` method provides a versatile way of plotting two dimensional data from the `svg::plot::SVGPlot` class. The simplest example is the following:
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.imshow( { {0.0,0.1,0.2},
               {0.3,0.4,0.5},
               {0.6,0.7,0.8} } );
@@ -22,7 +22,7 @@ The parameter of `imshow` is a two-dimensional array of values. These values can
 auto red = std::tuple(1.0f,0.0f,0.0f);
 auto green = std::tuple(0.0f,1.0f,0.0f);
 auto blue = std::tuple(0.0f,0.0f,1.0f);
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200});
 plt.imshow( { {red,green,blue},
               {green,blue,red},
@@ -41,7 +41,7 @@ The values can also be RGBA tuples:
 auto red = std::tuple(1.0f,0.0f,0.0f,1.0f);
 auto green = std::tuple(0.0f,1.0f,0.0f,1.0f);
 auto black_transparent = std::tuple(0.0f,0.0f,0.0f,0.5f);
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200});
 plt.imshow( { {black_transparent,green,black_transparent},
              {green,black_transparent,red},
@@ -57,7 +57,7 @@ that yields
 Obviously, there is no need to use bracketed data. Any standard C++ collection can be used:
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200});
 std::list<std::list<float>> data;
 for (float f = 0.0f; f<=1.0f; f+=0.1f) {
@@ -75,7 +75,7 @@ plt.savefig("../doc/svgplot/imshow/example4.svg");
 There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate:
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200});
 auto f = [] (float x, float y) {
     float r = 0.5f+0.5f*std::sin(x);
@@ -83,7 +83,7 @@ auto f = [] (float x, float y) {
     float b = std::max(0.0f,1.0f-(r+g));
     return std::tuple(r,g,b);
 };
-plt.imshow(svg_cpp_plot::arange(0,10,0.25),svg_cpp_plot::arange(0,10,0.25),f);
+plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f);
 plt.savefig("../doc/svgplot/imshow/example5.svg");
 ```
 
@@ -104,7 +104,7 @@ It is possible to define different strategies for interpolation, defined as a C+
 This would be an example of bicubic interpolation:
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200});
 auto f = [] (float x, float y) {
     float r = 0.5f+0.5f*std::sin(x);
@@ -112,7 +112,7 @@ auto f = [] (float x, float y) {
     float b = std::max(0.0f,1.0f-(r+g));
     return std::tuple(r,g,b);
 };
-plt.imshow(svg_cpp_plot::arange(0,10,0.25),svg_cpp_plot::arange(0,10,0.25),f).interpolation("bicubic");
+plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f).interpolation("bicubic");
 plt.savefig("../doc/svgplot/imshow/example6.svg");
 ```
 
@@ -126,7 +126,7 @@ that generates a much smoother output
 The `extent` named attribute, which in C++ is modeled as a method that can be concatenated with other similar methods, defines the actual range covered by the `imshow` data as a 4D tuple {xmin,xmax,ymin,ymax}. This is useful for adjusting the x-y labels according to the adequate range. For instance the following code
 
 ```cpp
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,20}).yticks({});
 std::list<std::list<float>> data; 
 data.push_back(std::list<float>()); 
@@ -148,7 +148,7 @@ This attribute also helps locating the data into specific positions within a lar
 auto red = std::tuple(1.0f,0.0f,0.0f);
 auto green = std::tuple(0.0f,1.0f,0.0f);
 auto blue = std::tuple(0.0f,0.0f,1.0f);
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.figsize({200,200}).axis({-5,5,-5,5});
 plt.imshow( { {red,green,blue},
               {green,blue,red},
@@ -172,12 +172,12 @@ In the case of arrays of values, the mapping to RGB values is done (like in Matp
 It is possible, however, to specifically set those clamping values through the `vmin` and `vmax` named parameters (represented in C++ as methods). Those parameters can even be inverted (`vmin` being greater than `vmax`) so that the colormap is inverted as well. These options are illustrated in the following example, where several options regarding `vmin` and `vmax` are compared.
 
 ```cpp
-auto x = svg_cpp_plot::arange(-5,5,0.2);
-auto y = svg_cpp_plot::arange(-5,5,0.2);
+auto x = svg::plot::arange(-5,5,0.2);
+auto y = svg::plot::arange(-5,5,0.2);
 auto himmelblau = [] (float x, float y) {
     return (x*x + y - 11.0f)*(x*x + y - 11.0f) + (x + y*y -7)*(x + y*y -7);
  };
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.subplot(1,4,0).figsize({200,200}).title("Default").imshow(x,y,himmelblau);
 plt.subplot(1,4,1).figsize({200,200}).title("vmax to 100").imshow(x,y,himmelblau).vmax(100);
 plt.subplot(1,4,2).figsize({200,200}).title("vmin to 100").imshow(x,y,himmelblau).vmin(100);
@@ -193,10 +193,10 @@ This example yields the following result:
 It is also possible to change the color map through the `cmap` attribute: a string that defines the mapping from the values to a color that represents them. The usage is illustrated in the following example:
 
 ```cpp
-auto x = svg_cpp_plot::arange(0,1,0.01);
-auto y = svg_cpp_plot::arange(0,1,1);
+auto x = svg::plot::arange(0,1,0.01);
+auto y = svg::plot::arange(0,1,1);
 auto f = [] (float x, float y) { return x; };
-svg_cpp_plot::SVGPlot plt;
+svg::plot::SVGPlot plt;
 plt.subplots_adjust().wspace(0.15).left(0.05).right(0.95);
 int i = 0;
 for (auto cmap : {"grayscale","viridis","plasma","magma","inferno","bwr","seismic","coolwarm","Spectral","PiYG"}) 

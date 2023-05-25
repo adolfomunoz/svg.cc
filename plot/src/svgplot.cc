@@ -71,6 +71,11 @@ SVGPlot& SVGPlot::subplot(int nrows_, int ncols_, std::size_t index) {
     }
     return *subplots_[index];
 }
+
+SVGPlot& SVGPlot::subplot(int pos) {
+    return subplot(pos / 100, (pos % 100)/10, pos%10);
+}
+
     /*****************************
      * AXIS SCALES
      *****************************/
