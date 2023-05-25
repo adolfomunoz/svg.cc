@@ -8,12 +8,14 @@ namespace svg {
 namespace plot {
   
 class ImShow : public Plottable {
-	ColorMap cmap_;
+    std::vector<std::vector<svg::Color>> colors_;
+    std::vector<std::vector<float>> values_;
+
+	ColorMap cmap_ = viridis;
 	std::optional<float> vmin_, vmax_; 
     std::optional<std::array<float,4>>  extent_;
     
 public:
-    ImShow();
 	ImShow& vmin(float f) noexcept; 
 	ImShow& vmax(float f) noexcept; 
     ImShow& extent(const std::array<float,4> & e) noexcept; 
@@ -21,32 +23,12 @@ public:
     ImShow& cmap(const std::string& c) noexcept;
     ImShow& cmap(const char* c) noexcept;   
 protected:
-    virtual float calculated_vmin() const = 0;
-    virtual float calculated_vmax() const = 0;
-    virtual std::array<float,2>() size = 0;
-    
-
-public:
- 	float vmin() const {
-
-		if (vmin_set) return vmin_;
-        else return calculated_vmin();
-    }
-    
- 	float vmax() const {
-		if (vmax_set) return vmax_;
-        else return calculated_vmax();
-    }
-   
-	ImShow& cmap(std::string_view s) { cmap_=s; return *this; }
-	std::string_view cmap() const { return cmap_; }
-	ImShow& interpolation(std::string_view s) { interpolation_=s; return *this; }
-	std::string_view interpolation() const { return interpolation_; }
-    
-	virtual std::tuple<std::size_t,std::size_t> size() const = 0;
-    
+    float vmin() const noexcept;
+    float vmax() const noexcept;
+public: 
+    std::array<float,2> size() const noexcept;
 	std::array<float,4> axis() const noexcept override {
-        if (extent_set) return extent_;
+        if (extent) return *extent_;
         else return std::array<float,4>{
 				-0.5f,float(std::get<0>(size()))-0.5f,
 				-0.5f,float(std::get<1>(size()))-0.5f};
