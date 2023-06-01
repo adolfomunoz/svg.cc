@@ -8,7 +8,7 @@ public:
     static const char* type_name() { return "element"; } 
 };
 
-class Element : public pattern::Pimpl<ElementBase> {
+class Element final : public pattern::Pimpl<ElementBase> {
 public:
     using pattern::Pimpl<ElementBase>::Pimpl;
     using pattern::Pimpl<ElementBase>::operator=;

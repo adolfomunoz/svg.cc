@@ -138,7 +138,6 @@ Plot& SVGPlot::plot(std::list<float>&& y) noexcept {
 
     /***************
      * SCATTER variants
-     * 
      ****************/
 Scatter& SVGPlot::scatter(std::vector<float>&& x, std::vector<float>&& y) noexcept {
     plottables.push_back(Scatter(std::move(x),std::move(y)).c(next_color()));
@@ -160,6 +159,25 @@ Scatter& SVGPlot::scatter(const std::vector<float>& x, const std::vector<float>&
     return plottables.back().cast_static<Scatter>();
 }
 
+    /***************
+     * IMSHOW variants
+     ****************/
+ImShow& SVGPlot::imshow(std::vector<std::vector<float>>&& x) noexcept {
+    plottables.push_back(ImShow(std::move(x)));
+    return plottables.back().cast_static<ImShow>();
+}
+ImShow& SVGPlot::imshow(const std::vector<std::vector<float>>& x) noexcept {
+    plottables.push_back(ImShow(x));
+    return plottables.back().cast_static<ImShow>();
+}
+ImShow& SVGPlot::imshow(std::vector<std::vector<svg::Color>>&& x) noexcept {
+    plottables.push_back(ImShow(std::move(x)));
+    return plottables.back().cast_static<ImShow>();
+}
+ImShow& SVGPlot::imshow(const std::vector<std::vector<svg::Color>>& x) noexcept {
+    plottables.push_back(ImShow(x));
+    return plottables.back().cast_static<ImShow>();
+}
 
    /***************
      * GRAPH setup

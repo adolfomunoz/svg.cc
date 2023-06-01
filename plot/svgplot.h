@@ -3,6 +3,7 @@
 #include "plottable.h"
 #include "plot.h"
 #include "scatter.h"
+#include "imshow.h"
 #include "linspace.h"
 #include "../src/svg.h"
 
@@ -116,6 +117,15 @@ public:
     Scatter& scatter(CollectionX&& x, CollectionY&& y, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
         return this->scatter(std::vector<float>(x.begin(),x.end()),std::vector<float>(y.begin(),y.end()));    
     }
+
+    /***************
+     * IMSHOW variants
+     ****************/
+    ImShow& imshow(std::vector<std::vector<float>>&& x) noexcept;
+    ImShow& imshow(const std::vector<std::vector<float>>& x) noexcept;
+    ImShow& imshow(std::vector<std::vector<svg::Color>>&& x) noexcept;
+    ImShow& imshow(const std::vector<std::vector<svg::Color>>& x) noexcept;
+
     /***************
      * GRAPH setup
      ****************/

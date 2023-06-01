@@ -1,9 +1,16 @@
 #include "../imshow.h"
+#include "../../src/group.h"
+#include "../../src/rect.h"
+#include <limits>
 
 namespace svg {
 namespace plot {
 
-ImShow() : cmap_(viridis) {}
+ImShow::ImShow(std::vector<std::vector<float>>&& v) noexcept : values_(std::move(v)) {}
+ImShow::ImShow(const std::vector<std::vector<float>>& v) noexcept : values_(v) {}
+ImShow::ImShow(std::vector<std::vector<svg::Color>>&& v) noexcept : colors_(std::move(v)) {}
+ImShow::ImShow(const std::vector<std::vector<svg::Color>>& v) noexcept : colors_(v) {} 
+
 
 ImShow& ImShow::vmin(float v) noexcept {
     vmin_=v; return (*this);
@@ -38,13 +45,13 @@ float ImShow::vmax() const noexcept {
     }
 }
 
-std::array<float,4> ImShow::axis() const noexcept override {
-    if (extent) return *extent_;
+std::array<float,4> ImShow::axis() const noexcept {
+    if (extent_) return *extent_;
     else { 
         auto sz = size();
         return std::array<float,4>{
-            -0.5f,s[0]-0.5f,
-            -0.5f,s[1]-0.5f};
+            -0.5f,float(sz[0])-0.5f,
+            -0.5f,float(sz[1])-0.5f};
     } 
 }
 
@@ -52,33 +59,70 @@ std::array<float,4> ImShow::extent() const {
     return axis();
 }
 
-std::array<float,2> size() const noexcept {
-    std::array<float,2> s{0.0f,0.0f} 
+std::array<std::size_t,2> ImShow::size() const noexcept {
+    std::array<std::size_t,2> s{0,0}; 
     if (!values_.empty()) {
-        s[1] = float(values_.size());
-        for (auto r : values_) if (float(r.size())>s[0]) s[0]=float(r.size()); 
+        s[1] = values_.size();
+        for (auto r : values_) if (float(r.size())>s[0]) s[0]=r.size(); 
     } else if (!colors_.empty()) {
-        s[1] = float(colors_.size());
-        for (auto r : colors_) if (float(r.size())>s[0]) s[0]=float(r.size()); 
+        s[1] = colors_.size();
+        for (auto r : colors_) if (float(r.size())>s[0]) s[0]=r.size(); 
     } 
     return s;
 }  
 
-svg::Color color(std::size_t i, std::size_t j) const noexcept {
+svg::Color ImShow::color(std::size_t i, std::size_t j) const noexcept {
     if (!values_.empty()) {
         if (j<values_.size()) if (i<values_[j].size()) return cmap_(values_[j][i],vmin(),vmax());
-    } else if (!colors.empty()) {
+    } else if (!colors_.empty()) {
         if (j<colors_.size()) if (i<colors_[j].size()) return colors_[j][i];
     } 
     return svg::black;  
 } 
-float opacity(std::size_t i, std::size_t j) const noexcept {
+float ImShow::opacity(std::size_t i, std::size_t j) const noexcept {
     if (!values_.empty()) {
         if (j<values_.size()) if (i<values_[j].size()) return 1.0f;
-    } else if (!colors.empty()) {
+    } else if (!colors_.empty()) {
         if (j<colors_.size()) if (i<colors_[j].size()) return 1.0f;
     }
     return 0.0f; 
+} 
+
+ImShow& ImShow::interpolation(const Interpolation& i) noexcept {
+    interpolation_ = i; return (*this);
+} 
+ImShow& ImShow::interpolation(const std::string& i) noexcept {
+    interpolation_.set_type(i); return (*this);
+} 
+ImShow& ImShow::interpolation(const char* i) noexcept {
+    return interpolation(std::string(i));
+} 
+svg::Element ImShow::plot(const Transform& xscale, const Transform& yscale) const noexcept {
+    return interpolation_.plot(*this,xscale,yscale);
+} 
+
+
+InterpolationNearest nearest;
+svg::Element InterpolationNearest::plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept {
+    auto size = imshow.size();
+    auto extent = imshow.extent();
+    float dx = (extent[1]-extent[0])/float(size[0]);
+    float dy = (extent[3]-extent[2])/float(size[1]);
+    svg::Group group;
+    for (std::size_t i = 0; i<size[0]; ++i) {
+        float x = extent[0]+float(i)*dx; 
+        for (std::size_t j = 0; j<size[1]; ++j) {
+            float y = extent[2]+float(j)*dy;
+            float op = imshow.opacity(i,j);
+            if (op>0.0f) {
+                group.add(svg::Rect(xscale(x),yscale(y),xscale(x+dx),yscale(y+dy)))
+                    .stroke_width(0)
+                    .fill(imshow.color(i,j))
+                    .fill_opacity(op);
+            } 
+        } 
+    } 
+    return group;     
 } 
 
 

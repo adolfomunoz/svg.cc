@@ -6,8 +6,33 @@
 
 namespace svg {
 namespace plot {
-  
-class ImShow : public Plottable {
+
+class ImShow;
+class InterpolationBase : public pattern::SelfRegisteringReflectableBase {
+public:
+    virtual svg::Element plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept = 0;
+};
+
+class Interpolation : public pattern::Pimpl<InterpolationBase> {
+public:
+    using pattern::Pimpl<InterpolationBase>::Pimpl;
+    using pattern::Pimpl<InterpolationBase>::operator=;
+    
+    svg::Element plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept override {
+        return impl()->plot(imshow,xscale,yscale);
+    }
+};
+
+class InterpolationNearest : public pattern::Reflectable<InterpolationNearest, InterpolationBase> {
+public:
+    InterpolationNearest(){} 
+    static const char* type_name() { return "nearest"; } 
+    svg::Element plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept override;
+};
+extern InterpolationNearest nearest;
+
+
+class ImShow : public PlottableBase {
     std::vector<std::vector<svg::Color>> colors_;
     std::vector<std::vector<float>> values_;
 
@@ -15,33 +40,33 @@ class ImShow : public Plottable {
 	std::optional<float> vmin_, vmax_; 
     std::optional<std::array<float,4>>  extent_;
     
+    Interpolation interpolation_ = nearest;
 public:
+    ImShow(std::vector<std::vector<float>>&& v) noexcept;
+    ImShow(const std::vector<std::vector<float>>& v) noexcept;
+    ImShow(std::vector<std::vector<svg::Color>>&& v) noexcept;
+    ImShow(const std::vector<std::vector<svg::Color>>& v) noexcept;
 	ImShow& vmin(float f) noexcept; 
 	ImShow& vmax(float f) noexcept; 
     ImShow& extent(const std::array<float,4> & e) noexcept; 
     ImShow& cmap(const ColorMap& c) noexcept; 
     ImShow& cmap(const std::string& c) noexcept;
-    ImShow& cmap(const char* c) noexcept;   
-protected:
+    ImShow& cmap(const char* c) noexcept;  
+    ImShow& interpolation(const Interpolation& i) noexcept;
+    ImShow& interpolation(const std::string& i) noexcept;
+    ImShow& interpolation(const char* i) noexcept;
     float vmin() const noexcept;
     float vmax() const noexcept;
-public: 
-    std::array<float,2> size() const noexcept;
-	std::array<float,4> axis() const noexcept override {
-        if (extent) return *extent_;
-        else return std::array<float,4>{
-				-0.5f,float(std::get<0>(size()))-0.5f,
-				-0.5f,float(std::get<1>(size()))-0.5f};
-	}
-    
-    std::array<float,4> extent() const {
-        return axis();
-    }
-    
+    svg::Color color(std::size_t i, std::size_t j) const noexcept;
+    float opacity(std::size_t i, std::size_t j) const noexcept;
+    std::array<std::size_t,2> size() const noexcept;
+	std::array<float,4> axis() const noexcept override;
+    std::array<float,4> extent() const;
+    svg::Element plot(const Transform& xscale, const Transform& yscale) const noexcept override;
 };
 
 
-
+/*
 template<typename T>
 class ImShowType : public ImShow {
     std::vector<std::vector<T>> data;
@@ -140,7 +165,9 @@ private:
     }
  
 };
+*/
 
 
 	
+}
 }

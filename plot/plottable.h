@@ -12,7 +12,7 @@ public:
     virtual ~PlottableBase() {}
 };
 
-class Plottable : public pattern::Pimpl<PlottableBase> {
+class Plottable final : public pattern::Pimpl<PlottableBase> {
 public:
     using pattern::Pimpl<PlottableBase>::Pimpl;
     using pattern::Pimpl<PlottableBase>::operator=;
