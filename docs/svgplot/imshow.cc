@@ -3,41 +3,47 @@
 
 
 int main(int argc, char** argv) {
-	{ // Example 1
-		svg::plot::SVGPlot plt;
-        plt.figsize({200,200});
-		plt.imshow({{0.0,0.1,0.2},
-					{0.3,0.4,0.5},
-					{0.6,0.7,0.8}});
-		plt.savefig("../docs/svgplot/imshow/example1.svg");
-	}
- 
-
-    { // Example 2
+    { // Example 1
 		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
 		plt.imshow({{svg::red,svg::green,svg::blue},
 					{svg::green,svg::blue,svg::red},
 					{svg::blue,svg::red,svg::green}});
-		plt.savefig("../docs/svgplot/imshow/example2.svg");
+		plt.savefig("../docs/svgplot/imshow/example1.svg");
 	}
 
-/*  
-    { // Example 3
-        auto red = std::tuple(1.0f,0.0f,0.0f,1.0f);
-        auto green = std::tuple(0.0f,1.0f,0.0f,1.0f);
-//        auto blue = std::tuple(0.0f,0.0f,1.0f,1.0f);
-        auto black_transparent = std::tuple(0.0f,0.0f,0.0f,0.5f);
-		svg_cpp_plot::SVGPlot plt;
+    { // Example 1 again, with strings
+		svg::plot::SVGPlot plt;
+        plt.figsize({200,200});
+		plt.imshow({{"red","green","blue"},
+					{"green","blue","red"},
+					{"blue","red","green"}});
+		plt.savefig("../docs/svgplot/imshow/example1.svg");
+	}  
+
+    { // Example 2
+        auto red = std::array<float,4>{1.0f,0.0f,0.0f,1.0f};
+        auto green = std::array<float,4>{0.0f,1.0f,0.0f,1.0f};
+        auto black_transparent = std::array<float,4>{0.0f,0.0f,0.0f,0.5f};
+		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
 		plt.imshow({{black_transparent,green,black_transparent},
 					{green,black_transparent,red},
 					{black_transparent,red,black_transparent}});
-		plt.savefig("../doc/svgplot/imshow/example3.svg");
+		plt.savefig("../docs/svgplot/imshow/example2.svg");
+	}
+
+	{ // Example 3
+		svg::plot::SVGPlot plt;
+        plt.figsize({200,200});
+		plt.imshow({{0.0,0.1,0.2},
+					{0.3,0.4,0.5},
+					{0.6,0.7,0.8}});
+		plt.savefig("../docs/svgplot/imshow/example3.svg");
 	}
     
     { // Example 4
-		svg_cpp_plot::SVGPlot plt;
+		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
         std::list<std::list<float>> data;
         for (float f = 0.0f; f<=1.0f; f+=0.1f) {
@@ -46,9 +52,10 @@ int main(int argc, char** argv) {
                 data.back().push_back(f+g);
         }
 		plt.imshow(data);
-		plt.savefig("../doc/svgplot/imshow/example4.svg");
+		plt.savefig("../docs/svgplot/imshow/example4.svg");
 	}
-    
+
+/*   
     { // Example 5
     	svg_cpp_plot::SVGPlot plt;
         plt.figsize({200,200});

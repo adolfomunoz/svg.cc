@@ -5,15 +5,15 @@
    </clipPath>
    <g id="g00001" clip-path="url(#clipPath00001)" >
          <g id="g00002" >
-               <rect stroke-width="0" fill="rgb(68, 1, 84)" fill-opacity="1" x="26" y="125.667" width="54.5" height="58.8333" id="rect00002" />
-         <rect stroke-width="0" fill="rgb(44.875, 113.5, 141.125)" fill-opacity="1" x="26" y="66.8333" width="54.5" height="58.8333" id="rect00003" />
-         <rect stroke-width="0" fill="rgb(100, 198.75, 93.75)" fill-opacity="1" x="26" y="8" width="54.5" height="58.8333" id="rect00004" />
-         <rect stroke-width="0" fill="rgb(66.125, 42.875, 115.875)" fill-opacity="1" x="80.5" y="125.667" width="54.5" height="58.8333" id="rect00005" />
-         <rect stroke-width="0" fill="rgb(38, 144, 137)" fill-opacity="1" x="80.5" y="66.8333" width="54.5" height="58.8333" id="rect00006" />
-         <rect stroke-width="0" fill="rgb(171.125, 217.25, 64.5)" fill-opacity="1" x="80.5" y="8" width="54.5" height="58.8333" id="rect00007" />
-         <rect stroke-width="0" fill="rgb(59.25, 81, 136.75)" fill-opacity="1" x="135" y="125.667" width="54.5" height="58.8333" id="rect00008" />
-         <rect stroke-width="0" fill="rgb(45, 173.125, 125.625)" fill-opacity="1" x="135" y="66.8333" width="54.5" height="58.8333" id="rect00009" />
-         <rect stroke-width="0" fill="rgb(253, 231, 37)" fill-opacity="1" x="135" y="8" width="54.5" height="58.8333" id="rect00010" />
+               <rect stroke-width="0" fill="red" fill-opacity="1" x="26" y="125.667" width="54.5" height="58.8333" id="rect00002" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="26" y="66.8333" width="54.5" height="58.8333" id="rect00003" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="26" y="8" width="54.5" height="58.8333" id="rect00004" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="80.5" y="125.667" width="54.5" height="58.8333" id="rect00005" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="80.5" y="66.8333" width="54.5" height="58.8333" id="rect00006" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="80.5" y="8" width="54.5" height="58.8333" id="rect00007" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="135" y="125.667" width="54.5" height="58.8333" id="rect00008" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="135" y="66.8333" width="54.5" height="58.8333" id="rect00009" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="135" y="8" width="54.5" height="58.8333" id="rect00010" />
 
       </g>
 

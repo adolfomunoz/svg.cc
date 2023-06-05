@@ -35,6 +35,7 @@ extern InterpolationNearest nearest;
 class ImShow : public PlottableBase {
     std::vector<std::vector<svg::Color>> colors_;
     std::vector<std::vector<float>> values_;
+    std::vector<std::vector<float>> opacities_;
 
 	ColorMap cmap_ = viridis;
 	std::optional<float> vmin_, vmax_; 
@@ -46,6 +47,8 @@ public:
     ImShow(const std::vector<std::vector<float>>& v) noexcept;
     ImShow(std::vector<std::vector<svg::Color>>&& v) noexcept;
     ImShow(const std::vector<std::vector<svg::Color>>& v) noexcept;
+    ImShow& opacity(std::vector<std::vector<float>>&& v) noexcept;
+    ImShow& opacity(const std::vector<std::vector<float>>& v) noexcept;
 	ImShow& vmin(float f) noexcept; 
 	ImShow& vmax(float f) noexcept; 
     ImShow& extent(const std::array<float,4> & e) noexcept; 

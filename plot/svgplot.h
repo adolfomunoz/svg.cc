@@ -126,6 +126,82 @@ public:
     ImShow& imshow(std::vector<std::vector<svg::Color>>&& x) noexcept;
     ImShow& imshow(const std::vector<std::vector<svg::Color>>& x) noexcept;
 
+    ImShow& imshow(const std::vector<std::vector<std::array<float,1>>>& x) noexcept;
+    ImShow& imshow(const std::vector<std::vector<std::array<float,2>>>& x) noexcept;
+    ImShow& imshow(const std::vector<std::vector<std::array<float,3>>>& x) noexcept;
+    ImShow& imshow(const std::vector<std::vector<std::array<float,4>>>& x) noexcept;
+        
+    template<typename Collection>
+    ImShow& imshow(Collection&& x, 
+        std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
+        std::vector<std::vector<float>> vx;
+        for (const auto& r : x) vx.push_back(std::vector<float>(r.begin(),r.end()));
+        return this->imshow(std::move(vx));    
+    }
+    template<typename Collection>
+    ImShow& imshow(Collection&& x, 
+        std::enable_if_t<std::is_base_of_v<ColorBase,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
+        std::vector<std::vector<svg::Color>> vx;
+        for (const auto& r : x) vx.push_back(std::vector<svg::Color>(r.begin(),r.end()));
+        return this->imshow(std::move(vx));    
+    }
+    template<typename Collection>
+    ImShow& imshow(Collection&& x, 
+        std::enable_if_t<std::is_same_v<std::string,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
+    
+        std::vector<std::vector<svg::Color>> colors;
+        for (const auto& r : x) {
+            std::vector<svg::Color> vc(r.size());
+            std::transform(r.begin(),r.end(),vc.begin(),[] (const std::string& cc) { return color_from_string(cc); });
+            colors.push_back(std::move(vc));
+        } 
+        return imshow(std::move(colors));    
+    }
+    template<typename Collection>
+    ImShow& imshow(Collection&& x, 
+        std::enable_if_t<std::is_same_v<const char*,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
+    
+        std::vector<std::vector<svg::Color>> colors;
+        for (const auto& r : x) {
+            std::vector<svg::Color> vc(r.size());
+            std::transform(r.begin(),r.end(),vc.begin(),[] (const char* cc) { return color_from_string(std::string(cc)); });
+            colors.push_back(std::move(vc));
+        } 
+        return imshow(std::move(colors));    
+    }
+    template<typename Collection>
+    ImShow& imshow(Collection&& x, 
+        std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
+        std::vector<std::vector<Color>> colors;
+        std::vector<std::vector<float>> opacities;
+        for (const auto& r : x) { 
+            std::vector<Color> vc;
+            std::vector<float> vo;
+            for (const auto& v : r) {
+                if (v.size()==1) {
+                    vc.push_back(svg::rgb(v.front(),v.front(),v.front()));
+                    vo.push_back(1.0f);
+                } else if (v.size()==2) {
+                    vc.push_back(svg::rgb(v.front(),v.front(),v.front()));
+                    vo.push_back(v.back());
+                } else if (v.size()==3) {
+                    auto i = v.begin();
+                    vc.push_back(svg::rgb(*(i++),*(i++),*(i++)));
+                    vo.push_back(1.0f);
+                } else if (v.size()>=4) {
+                    auto i = v.begin();
+                    vc.push_back(svg::rgb(*(i++),*(i++),*(i++)));
+                    vo.push_back(*(i++));
+                } else {
+                    vc.push_back(svg::black);
+                    vo.push_back(0.0f);
+                }  
+            }
+            colors.push_back(vc);
+            opacities.push_back(vo);
+        } 
+        return this->imshow(std::move(colors)).opacity(std::move(opacities));    
+    }
     /***************
      * GRAPH setup
      ****************/

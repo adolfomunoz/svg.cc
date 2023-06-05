@@ -11,6 +11,12 @@ ImShow::ImShow(const std::vector<std::vector<float>>& v) noexcept : values_(v) {
 ImShow::ImShow(std::vector<std::vector<svg::Color>>&& v) noexcept : colors_(std::move(v)) {}
 ImShow::ImShow(const std::vector<std::vector<svg::Color>>& v) noexcept : colors_(v) {} 
 
+ImShow& ImShow::opacity(std::vector<std::vector<float>>&& v) noexcept {
+    opacities_ = std::move(v); return (*this);
+}
+ImShow& ImShow::opacity(const std::vector<std::vector<float>>& v) noexcept {
+    opacities_ = v; return (*this);
+}
 
 ImShow& ImShow::vmin(float v) noexcept {
     vmin_=v; return (*this);
@@ -79,11 +85,18 @@ svg::Color ImShow::color(std::size_t i, std::size_t j) const noexcept {
     } 
     return svg::black;  
 } 
+
 float ImShow::opacity(std::size_t i, std::size_t j) const noexcept {
     if (!values_.empty()) {
-        if (j<values_.size()) if (i<values_[j].size()) return 1.0f;
+        if (j<values_.size()) if (i<values_[j].size()) {
+            if (j<opacities_.size()) if (i<opacities_[j].size()) return opacities_[j][i];  
+            return 1.0f;
+        } 
     } else if (!colors_.empty()) {
-        if (j<colors_.size()) if (i<colors_[j].size()) return 1.0f;
+        if (j<colors_.size()) if (i<colors_[j].size()) {
+            if (j<opacities_.size()) if (i<opacities_[j].size()) return opacities_[j][i];  
+            return 1.0f;
+        } 
     }
     return 0.0f; 
 } 

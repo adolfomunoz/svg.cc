@@ -1,20 +1,24 @@
 # SVGPlot::imshow
 
-The `imshow` method provides a versatile way of plotting two dimensional data from the `svg::plot::SVGPlot` class. The simplest example is the following:
+The `imshow` method provides a versatile way of plotting two dimensional data from the `svg::plot::SVGPlot` class. Particularly, it is able to plot images given a two dimensional array (array of array) of colors. This can be done as typed colors
 
-```cpp
-svg::plot::SVGPlot plt;
-plt.imshow( { {0.0,0.1,0.2},
-              {0.3,0.4,0.5},
-              {0.6,0.7,0.8} } );
-plt.savefig("../doc/svgplot/imshow/example1.svg");
-```
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=7 count=6 %}
+{% endhighlight %}
 
-that generates:
+or as strings that name colors
 
-<div style="text-align:center"><img 
- src="./imshow/example1.svg" alt="example1" width="50%" /></div>
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=16 count=6 %}
+{% endhighlight %}
+
+For more details about how to express colors, see [here](colors.html)  
+
+These generate
+
+![Example 1](./imshow/example1.svg)
  
+FROM HERE EVERYTHING IS OUTDATED
  
 The parameter of `imshow` is a two-dimensional array of values. These values can be either floats (as above) or RGB tuples:
 

@@ -1,36 +1,47 @@
-<svg viewBox="0 0 200 200" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="id0000000040" >
-<g id="id0000000041" >
-<clipPath id="id0000000041clipper" >
-<polygon points="36,1 36,178 199,178 199,1 " id="id0000000045" class="rectangle" />
-</clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" id="svg00003" >
+   <clipPath id="clipPath00003" >
+         <rect x="26" y="8" width="163.5" height="176.5" id="rect00021" />
 
-<g clip-path="url(#id0000000041clipper)" id="id0000000043" >
-<g stroke-width="0.000000" id="id0000000044" >
-<polygon points="36,178 36,119 90.3333,119 90.3333,178 " opacity="0.500000" fill="rgb( 0, 0, 0 )" stroke-width="0.000000" id="id0000000046" class="rectangle" />
-<polygon points="90.3333,178 90.3333,119 144.667,119 144.667,178 " opacity="1.000000" fill="rgb( 0, 255, 0 )" stroke-width="0.000000" id="id0000000047" class="rectangle" />
-<polygon points="144.667,178 144.667,119 199,119 199,178 " opacity="0.500000" fill="rgb( 0, 0, 0 )" stroke-width="0.000000" id="id0000000048" class="rectangle" />
-<polygon points="36,119 36,60 90.3333,60 90.3333,119 " opacity="1.000000" fill="rgb( 0, 255, 0 )" stroke-width="0.000000" id="id0000000049" class="rectangle" />
-<polygon points="90.3333,119 90.3333,60 144.667,60 144.667,119 " opacity="0.500000" fill="rgb( 0, 0, 0 )" stroke-width="0.000000" id="id0000000050" class="rectangle" />
-<polygon points="144.667,119 144.667,60 199,60 199,119 " opacity="1.000000" fill="rgb( 255, 0, 0 )" stroke-width="0.000000" id="id0000000051" class="rectangle" />
-<polygon points="36,60 36,1 90.3333,1 90.3333,60 " opacity="0.500000" fill="rgb( 0, 0, 0 )" stroke-width="0.000000" id="id0000000052" class="rectangle" />
-<polygon points="90.3333,60 90.3333,1 144.667,1 144.667,60 " opacity="1.000000" fill="rgb( 255, 0, 0 )" stroke-width="0.000000" id="id0000000053" class="rectangle" />
-<polygon points="144.667,60 144.667,1 199,1 199,60 " opacity="0.500000" fill="rgb( 0, 0, 0 )" stroke-width="0.000000" id="id0000000054" class="rectangle" />
-</g>
+   </clipPath>
+   <g id="g00005" clip-path="url(#clipPath00003)" >
+         <g id="g00006" >
+               <rect stroke-width="0" fill="rgb(68, 1, 84)" fill-opacity="1" x="26" y="125.667" width="54.5" height="58.8333" id="rect00022" />
+         <rect stroke-width="0" fill="rgb(44.875, 113.5, 141.125)" fill-opacity="1" x="26" y="66.8333" width="54.5" height="58.8333" id="rect00023" />
+         <rect stroke-width="0" fill="rgb(100, 198.75, 93.75)" fill-opacity="1" x="26" y="8" width="54.5" height="58.8333" id="rect00024" />
+         <rect stroke-width="0" fill="rgb(66.125, 42.875, 115.875)" fill-opacity="1" x="80.5" y="125.667" width="54.5" height="58.8333" id="rect00025" />
+         <rect stroke-width="0" fill="rgb(38, 144, 137)" fill-opacity="1" x="80.5" y="66.8333" width="54.5" height="58.8333" id="rect00026" />
+         <rect stroke-width="0" fill="rgb(171.125, 217.25, 64.5)" fill-opacity="1" x="80.5" y="8" width="54.5" height="58.8333" id="rect00027" />
+         <rect stroke-width="0" fill="rgb(59.25, 81, 136.75)" fill-opacity="1" x="135" y="125.667" width="54.5" height="58.8333" id="rect00028" />
+         <rect stroke-width="0" fill="rgb(45, 173.125, 125.625)" fill-opacity="1" x="135" y="66.8333" width="54.5" height="58.8333" id="rect00029" />
+         <rect stroke-width="0" fill="rgb(253, 231, 37)" fill-opacity="1" x="135" y="8" width="54.5" height="58.8333" id="rect00030" />
 
-</g>
+      </g>
 
-<polygon points="36,1 36,178 199,178 199,1 " stroke="black" stroke-width="1.000000" fill="none" id="id0000000055" pointer-events="none" class="rectangle" />
-<polyline points="63.1667,178 63.1667,181 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000056" class="line" />
-<text id="id0000000057" transform="matrix(1 0 0 1 36 1)" x="27.166666" y="182.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-0
-</text>
-
-<polyline points="33,148.5 36,148.5 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000058" class="line" />
-<text id="id0000000059" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="147.500000" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0
-</text>
-
-
-</g>
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="26" y="8" width="163.5" height="176.5" id="rect00021" />
+   <line x1="53.25" y1="184.5" x2="53.25" y2="187.5" stroke-width="1" stroke="black" id="line00017" />
+   <text x="53.25" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00017" >
+0   </text>
+   <line x1="91.4" y1="184.5" x2="91.4" y2="187.5" stroke-width="1" stroke="black" id="line00018" />
+   <text x="91.4" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00018" >
+0.7   </text>
+   <line x1="129.55" y1="184.5" x2="129.55" y2="187.5" stroke-width="1" stroke="black" id="line00019" />
+   <text x="129.55" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00019" >
+1.4   </text>
+   <line x1="167.7" y1="184.5" x2="167.7" y2="187.5" stroke-width="1" stroke="black" id="line00020" />
+   <text x="167.7" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00020" >
+2.1   </text>
+   <line x1="26" y1="155.083" x2="23" y2="155.083" stroke-width="1" stroke="black" id="line00021" />
+   <text x="22" y="155.083" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00021" >
+0   </text>
+   <line x1="26" y1="113.9" x2="23" y2="113.9" stroke-width="1" stroke="black" id="line00022" />
+   <text x="22" y="113.9" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00022" >
+0.7   </text>
+   <line x1="26" y1="72.7167" x2="23" y2="72.7167" stroke-width="1" stroke="black" id="line00023" />
+   <text x="22" y="72.7167" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00023" >
+1.4   </text>
+   <line x1="26" y1="31.5333" x2="23" y2="31.5333" stroke-width="1" stroke="black" id="line00024" />
+   <text x="22" y="31.5333" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00024" >
+2.1   </text>
 
 </svg>

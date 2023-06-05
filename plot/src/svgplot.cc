@@ -5,6 +5,7 @@
 #include "../../src/line.h"
 #include "../../src/text.h"
 #include "../arange.h"
+#include "color.h"
 #include <codecvt>
 #include <fstream>
 
@@ -163,7 +164,7 @@ Scatter& SVGPlot::scatter(const std::vector<float>& x, const std::vector<float>&
      * IMSHOW variants
      ****************/
 ImShow& SVGPlot::imshow(std::vector<std::vector<float>>&& x) noexcept {
-    plottables.push_back(ImShow(std::move(x)));
+    plottables.push_back(ImShow(x));
     return plottables.back().cast_static<ImShow>();
 }
 ImShow& SVGPlot::imshow(const std::vector<std::vector<float>>& x) noexcept {
@@ -171,13 +172,61 @@ ImShow& SVGPlot::imshow(const std::vector<std::vector<float>>& x) noexcept {
     return plottables.back().cast_static<ImShow>();
 }
 ImShow& SVGPlot::imshow(std::vector<std::vector<svg::Color>>&& x) noexcept {
-    plottables.push_back(ImShow(std::move(x)));
+    plottables.push_back(ImShow(x));
     return plottables.back().cast_static<ImShow>();
 }
 ImShow& SVGPlot::imshow(const std::vector<std::vector<svg::Color>>& x) noexcept {
     plottables.push_back(ImShow(x));
     return plottables.back().cast_static<ImShow>();
 }
+
+
+ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,1>>>& x) noexcept {
+    std::vector<std::vector<float>> colors;
+    for (const auto& r : x) {
+        std::vector<float> vc(r.size());
+        std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,1>& cc) { return cc[0]; });
+        colors.push_back(std::move(vc));
+    } 
+    return imshow(std::move(colors));
+}
+ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,2>>>& x) noexcept {
+    std::vector<std::vector<float>> colors;
+    std::vector<std::vector<float>> opacities;
+    for (const auto& r : x) {
+        std::vector<float> vc(r.size());
+        std::vector<float> vo(r.size());
+        std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,2>& cc) { return cc[0]; });
+        std::transform(r.begin(),r.end(),vo.begin(),[] (const std::array<float,2>& cc) { return cc[1]; });
+        colors.push_back(std::move(vc));
+        opacities.push_back(std::move(vo));
+    } 
+    return imshow(std::move(colors)).opacity(std::move(opacities));
+} 
+ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,3>>>& x) noexcept {
+    std::vector<std::vector<svg::Color>> colors;
+    for (const auto& r : x) {
+        std::vector<svg::Color> vc(r.size());
+        std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,3>& cc) { 
+            return svg::rgb(cc[0],cc[1], cc[2]);  });
+        colors.push_back(std::move(vc));
+    } 
+    return imshow(std::move(colors));
+}
+ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,4>>>& x) noexcept {
+    std::vector<std::vector<svg::Color>> colors;
+    std::vector<std::vector<float>> opacities;
+    for (const auto& r : x) {
+        std::vector<svg::Color> vc(r.size());
+        std::vector<float> vo(r.size());
+        std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,4>& cc) { 
+            return svg::rgb(cc[0],cc[1], cc[2]);  });
+        std::transform(r.begin(),r.end(),vo.begin(),[] (const std::array<float,4>& cc) { return cc[3]; });
+        colors.push_back(std::move(vc));
+        opacities.push_back(std::move(vo));
+    } 
+    return imshow(std::move(colors)).opacity(std::move(opacities));
+} 
 
    /***************
      * GRAPH setup
