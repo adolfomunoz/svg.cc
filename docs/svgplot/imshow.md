@@ -54,7 +54,7 @@ yields this graph:
 
 ![Example 4](./imshow/example4.svg)
 
-FROM HERE EVERYTHING IS OUTDATED
+**FROM HERE ON EVERYTHING IS OUTDATED**
 
  
 There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate:
