@@ -17,64 +17,39 @@ For more details about how to express colors, see [here](colors.html)
 These generate
 
 ![Example 1](./imshow/example1.svg)
- 
+
+Alternatively, it is also possible to pass four-dimensional arrays as color values:
+
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=25 count=9 %}
+{% endhighlight %}
+
+In that case, the first three components correspond to the RGB color while the fourth component becomes the opacity, as shown here:
+
+![Example 2](./imshow/example2.svg)
+
+Last, it is also possible to pass only floating point values instead of colors:
+
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=37 count=6 %}
+{% endhighlight %}
+
+which are converted to colors using color maps. The code above is transformed into:
+
+![Example 3](./imshow/example3.svg)
+
+While the typical `imshow` call would expect that the width of each line is equal to the others, in practice there is no need. Empty positions will just become transparent. For instance, this code:
+
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=46 count=10 %}
+{% endhighlight %}
+
+yields this graph:
+
+![Example 4](./imshow/example4.svg)
+
 FROM HERE EVERYTHING IS OUTDATED
- 
-The parameter of `imshow` is a two-dimensional array of values. These values can be either floats (as above) or RGB tuples:
 
-```cpp
-auto red = std::tuple(1.0f,0.0f,0.0f);
-auto green = std::tuple(0.0f,1.0f,0.0f);
-auto blue = std::tuple(0.0f,0.0f,1.0f);
-svg::plot::SVGPlot plt;
-plt.figsize({200,200});
-plt.imshow( { {red,green,blue},
-              {green,blue,red},
-              {blue,red,green} } );
-plt.savefig("../doc/svgplot/imshow/example2.svg");
-```
-
-generating:
-
-<div style="text-align:center"><img 
- src="./imshow/example2.svg" alt="example2" width="50%" /></div>
- 
-The values can also be RGBA tuples: 
-
-```cpp
-auto red = std::tuple(1.0f,0.0f,0.0f,1.0f);
-auto green = std::tuple(0.0f,1.0f,0.0f,1.0f);
-auto black_transparent = std::tuple(0.0f,0.0f,0.0f,0.5f);
-svg::plot::SVGPlot plt;
-plt.figsize({200,200});
-plt.imshow( { {black_transparent,green,black_transparent},
-             {green,black_transparent,red},
-             {black_transparent,red,black_transparent} } );
-plt.savefig("../doc/svgplot/imshow/example3.svg");
-```
-
-that yields
-
-<div style="text-align:center"><img 
- src="./imshow/example3.svg" alt="example3" width="50%" /></div>
- 
-Obviously, there is no need to use bracketed data. Any standard C++ collection can be used:
-
-```cpp
-svg::plot::SVGPlot plt;
-plt.figsize({200,200});
-std::list<std::list<float>> data;
-for (float f = 0.0f; f<=1.0f; f+=0.1f) {
-    data.push_back(std::list<float>());
-    for (float g = f; g<=1.0f; g+=0.1f) 
-        data.back().push_back(f+g);
-}
-plt.imshow(data);
-plt.savefig("../doc/svgplot/imshow/example4.svg");
-```
-
-<div style="text-align:center"><img 
- src="./imshow/example4.svg" alt="example4" width="50%" /></div>
  
 There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate:
 

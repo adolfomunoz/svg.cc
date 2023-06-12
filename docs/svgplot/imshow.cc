@@ -6,9 +6,9 @@ int main(int argc, char** argv) {
     { // Example 1
 		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
-		plt.imshow({{svg::red,svg::green,svg::blue},
-					{svg::green,svg::blue,svg::red},
-					{svg::blue,svg::red,svg::green}});
+		plt.imshow({ {svg::red,svg::green,svg::blue},
+					 {svg::green,svg::blue,svg::red},
+					 {svg::blue,svg::red,svg::green} });
 		plt.savefig("../docs/svgplot/imshow/example1.svg");
 	}
 
@@ -27,18 +27,18 @@ int main(int argc, char** argv) {
         auto black_transparent = std::array<float,4>{0.0f,0.0f,0.0f,0.5f};
 		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
-		plt.imshow({{black_transparent,green,black_transparent},
-					{green,black_transparent,red},
-					{black_transparent,red,black_transparent}});
+		plt.imshow({ {black_transparent,green,black_transparent},
+					 {green,black_transparent,red},
+					 {black_transparent,red,black_transparent} });
 		plt.savefig("../docs/svgplot/imshow/example2.svg");
 	}
 
 	{ // Example 3
 		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
-		plt.imshow({{0.0,0.1,0.2},
-					{0.3,0.4,0.5},
-					{0.6,0.7,0.8}});
+		plt.imshow({ {0.0,0.1,0.2},
+					 {0.3,0.4,0.5},
+					 {0.6,0.7,0.8} });
 		plt.savefig("../docs/svgplot/imshow/example3.svg");
 	}
     
