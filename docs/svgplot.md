@@ -29,10 +29,6 @@ Assuming that you have followed the [installation instructions](index.html), you
 * You can include `svg/plot/svgplot.h` and then link the static library `svgplot`. I don't provide binaries for the library but it is easily compiled. I do it with *CMake* using the line there `add_library(svgplot ...)`. You can also include my `CMakeLists.txt` into your project, although it probably compiles things that you don't need.
 * You can include header-only version `svg/plot/svgplot-headeronly.h` and link nothing. This is even easier but compile times will tend to be significantly larger.
 
-{% highlight cmake %}
-{% include includelines filename='subplot.cc' start=6 count=6 %}
-{% endhighlight %}
-
 
 ## Named parameters
 
