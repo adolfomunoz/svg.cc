@@ -38,6 +38,12 @@ which are converted to colors using color maps. The code above is transformed in
 
 ![Example 3](./imshow/example3.svg)
 
+In general, it is possible to pass arrays as "colors", and the behavior depends on the size of those arrays:
+* 1D arrays are transformed into values from their only component and then go through the color map.
+* 2D arrays are split: the first component goes through the color map and the seconds becomes the opacity.
+* 3D arrays become RGB colors.
+* 4D arrays begome RGB colors (first three components) and an opacity (fourth component) as discussed above.
+
 While the typical `imshow` call would expect that the width of each line is equal to the others, in practice there is no need. Empty positions will just become transparent. For instance, this code:
 
 {% highlight cpp %}
