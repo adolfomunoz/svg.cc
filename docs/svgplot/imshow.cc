@@ -15,9 +15,9 @@ int main(int argc, char** argv) {
     { // Example 1 again, with strings
 		svg::plot::SVGPlot plt;
         plt.figsize({200,200});
-		plt.imshow({{"red","green","blue"},
-					{"green","blue","red"},
-					{"blue","red","green"}});
+		plt.imshow({ {"red","green","blue"},
+					 {"green","blue","red"},
+					 {"blue","red","green"} });
 		plt.savefig("../docs/svgplot/imshow/example1.svg");
 	}  
 
