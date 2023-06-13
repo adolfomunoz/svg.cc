@@ -1,5 +1,6 @@
 #include "../../plot/svgplot.h"
 #include <fstream>
+#include <cmath>
 
 
 int main(int argc, char** argv) {
@@ -55,21 +56,21 @@ int main(int argc, char** argv) {
 		plt.savefig("../docs/svgplot/imshow/example4.svg");
 	}
 
-/*   
+   
     { // Example 5
-    	svg_cpp_plot::SVGPlot plt;
+    	svg::plot::SVGPlot plt;
         plt.figsize({200,200});
         auto f = [] (float x, float y) {
-            float r = 0.5f+0.5f*std::sin(x);
-            float g = 0.5f+0.5f*std::sin(y);
-            float b = std::max(0.0f,1.0f-(r+g));
-            return std::tuple(r,g,b);
+            float r = 127.0f+127.0f*std::sin(x);
+            float g = 127.0f+127.0f*std::sin(y);
+            float b = std::max(0.0f,255.0f-(r+g));
+            return svg::rgb(r,g,b);
         };
-        plt.imshow(svg_cpp_plot::arange(0,10,0.25),svg_cpp_plot::arange(0,10,0.25),f);
-		plt.savefig("../doc/svgplot/imshow/example5.svg");
+        plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f);
+		plt.savefig("../docs/svgplot/imshow/example5.svg");
     }
     
-    { // Example 6
+/*    { // Example 6
     	svg_cpp_plot::SVGPlot plt;
         plt.figsize({200,200});
         auto f = [] (float x, float y) {

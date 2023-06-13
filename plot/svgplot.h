@@ -132,21 +132,21 @@ public:
     ImShow& imshow(const std::vector<std::vector<std::array<float,4>>>& x) noexcept;
         
     template<typename Collection>
-    ImShow& imshow(Collection&& x, 
+    ImShow& imshow(const Collection& x, 
         std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
         std::vector<std::vector<float>> vx;
         for (const auto& r : x) vx.push_back(std::vector<float>(r.begin(),r.end()));
         return this->imshow(std::move(vx));    
     }
     template<typename Collection>
-    ImShow& imshow(Collection&& x, 
+    ImShow& imshow(const Collection& x, 
         std::enable_if_t<std::is_base_of_v<ColorBase,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
         std::vector<std::vector<svg::Color>> vx;
         for (const auto& r : x) vx.push_back(std::vector<svg::Color>(r.begin(),r.end()));
         return this->imshow(std::move(vx));    
     }
     template<typename Collection>
-    ImShow& imshow(Collection&& x, 
+    ImShow& imshow(const Collection& x, 
         std::enable_if_t<std::is_same_v<std::string,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
     
         std::vector<std::vector<svg::Color>> colors;
@@ -158,7 +158,7 @@ public:
         return imshow(std::move(colors));    
     }
     template<typename Collection>
-    ImShow& imshow(Collection&& x, 
+    ImShow& imshow(const Collection& x, 
         std::enable_if_t<std::is_same_v<const char*,typename std::decay_t<Collection>::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
     
         std::vector<std::vector<svg::Color>> colors;
@@ -170,7 +170,7 @@ public:
         return imshow(std::move(colors));    
     }
     template<typename Collection>
-    ImShow& imshow(Collection&& x, 
+    ImShow& imshow(const Collection& x, 
         std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type::value_type::value_type> ,void*> sfinae = nullptr) noexcept {
         std::vector<std::vector<Color>> colors;
         std::vector<std::vector<float>> opacities;
@@ -201,6 +201,19 @@ public:
             opacities.push_back(vo);
         } 
         return this->imshow(std::move(colors)).opacity(std::move(opacities));    
+    }
+    template<typename CollectionX, typename CollectionY, typename Function>
+    ImShow& imshow(const CollectionX& xs,const CollectionY& ys, const Function& f,
+        std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> &&
+                         std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type>,void*> sfinae = nullptr) noexcept {
+        
+        using T = std::decay_t<decltype(f(std::declval<typename CollectionX::value_type>(),std::declval<typename CollectionY::value_type>()))>;
+        std::vector<std::vector<T>> data;
+        for (auto y : ys) {
+            data.push_back(std::vector<T>());
+            for (auto x : xs) data.back().push_back(f(x,y));
+        }
+        return imshow(std::move(data));   
     }
     /***************
      * GRAPH setup

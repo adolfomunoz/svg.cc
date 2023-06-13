@@ -54,58 +54,21 @@ yields this graph:
 
 ![Example 4](./imshow/example4.svg)
 
-**FROM HERE ON EVERYTHING IS OUTDATED**
-
  
-There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate:
+There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate. The return value of that function can be any of those that can be passed also as vectors, such as single floating point values, colors or (1-2-3-4)D arrays. The following code illustrates how to use this:
 
-```cpp
-svg::plot::SVGPlot plt;
-plt.figsize({200,200});
-auto f = [] (float x, float y) {
-    float r = 0.5f+0.5f*std::sin(x);
-    float g = 0.5f+0.5f*std::sin(y);
-    float b = std::max(0.0f,1.0f-(r+g));
-    return std::tuple(r,g,b);
-};
-plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f);
-plt.savefig("../doc/svgplot/imshow/example5.svg");
-```
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=61 count=10 %}
+{% endhighlight %}
 
-that generates
+This code generates
 
-<div style="text-align:center"><img 
- src="./imshow/example5.svg" alt="example5" width="50%" /></div>
+![Example 5](./imshow/example5.svg)
 
+** STILL TO DO BELOW HERE BUT THE CODE SHOULD WORK **
 
 ## Formatting
 
-### Interpolation
-
-It is possible to define different strategies for interpolation, defined as a C++ equivalent of a named attribute. By default the interpolation is `"nearest"` (used in all the examples above), which means that there is no interpolation between the values. This library offers another interpolation option, `"bicubic"`, but with two limitations:
-- RGBA values are not supported in bicubuc interpolation.
-- The library has to be complied and linked with `libpng`.
-
-This would be an example of bicubic interpolation:
-
-```cpp
-svg::plot::SVGPlot plt;
-plt.figsize({200,200});
-auto f = [] (float x, float y) {
-    float r = 0.5f+0.5f*std::sin(x);
-    float g = 0.5f+0.5f*std::sin(y);
-    float b = std::max(0.0f,1.0f-(r+g));
-    return std::tuple(r,g,b);
-};
-plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f).interpolation("bicubic");
-plt.savefig("../doc/svgplot/imshow/example6.svg");
-```
-
-that generates a much smoother output
-
-<div style="text-align:center"><img 
- src="./imshow/example6.svg" alt="example6" width="50%" /></div>
- 
 ### Extent
 
 The `extent` named attribute, which in C++ is modeled as a method that can be concatenated with other similar methods, defines the actual range covered by the `imshow` data as a 4D tuple {xmin,xmax,ymin,ymax}. This is useful for adjusting the x-y labels according to the adequate range. For instance the following code
@@ -199,4 +162,33 @@ There are several color maps available, all of them inspired by Matplotlib, and 
 Right now, only perceptually uniform (top row) and divergent (bottom row) color maps are available. More color maps might be added in the future.
 
 The `vmin`, `vmax` and `cmap` named attributes have no effect on RGB or RGBA `imshow` input data.
+
+
+**FROM THIS POINT EVERYTHING IS OLD AND WORK IN PROGRESS**
+
+### Interpolation
+
+It is possible to define different strategies for interpolation, defined as a C++ equivalent of a named attribute. By default the interpolation is `"nearest"` (used in all the examples above), which means that there is no interpolation between the values. This library offers another interpolation option, `"bicubic"`, but with two limitations:
+- RGBA values are not supported in bicubuc interpolation.
+- The library has to be complied and linked with `libpng`.
+
+This would be an example of bicubic interpolation:
+
+```cpp
+svg::plot::SVGPlot plt;
+plt.figsize({200,200});
+auto f = [] (float x, float y) {
+    float r = 0.5f+0.5f*std::sin(x);
+    float g = 0.5f+0.5f*std::sin(y);
+    float b = std::max(0.0f,1.0f-(r+g));
+    return std::tuple(r,g,b);
+};
+plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f).interpolation("bicubic");
+plt.savefig("../doc/svgplot/imshow/example6.svg");
+```
+
+that generates a much smoother output
+
+<div style="text-align:center"><img 
+ src="./imshow/example6.svg" alt="example6" width="50%" /></div>
 
