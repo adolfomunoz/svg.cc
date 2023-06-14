@@ -65,53 +65,38 @@ This code generates
 
 ![Example 5](./imshow/example5.svg)
 
-** STILL TO DO BELOW HERE BUT THE CODE SHOULD WORK **
-
 ## Formatting
 
 ### Extent
 
-The `extent` named attribute, which in C++ is modeled as a method that can be concatenated with other similar methods, defines the actual range covered by the `imshow` data as a 4D tuple {xmin,xmax,ymin,ymax}. This is useful for adjusting the x-y labels according to the adequate range. For instance the following code
+The `extent` named attribute, which in C++ is modeled as a method that can be concatenated with other similar methods, defines the actual range covered by the `imshow` data as a 4D array {xmin,xmax,ymin,ymax}. This is useful for adjusting the x-y labels according to the adequate range. For instance the following code
 
-```cpp
-svg::plot::SVGPlot plt;
-plt.figsize({200,20}).yticks({});
-std::list<std::list<float>> data; 
-data.push_back(std::list<float>()); 
-for (float f = 0.0f; f<=1.0f; f+=0.1f) data.back().push_back(f);
-plt.imshow(data).interpolation("bicubic").extent({0,1,0,1});
-plt.savefig("../doc/svgplot/imshow/example7.svg");   
-```
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=74 count=7 %}
+{% endhighlight %}
 
 yields the following graph
 
-<div style="text-align:center"><img 
- src="./imshow/example7.svg" alt="example7" width="50%" /></div>
+![Example 6](./imshow/example6.svg)
 
-Note how the range of the data defined by the list covers the \[0..1\] range in the horizontal axis (instead of the \[0..10\] which would be setup according to the number of data points). 
+Note how the range of the data defined by the list covers the \[0..1\] range in the horizontal axis (instead of the \[0..100\] which would be setup according to the number of data points). 
 
 This attribute also helps locating the data into specific positions within a larger plot. It also enables flipping any of the axis by switching the minimum and maximum on that axis. An example of that is given by 
 
-```cpp
-auto red = std::tuple(1.0f,0.0f,0.0f);
-auto green = std::tuple(0.0f,1.0f,0.0f);
-auto blue = std::tuple(0.0f,0.0f,1.0f);
-svg::plot::SVGPlot plt;
-plt.figsize({200,200}).axis({-5,5,-5,5});
-plt.imshow( { {red,green,blue},
-              {green,blue,red},
-              {blue,red,green} } ).extent({-1,1,1,-1});
-plt.savefig("../doc/svgplot/imshow/example8.svg");   
-```
+{% highlight cpp %}
+{% include includelines filename='imshow.cc' start=84 count=6 %}
+{% endhighlight %}
 
 that results into 
 
-<div style="text-align:center"><img 
- src="./imshow/example8.svg" alt="example8" width="50%" /></div>
- 
+![Example 7](./imshow/example7.svg)
+
 Note how the RGB data is centered and flipped on the vertical axis.
 
-In the case of data defined by a 2D function (see examples 4 and 5 above) the extent of the data is already defined as the boundaries of the function.
+In the case of data defined by a 2D function (see example
+ above) the extent of the data is already defined as the boundaries of the function.
+
+**DONE UNTIL HERE**
 
 ### Colormaps and limits for values
 

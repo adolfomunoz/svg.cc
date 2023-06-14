@@ -213,7 +213,9 @@ public:
             data.push_back(std::vector<T>());
             for (auto x : xs) data.back().push_back(f(x,y));
         }
-        return imshow(std::move(data));   
+        float dx = (xs.back() - xs.front())/float(xs.size());
+        float dy = (ys.back() - ys.front())/float(ys.size());
+        return imshow(std::move(data)).extent({xs.front()-0.5f*dx, xs.back()+0.5f*dx, ys.front()-0.5f*dy, ys.back() + 0.5f*dy});   
     }
     /***************
      * GRAPH setup

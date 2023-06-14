@@ -11,6 +11,10 @@ public:
 		start(start), stop(stop), step(step) { }
 	arange(int n) :
 		start(0), stop(n), step(1) {}
+
+	std::size_t size() const {
+		return std::size_t((stop-start)/step)+1;
+	}
 	
 	using value_type=float;
     

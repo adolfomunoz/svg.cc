@@ -65,6 +65,10 @@ std::array<float,4> ImShow::extent() const {
     return axis();
 }
 
+ImShow& ImShow::extent(const std::array<float,4> & e) noexcept {
+    extent_ = e; return (*this);
+}
+
 std::array<std::size_t,2> ImShow::size() const noexcept {
     std::array<std::size_t,2> s{0,0}; 
     if (!values_.empty()) {
