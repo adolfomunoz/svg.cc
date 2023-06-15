@@ -208,7 +208,7 @@ ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,3>>>& x) 
     for (const auto& r : x) {
         std::vector<svg::Color> vc(r.size());
         std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,3>& cc) { 
-            return svg::rgb(cc[0],cc[1], cc[2]);  });
+            return svg::rgb(255.0f*cc[0],255.0f*cc[1],255.0f*cc[2]);  });
         colors.push_back(std::move(vc));
     } 
     return imshow(std::move(colors));
@@ -220,7 +220,7 @@ ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,4>>>& x) 
         std::vector<svg::Color> vc(r.size());
         std::vector<float> vo(r.size());
         std::transform(r.begin(),r.end(),vc.begin(),[] (const std::array<float,4>& cc) { 
-            return svg::rgb(cc[0],cc[1], cc[2]);  });
+            return svg::rgb(255.0f*cc[0],255.0f*cc[1], 255.0f*cc[2]);  });
         std::transform(r.begin(),r.end(),vo.begin(),[] (const std::array<float,4>& cc) { return cc[3]; });
         colors.push_back(std::move(vc));
         opacities.push_back(std::move(vo));

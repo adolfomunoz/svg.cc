@@ -179,18 +179,18 @@ public:
             std::vector<float> vo;
             for (const auto& v : r) {
                 if (v.size()==1) {
-                    vc.push_back(svg::rgb(v.front(),v.front(),v.front()));
+                    vc.push_back(svg::rgb(255.0f*v.front(),255.0f*v.front(),255.0f*v.front()));
                     vo.push_back(1.0f);
                 } else if (v.size()==2) {
-                    vc.push_back(svg::rgb(v.front(),v.front(),v.front()));
+                    vc.push_back(svg::rgb(255.0f*v.front(),255.0f*v.front(),255.0f*v.front()));
                     vo.push_back(v.back());
                 } else if (v.size()==3) {
                     auto i = v.begin();
-                    vc.push_back(svg::rgb(*(i++),*(i++),*(i++)));
+                    vc.push_back(svg::rgb(255.0f*(*(i++)),255.0f*(*(i++)),255.0f*(*(i++))));
                     vo.push_back(1.0f);
                 } else if (v.size()>=4) {
                     auto i = v.begin();
-                    vc.push_back(svg::rgb(*(i++),*(i++),*(i++)));
+                    vc.push_back(svg::rgb(255.0f*(*(i++)),255.0f*(*(i++)),255.0f*(*(i++))));
                     vo.push_back(*(i++));
                 } else {
                     vc.push_back(svg::black);

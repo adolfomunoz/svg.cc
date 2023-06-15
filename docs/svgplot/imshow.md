@@ -3,13 +3,13 @@
 The `imshow` method provides a versatile way of plotting two dimensional data from the `svg::plot::SVGPlot` class. Particularly, it is able to plot images given a two dimensional array (array of array) of colors. This can be done as typed colors
 
 {% highlight cpp %}
-{% include includelines filename='imshow.cc' start=7 count=6 %}
+{% include includelines filename='imshow.cc' start=8 count=6 %}
 {% endhighlight %}
 
 or as strings that name colors
 
 {% highlight cpp %}
-{% include includelines filename='imshow.cc' start=16 count=6 %}
+{% include includelines filename='imshow.cc' start=17 count=6 %}
 {% endhighlight %}
 
 For more details about how to express colors, see [here](colors.html)  
@@ -21,7 +21,7 @@ These generate
 Alternatively, it is also possible to pass four-dimensional arrays as color values:
 
 {% highlight cpp %}
-{% include includelines filename='imshow.cc' start=25 count=9 %}
+{% include includelines filename='imshow.cc' start=26 count=9 %}
 {% endhighlight %}
 
 In that case, the first three components correspond to the RGB color while the fourth component becomes the opacity, as shown here:
