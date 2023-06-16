@@ -47,7 +47,7 @@ In general, it is possible to pass arrays as "colors", and the behavior depends 
 While the typical `imshow` call would expect that the width of each line is equal to the others, in practice there is no need. Empty positions will just become transparent. For instance, this code:
 
 {% highlight cpp %}
-{% include includelines filename='imshow.cc' start=46 count=10 %}
+{% include includelines filename='imshow.cc' start=47 count=10 %}
 {% endhighlight %}
 
 yields this graph:
@@ -58,7 +58,7 @@ yields this graph:
 There is also the possiblity of passing a two dimensional funcion with two lists of positions (in the two axes) to evaluate. The return value of that function can be any of those that can be passed also as vectors, such as single floating point values, colors or (1-2-3-4)D arrays. The following code illustrates how to use this:
 
 {% highlight cpp %}
-{% include includelines filename='imshow.cc' start=61 count=10 %}
+{% include includelines filename='imshow.cc' start=62 count=10 %}
 {% endhighlight %}
 
 This code generates

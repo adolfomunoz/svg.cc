@@ -34,14 +34,14 @@ int main(int argc, char** argv) {
     plt.savefig("../docs/svgplot/imshow/example2.svg");
 	}
 
-	{ // Example 3
+    { // Example 3
     svg::plot::SVGPlot plt;
     plt.figsize({200,200});
-	plt.imshow({ {0.0,0.1,0.2},
-				 {0.3,0.4,0.5},
-				 {0.6,0.7,0.8} });
-	plt.savefig("../docs/svgplot/imshow/example3.svg");
-	}
+    plt.imshow({ {0.0,0.1,0.2},
+                 {0.3,0.4,0.5},
+                 {0.6,0.7,0.8} });
+    plt.savefig("../docs/svgplot/imshow/example3.svg");
+    }
     
     { // Example 4
     svg::plot::SVGPlot plt;

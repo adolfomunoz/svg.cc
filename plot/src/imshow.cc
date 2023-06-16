@@ -121,6 +121,7 @@ svg::Element ImShow::plot(const Transform& xscale, const Transform& yscale) cons
 
 InterpolationNearest nearest;
 svg::Element InterpolationNearest::plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept {
+    const float eps = 1.e-1;
     auto size = imshow.size();
     auto extent = imshow.extent();
     float dx = (extent[1]-extent[0])/float(size[0]);
@@ -132,7 +133,7 @@ svg::Element InterpolationNearest::plot(const ImShow& imshow, const Transform& x
             float y = extent[2]+float(j)*dy;
             float op = imshow.opacity(i,j);
             if (op>0.0f) {
-                group.add(svg::Rect(xscale(x),yscale(y),xscale(x+dx),yscale(y+dy)))
+                group.add(svg::Rect(xscale(x),yscale(y),xscale(x+dx*(1.0f+eps)),yscale(y+dy*(1.0f+eps))))
                     .stroke_width(0)
                     .fill(imshow.color(i,j))
                     .fill_opacity(op);
