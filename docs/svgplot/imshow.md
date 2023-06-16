@@ -110,7 +110,7 @@ This example yields the following result:
 
 ![Example 8](./imshow/example8.svg)
  
-It is also possible to change the color map through the `cmap` attribute: a string that defines the mapping from the values to a color that represents them. More about color maps can be read [here](colormaps.html).
+It is also possible to change the color map through the `cmap` attribute: a string that defines the mapping from the values to a color that represents them. More about color maps can be read [here](colormap.html).
 
 The `vmin`, `vmax` and `cmap` named attributes have no effect on `imshow` when the input data consists on colors, or has three or four channels (which internally translate into colors).
 
