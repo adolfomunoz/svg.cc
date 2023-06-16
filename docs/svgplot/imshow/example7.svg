@@ -1,38 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" id="svg00008" >
    <clipPath id="clipPath00008" >
-         <rect x="18.5" y="8" width="171" height="176.5" id="rect01800" />
+         <rect x="18.5" y="8" width="176" height="176.5" id="rect01800" />
 
    </clipPath>
    <g id="g00015" clip-path="url(#clipPath00008)" >
          <g id="g00016" >
-               <rect stroke-width="0" fill="red" fill-opacity="1" x="86.9" y="78.6" width="12.54" height="12.9433" id="rect01801" />
-         <rect stroke-width="0" fill="green" fill-opacity="1" x="86.9" y="90.3667" width="12.54" height="12.9433" id="rect01802" />
-         <rect stroke-width="0" fill="blue" fill-opacity="1" x="86.9" y="102.133" width="12.54" height="12.9433" id="rect01803" />
-         <rect stroke-width="0" fill="green" fill-opacity="1" x="98.3" y="78.6" width="12.54" height="12.9433" id="rect01804" />
-         <rect stroke-width="0" fill="blue" fill-opacity="1" x="98.3" y="90.3667" width="12.54" height="12.9433" id="rect01805" />
-         <rect stroke-width="0" fill="red" fill-opacity="1" x="98.3" y="102.133" width="12.54" height="12.9433" id="rect01806" />
-         <rect stroke-width="0" fill="blue" fill-opacity="1" x="109.7" y="78.6" width="12.54" height="12.9433" id="rect01807" />
-         <rect stroke-width="0" fill="red" fill-opacity="1" x="109.7" y="90.3667" width="12.54" height="12.9433" id="rect01808" />
-         <rect stroke-width="0" fill="green" fill-opacity="1" x="109.7" y="102.133" width="12.54" height="12.9433" id="rect01809" />
+               <rect stroke-width="0" fill="red" fill-opacity="1" x="88.9" y="78.6" width="12.9067" height="12.9433" id="rect01801" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="88.9" y="90.3667" width="12.9067" height="12.9433" id="rect01802" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="88.9" y="102.133" width="12.9067" height="12.9433" id="rect01803" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="100.633" y="78.6" width="12.9067" height="12.9433" id="rect01804" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="100.633" y="90.3667" width="12.9067" height="12.9433" id="rect01805" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="100.633" y="102.133" width="12.9067" height="12.9433" id="rect01806" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="112.367" y="78.6" width="12.9067" height="12.9433" id="rect01807" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="112.367" y="90.3667" width="12.9067" height="12.9433" id="rect01808" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="112.367" y="102.133" width="12.9067" height="12.9433" id="rect01809" />
 
       </g>
 
    </g>
-   <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="171" height="176.5" id="rect01800" />
-   <line x1="35.6" y1="184.5" x2="35.6" y2="187.5" stroke-width="1" stroke="black" id="line00061" />
-   <text x="35.6" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00061" >
+   <rect stroke-width="1" stroke="black" fill="none" x="18.5" y="8" width="176" height="176.5" id="rect01800" />
+   <line x1="36.1" y1="184.5" x2="36.1" y2="187.5" stroke-width="1" stroke="black" id="line00061" />
+   <text x="36.1" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00061" >
 -4   </text>
-   <line x1="69.8" y1="184.5" x2="69.8" y2="187.5" stroke-width="1" stroke="black" id="line00062" />
-   <text x="69.8" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00062" >
+   <line x1="71.3" y1="184.5" x2="71.3" y2="187.5" stroke-width="1" stroke="black" id="line00062" />
+   <text x="71.3" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00062" >
 -2   </text>
-   <line x1="104" y1="184.5" x2="104" y2="187.5" stroke-width="1" stroke="black" id="line00063" />
-   <text x="104" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00063" >
+   <line x1="106.5" y1="184.5" x2="106.5" y2="187.5" stroke-width="1" stroke="black" id="line00063" />
+   <text x="106.5" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00063" >
 0   </text>
-   <line x1="138.2" y1="184.5" x2="138.2" y2="187.5" stroke-width="1" stroke="black" id="line00064" />
-   <text x="138.2" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00064" >
+   <line x1="141.7" y1="184.5" x2="141.7" y2="187.5" stroke-width="1" stroke="black" id="line00064" />
+   <text x="141.7" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00064" >
 2   </text>
-   <line x1="172.4" y1="184.5" x2="172.4" y2="187.5" stroke-width="1" stroke="black" id="line00065" />
-   <text x="172.4" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00065" >
+   <line x1="176.9" y1="184.5" x2="176.9" y2="187.5" stroke-width="1" stroke="black" id="line00065" />
+   <text x="176.9" y="190.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00065" >
 4   </text>
    <line x1="18.5" y1="166.85" x2="15.5" y2="166.85" stroke-width="1" stroke="black" id="line00066" />
    <text x="14.5" y="166.85" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00066" >
