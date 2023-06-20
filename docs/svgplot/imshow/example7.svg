@@ -7,13 +7,13 @@
          <g id="g00016" >
                <rect stroke-width="0" fill="red" fill-opacity="1" x="88.9" y="78.6" width="12.9067" height="12.9433" id="rect01801" />
          <rect stroke-width="0" fill="green" fill-opacity="1" x="88.9" y="90.3667" width="12.9067" height="12.9433" id="rect01802" />
-         <rect stroke-width="0" fill="blue" fill-opacity="1" x="88.9" y="102.133" width="12.9067" height="12.9433" id="rect01803" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="88.9" y="102.133" width="12.9067" height="11.7667" id="rect01803" />
          <rect stroke-width="0" fill="green" fill-opacity="1" x="100.633" y="78.6" width="12.9067" height="12.9433" id="rect01804" />
          <rect stroke-width="0" fill="blue" fill-opacity="1" x="100.633" y="90.3667" width="12.9067" height="12.9433" id="rect01805" />
-         <rect stroke-width="0" fill="red" fill-opacity="1" x="100.633" y="102.133" width="12.9067" height="12.9433" id="rect01806" />
-         <rect stroke-width="0" fill="blue" fill-opacity="1" x="112.367" y="78.6" width="12.9067" height="12.9433" id="rect01807" />
-         <rect stroke-width="0" fill="red" fill-opacity="1" x="112.367" y="90.3667" width="12.9067" height="12.9433" id="rect01808" />
-         <rect stroke-width="0" fill="green" fill-opacity="1" x="112.367" y="102.133" width="12.9067" height="12.9433" id="rect01809" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="100.633" y="102.133" width="12.9067" height="11.7667" id="rect01806" />
+         <rect stroke-width="0" fill="blue" fill-opacity="1" x="112.367" y="78.6" width="11.7333" height="12.9433" id="rect01807" />
+         <rect stroke-width="0" fill="red" fill-opacity="1" x="112.367" y="90.3667" width="11.7333" height="12.9433" id="rect01808" />
+         <rect stroke-width="0" fill="green" fill-opacity="1" x="112.367" y="102.133" width="11.7333" height="11.7667" id="rect01809" />
 
       </g>
 

@@ -353,8 +353,8 @@ std::array<float,4> SVGPlot::margin() const noexcept {
 
         //Right and top are affected by xticklabels and yticklabels because the text might get out of there
         return std::array<float,4>{
-            0.5f*linewidth() + std::max((yt?3.0f:0.0f) + yticklabels_size() + (ylabel().empty()?0.0f:(2.0f*label_fontsize()+1.0f)),(xtl?0.5f*fontsize():0.0f)), //Left
-            0.5f*linewidth() + (xtl?0.5f*fontsize():0.0f), //Right
+            0.5f*linewidth() + std::max((yt?3.0f:0.0f) + yticklabels_size() + (ylabel().empty()?0.0f:(2.0f*label_fontsize()+1.0f)),(xtl?(float(xticklabels().front().size()/2)+1.0f)*0.5f*fontsize():0.0f)), //Left
+            0.5f*linewidth() + (xtl?(float(xticklabels().back().size()/2)+1.0f)*0.5f*fontsize():0.0f), //Right
             0.5f*linewidth() + (title().empty()?0.0f:title_fontsize()*1.5f+2.0f) + (ytl?3.0f*fontsize()/4.0f:0.0f), //Top
             0.5f*linewidth() + std::max((xt?3.0f:0.0f) + (xtl?(fontsize()+2.0f):0.0f) + (xlabel().empty()?0.0f:(label_fontsize()+1.0f)),(ytl?3.0f*fontsize()/4.0f:0.0f)) //Bottom
         };
