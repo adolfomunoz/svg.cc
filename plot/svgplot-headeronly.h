@@ -3,5 +3,7 @@
 #include "src/axis-scale.cc"
 #include "src/plot.cc"
 #include "src/scatter.cc"
+#include "src/imshow.cc"
+#include "src/bar.cc"
 #include "src/svgplot.cc"
 #include "src/color.cc"
