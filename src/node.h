@@ -8,6 +8,7 @@ class Node : public pattern::Reflectable<Node,ElementBase> {
 public:
     auto reflect() { return std::tie(children_); }
     const std::list<Element>& children() const { return children_; }
+    std::list<Element>& children() { return children_; } 
 
     template<typename T>
     T& add(const T& t) { 

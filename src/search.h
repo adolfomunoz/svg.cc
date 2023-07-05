@@ -22,4 +22,21 @@ std::list<T> find_all(const U& u) {
     return all;
 }
 
+template<typename T, typename U, typename F>
+void for_all(U& u, const F& f) {
+    u.apply(
+        [&f] (T& t) { f(t); },
+        [&f] (Group& g) {
+            for (Element e : g.children()) {
+                for_all<T>(e,f);
+            }
+        },
+        [&f] (SVG& g) {
+            for (Element e : g.children()) {
+                for_all<T>(e,f);
+            }
+        }
+    );
+}
+
 }
