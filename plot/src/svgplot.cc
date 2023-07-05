@@ -228,6 +228,28 @@ ImShow& SVGPlot::imshow(const std::vector<std::vector<std::array<float,4>>>& x) 
     } 
     return imshow(std::move(colors)).opacity(std::move(opacities));
 } 
+    /***************
+     * BAR variants
+     ****************/
+Bar& SVGPlot::bar(std::vector<float>&& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(Bar(std::move(x),std::move(y)).color(next_color()));
+    return plottables.back().cast_static<Bar>();
+}
+
+Bar& SVGPlot::bar(const std::vector<float>& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(Bar(x,std::move(y)).color(next_color()));
+    return plottables.back().cast_static<Bar>();
+}
+
+Bar& SVGPlot::bar(std::vector<float>&& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(Bar(std::move(x),y).color(next_color()));
+    return plottables.back().cast_static<Bar>();
+}
+
+Bar& SVGPlot::bar(const std::vector<float>& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(Bar(x,y).color(next_color()));
+    return plottables.back().cast_static<Bar>();
+}
 
    /***************
      * GRAPH setup

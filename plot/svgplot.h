@@ -4,6 +4,7 @@
 #include "plot.h"
 #include "scatter.h"
 #include "imshow.h"
+#include "bar.h"
 #include "linspace.h"
 #include "../src/svg.h"
 
@@ -217,6 +218,20 @@ public:
         float dy = (ys.back() - ys.front())/float(ys.size());
         return imshow(std::move(data)).extent({xs.front()-0.5f*dx, xs.back()+0.5f*dx, ys.front()-0.5f*dy, ys.back() + 0.5f*dy});   
     }
+
+    /***************
+     * BAR variants
+     ****************/
+    Bar& bar(std::vector<float>&& x, std::vector<float>&& y) noexcept;
+    Bar& bar(const std::vector<float>& x, std::vector<float>&& y) noexcept;
+    Bar& bar(std::vector<float>&& x, const std::vector<float>& y) noexcept;
+    Bar& bar(const std::vector<float>& x, const std::vector<float>& y) noexcept;
+
+    template<typename CollectionX, typename CollectionY>
+    Bar& bar(CollectionX&& x, CollectionY&& y, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->bar(std::vector<float>(x.begin(),x.end()),std::vector<float>(y.begin(),y.end()));    
+    }
+
     /***************
      * GRAPH setup
      ****************/
