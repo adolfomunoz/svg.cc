@@ -16,25 +16,27 @@ Bar::Bar(std::vector<float>&& x, std::vector<float>&& h) : x_(std::move(x)), hei
 
 svg::Element Bar::plot(const Transform& xscale, const Transform& yscale) const noexcept {
     svg::Group output;
+    for (std::size_t i = 0; i<nbars();++i)
+        output.add(svg::Rect(x(i)-0.5f*width(i),bottom(i),x(i)+0.5f*width(i),bottom(i)+height(i)))
+            .opacity(alpha(i))
+            .fill(color(i))
+            .stroke_width(0);
+   
     return output;
+}    
+std::size_t Bar::nbars() const noexcept {
+    return std::min(x_.size(),height_.size());
 }
-std::array<float,4> Bar::axis() const noexcept {
-//    if (x.empty() || y.empty()) 
-    return std::array<float,4>{0.0f,0.0f,0.0f,0.0f};
-/*    std::array<float,4> a{x.front(),x.front(),y.front(),y.front()};
-    std::vector<float>::const_iterator ix, iy;
-    for (ix = x.begin(), iy = y.begin(); (ix != x.end()) && (iy != y.end()); ++ix, ++iy) {
-        if (*ix < a[0]) a[0] = *ix;
-        if (*ix > a[1]) a[1] = *ix;
-        if (*iy < a[2]) a[2] = *iy;
-        if (*iy > a[3]) a[3] = *iy;
-    }
 
-    //Arbitrary expansion, maybe not a good idea but it is worse to account for markersize which is in a different space
-    float dx = std::abs(a[1]-a[0])/32.0f; //+ max_size/std::abs(ax[1]-ax[0]);
-    float dy = std::abs(a[3]-a[2])/32.0f; //+ max_size/std::abs(ax[3]-ax[2]);
-    a[0]-=dx; a[1]+=dx; a[2]-=dy; a[3]+=dy;
-    return a;*/
+std::array<float,4> Bar::axis() const noexcept {
+    std::array<float,4> a{x(0)-0.5f,x(0)+0.5f,bottom(0),height(0)};
+    for (std::size_t i = 1; i<nbars();++i) {
+        a[0] = std::min(a[0],x(i)-0.5f);
+        a[1] = std::max(a[1],x(i)+0.5f);
+        a[2] = std::min(a[2],bottom(i));
+        a[3] = std::max(a[3],bottom(i)+height(i));
+    }
+    return a;
 }
 
 Bar& Bar::width(std::vector<float>&& vf) noexcept {
