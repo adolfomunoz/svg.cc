@@ -10,8 +10,8 @@ namespace plot {
 
 class Bar : public PlottableBase {
     std::vector<float> x_, height_;
-    std::vector<float> width_ = std::vector<float>(0.8,1.0f);
-    std::vector<float> bottom_ = std::vector<float>(0,1.0f);
+    std::vector<float> width_ = std::vector<float>(1,0.8f);
+    std::vector<float> bottom_ = std::vector<float>(1,0.0f);
     std::vector<float> alpha_ = std::vector<float>(1,1.0f);
     std::vector<svg::Color> color_ = std::vector<svg::Color>(1,svg::black);
 

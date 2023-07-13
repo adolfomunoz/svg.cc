@@ -17,7 +17,10 @@ Bar::Bar(std::vector<float>&& x, std::vector<float>&& h) : x_(std::move(x)), hei
 svg::Element Bar::plot(const Transform& xscale, const Transform& yscale) const noexcept {
     svg::Group output;
     for (std::size_t i = 0; i<nbars();++i)
-        output.add(svg::Rect(x(i)-0.5f*width(i),bottom(i),x(i)+0.5f*width(i),bottom(i)+height(i)))
+        output.add(svg::Rect(xscale(x(i)-0.5f*width(i)),
+                             yscale(bottom(i)),
+                             xscale(x(i)+0.5f*width(i)),
+                             yscale(bottom(i)+height(i))))
             .opacity(alpha(i))
             .fill(color(i))
             .stroke_width(0);
