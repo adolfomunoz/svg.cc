@@ -47,6 +47,7 @@ public:
     Bar& color(const std::vector<svg::Color>& c) noexcept;
     Bar& color(const std::vector<std::string>& c) noexcept;
     Bar& color(const std::vector<const char*>& c) noexcept;
+    Bar& color(const std::initializer_list<const char*>& c) noexcept;
     template<typename Collection>
     Bar& color(const Collection& vc, std::enable_if_t<std::is_base_of_v<svg::ColorBase,typename std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
         return this->color(std::vector<svg::Color>(vc.begin(),vc.end()));    

@@ -81,5 +81,8 @@ namespace std {
 template<>
 struct iterator_traits<svg::plot::arange::const_iterator> {
 	using iterator_category = std::forward_iterator_tag;
+	using difference_type = std::size_t;
+	using value_type = float;
+	using reference = float&;
 };
 }

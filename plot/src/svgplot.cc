@@ -251,6 +251,11 @@ Bar& SVGPlot::bar(const std::vector<float>& x, const std::vector<float>& y) noex
     return plottables.back().cast_static<Bar>();
 }
 
+Bar& SVGPlot::bar(const std::vector<std::string>& x, const std::vector<float>& y) noexcept {
+    this->xticks(arange(x.size()),x);
+    return this->bar(arange(x.size()),y);
+}
+
    /***************
      * GRAPH setup
      ****************/

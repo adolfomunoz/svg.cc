@@ -1,175 +1,147 @@
-<svg viewBox="0 0 640 480" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="id0000000210" >
-<g id="id0000000211" >
-<clipPath id="id0000000211clipper" >
-<polygon points="36,1 36,458 639,458 639,1 " id="id0000000216" class="rectangle" />
-</clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" id="svg00006" >
+   <clipPath id="clipPath00006" >
+         <rect x="26" y="8" width="603.5" height="456.5" id="rect00059" />
 
-<g clip-path="url(#id0000000211clipper)" id="id0000000213" >
-<g id="id0000000214" >
-<polygon points="38.9851,458 38.9851,370.698 50.9257,370.698 50.9257,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000217" fill-opacity="0.500000" class="rectangle" />
-<polygon points="50.9257,458 50.9257,347.017 62.8663,347.017 62.8663,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000218" fill-opacity="0.500000" class="rectangle" />
-<polygon points="62.8663,458 62.8663,319.707 74.8069,319.707 74.8069,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000219" fill-opacity="0.500000" class="rectangle" />
-<polygon points="74.8069,458 74.8069,289.089 86.7475,289.089 86.7475,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000220" fill-opacity="0.500000" class="rectangle" />
-<polygon points="86.7475,458 86.7475,255.777 98.6881,255.777 98.6881,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000221" fill-opacity="0.500000" class="rectangle" />
-<polygon points="98.6881,458 98.6881,220.689 110.629,220.689 110.629,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000222" fill-opacity="0.500000" class="rectangle" />
-<polygon points="110.629,458 110.629,185.027 122.569,185.027 122.569,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000223" fill-opacity="0.500000" class="rectangle" />
-<polygon points="122.569,458 122.569,150.224 134.51,150.224 134.51,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000224" fill-opacity="0.500000" class="rectangle" />
-<polygon points="134.51,458 134.51,117.855 146.451,117.855 146.451,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000225" fill-opacity="0.500000" class="rectangle" />
-<polygon points="146.451,458 146.451,89.5249 158.391,89.5249 158.391,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000226" fill-opacity="0.500000" class="rectangle" />
-<polygon points="158.391,458 158.391,66.7397 170.332,66.7397 170.332,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000227" fill-opacity="0.500000" class="rectangle" />
-<polygon points="170.332,458 170.332,50.772 182.272,50.772 182.272,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000228" fill-opacity="0.500000" class="rectangle" />
-<polygon points="182.272,458 182.272,42.5455 194.213,42.5455 194.213,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000229" fill-opacity="0.500000" class="rectangle" />
-<polygon points="194.213,458 194.213,42.5455 206.153,42.5455 206.153,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000230" fill-opacity="0.500000" class="rectangle" />
-<polygon points="206.153,458 206.153,50.772 218.094,50.772 218.094,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000231" fill-opacity="0.500000" class="rectangle" />
-<polygon points="218.094,458 218.094,66.7397 230.035,66.7397 230.035,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000232" fill-opacity="0.500000" class="rectangle" />
-<polygon points="230.035,458 230.035,89.5249 241.975,89.5249 241.975,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000233" fill-opacity="0.500000" class="rectangle" />
-<polygon points="241.975,458 241.975,117.855 253.916,117.855 253.916,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000234" fill-opacity="0.500000" class="rectangle" />
-<polygon points="253.916,458 253.916,150.224 265.856,150.224 265.856,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000235" fill-opacity="0.500000" class="rectangle" />
-<polygon points="265.856,458 265.856,185.027 277.797,185.027 277.797,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000236" fill-opacity="0.500000" class="rectangle" />
-<polygon points="277.797,458 277.797,220.689 289.738,220.689 289.738,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000237" fill-opacity="0.500000" class="rectangle" />
-<polygon points="289.738,458 289.738,255.777 301.678,255.777 301.678,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000238" fill-opacity="0.500000" class="rectangle" />
-<polygon points="301.678,458 301.678,289.089 313.619,289.089 313.619,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000239" fill-opacity="0.500000" class="rectangle" />
-<polygon points="313.619,458 313.619,319.707 325.559,319.707 325.559,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000240" fill-opacity="0.500000" class="rectangle" />
-<polygon points="325.559,458 325.559,347.017 337.5,347.017 337.5,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000241" fill-opacity="0.500000" class="rectangle" />
-<polygon points="337.5,458 337.5,370.698 349.441,370.698 349.441,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000242" fill-opacity="0.500000" class="rectangle" />
-<polygon points="349.441,458 349.441,390.686 361.381,390.686 361.381,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000243" fill-opacity="0.500000" class="rectangle" />
-<polygon points="361.381,458 361.381,407.125 373.322,407.125 373.322,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000244" fill-opacity="0.500000" class="rectangle" />
-<polygon points="373.322,458 373.322,420.311 385.262,420.311 385.262,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000245" fill-opacity="0.500000" class="rectangle" />
-<polygon points="385.262,458 385.262,430.632 397.203,430.632 397.203,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000246" fill-opacity="0.500000" class="rectangle" />
-<polygon points="397.203,458 397.203,438.52 409.144,438.52 409.144,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000247" fill-opacity="0.500000" class="rectangle" />
-<polygon points="409.144,458 409.144,444.409 421.084,444.409 421.084,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000248" fill-opacity="0.500000" class="rectangle" />
-<polygon points="421.084,458 421.084,448.706 433.025,448.706 433.025,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000249" fill-opacity="0.500000" class="rectangle" />
-<polygon points="433.025,458 433.025,451.77 444.965,451.77 444.965,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000250" fill-opacity="0.500000" class="rectangle" />
-<polygon points="444.965,458 444.965,453.907 456.906,453.907 456.906,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000251" fill-opacity="0.500000" class="rectangle" />
-<polygon points="456.906,458 456.906,455.364 468.847,455.364 468.847,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000252" fill-opacity="0.500000" class="rectangle" />
-<polygon points="468.847,458 468.847,456.336 480.787,456.336 480.787,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000253" fill-opacity="0.500000" class="rectangle" />
-<polygon points="480.787,458 480.787,456.97 492.728,456.97 492.728,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000254" fill-opacity="0.500000" class="rectangle" />
-<polygon points="492.728,458 492.728,457.375 504.668,457.375 504.668,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000255" fill-opacity="0.500000" class="rectangle" />
-<polygon points="504.668,458 504.668,457.629 516.609,457.629 516.609,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000256" fill-opacity="0.500000" class="rectangle" />
-<polygon points="516.609,458 516.609,457.784 528.549,457.784 528.549,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000257" fill-opacity="0.500000" class="rectangle" />
-<polygon points="528.549,458 528.549,457.876 540.49,457.876 540.49,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000258" fill-opacity="0.500000" class="rectangle" />
-<polygon points="540.49,458 540.49,457.931 552.431,457.931 552.431,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000259" fill-opacity="0.500000" class="rectangle" />
-<polygon points="552.431,458 552.431,457.962 564.371,457.962 564.371,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000260" fill-opacity="0.500000" class="rectangle" />
-<polygon points="564.371,458 564.371,457.98 576.312,457.98 576.312,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000261" fill-opacity="0.500000" class="rectangle" />
-<polygon points="576.312,458 576.312,457.989 588.252,457.989 588.252,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000262" fill-opacity="0.500000" class="rectangle" />
-<polygon points="588.252,458 588.252,457.994 600.193,457.994 600.193,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000263" fill-opacity="0.500000" class="rectangle" />
-<polygon points="600.193,458 600.193,457.997 612.134,457.997 612.134,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000264" fill-opacity="0.500000" class="rectangle" />
-<polygon points="612.134,458 612.134,457.999 624.074,457.999 624.074,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000265" fill-opacity="0.500000" class="rectangle" />
-<polygon points="624.074,458 624.074,457.999 636.015,457.999 636.015,458 " fill="#1f77b4" stroke-width="0.000000" id="id0000000266" fill-opacity="0.500000" class="rectangle" />
-</g>
+   </clipPath>
+   <g id="g00013" clip-path="url(#clipPath00006)" >
+         <g id="g00014" >
+               <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="26" y="368.573" width="12.07" height="95.9271" id="rect00060" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="38.07" y="342.553" width="12.07" height="121.947" id="rect00061" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="50.14" y="312.544" width="12.07" height="151.956" id="rect00062" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="62.21" y="278.901" width="12.07" height="185.599" id="rect00063" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="74.28" y="242.298" width="12.07" height="222.202" id="rect00064" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="86.35" y="203.743" width="12.07" height="260.757" id="rect00065" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="98.42" y="164.558" width="12.07" height="299.942" id="rect00066" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="110.49" y="126.316" width="12.07" height="338.184" id="rect00067" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="122.56" y="90.7494" width="12.07" height="373.751" id="rect00068" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="134.63" y="59.6208" width="12.07" height="404.879" id="rect00069" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="146.7" y="34.5845" width="12.07" height="429.915" id="rect00070" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="158.77" y="17.0393" width="12.07" height="447.461" id="rect00071" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="170.84" y="8" width="12.07" height="456.5" id="rect00072" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="182.91" y="8" width="12.07" height="456.5" id="rect00073" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="194.98" y="17.0393" width="12.07" height="447.461" id="rect00074" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="207.05" y="34.5845" width="12.07" height="429.915" id="rect00075" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="219.12" y="59.6208" width="12.07" height="404.879" id="rect00076" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="231.19" y="90.7494" width="12.07" height="373.751" id="rect00077" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="243.26" y="126.316" width="12.07" height="338.184" id="rect00078" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="255.33" y="164.558" width="12.07" height="299.942" id="rect00079" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="267.4" y="203.743" width="12.0699" height="260.757" id="rect00080" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="279.47" y="242.298" width="12.07" height="222.202" id="rect00081" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="291.54" y="278.901" width="12.07" height="185.599" id="rect00082" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="303.61" y="312.544" width="12.07" height="151.956" id="rect00083" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="315.68" y="342.553" width="12.07" height="121.947" id="rect00084" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="327.75" y="368.573" width="12.07" height="95.9271" id="rect00085" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="339.82" y="390.535" width="12.07" height="73.9648" id="rect00086" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="351.89" y="408.599" width="12.07" height="55.9014" id="rect00087" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="363.96" y="423.087" width="12.07" height="41.4128" id="rect00088" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="376.03" y="434.428" width="12.07" height="30.0718" id="rect00089" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="388.1" y="443.096" width="12.07" height="21.4042" id="rect00090" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="400.17" y="449.567" width="12.07" height="14.9332" id="rect00091" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="412.24" y="454.288" width="12.07" height="10.2122" id="rect00092" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="424.31" y="457.655" width="12.07" height="6.84549" id="rect00093" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="436.38" y="460.002" width="12.07" height="4.4978" id="rect00094" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="448.45" y="461.603" width="12.07" height="2.89676" id="rect00095" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="460.52" y="462.671" width="12.07" height="1.82867" id="rect00096" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="472.59" y="463.368" width="12.07" height="1.13156" id="rect00097" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="484.66" y="463.814" width="12.07" height="0.68631" id="rect00098" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="496.73" y="464.092" width="12.07" height="0.40802" id="rect00099" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="508.8" y="464.262" width="12.07" height="0.237793" id="rect00100" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="520.87" y="464.364" width="12.0699" height="0.135834" id="rect00101" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="532.94" y="464.424" width="12.0701" height="0.0760498" id="rect00102" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="545.01" y="464.458" width="12.07" height="0.041748" id="rect00103" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="557.08" y="464.478" width="12.0699" height="0.0224609" id="rect00104" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="569.15" y="464.488" width="12.0701" height="0.0118408" id="rect00105" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="581.22" y="464.494" width="12.0699" height="0.00610352" id="rect00106" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="593.29" y="464.497" width="12.07" height="0.00311279" id="rect00107" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="605.36" y="464.498" width="12.07" height="0.00152588" id="rect00108" />
+         <rect stroke-width="0" fill="#1f77b4" opacity="0.5" x="617.43" y="464.499" width="12.07" height="0.000762939" id="rect00109" />
 
-<g id="id0000000215" >
-<polygon points="38.9851,458 38.9851,458 50.9257,458 50.9257,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000267" fill-opacity="0.500000" class="rectangle" />
-<polygon points="50.9257,458 50.9257,458 62.8663,458 62.8663,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000268" fill-opacity="0.500000" class="rectangle" />
-<polygon points="62.8663,458 62.8663,457.999 74.8069,457.999 74.8069,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000269" fill-opacity="0.500000" class="rectangle" />
-<polygon points="74.8069,458 74.8069,457.998 86.7475,457.998 86.7475,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000270" fill-opacity="0.500000" class="rectangle" />
-<polygon points="86.7475,458 86.7475,457.996 98.6881,457.996 98.6881,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000271" fill-opacity="0.500000" class="rectangle" />
-<polygon points="98.6881,458 98.6881,457.992 110.629,457.992 110.629,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000272" fill-opacity="0.500000" class="rectangle" />
-<polygon points="110.629,458 110.629,457.986 122.569,457.986 122.569,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000273" fill-opacity="0.500000" class="rectangle" />
-<polygon points="122.569,458 122.569,457.973 134.51,457.973 134.51,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000274" fill-opacity="0.500000" class="rectangle" />
-<polygon points="134.51,458 134.51,457.952 146.451,457.952 146.451,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000275" fill-opacity="0.500000" class="rectangle" />
-<polygon points="146.451,458 146.451,457.913 158.391,457.913 158.391,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000276" fill-opacity="0.500000" class="rectangle" />
-<polygon points="158.391,458 158.391,457.849 170.332,457.849 170.332,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000277" fill-opacity="0.500000" class="rectangle" />
-<polygon points="170.332,458 170.332,457.74 182.272,457.74 182.272,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000278" fill-opacity="0.500000" class="rectangle" />
-<polygon points="182.272,458 182.272,457.563 194.213,457.563 194.213,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000279" fill-opacity="0.500000" class="rectangle" />
-<polygon points="194.213,458 194.213,457.279 206.153,457.279 206.153,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000280" fill-opacity="0.500000" class="rectangle" />
-<polygon points="206.153,458 206.153,456.835 218.094,456.835 218.094,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000281" fill-opacity="0.500000" class="rectangle" />
-<polygon points="218.094,458 218.094,456.155 230.035,456.155 230.035,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000282" fill-opacity="0.500000" class="rectangle" />
-<polygon points="230.035,458 230.035,455.135 241.975,455.135 241.975,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000283" fill-opacity="0.500000" class="rectangle" />
-<polygon points="241.975,458 241.975,453.639 253.916,453.639 253.916,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000284" fill-opacity="0.500000" class="rectangle" />
-<polygon points="253.916,458 253.916,451.494 265.856,451.494 265.856,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000285" fill-opacity="0.500000" class="rectangle" />
-<polygon points="265.856,458 265.856,448.487 277.797,448.487 277.797,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000286" fill-opacity="0.500000" class="rectangle" />
-<polygon points="277.797,458 277.797,444.364 289.738,444.364 289.738,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000287" fill-opacity="0.500000" class="rectangle" />
-<polygon points="289.738,458 289.738,438.842 301.678,438.842 301.678,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000288" fill-opacity="0.500000" class="rectangle" />
-<polygon points="301.678,458 301.678,431.618 313.619,431.618 313.619,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000289" fill-opacity="0.500000" class="rectangle" />
-<polygon points="313.619,458 313.619,422.387 325.559,422.387 325.559,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000290" fill-opacity="0.500000" class="rectangle" />
-<polygon points="325.559,458 325.559,410.88 337.5,410.88 337.5,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000291" fill-opacity="0.500000" class="rectangle" />
-<polygon points="337.5,458 337.5,396.889 349.441,396.889 349.441,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000292" fill-opacity="0.500000" class="rectangle" />
-<polygon points="349.441,458 349.441,380.312 361.381,380.312 361.381,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000293" fill-opacity="0.500000" class="rectangle" />
-<polygon points="361.381,458 361.381,361.195 373.322,361.195 373.322,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000294" fill-opacity="0.500000" class="rectangle" />
-<polygon points="373.322,458 373.322,339.762 385.262,339.762 385.262,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000295" fill-opacity="0.500000" class="rectangle" />
-<polygon points="385.262,458 385.262,316.444 397.203,316.444 397.203,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000296" fill-opacity="0.500000" class="rectangle" />
-<polygon points="397.203,458 397.203,291.882 409.144,291.882 409.144,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000297" fill-opacity="0.500000" class="rectangle" />
-<polygon points="409.144,458 409.144,266.919 421.084,266.919 421.084,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000298" fill-opacity="0.500000" class="rectangle" />
-<polygon points="421.084,458 421.084,242.557 433.025,242.557 433.025,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000299" fill-opacity="0.500000" class="rectangle" />
-<polygon points="433.025,458 433.025,219.898 444.965,219.898 444.965,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000300" fill-opacity="0.500000" class="rectangle" />
-<polygon points="444.965,458 444.965,200.067 456.906,200.067 456.906,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000301" fill-opacity="0.500000" class="rectangle" />
-<polygon points="456.906,458 456.906,184.118 468.847,184.118 468.847,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000302" fill-opacity="0.500000" class="rectangle" />
-<polygon points="468.847,458 468.847,172.94 480.787,172.94 480.787,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000303" fill-opacity="0.500000" class="rectangle" />
-<polygon points="480.787,458 480.787,167.182 492.728,167.182 492.728,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000304" fill-opacity="0.500000" class="rectangle" />
-<polygon points="492.728,458 492.728,167.182 504.668,167.182 504.668,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000305" fill-opacity="0.500000" class="rectangle" />
-<polygon points="504.668,458 504.668,172.94 516.609,172.94 516.609,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000306" fill-opacity="0.500000" class="rectangle" />
-<polygon points="516.609,458 516.609,184.118 528.549,184.118 528.549,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000307" fill-opacity="0.500000" class="rectangle" />
-<polygon points="528.549,458 528.549,200.067 540.49,200.067 540.49,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000308" fill-opacity="0.500000" class="rectangle" />
-<polygon points="540.49,458 540.49,219.898 552.431,219.898 552.431,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000309" fill-opacity="0.500000" class="rectangle" />
-<polygon points="552.431,458 552.431,242.557 564.371,242.557 564.371,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000310" fill-opacity="0.500000" class="rectangle" />
-<polygon points="564.371,458 564.371,266.919 576.312,266.919 576.312,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000311" fill-opacity="0.500000" class="rectangle" />
-<polygon points="576.312,458 576.312,291.882 588.252,291.882 588.252,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000312" fill-opacity="0.500000" class="rectangle" />
-<polygon points="588.252,458 588.252,316.444 600.193,316.444 600.193,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000313" fill-opacity="0.500000" class="rectangle" />
-<polygon points="600.193,458 600.193,339.762 612.134,339.762 612.134,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000314" fill-opacity="0.500000" class="rectangle" />
-<polygon points="612.134,458 612.134,361.195 624.074,361.195 624.074,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000315" fill-opacity="0.500000" class="rectangle" />
-<polygon points="624.074,458 624.074,380.312 636.015,380.312 636.015,458 " fill="#ff7f0e" stroke-width="0.000000" id="id0000000316" fill-opacity="0.500000" class="rectangle" />
-</g>
+      </g>
+      <g id="g00015" >
+               <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="26" y="464.5" width="12.07" height="0.000244141" id="rect00110" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="38.07" y="464.499" width="12.07" height="0.000518799" id="rect00111" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="50.14" y="464.499" width="12.07" height="0.00106812" id="rect00112" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="62.21" y="464.498" width="12.07" height="0.00216675" id="rect00113" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="74.28" y="464.496" width="12.07" height="0.00427246" id="rect00114" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="86.35" y="464.492" width="12.07" height="0.00830078" id="rect00115" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="98.42" y="464.484" width="12.07" height="0.0157166" id="rect00116" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="110.49" y="464.471" width="12.07" height="0.0292053" id="rect00117" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="122.56" y="464.447" width="12.07" height="0.0532227" id="rect00118" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="134.63" y="464.405" width="12.07" height="0.0950623" id="rect00119" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="146.7" y="464.334" width="12.07" height="0.166443" id="rect00120" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="158.77" y="464.214" width="12.07" height="0.285614" id="rect00121" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="170.84" y="464.02" width="12.07" height="0.480438" id="rect00122" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="182.91" y="463.708" width="12.07" height="0.792084" id="rect00123" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="194.98" y="463.22" width="12.07" height="1.28006" id="rect00124" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="207.05" y="462.472" width="12.07" height="2.02771" id="rect00125" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="219.12" y="461.352" width="12.07" height="3.14847" id="rect00126" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="231.19" y="459.708" width="12.07" height="4.79184" id="rect00127" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="243.26" y="457.351" width="12.07" height="7.14859" id="rect00128" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="255.33" y="454.047" width="12.07" height="10.4532" id="rect00129" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="267.4" y="449.517" width="12.0699" height="14.983" id="rect00130" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="279.47" y="443.45" width="12.07" height="21.0503" id="rect00131" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="291.54" y="435.511" width="12.07" height="28.9889" id="rect00132" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="303.61" y="425.369" width="12.07" height="39.131" id="rect00133" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="315.68" y="412.725" width="12.07" height="51.7753" id="rect00134" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="327.75" y="397.351" width="12.07" height="67.149" id="rect00135" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="339.82" y="379.137" width="12.07" height="85.3631" id="rect00136" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="351.89" y="358.131" width="12.07" height="106.369" id="rect00137" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="363.96" y="334.581" width="12.07" height="129.919" id="rect00138" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="376.03" y="308.958" width="12.07" height="155.542" id="rect00139" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="388.1" y="281.97" width="12.07" height="182.53" id="rect00140" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="400.17" y="254.541" width="12.07" height="209.959" id="rect00141" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="412.24" y="227.772" width="12.07" height="236.728" id="rect00142" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="424.31" y="202.875" width="12.07" height="261.625" id="rect00143" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="436.38" y="181.085" width="12.07" height="283.415" id="rect00144" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="448.45" y="163.559" width="12.07" height="300.941" id="rect00145" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="460.52" y="151.277" width="12.07" height="313.223" id="rect00146" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="472.59" y="144.95" width="12.07" height="319.55" id="rect00147" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="484.66" y="144.95" width="12.07" height="319.55" id="rect00148" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="496.73" y="151.277" width="12.07" height="313.223" id="rect00149" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="508.8" y="163.559" width="12.07" height="300.941" id="rect00150" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="520.87" y="181.085" width="12.0699" height="283.415" id="rect00151" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="532.94" y="202.875" width="12.0701" height="261.625" id="rect00152" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="545.01" y="227.772" width="12.07" height="236.728" id="rect00153" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="557.08" y="254.541" width="12.0699" height="209.959" id="rect00154" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="569.15" y="281.97" width="12.0701" height="182.53" id="rect00155" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="581.22" y="308.958" width="12.0699" height="155.542" id="rect00156" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="593.29" y="334.581" width="12.07" height="129.919" id="rect00157" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="605.36" y="358.131" width="12.07" height="106.369" id="rect00158" />
+         <rect stroke-width="0" fill="#ff7f0e" opacity="0.5" x="617.43" y="379.137" width="12.07" height="85.3631" id="rect00159" />
 
-</g>
+      </g>
 
-<polygon points="36,1 36,458 639,458 639,1 " stroke="black" stroke-width="1.000000" fill="none" id="id0000000317" pointer-events="none" class="rectangle" />
-<polyline points="44.9554,458 44.9554,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000318" class="line" />
-<text id="id0000000319" transform="matrix(1 0 0 1 36 1)" x="8.955445" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-0
-</text>
-
-<polyline points="164.361,458 164.361,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000320" class="line" />
-<text id="id0000000321" transform="matrix(1 0 0 1 36 1)" x="128.361389" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-10
-</text>
-
-<polyline points="283.767,458 283.767,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000322" class="line" />
-<text id="id0000000323" transform="matrix(1 0 0 1 36 1)" x="247.767334" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-20
-</text>
-
-<polyline points="403.173,458 403.173,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000324" class="line" />
-<text id="id0000000325" transform="matrix(1 0 0 1 36 1)" x="367.173279" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-30
-</text>
-
-<polyline points="522.579,458 522.579,461 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000326" class="line" />
-<text id="id0000000327" transform="matrix(1 0 0 1 36 1)" x="486.579193" y="462.000000" dominant-baseline="hanging" text-anchor="middle" font-size="14.000000px" >
-40
-</text>
-
-<polyline points="33,458 36,458 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000328" class="line" />
-<text id="id0000000329" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="457.000000" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0
-</text>
-
-<polyline points="33,374.701 36,374.701 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000330" class="line" />
-<text id="id0000000331" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="373.701111" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.2
-</text>
-
-<polyline points="33,291.402 36,291.402 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000332" class="line" />
-<text id="id0000000333" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="290.402222" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.4
-</text>
-
-<polyline points="33,208.103 36,208.103 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000334" class="line" />
-<text id="id0000000335" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="207.103302" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.6
-</text>
-
-<polyline points="33,124.804 36,124.804 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000336" class="line" />
-<text id="id0000000337" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="123.804413" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-0.8
-</text>
-
-<polyline points="33,41.5055 36,41.5055 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000338" class="line" />
-<text id="id0000000339" transform="matrix(1 0 0 1 36 1)" x="-5.000000" y="40.505524" dominant-baseline="middle" text-anchor="end" font-size="14.000000px" >
-1
-</text>
-
-
-</g>
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="26" y="8" width="603.5" height="456.5" id="rect00059" />
+   <line x1="32.035" y1="464.5" x2="32.035" y2="467.5" stroke-width="1" stroke="black" id="line00050" />
+   <text x="32.035" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00050" >
+0   </text>
+   <line x1="152.735" y1="464.5" x2="152.735" y2="467.5" stroke-width="1" stroke="black" id="line00051" />
+   <text x="152.735" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00051" >
+10   </text>
+   <line x1="273.435" y1="464.5" x2="273.435" y2="467.5" stroke-width="1" stroke="black" id="line00052" />
+   <text x="273.435" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00052" >
+20   </text>
+   <line x1="394.135" y1="464.5" x2="394.135" y2="467.5" stroke-width="1" stroke="black" id="line00053" />
+   <text x="394.135" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00053" >
+30   </text>
+   <line x1="514.835" y1="464.5" x2="514.835" y2="467.5" stroke-width="1" stroke="black" id="line00054" />
+   <text x="514.835" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00054" >
+40   </text>
+   <line x1="26" y1="464.5" x2="23" y2="464.5" stroke-width="1" stroke="black" id="line00055" />
+   <text x="22" y="464.5" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00055" >
+0   </text>
+   <line x1="26" y1="372.971" x2="23" y2="372.971" stroke-width="1" stroke="black" id="line00056" />
+   <text x="22" y="372.971" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00056" >
+0.2   </text>
+   <line x1="26" y1="281.443" x2="23" y2="281.443" stroke-width="1" stroke="black" id="line00057" />
+   <text x="22" y="281.443" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00057" >
+0.4   </text>
+   <line x1="26" y1="189.914" x2="23" y2="189.914" stroke-width="1" stroke="black" id="line00058" />
+   <text x="22" y="189.914" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00058" >
+0.6   </text>
+   <line x1="26" y1="98.3858" x2="23" y2="98.3858" stroke-width="1" stroke="black" id="line00059" />
+   <text x="22" y="98.3858" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00059" >
+0.8   </text>
 
 </svg>

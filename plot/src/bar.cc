@@ -81,6 +81,10 @@ Bar& Bar::color(const std::vector<const char*>& sc) noexcept {
     std::transform(sc.begin(),sc.end(),cs.begin(),[] (const char* cc) { return color_from_string(std::string(cc)); });
     return color(std::move(cs));
 }
+Bar& Bar::color(const std::initializer_list<const char*>& sc) noexcept {
+    return color(std::vector<const char*>(sc));
+}
+
 Bar& Bar::color(const svg::Color& sc) noexcept {
     return color(std::vector<svg::Color>(1,sc));
 }
