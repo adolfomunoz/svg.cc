@@ -4,16 +4,16 @@
 
 int main(int argc, char** argv) {
 	{ // Example 1
-	svg::plot::SVGPlot plt;
+    svg::plot::SVGPlot plt;
     plt.bar({"G1","G2","G3","G4"},{1,2,3,4});
-	plt.savefig("../docs/svgplot/bar/example1.svg");
+    plt.savefig("../docs/svgplot/bar/example1.svg");
 	}
     
 	{ // Example 1
-	svg::plot::SVGPlot plt;
+    svg::plot::SVGPlot plt;
     plt.bar(svg::plot::arange(4),{1,2,3,4});
     plt.xticks(svg::plot::arange(4),{"G1","G2","G3","G4"});
-	plt.savefig("../docs/svgplot/bar/example1.svg");
+    plt.savefig("../docs/svgplot/bar/example1.svg");
 	}
 
  
