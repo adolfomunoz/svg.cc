@@ -15,7 +15,7 @@ add_executable(embed-images main/embed-images/main.cc)
 add_executable(represent main/represent/main.cc)
 add_executable(figure-inset main/figure-inset/main.cc)
 
-add_library(svgplot plot/src/svgplot.cc plot/src/plot.cc plot/src/scatter.cc plot/src/imshow.cc plot/src/bar.cc plot/src/axis-scale.cc plot/src/color.cc plot/src/colormap.cc)
+add_library(svgplot plot/src/svgplot.cc plot/src/plot.cc plot/src/scatter.cc plot/src/imshow.cc plot/src/bar.cc plot/src/barh.cc plot/src/axis-scale.cc plot/src/color.cc plot/src/colormap.cc)
 
 add_executable(plot docs/svgplot/plot.cc)
 target_link_libraries(plot svgplot)

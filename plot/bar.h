@@ -2,7 +2,6 @@
 #include "plottable.h"
 #include "../src/color.h"
 #include "../src/circle.h"
-#include "colormap.h"
 #include <vector>
 
 namespace svg {
