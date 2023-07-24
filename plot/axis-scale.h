@@ -35,10 +35,16 @@ public:
 };
 
 class Transform {
-    Scale scale; float xmin, xmax, canvas_min, canvas_max;
+    Scale scale_; float xmin_, xmax_, canvas_min_, canvas_max_;
 public:
     Transform(const Scale& scale, float xmin, float xmax, float canvas_min, float canvas_max) noexcept;
     float operator()(float x) const noexcept;
+    Transform with_new_canvas(const Transform& transform) const noexcept;
+    const Scale& scale() const noexcept;
+    float canvas_min() const noexcept;
+    float canvas_max() const noexcept;
+    float xmin() const noexcept;
+    float xmax() const noexcept;
 };
 
 namespace scale {

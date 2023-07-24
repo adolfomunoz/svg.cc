@@ -14,9 +14,11 @@ BarH::BarH(std::vector<float>&& x, std::vector<float>&& h) : bar(std::move(x),st
 
 svg::Element BarH::plot(const Transform& xscale, const Transform& yscale) const noexcept {
     svg::Group output;
-    output.add(bar.plot(yscale,xscale));
+    output.add(bar.plot(xscale.with_new_canvas(yscale),yscale.with_new_canvas(xscale)));
+    output.add_transform(svg::Scale(-1,1));
+    output.add_transform(svg::Translate(-xscale.canvas_min(),-yscale.canvas_min()));
     output.add_transform(svg::Rotate(90));
-    output.add_transform(svg::Scale(1,-1));
+    output.add_transform(svg::Translate(xscale.canvas_min(),yscale.canvas_min()));
     return output;
 }    
 

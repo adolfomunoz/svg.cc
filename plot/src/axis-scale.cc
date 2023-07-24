@@ -53,11 +53,22 @@ Transform Scale::transform(float xmin, float xmax, float canvas_min, float canva
 }
 
 Transform::Transform(const Scale& scale, float xmin, float xmax, float canvas_min, float canvas_max) noexcept :
-    scale(scale), xmin(xmin), xmax(xmax), canvas_min(canvas_min), canvas_max(canvas_max) {}
+    scale_(scale), xmin_(xmin), xmax_(xmax), canvas_min_(canvas_min), canvas_max_(canvas_max) {}
 
 float Transform::operator()(float x) const noexcept {
-    return scale.transform(x,xmin,xmax,canvas_min,canvas_max);
+    return scale().transform(x,xmin(),xmax(),canvas_min(),canvas_max());
 }
+
+Transform Transform::with_new_canvas(const Transform& that) const noexcept {
+    return Transform(this->scale(),this->xmin(),this->xmax(),that.canvas_min(),that.canvas_max());
+}
+
+float Transform::canvas_min() const noexcept { return canvas_min_; }
+float Transform::canvas_max() const noexcept { return canvas_max_; }
+float Transform::xmin() const noexcept { return xmin_; }
+float Transform::xmax() const noexcept { return xmax_; }
+
+const Scale& Transform::scale() const noexcept { return scale_; }
 
 float scale::linear::transform(float x, float xmin, float xmax, float canvas_min, float canvas_max) const noexcept {
     float t = (x - xmin)/(xmax - xmin);
