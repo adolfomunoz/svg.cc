@@ -83,8 +83,6 @@ that yields the same bars with different coloring strategies:
 
 ![Example 6](./bar/example6.svg)
 
-**THIS BELOW IS STILL TO BE DEVELOPED**
- 
 ## Horizontal bars
 
 In the same way that the `bar` method provides a way to generate **vertical** bar graphs, the `barh` method provides a way to generate **horizontal** graph bars, which works very similarly with minor changes:
@@ -95,36 +93,10 @@ In the same way that the `bar` method provides a way to generate **vertical** ba
 
 The following example reproduces most of the above examples but with horizontal graph bars:
 
-```cpp
-svg::plot::SVGPlot plt;
-float height = 0.3;
-std::vector<float> a{1,2,3,2,1};
-std::vector<float> b{2,1,2,1,2};
-plt.subplot(2,3,0).barh(svg::plot::arange(5)-0.5*height,a).height(height);
-plt.subplot(2,3,0).barh(svg::plot::arange(5)+0.5*height,b).height(height);
-plt.subplot(2,3,0).yticks(svg::plot::arange(5));
-plt.subplot(2,3,1).barh(svg::plot::arange(5),a);
-plt.subplot(2,3,1).barh(svg::plot::arange(5),b).left(a);
-plt.subplot(2,3,1).yticks(svg::plot::arange(5));
-std::list<float> v1,v2;
-for (auto i : svg::plot::arange(50)) {
-    v1.push_back(std::exp(-(float(i)-12.5f)*(float(i)-12.5f)/100.0f));
-    v2.push_back(0.7*std::exp(-(float(i)-37.5f)*(float(i)-37.5f)/100.0f));            
-}
-plt.subplot(2,3,2).barh(svg::plot::arange(50),v1).height(1.0f).alpha(0.5f);
-plt.subplot(2,3,2).barh(svg::plot::arange(50),v2).height(1.0f).alpha(0.5f);
-
-std::vector<std::string> labels{"G1","G2","G3","G4"};
-std::vector<float> values{1,2,3,4};
-plt.subplot(2,3,3).barh(labels,values).color("#FF0000");
-plt.subplot(2,3,4).barh(labels,values).color({"r","b","y","g"});
-plt.subplot(2,3,5).barh(labels,values).color({"blue","magenta"});
-plt.savefig("../doc/svgplot/bar/example10.svg");
-```
+{% highlight cpp %}
+{% include includelines filename='bar.cc' start=73 count=24 %}
+{% endhighlight %}
 
 leading to the following output:
 
-<div style="text-align:center"><img 
- src="./bar/example10.svg" alt="example10" width="100%" /></div>
-
-
+![Example 7](./bar/example7.svg)

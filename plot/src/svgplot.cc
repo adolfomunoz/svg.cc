@@ -256,6 +256,32 @@ Bar& SVGPlot::bar(const std::vector<std::string>& x, const std::vector<float>& y
     return this->bar(arange(x.size()),y);
 }
 
+BarH& SVGPlot::barh(std::vector<float>&& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(BarH(std::move(x),std::move(y)).color(next_color()));
+    return plottables.back().cast_static<BarH>();
+}
+
+BarH& SVGPlot::barh(const std::vector<float>& x, std::vector<float>&& y) noexcept {
+    plottables.push_back(BarH(x,std::move(y)).color(next_color()));
+    return plottables.back().cast_static<BarH>();
+}
+
+BarH& SVGPlot::barh(std::vector<float>&& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(BarH(std::move(x),y).color(next_color()));
+    return plottables.back().cast_static<BarH>();
+}
+
+BarH& SVGPlot::barh(const std::vector<float>& x, const std::vector<float>& y) noexcept {
+    plottables.push_back(BarH(x,y).color(next_color()));
+    return plottables.back().cast_static<BarH>();
+}
+
+BarH& SVGPlot::barh(const std::vector<std::string>& x, const std::vector<float>& y) noexcept {
+    this->yticks(arange(x.size()),x);
+    return this->barh(arange(x.size()),y);
+}
+
+
    /***************
      * GRAPH setup
      ****************/

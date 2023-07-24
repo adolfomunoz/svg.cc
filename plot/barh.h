@@ -33,6 +33,7 @@ public:
     BarH& color(T&& t) noexcept {
         bar.color(std::forward<T>(t)); return (*this);
     } 
+    BarH& color(const std::initializer_list<const char*>& t) noexcept;
     template<typename T>
     BarH& height(T&& t) noexcept {
         bar.width(std::forward<T>(t)); return (*this);

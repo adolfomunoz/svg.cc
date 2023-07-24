@@ -5,6 +5,7 @@
 #include "scatter.h"
 #include "imshow.h"
 #include "bar.h"
+#include "barh.h"
 #include "linspace.h"
 #include "../src/svg.h"
 
@@ -287,6 +288,24 @@ public:
     Bar& bar(CollectionX&& x, CollectionY&& y, std::enable_if_t<!std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
         this->xticks(arange(x.size()),std::vector<std::string>(x.begin(),x.end()));
         return this->bar(arange(x.size()),std::vector<float>(y.begin(),y.end()));    
+    }
+
+    BarH& barh(std::vector<float>&& x, std::vector<float>&& y) noexcept;
+    BarH& barh(const std::vector<float>& x, std::vector<float>&& y) noexcept;
+    BarH& barh(std::vector<float>&& x, const std::vector<float>& y) noexcept;
+    BarH& barh(const std::vector<float>& x, const std::vector<float>& y) noexcept;
+    BarH& barh(const std::vector<std::string>& x, const std::vector<float>& y) noexcept;
+
+    template<typename CollectionX, typename CollectionY>
+    BarH& barh(CollectionX&& x, CollectionY&& y, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->barh(std::vector<float>(x.begin(),x.end()),std::vector<float>(y.begin(),y.end()));    
+    }
+
+    //Assumes that CollectionX is of strings
+    template<typename CollectionX, typename CollectionY>
+    BarH& barh(CollectionX&& x, CollectionY&& y, std::enable_if_t<!std::is_arithmetic_v<typename std::decay_t<CollectionX>::value_type> && std::is_arithmetic_v<typename std::decay_t<CollectionY>::value_type>,void*> sfinae = nullptr) noexcept {
+        this->yticks(arange(x.size()),std::vector<std::string>(x.begin(),x.end()));
+        return this->barh(arange(x.size()),std::vector<float>(y.begin(),y.end()));    
     }
 
  

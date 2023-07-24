@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
     plt.savefig("../docs/svgplot/bar/example6.svg");
 	} 
     
-/*	{ // Example 10
+	{ // Example 7
     svg::plot::SVGPlot plt;
     float height = 0.3;
     std::vector<float> a{1,2,3,2,1};
@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
     plt.subplot(2,3,3).barh(labels,values).color("#FF0000");
     plt.subplot(2,3,4).barh(labels,values).color({"r","b","y","g"});
     plt.subplot(2,3,5).barh(labels,values).color({"blue","magenta"});
-    plt.savefig("../doc/svgplot/bar/example10.svg");
-	} */
+    plt.savefig("../docs/svgplot/bar/example7.svg");
+	} 
 }
 

@@ -25,5 +25,10 @@ std::array<float,4> BarH::axis() const noexcept {
     return std::array<float,4>{av[1],av[0],av[3],av[2]}; 
 }
 
+BarH& BarH::color(const std::initializer_list<const char*>& t) noexcept {
+    bar.color(t); return (*this);
+}
+
+
 }
 }
