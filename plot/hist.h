@@ -6,6 +6,61 @@
 namespace svg {
 namespace plot {
 
+class OrientationBase : public pattern::SelfRegisteringReflectableBase {
+public:
+    virtual bool is_horizontal() const noexcept = 0;
+    bool is_vertical() const noexcept { return !is_horizontal(); }
+};
+class Orientation : public pattern::Pimpl<OrientationBase> {
+public:
+    using pattern::Pimpl<OrientationBase>::Pimpl;
+    using pattern::Pimpl<OrientationBase>::operator=;
+    bool is_horizontal() const noexcept override { return impl()->is_horizontal(); }
+};
+class OrientationHorizontal : public pattern::Reflectable<OrientationHorizontal, OrientationBase> {
+public:
+    OrientationHorizontal(){} 
+    static const char* type_name() { return "horizontal"; } 
+    bool is_horizontal() const noexcept override { return true; }
+};
+extern OrientationHorizontal horizontal;
+class OrientationVertical : public pattern::Reflectable<OrientationVertical, OrientationBase> {
+public:
+    OrientationVertical(){} 
+    static const char* type_name() { return "vertical"; } 
+    bool is_horizontal() const noexcept override { return false; }
+};
+extern OrientationVertical vertical;
+
+class Hist;
+class HistTypeBase : public pattern::SelfRegisteringReflectableBase {
+public:
+    virtual Plottable representation(const Hist& hist) const noexcept = 0;
+};
+class HistType : public pattern::Pimpl<HistTypeBase> {
+public:
+    using pattern::Pimpl<HistTypeBase>::Pimpl;
+    using pattern::Pimpl<HistTypeBase>::operator=;
+    Plottable representation(const Hist& hist) const noexcept override {
+        return impl()->representation(hist);
+    }
+};
+class HistTypeBar : public pattern::Reflectable<HistTypeBar, HistTypeBase> {
+public:
+    HistTypeBar(){} 
+    static const char* type_name() { return "bar"; } 
+    Plottable representation(const Hist& hist) const noexcept override;
+};
+extern HistTypeBar bar;
+class HistTypeStep : public pattern::Reflectable<HistTypeStep, HistTypeBase> {
+public:
+    HistTypeStep(){} 
+    static const char* type_name() { return "step"; } 
+    Plottable representation(const Hist& hist) const noexcept override;
+};
+extern HistTypeStep step;
+
+
 class Hist : public PlottableBase {
     std::vector<float> x_; //Todo: enable multiple data (std::vector<std::vector<float>>)
     std::size_t bins_value = 10; 
@@ -16,8 +71,8 @@ class Hist : public PlottableBase {
     svg::Color color_ = svg::black;
     float alpha_ = 1.0f;
 
-//    Orientation orientation_;
-//    HistType histtype_;
+    Orientation orientation_ = horizontal;
+    HistType histtype_ = bar;
 public:
 	Hist(const std::vector<float>& x);
 	Hist(std::vector<float>&& x);
@@ -34,8 +89,10 @@ private:
     float bin(std::size_t i) const noexcept;
     
 public:
-//    Hist& orientation(const Orientation& o) noexcept; 
-//    Hist& histtype(const HistType& h) noexcept;
+    Hist& orientation(const Orientation& o) noexcept;
+    const Orientation& orientation() const noexcept;
+    Hist& histtype(const HistType& h) noexcept;
+    const HistType& histtype() const noexcept;
     
 private:
     float weight_(int i) const noexcept; 

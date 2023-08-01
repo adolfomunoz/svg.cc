@@ -281,6 +281,17 @@ BarH& SVGPlot::barh(const std::vector<std::string>& x, const std::vector<float>&
     return this->barh(arange(x.size()),y);
 }
 
+/*************
+ * HIST
+ *************/
+Hist& SVGPlot::hist(std::vector<float>&& x) noexcept {
+    plottables.push_back(Hist(std::move(x)).color(next_color()));
+    return plottables.back().cast_static<Hist>();
+}
+Hist& SVGPlot::hist(const std::vector<float>& x) noexcept {
+    plottables.push_back(Hist(x).color(next_color()));
+    return plottables.back().cast_static<Hist>();
+}
 
    /***************
      * GRAPH setup

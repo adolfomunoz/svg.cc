@@ -1,4 +1,7 @@
 #include "../hist.h"
+#include "../bar.h"
+#include "../barh.h"
+#include "../plot.h"
 #include <algorithm>
 
 namespace svg {
@@ -8,11 +11,11 @@ Hist::Hist(const std::vector<float>& x) : x_(x) {}
 Hist::Hist(std::vector<float>&& x) : x_(std::move(x)) {}
 
 svg::Element Hist::plot(const Transform& xscale, const Transform& yscale) const noexcept {
-    return svg::Element();
+    return histtype().representation(*this).plot(xscale,yscale);
 }
 
 std::array<float,4> Hist::axis() const noexcept {
-    return std::array<float,4>{0,0,0,0};
+    return histtype().representation(*this).axis();
 }
 
 std::tuple<float,float> Hist::range() const noexcept {
@@ -40,28 +43,7 @@ float Hist::bin(std::size_t i) const noexcept {
         auto [xmin,xmax] = range();
         return xmin+float(i)*(xmax-xmin)/float(bins_size());
     }
-}
-    
-/*
-Hist& orientation(const Orientation& o) {
-    orientation_ = o; return *this;
-}
-
-Hist& orientation(const std::string_view& s) {
-    if (s[0]=='h') return this->orientation(Orientation::horizontal);
-    else return this->orientation(Orientation::vertical);
-}
-
-Hist& histtype(const HistType& h) {
-    histtype_ = h; return *this;
-}
-
-Hist& histtype(const std::string_view& s) {
-    if (s[0]=='b') return this->histtype(HistType::bar);
-    else return this->histtype(HistType::step);
-}
-*/
-     
+}     
     
 float Hist::weight_(int i) const noexcept {
     return ((i<0) || (i>=int(weights_.size())))?1.0f:weights_[i];
@@ -125,31 +107,41 @@ Hist& Hist::color(const char* sc) noexcept {
     return color(std::string(sc));
 }
 const svg::Color& Hist::color() const { return color_; }
+Hist& Hist::orientation(const Orientation& o) noexcept {
+    orientation_=o; return (*this);
+}
+const Orientation& Hist::orientation() const noexcept { return orientation_; }
+Hist& Hist::histtype(const HistType& h) noexcept {
+    histtype_=h; return (*this);
+}
+const HistType& Hist::histtype() const noexcept { return histtype_; }
 
-/*
-    std::unique_ptr<Plottable> representation() const {
-        if (histtype_==HistType::bar) {
-            if (orientation_==Orientation::vertical) {
-                auto sol = std::make_unique<Bar>(hist_positions(),hist_values());
-                sol->width(hist_widths()).color(color_).alpha(alpha());
-                return sol;
-            } else {
-                auto sol = std::make_unique<BarH>(hist_positions(),hist_values());
-                sol->height(hist_widths()).color(color_).alpha(alpha());
-                return sol;
-            }
-        } else { // histtype_==HistType::step
-            if (orientation_==Orientation::vertical) {
-                auto sol = std::make_unique<Plot>(hist_positions(),hist_values());
-                sol->color(color_).alpha(alpha());
-                return sol;
-            } else { 
-                auto sol = std::make_unique<Plot>(hist_values(),hist_positions());
-                sol->color(color_).alpha(alpha());
-                return sol;
-            }
-        }  
-    }*/
+Plottable HistTypeBar::representation(const Hist& hist) const noexcept {
+    if (hist.orientation().is_horizontal()) {
+        return Bar(hist.hist_positions(),hist.hist_values())
+            .width(hist.hist_widths()).color(hist.color()).alpha(hist.alpha());
+    } else {
+        return BarH(hist.hist_positions(),hist.hist_values())
+            .height(hist.hist_widths()).color(hist.color()).alpha(hist.alpha());
+    }
+}
+
+Plottable HistTypeStep::representation(const Hist& hist) const noexcept {
+    auto posv = hist.hist_positions();
+    auto valv = hist.hist_values();
+    std::list<float> pos(posv.begin(),posv.end());
+    std::list<float> val(valv.begin(),valv.end());
+    if (hist.orientation().is_horizontal()) {
+        return Plot(pos,val).color(hist.color()).alpha(hist.alpha());
+    } else {
+        return Plot(val,pos).color(hist.color()).alpha(hist.alpha());
+    }
+}
+
+OrientationHorizontal horizontal;
+OrientationVertical vertical;
+HistTypeBar bar;
+HistTypeStep step;
 
 }
 }

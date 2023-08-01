@@ -6,6 +6,7 @@
 #include "imshow.h"
 #include "bar.h"
 #include "barh.h"
+#include "hist.h"
 #include "linspace.h"
 #include "../src/svg.h"
 
@@ -308,6 +309,15 @@ public:
         return this->barh(arange(x.size()),std::vector<float>(y.begin(),y.end()));    
     }
 
+    /***************
+     * HIST
+     ****************/
+    Hist& hist(std::vector<float>&& x) noexcept;
+    Hist& hist(const std::vector<float>& x) noexcept;
+    template<typename Collection>
+    Hist& hist(Collection&& x, std::enable_if_t<std::is_arithmetic_v<typename std::decay_t<Collection>::value_type>,void*> sfinae = nullptr) noexcept {
+        return this->hist(std::vector<float>(x.begin(),x.end()));    
+    }
  
     /****************
      * OUTPUT

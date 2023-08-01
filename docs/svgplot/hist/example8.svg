@@ -1,115 +1,87 @@
-<svg viewBox="0 0 200 150" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="id0000000645" >
-<g id="id0000000646" >
-<clipPath id="id0000000646clipper" >
-<polygon points="30,5 30,130 195,130 195,5 " id="id0000000649" class="rectangle" />
-</clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480" id="svg00019" >
+   <clipPath id="clipPath00016" >
+         <rect x="26" y="8" width="603.5" height="456.5" id="rect00159" />
 
-<g clip-path="url(#id0000000646clipper)" id="id0000000648" >
-<g id="id0000000650" >
-<polygon points="30,130 30,130 38.25,130 38.25,130 " fill="blue" stroke-width="0.000000" id="id0000000651" fill-opacity="0.500000" class="rectangle" />
-<polygon points="38.25,130 38.25,130 46.5,130 46.5,130 " fill="blue" stroke-width="0.000000" id="id0000000652" fill-opacity="0.500000" class="rectangle" />
-<polygon points="46.5,130 46.5,130 54.75,130 54.75,130 " fill="blue" stroke-width="0.000000" id="id0000000653" fill-opacity="0.500000" class="rectangle" />
-<polygon points="54.75,130 54.75,130 63,130 63,130 " fill="blue" stroke-width="0.000000" id="id0000000654" fill-opacity="0.500000" class="rectangle" />
-<polygon points="63,130 63,130 71.25,130 71.25,130 " fill="blue" stroke-width="0.000000" id="id0000000655" fill-opacity="0.500000" class="rectangle" />
-<polygon points="71.25,130 71.25,130 79.5,130 79.5,130 " fill="blue" stroke-width="0.000000" id="id0000000656" fill-opacity="0.500000" class="rectangle" />
-<polygon points="79.5,130 79.5,130 87.75,130 87.75,130 " fill="blue" stroke-width="0.000000" id="id0000000657" fill-opacity="0.500000" class="rectangle" />
-<polygon points="87.75,130 87.75,130 96,130 96,130 " fill="blue" stroke-width="0.000000" id="id0000000658" fill-opacity="0.500000" class="rectangle" />
-<polygon points="96,130 96,129.466 104.25,129.466 104.25,130 " fill="blue" stroke-width="0.000000" id="id0000000659" fill-opacity="0.500000" class="rectangle" />
-<polygon points="104.25,130 104.25,128.933 112.5,128.933 112.5,130 " fill="blue" stroke-width="0.000000" id="id0000000660" fill-opacity="0.500000" class="rectangle" />
-<polygon points="112.5,130 112.5,121.464 120.75,121.464 120.75,130 " fill="blue" stroke-width="0.000000" id="id0000000661" fill-opacity="0.500000" class="rectangle" />
-<polygon points="120.75,130 120.75,102.258 129,102.258 129,130 " fill="blue" stroke-width="0.000000" id="id0000000662" fill-opacity="0.500000" class="rectangle" />
-<polygon points="129,130 129,84.1187 137.25,84.1187 137.25,130 " fill="blue" stroke-width="0.000000" id="id0000000663" fill-opacity="0.500000" class="rectangle" />
-<polygon points="137.25,130 137.25,52.6419 145.5,52.6419 145.5,130 " fill="blue" stroke-width="0.000000" id="id0000000664" fill-opacity="0.500000" class="rectangle" />
-<polygon points="145.5,130 145.5,16.3636 153.75,16.3636 153.75,130 " fill="blue" stroke-width="0.000000" id="id0000000665" fill-opacity="0.500000" class="rectangle" />
-<polygon points="153.75,130 153.75,31.8353 162,31.8353 162,130 " fill="blue" stroke-width="0.000000" id="id0000000666" fill-opacity="0.500000" class="rectangle" />
-<polygon points="162,130 162,52.1084 170.25,52.1084 170.25,130 " fill="blue" stroke-width="0.000000" id="id0000000667" fill-opacity="0.500000" class="rectangle" />
-<polygon points="170.25,130 170.25,83.5851 178.5,83.5851 178.5,130 " fill="blue" stroke-width="0.000000" id="id0000000668" fill-opacity="0.500000" class="rectangle" />
-<polygon points="178.5,130 178.5,108.66 186.75,108.66 186.75,130 " fill="blue" stroke-width="0.000000" id="id0000000669" fill-opacity="0.500000" class="rectangle" />
-<polygon points="186.75,130 186.75,118.796 195,118.796 195,130 " fill="blue" stroke-width="0.000000" id="id0000000670" fill-opacity="0.500000" class="rectangle" />
-</g>
+   </clipPath>
+   <g id="g00032" clip-path="url(#clipPath00016)" >
+         <g id="g00033" >
+               <rect stroke-width="0" fill="blue" opacity="0.5" x="26" y="464.5" width="30.175" height="0" id="rect00160" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="56.175" y="464.5" width="30.175" height="0" id="rect00161" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="86.35" y="464.5" width="30.175" height="0" id="rect00162" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="116.525" y="464.5" width="30.175" height="0" id="rect00163" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="146.7" y="464.5" width="30.175" height="0" id="rect00164" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="176.875" y="464.5" width="30.175" height="0" id="rect00165" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="207.05" y="464.5" width="30.175" height="0" id="rect00166" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="237.225" y="464.5" width="30.175" height="0" id="rect00167" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="267.4" y="464.5" width="30.175" height="0" id="rect00168" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="297.575" y="458.009" width="30.175" height="6.49051" id="rect00169" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="327.75" y="434.211" width="30.175" height="30.2891" id="rect00170" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="357.925" y="339.017" width="30.175" height="125.483" id="rect00171" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="388.1" y="269.784" width="30.175" height="194.716" id="rect00172" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="418.275" y="172.427" width="30.175" height="292.073" id="rect00173" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="448.45" y="36.1256" width="30.175" height="428.374" id="rect00174" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="478.625" y="8" width="30.175" height="456.5" id="rect00175" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="508.8" y="200.552" width="30.175" height="263.948" id="rect00176" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="538.975" y="245.986" width="30.1749" height="218.514" id="rect00177" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="569.15" y="360.652" width="30.175" height="103.848" id="rect00178" />
+         <rect stroke-width="0" fill="blue" opacity="0.5" x="599.325" y="432.047" width="30.175" height="32.4526" id="rect00179" />
 
-<g id="id0000000671" >
-<polygon points="30,130 30,116.129 38.25,116.129 38.25,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000672" fill-opacity="0.500000" class="rectangle" />
-<polygon points="38.25,130 38.25,113.461 46.5,113.461 46.5,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000673" fill-opacity="0.500000" class="rectangle" />
-<polygon points="46.5,130 46.5,105.992 54.75,105.992 54.75,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000674" fill-opacity="0.500000" class="rectangle" />
-<polygon points="54.75,130 54.75,104.925 63,104.925 63,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000675" fill-opacity="0.500000" class="rectangle" />
-<polygon points="63,130 63,92.6547 71.25,92.6547 71.25,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000676" fill-opacity="0.500000" class="rectangle" />
-<polygon points="71.25,130 71.25,87.3197 79.5,87.3197 79.5,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000677" fill-opacity="0.500000" class="rectangle" />
-<polygon points="79.5,130 79.5,86.7862 87.75,86.7862 87.75,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000678" fill-opacity="0.500000" class="rectangle" />
-<polygon points="87.75,130 87.75,81.9846 96,81.9846 96,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000679" fill-opacity="0.500000" class="rectangle" />
-<polygon points="96,130 96,73.4486 104.25,73.4486 104.25,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000680" fill-opacity="0.500000" class="rectangle" />
-<polygon points="104.25,130 104.25,84.6522 112.5,84.6522 112.5,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000681" fill-opacity="0.500000" class="rectangle" />
-<polygon points="112.5,130 112.5,85.1857 120.75,85.1857 120.75,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000682" fill-opacity="0.500000" class="rectangle" />
-<polygon points="120.75,130 120.75,101.191 129,101.191 129,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000683" fill-opacity="0.500000" class="rectangle" />
-<polygon points="129,130 129,99.0568 137.25,99.0568 137.25,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000684" fill-opacity="0.500000" class="rectangle" />
-<polygon points="137.25,130 137.25,105.459 145.5,105.459 145.5,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000685" fill-opacity="0.500000" class="rectangle" />
-<polygon points="145.5,130 145.5,110.26 153.75,110.26 153.75,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000686" fill-opacity="0.500000" class="rectangle" />
-<polygon points="153.75,130 153.75,121.464 162,121.464 162,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000687" fill-opacity="0.500000" class="rectangle" />
-<polygon points="162,130 162,126.799 170.25,126.799 170.25,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000688" fill-opacity="0.500000" class="rectangle" />
-<polygon points="170.25,130 170.25,126.265 178.5,126.265 178.5,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000689" fill-opacity="0.500000" class="rectangle" />
-<polygon points="178.5,130 178.5,128.933 186.75,128.933 186.75,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000690" fill-opacity="0.500000" class="rectangle" />
-<polygon points="186.75,130 186.75,127.332 195,127.332 195,130 " fill="#CC00AA" stroke-width="0.000000" id="id0000000691" fill-opacity="0.500000" class="rectangle" />
-</g>
+      </g>
+      <g id="g00034" >
+               <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="26" y="432.047" width="30.175" height="32.4526" id="rect00180" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="56.175" y="414.739" width="30.175" height="49.7607" id="rect00181" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="86.35" y="360.652" width="30.175" height="103.848" id="rect00182" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="116.525" y="354.161" width="30.175" height="110.339" id="rect00183" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="146.7" y="310.891" width="30.175" height="153.609" id="rect00184" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="176.875" y="287.092" width="30.175" height="177.408" id="rect00185" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="207.05" y="248.149" width="30.175" height="216.351" id="rect00186" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="237.225" y="241.659" width="30.175" height="222.841" id="rect00187" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="267.4" y="258.967" width="30.175" height="205.533" id="rect00188" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="297.575" y="280.602" width="30.175" height="183.898" id="rect00189" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="327.75" y="304.4" width="30.175" height="160.1" id="rect00190" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="357.925" y="336.853" width="30.175" height="127.647" id="rect00191" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="388.1" y="336.853" width="30.175" height="127.647" id="rect00192" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="418.275" y="364.979" width="30.175" height="99.5213" id="rect00193" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="448.45" y="406.085" width="30.175" height="58.4147" id="rect00194" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="478.625" y="414.739" width="30.175" height="49.7607" id="rect00195" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="508.8" y="445.028" width="30.175" height="19.4716" id="rect00196" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="538.975" y="447.192" width="30.1749" height="17.308" id="rect00197" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="569.15" y="458.009" width="30.175" height="6.49051" id="rect00198" />
+         <rect stroke-width="0" fill="#CC00AA" opacity="0.5" x="599.325" y="462.336" width="30.175" height="2.16351" id="rect00199" />
 
-</g>
+      </g>
 
-<polygon points="30,5 30,130 195,130 195,5 " stroke="black" stroke-width="1.000000" fill="none" id="id0000000692" pointer-events="none" class="rectangle" />
-<polyline points="46.5,130 46.5,133 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000693" class="line" />
-<text id="id0000000694" transform="matrix(1 0 0 1 30 5)" x="16.500000" y="130.000000" dominant-baseline="hanging" text-anchor="middle" font-size="10.000000px" >
--8
-</text>
-
-<polyline points="79.5,130 79.5,133 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000695" class="line" />
-<text id="id0000000696" transform="matrix(1 0 0 1 30 5)" x="49.500000" y="130.000000" dominant-baseline="hanging" text-anchor="middle" font-size="10.000000px" >
--4
-</text>
-
-<polyline points="112.5,130 112.5,133 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000697" class="line" />
-<text id="id0000000698" transform="matrix(1 0 0 1 30 5)" x="82.500000" y="130.000000" dominant-baseline="hanging" text-anchor="middle" font-size="10.000000px" >
-0
-</text>
-
-<polyline points="145.5,130 145.5,133 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000699" class="line" />
-<text id="id0000000700" transform="matrix(1 0 0 1 30 5)" x="115.500000" y="130.000000" dominant-baseline="hanging" text-anchor="middle" font-size="10.000000px" >
-4
-</text>
-
-<polyline points="178.5,130 178.5,133 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000701" class="line" />
-<text id="id0000000702" transform="matrix(1 0 0 1 30 5)" x="148.500000" y="130.000000" dominant-baseline="hanging" text-anchor="middle" font-size="10.000000px" >
-8
-</text>
-
-<polyline points="27,130 30,130 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000703" class="line" />
-<text id="id0000000704" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="125.000000" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-0
-</text>
-
-<polyline points="27,105.459 30,105.459 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000705" class="line" />
-<text id="id0000000706" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="100.458817" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-46
-</text>
-
-<polyline points="27,80.9176 30,80.9176 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000707" class="line" />
-<text id="id0000000708" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="75.917633" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-92
-</text>
-
-<polyline points="27,56.3764 30,56.3764 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000709" class="line" />
-<text id="id0000000710" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="51.376442" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-138
-</text>
-
-<polyline points="27,31.8353 30,31.8353 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000711" class="line" />
-<text id="id0000000712" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="26.835258" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-184
-</text>
-
-<polyline points="27,7.29407 30,7.29407 " fill="none" stroke-width="1.000000" stroke="black" id="id0000000713" class="line" />
-<text id="id0000000714" transform="matrix(1 0 0 1 30 5)" x="-5.000000" y="2.294067" dominant-baseline="middle" text-anchor="end" font-size="10.000000px" >
-230
-</text>
-
-
-</g>
+   </g>
+   <rect stroke-width="1" stroke="black" fill="none" x="26" y="8" width="603.5" height="456.5" id="rect00159" />
+   <line x1="26" y1="464.5" x2="26" y2="467.5" stroke-width="1" stroke="black" id="line00152" />
+   <text x="26" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00159" >
+-10   </text>
+   <line x1="176.875" y1="464.5" x2="176.875" y2="467.5" stroke-width="1" stroke="black" id="line00153" />
+   <text x="176.875" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00160" >
+-5   </text>
+   <line x1="327.75" y1="464.5" x2="327.75" y2="467.5" stroke-width="1" stroke="black" id="line00154" />
+   <text x="327.75" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00161" >
+0   </text>
+   <line x1="478.625" y1="464.5" x2="478.625" y2="467.5" stroke-width="1" stroke="black" id="line00155" />
+   <text x="478.625" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00162" >
+5   </text>
+   <line x1="629.5" y1="464.5" x2="629.5" y2="467.5" stroke-width="1" stroke="black" id="line00156" />
+   <text x="629.5" y="470.5" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" id="text00163" >
+10   </text>
+   <line x1="26" y1="464.5" x2="23" y2="464.5" stroke-width="1" stroke="black" id="line00157" />
+   <text x="22" y="464.5" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00164" >
+0   </text>
+   <line x1="26" y1="356.325" x2="23" y2="356.325" stroke-width="1" stroke="black" id="line00158" />
+   <text x="22" y="356.325" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00165" >
+50   </text>
+   <line x1="26" y1="248.149" x2="23" y2="248.149" stroke-width="1" stroke="black" id="line00159" />
+   <text x="22" y="248.149" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00166" >
+100   </text>
+   <line x1="26" y1="139.974" x2="23" y2="139.974" stroke-width="1" stroke="black" id="line00160" />
+   <text x="22" y="139.974" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00167" >
+150   </text>
+   <line x1="26" y1="31.7986" x2="23" y2="31.7986" stroke-width="1" stroke="black" id="line00161" />
+   <text x="22" y="31.7986" font-size="10" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" id="text00168" >
+200   </text>
 
 </svg>
