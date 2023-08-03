@@ -30,6 +30,13 @@ public:
     svg::Element plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept override;
 };
 extern InterpolationNearest nearest;
+class InterpolationBicubic : public pattern::Reflectable<InterpolationBicubic, InterpolationBase> {
+public:
+    InterpolationBicubic(){} 
+    static const char* type_name() { return "bicubic"; } 
+    svg::Element plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept override;
+};
+extern InterpolationBicubic bicubic;
 
 
 class ImShow : public PlottableBase {

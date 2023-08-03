@@ -104,17 +104,17 @@ int main(int argc, char** argv) {
     }   
     
     
-    /*    { // Example 6
-    	svg_cpp_plot::SVGPlot plt;
+    { // Example 9
+    	svg::plot::SVGPlot plt;
         plt.figsize({200,200});
         auto f = [] (float x, float y) {
             float r = 0.5f+0.5f*std::sin(x);
             float g = 0.5f+0.5f*std::sin(y);
             float b = std::max(0.0f,1.0f-(r+g));
-            return std::tuple(r,g,b);
+            return std::array<float,3>{r,g,b};
         };
-        plt.imshow(svg_cpp_plot::arange(0,10,0.25),svg_cpp_plot::arange(0,10,0.25),f).interpolation("bicubic");
-		plt.savefig("../doc/svgplot/imshow/example6.svg");
-    } */
+        plt.imshow(svg::plot::arange(0,10,0.25),svg::plot::arange(0,10,0.25),f).interpolation(svg::plot::bicubic);
+		plt.savefig("../docs/svgplot/imshow/example9.svg");
+    } 
 
 }

@@ -1,6 +1,8 @@
 #include "../imshow.h"
 #include "../../src/group.h"
 #include "../../src/rect.h"
+#include "../../src/image.h"
+#include "bmp.h"
 #include <limits>
 
 namespace svg {
@@ -145,6 +147,24 @@ svg::Element InterpolationNearest::plot(const ImShow& imshow, const Transform& x
         } 
     } 
     return group;     
+} 
+
+InterpolationBicubic bicubic;
+svg::Element InterpolationBicubic::plot(const ImShow& imshow, const Transform& xscale, const Transform& yscale) const noexcept {
+    auto size = imshow.size();
+    auto extent = imshow.extent();
+    BMP data(size[0],size[1]), mask(size[0],size[1]);
+    for (std::size_t i = 0; i<size[0]; ++i) 
+        for (std::size_t j = 0; j<size[1]; ++j) {
+            data(i,j)=imshow.color(i,j);
+            mask(i,j)=imshow.opacity(i,j);
+        }
+    data.save("tmpdata.bmp");
+    mask.save("tmpmask.bmp");
+    return svg::Image().embed("tmpdata.bmp")
+        .x(xscale(extent[0])).width(xscale(extent[1])-xscale(extent[0]))
+        .y(yscale(extent[3])).height(yscale(extent[2])-yscale(extent[3]))
+        .preserveAspectRatio("none");    
 } 
 
 
