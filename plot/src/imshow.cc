@@ -156,8 +156,8 @@ svg::Element InterpolationBicubic::plot(const ImShow& imshow, const Transform& x
     BMP data(size[0],size[1]), mask(size[0],size[1]);
     for (std::size_t i = 0; i<size[0]; ++i) 
         for (std::size_t j = 0; j<size[1]; ++j) {
-            data(i,j)=imshow.color(i,j);
-            mask(i,j)=imshow.opacity(i,j);
+            data(i,j)=imshow.color(i,size[1]-j-1);
+            mask(i,j)=imshow.opacity(i,size[1]-j-1);
         }
     data.save("tmpdata.bmp");
     mask.save("tmpmask.bmp");
