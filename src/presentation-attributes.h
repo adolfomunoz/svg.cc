@@ -14,6 +14,7 @@ class PresentationAttributes : public pattern::Reflectable<PresentationAttribute
     std::optional<Color> _stroke, _fill;
     std::optional<float> _opacity, _fill_opacity;
     std::optional<std::list<float>> _stroke_dasharray;
+    std::optional<std::string> _mask;
 public:
     PresentationAttributes() {}
     
@@ -37,9 +38,14 @@ public:
     float fill_opacity() const noexcept { return _fill_opacity.value_or(1.0f); }
     T& stroke_dasharray(const std::list<float>& l) noexcept { _stroke_dasharray=l; return t(); }
     std::list<float> stroke_dasharray() const noexcept { return _stroke_dasharray.value_or(std::list<float>()); }
+    T& mask(const std::string& m) noexcept{ _mask=m; return t(); }
+    std::string mask() const noexcept { return _mask.value_or(std::string()); } 
+    T& mask_id(const std::string& id) noexcept { 
+        return mask(std::string("url(#")+id+")");
+    }  
 
-    auto reflect() { return std::tie(_stroke_width,_stroke,_fill,_opacity,_fill_opacity,_stroke_dasharray); }
-    auto reflect_names() const { return std::tuple("stroke-width","stroke","fill","opacity","fill-opacity","stroke-dasharray"); }
+    auto reflect() { return std::tie(_stroke_width,_stroke,_fill,_opacity,_fill_opacity,_stroke_dasharray,_mask); }
+    auto reflect_names() const { return std::tuple("stroke-width","stroke","fill","opacity","fill-opacity","stroke-dasharray","mask"); }
 };
 
 }

@@ -13,3 +13,6 @@
 #include "src/search.h"
 #include "src/text.h"
 #include "src/use.h"
+#include "src/mask.h"
+
+

@@ -2,6 +2,7 @@
 #include "../../src/group.h"
 #include "../../src/rect.h"
 #include "../../src/image.h"
+#include "../../src/mask.h"
 #include "bmp.h"
 #include <limits>
 
@@ -157,14 +158,26 @@ svg::Element InterpolationBicubic::plot(const ImShow& imshow, const Transform& x
     for (std::size_t i = 0; i<size[0]; ++i) 
         for (std::size_t j = 0; j<size[1]; ++j) {
             data(i,j)=imshow.color(i,size[1]-j-1);
-            mask(i,j)=imshow.opacity(i,size[1]-j-1);
+            mask(i,j)=255.0f*imshow.opacity(i,size[1]-j-1);
         }
     data.save("tmpdata.bmp");
     mask.save("tmpmask.bmp");
+    svg::Group g;
+    auto& m = g.add(svg::Mask());
+    m.add(svg::Image()).embed("tmpmask.bmp").x(xscale(extent[0])).width(xscale(extent[1])-xscale(extent[0]))
+        .y(yscale(extent[3])).height(yscale(extent[2])-yscale(extent[3]))
+        .preserveAspectRatio("none");
+    g.add(svg::Image()).embed("tmpdata.bmp")
+        .x(xscale(extent[0])).width(xscale(extent[1])-xscale(extent[0]))
+        .y(yscale(extent[3])).height(yscale(extent[2])-yscale(extent[3]))
+        .preserveAspectRatio("none").mask_id(m.id());
+    return g;    
+/*
     return svg::Image().embed("tmpdata.bmp")
         .x(xscale(extent[0])).width(xscale(extent[1])-xscale(extent[0]))
         .y(yscale(extent[3])).height(yscale(extent[2])-yscale(extent[3]))
-        .preserveAspectRatio("none");    
+        .preserveAspectRatio("none"); 
+*/   
 } 
 
 
