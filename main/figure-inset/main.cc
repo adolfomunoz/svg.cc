@@ -8,9 +8,10 @@ struct Config : public pattern::Reflectable<Config> {
     Layout layout = LayoutSingleImageBottomInsets();
     std::list<std::string> images;
     std::list<std::string> labels;
+    bool ignore_image_in_svg = false;
     
-    auto reflect() { return std::tie(input,output,layout,images,labels);}
-    auto reflect_names() const { return std::tuple("input","output","layout","images","labels"); }
+    auto reflect() { return std::tie(input,output,layout,images,labels,ignore_image_in_svg);}
+    auto reflect_names() const { return std::tuple("input","output","layout","images","labels","ignore-image-in-svg"); }
 };
 
 
@@ -23,6 +24,7 @@ int main(int argc, char** argv) {
             std::cout<<"   --output=<output> - The output svg file with the new insets. If omitted, the standard output."<<std::endl;
             std::cout<<"   --images <image1> <image2> <image3> - The filenames of the images for the insets, added to the image in the SVG file."<<std::endl;
             std::cout<<"   --labels <label1> <label2> <label3> - Label associated with each filename. Not displayed if omitted"<<std::endl;
+            std::cout<<"   --ignore-image-in-svg - Boolean, ignores the image in the SVG and only uses the one in the --images parameter"<<std::endl;
             std::cout<<"   --layout-type=<layout> - The distribution of the insets, one of the following:"<<std::endl;
             std::cout<<"        "<<Layout::registered()<<std::endl;
             return 0;
@@ -48,11 +50,12 @@ int main(int argc, char** argv) {
 
     svg::SVG out;
     svg::Image image = images.front();
-    for (auto& im : images)
-        im.x(image.x()).y(image.y()).width(image.width()).height(image.height());
+    if (config.ignore_image_in_svg) images.pop_front();
     for (auto filename : config.images)
         if ((filename != image.href()) && (filename != (std::string("./")+image.href())))
             images.push_back(image.href(filename));
+    for (auto& im : images)
+        im.x(image.x()).y(image.y()).width(image.width()).height(image.height());
 
     config.layout.draw_insets(out,images,insets);  
 

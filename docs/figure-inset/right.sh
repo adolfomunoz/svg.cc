@@ -1,0 +1,1 @@
+../../bin/figure-inset --input=insets.svg --output=right.svg --layout=layout-single-image-right-insets --images flowers2.jpg 
