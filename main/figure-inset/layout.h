@@ -5,6 +5,7 @@
 
 class LayoutBase : public pattern::SelfRegisteringReflectableBase {
 public:
+    static const char* type_name() { return "layout"; }
     virtual void draw_insets(svg::SVG& out, 
             const std::list<svg::Image>& images, 
             const std::list<svg::Rect>& insets,
