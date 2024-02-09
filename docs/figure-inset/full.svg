@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 318.382 166.85" id="svg00002" >
+   <defs>
+         <clipPath id="inset-00001" >
+               <rect x="19.0155" y="23.2798" width="19.8" height="27.72" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+      <clipPath id="inset-00002" >
+               <rect x="85.8605" y="48.2618" width="22.4473" height="24.7102" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+      <clipPath id="inset-00003" >
+               <rect x="19.0012" y="87.1911" width="27.7488" height="12.4745" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+      <clipPath id="inset-00004" >
+               <rect x="180.697" y="23.2798" width="19.8" height="27.72" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+      <clipPath id="inset-00005" >
+               <rect x="247.542" y="48.2618" width="22.4473" height="24.7102" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+      <clipPath id="inset-00006" >
+               <rect x="180.683" y="87.1911" width="27.7488" height="12.4745" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+
+      </clipPath>
+
+   </defs>
+   <image href="flowers.jpg" xlink:href="flowers.jpg" x="0" y="0" width="159.191" height="124.535" id="image1941" preserveAspectRatio="none" />
+   <rect x="19.0155" y="23.2798" width="19.8" height="27.72" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers.jpg" xlink:href="flowers.jpg" x="0" y="0" width="159.191" height="124.535" id="image1941" transform="translate(0.5 126.526) scale(1.43666 1.43666) translate(-19.0155 -23.2798)" clip-path="url(#inset-00001)" preserveAspectRatio="none" />
+   <rect x="0.5" y="126.526" width="28.4458" height="39.8242" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+   <rect x="85.8605" y="48.2618" width="22.4473" height="24.7102" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers.jpg" xlink:href="flowers.jpg" x="0" y="0" width="159.191" height="124.535" id="image1941" transform="translate(31.4365 126.526) scale(1.61165 1.61165) translate(-85.8605 -48.2618)" clip-path="url(#inset-00002)" preserveAspectRatio="none" />
+   <rect x="31.4365" y="126.526" width="36.1772" height="39.8242" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+   <rect x="19.0012" y="87.1911" width="27.7488" height="12.4745" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers.jpg" xlink:href="flowers.jpg" x="0" y="0" width="159.191" height="124.535" id="image1941" transform="translate(70.1045 126.526) scale(3.19245 3.19245) translate(-19.0012 -87.1911)" clip-path="url(#inset-00003)" preserveAspectRatio="none" />
+   <rect x="70.1045" y="126.526" width="88.5866" height="39.8242" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers2.jpg" xlink:href="flowers2.jpg" x="161.682" y="0" width="159.191" height="124.535" id="image1941" preserveAspectRatio="none" />
+   <rect x="180.697" y="23.2798" width="19.8" height="27.72" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers2.jpg" xlink:href="flowers2.jpg" x="161.682" y="0" width="159.191" height="124.535" id="image1941" transform="translate(162.182 126.526) scale(1.43666 1.43666) translate(-180.697 -23.2798)" clip-path="url(#inset-00004)" preserveAspectRatio="none" />
+   <rect x="162.182" y="126.526" width="28.4458" height="39.8242" id="rect1634" style="stroke-width: 1; stroke: #00eff6; fill: none; stroke-dasharray: 0 ; " />
+   <rect x="247.542" y="48.2618" width="22.4473" height="24.7102" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers2.jpg" xlink:href="flowers2.jpg" x="161.682" y="0" width="159.191" height="124.535" id="image1941" transform="translate(193.118 126.526) scale(1.61165 1.61165) translate(-247.542 -48.2618)" clip-path="url(#inset-00005)" preserveAspectRatio="none" />
+   <rect x="193.118" y="126.526" width="36.1772" height="39.8242" id="rect1688" style="stroke-width: 1; stroke: #f6a600; fill: none; stroke-dasharray: 0 ; " />
+   <rect x="180.683" y="87.1911" width="27.7488" height="12.4745" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+   <image href="flowers2.jpg" xlink:href="flowers2.jpg" x="161.682" y="0" width="159.191" height="124.535" id="image1941" transform="translate(231.786 126.526) scale(3.19245 3.19245) translate(-180.683 -87.1911)" clip-path="url(#inset-00006)" preserveAspectRatio="none" />
+   <rect x="231.786" y="126.526" width="88.5866" height="39.8242" id="rect1570" style="stroke-width: 1; stroke: #21f600; fill: none; stroke-dasharray: 0 ; " />
+
+</svg>

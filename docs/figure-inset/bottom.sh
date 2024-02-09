@@ -1,1 +1,1 @@
-../../bin/figure-inset --input=insets.svg --output=bottom.svg --layout-type=layout-single-image-bottom-insets --images flowers2.jpg
+../../bin/figure-inset --input=insets.svg --output=bottom.svg --layout-type=layout-single-image-bottom-insets --images flowers2.jpg --labels F1 F2

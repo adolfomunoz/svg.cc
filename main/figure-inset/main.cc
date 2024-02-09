@@ -20,6 +20,7 @@ int main(int argc, char** argv) {
         if (std::string(argv[i])=="--help") {
             std::cout<<"figure-inset      - figure inset generator."<<std::endl;
             std::cout<<"   Parameters:"<<std::endl;
+            std::cout<<"   --help - Show this help"<<std::endl;
             std::cout<<"   --input=<input> - The input svg file with an image and several rectangles that mark the insets. If omitted, it is obtained from the standard input."<<std::endl;
             std::cout<<"   --output=<output> - The output svg file with the new insets. If omitted, the standard output."<<std::endl;
             std::cout<<"   --images <image1> <image2> <image3> - The filenames of the images for the insets, added to the image in the SVG file."<<std::endl;
