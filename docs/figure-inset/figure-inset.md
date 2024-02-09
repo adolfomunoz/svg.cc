@@ -23,7 +23,7 @@ figure-inset      - figure inset generator.
 
 Here you can find the output for different layouts with the previous input image:
 
-{% highlight %}
+{% highlight shell %}
 {% include includelines filename='right.sh' start=1 count=1 %}
 {% endhighlight %}
 
@@ -32,7 +32,7 @@ outputs
 ![Right](./right.svg)
 
 
-{% highlight %}
+{% highlight shell %}
 {% include includelines filename='bottom.sh' start=1 count=1 %}
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ outputs
 
 ![Bottom](./bottom.svg)
 
-{% highlight %}
+{% highlight shell %}
 {% include includelines filename='full.sh' start=1 count=1 %}
 {% endhighlight %}
 
