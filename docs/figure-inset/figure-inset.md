@@ -2,7 +2,7 @@
 
 `figure-inset` is a command-line tool to generate SVG figures with insets and potential labels from a very simple SVG input that can be trivially edited using SVG editing tools such as [Inkscape](https://inkscape.org). The input file must consist on an image with several unfilled rectangles, preferrably with different border colors, marking where do you wants the insets to be taken. An example of such input SVG is:
 
-![Input](./insets.svg)
+![Input](./insets-embedded.svg)
 
 Help can be found by invoking `figure-inset --help`, which shows:
 
