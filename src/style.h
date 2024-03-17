@@ -7,9 +7,10 @@
 
 namespace svg {
 
+class StyleAttr;
 std::istream& operator>>(std::istream& is, StyleAttr& style);
 
-class StyleAttr : public pattern::Reflectable<StyleAttr,PresentationAttributes<Style>,TextPresentationAttributes<Style>> {
+class StyleAttr : public pattern::Reflectable<StyleAttr,PresentationAttributes<StyleAttr>,TextPresentationAttributes<StyleAttr>> {
 public:
     StyleAttr() {} 
     StyleAttr(const std::string& str) {
@@ -122,7 +123,7 @@ class StyleRule {
     std::string selector_;
     StyleAttr declaration_;
 public:
-    StyleRule(const std::string& selector, const StyleAttr& declaration) :
+    StyleRule(const std::string& selector = "", const StyleAttr& declaration = StyleAttr()) :
         selector_(selector), declaration_(declaration) {}
     StyleRule(const std::string& selector, const std::string& declaration) :
         selector_(selector), declaration_(declaration) {}
@@ -159,8 +160,10 @@ public:
     StyleRule& add(const StyleRule& sr) {
         _rules.push_back(sr); return _rules.back();
     }
-    StyleRule& add(const std::string& selector; const std::string& description) {
+    StyleRule& add(const std::string& selector, const std::string& description) {
         return add(StyleRule(selector,description));
     }
     
+};
+
 }
