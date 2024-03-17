@@ -1,13 +1,22 @@
 #pragma once
 #include "presentation-attributes.h"
 #include "text-presentation-attributes.h"
+#include <iostream>
+#include <sstream>
+#include <list>
 
 namespace svg {
 
-class Style : public pattern::Reflectable<Style,PresentationAttributes<Style>,TextPresentationAttributes<Style>> {
+std::istream& operator>>(std::istream& is, StyleAttr& style);
+
+class StyleAttr : public pattern::Reflectable<StyleAttr,PresentationAttributes<Style>,TextPresentationAttributes<Style>> {
 public:
-    Style() {}   
-    virtual ~Style() {}
+    StyleAttr() {} 
+    StyleAttr(const std::string& str) {
+        std::stringstream sstr(str);
+        sstr>>(*this);
+    }  
+    virtual ~StyleAttr() {}
     static const char* type_name() { return "style"; } 
 //    auto reflect() {}
 //    auto reflect_names() const { }
@@ -82,7 +91,7 @@ namespace detail {
 
 }
 
-inline std::istream& operator>>(std::istream& is, Style& style) {
+inline std::istream& operator>>(std::istream& is, StyleAttr& style) {
     std::string name; std::string value;
     while (!is.eof()) {
         std::getline(is,name,':'); //Remove trailing and ending spaces
@@ -100,7 +109,7 @@ inline std::istream& operator>>(std::istream& is, Style& style) {
     return is;
 }
 
-inline std::ostream& operator<<(std::ostream& os, const Style& style) {
+inline std::ostream& operator<<(std::ostream& os, const StyleAttr& style) {
     style.for_each_attribute([&os] (const std::string& name, const auto& value) {
         if (detail::has_value(value)) {
             os<<name<<": "<<detail::to_string(value)<<"; ";
@@ -109,6 +118,49 @@ inline std::ostream& operator<<(std::ostream& os, const Style& style) {
     return os;
 }
 
+class StyleRule {
+    std::string selector_;
+    StyleAttr declaration_;
+public:
+    StyleRule(const std::string& selector, const StyleAttr& declaration) :
+        selector_(selector), declaration_(declaration) {}
+    StyleRule(const std::string& selector, const std::string& declaration) :
+        selector_(selector), declaration_(declaration) {}
 
+    const std::string& selector() const { return selector_; }
+    const StyleAttr& declaration() const { return declaration_; }
+};
+
+inline std::istream& operator>>(std::istream& is, StyleRule& style) {
+    std::string selector; std::string declaration;
+    std::getline(is,selector,'{');
+    selector.erase(0,selector.find_first_not_of(" \t\n\r\f\v"));
+    selector.erase(selector.find_last_not_of(" \t\n\r\f\v") + 1);
+    std::getline(is,declaration,'}');
+    declaration.erase(0,declaration.find_first_not_of(" \t\n\r\f\v"));
+    declaration.erase(declaration.find_last_not_of(" \t\n\r\f\v") + 1);
+    style = StyleRule(selector,declaration);
+    return is;
+}
+
+inline std::ostream& operator<<(std::ostream& os, const StyleRule& style) {
+    os<<style.selector()<<"{\n   "<<style.declaration()<<"\n}\n";
+    return os;
+}
+
+class Style : public pattern::Reflectable<Style,ElementBase> {
+    std::list<StyleRule> _rules;
+public:
+    Style(const std::list<StyleRule>& rules = std::list<StyleRule>()) :
+        _rules(rules) { }
+    static const char* type_name() { return "style"; } 
+    auto reflect() { return std::tie(_rules); }
+    auto reflect_names() const { return std::tuple(); }
+    StyleRule& add(const StyleRule& sr) {
+        _rules.push_back(sr); return _rules.back();
+    }
+    StyleRule& add(const std::string& selector; const std::string& description) {
+        return add(StyleRule(selector,description));
+    }
     
 }
