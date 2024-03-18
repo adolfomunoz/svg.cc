@@ -1,4 +1,5 @@
 #pragma once
+
 #include "element.h"
 #include "presentation-attributes.h"
 #include "text-presentation-attributes.h"
