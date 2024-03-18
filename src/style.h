@@ -145,7 +145,7 @@ inline std::istream& operator>>(std::istream& is, StyleRule& style) {
 }
 
 inline std::ostream& operator<<(std::ostream& os, const StyleRule& style) {
-    os<<style.selector()<<"{\n   "<<style.declaration()<<"\n}\n";
+    os<<style.selector()<<" {\n   "<<style.declaration()<<"\n}\n";
     return os;
 }
 
