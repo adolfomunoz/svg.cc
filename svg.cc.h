@@ -14,5 +14,9 @@
 #include "src/text.h"
 #include "src/use.h"
 #include "src/mask.h"
+#include "src/script.h"
+
+
+
 
 
