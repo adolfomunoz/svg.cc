@@ -37,8 +37,8 @@ inline std::istream& operator>>(std::istream& is, Clip& c) {
     std::string name;
     
     std::getline(is,name,'(');
-    std::remove(name.begin(),name.end(),' ');
-    c.set_type(name);
+    auto it = std::remove(name.begin(),name.end(),' ');
+    c.set_type(std::string(name.begin(),it));
     c.read_clip_params(is);
     if (is.peek() == ')') { char dummy; is>>dummy; }
     return is;

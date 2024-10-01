@@ -33,8 +33,8 @@ inline std::istream& operator>>(std::istream& is, Transform& t) {
     std::string name;
     
     std::getline(is,name,'(');
-    std::remove(name.begin(),name.end(),' ');
-    t.set_type(name);
+    auto it = std::remove(name.begin(),name.end(),' ');
+    t.set_type(std::string(name.begin(),it));
     t.read_params(is);
     if (is.peek() == ')') { char dummy; is>>dummy; }
     return is;
