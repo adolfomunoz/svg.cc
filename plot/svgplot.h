@@ -40,6 +40,13 @@ private:
     std::size_t color_cycle_pos{0};
     svg::Color next_color() noexcept;
 
+
+    constexpr float fontsize() const noexcept { return 10.0; }
+    constexpr float title_fontsize() const noexcept { return 2.4*fontsize(); }
+    constexpr float label_fontsize() const noexcept { return 1.6*fontsize(); }
+    float yticklabels_size() const noexcept;
+    std::array<float,4> margin() const noexcept;
+public:
     std::array<float,2> figsize() const noexcept;
     std::array<float,4> axis() const noexcept;
     std::vector<float> xticks() const noexcept;
@@ -48,12 +55,6 @@ private:
     std::vector<std::string> yticklabels() const noexcept;
     float linewidth() const noexcept;
 
-    constexpr float fontsize() const noexcept { return 10.0; }
-    constexpr float title_fontsize() const noexcept { return 2.4*fontsize(); }
-    constexpr float label_fontsize() const noexcept { return 1.6*fontsize(); }
-    float yticklabels_size() const noexcept;
-    std::array<float,4> margin() const noexcept;
-public:
     SVGPlot& figsize(const std::array<float,2>& fs) noexcept;
     SVGPlot& axis(const std::array<float,4>& a) noexcept;
     SVGPlot& linewidth(float lw) noexcept;
